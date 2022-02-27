@@ -1,4 +1,4 @@
-# hello wordl
+# xordle
 
 It's [Wordle](https://www.powerlanguage.co.uk/wordle/) but with different rules.
 
