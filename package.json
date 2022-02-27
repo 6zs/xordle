@@ -1,5 +1,5 @@
 {
-  "name": "wordl",
+  "name": "xordle",
   "version": "0.1.0",
   "homepage": "http://hellowordl.net/",
   "private": false,
@@ -14,8 +14,8 @@
     "gh-pages": "^3.2.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-scripts": "5.0.0",
-    "typescript": "^4.5.4",
+    "react-scripts": "^5.0.0",
+    "typescript": "^4.5.5",
     "web-vitals": "^2.1.2"
   },
   "scripts": {

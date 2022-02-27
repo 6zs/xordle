@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Row, RowState } from "./Row";
 import dictionary from "./dictionary.json";
-import { Clue, clue, describeClue, violation } from "./clue";
+import { Clue, clue, describeClue, violation, xorclue } from "./clue";
 import { Keyboard } from "./Keyboard";
 import targetList from "./targets.json";
 import {
@@ -38,34 +38,58 @@ const maxLength = 11;
 const limitLength = (n: number) =>
   n >= minLength && n <= maxLength ? n : defaultLength;
 
-function randomTarget(wordLength: number): string {
-  const eligible = targets.filter((word) => word.length === wordLength);
-  let candidate: string;
-  do {
-    candidate = pick(eligible);
-  } while (/\*/.test(candidate));
-  return candidate;
+function isValidCluePair(word1: string, word2: string) {
+  if (/\*/.test(word1)) {
+    return false;
+  }
+  if (/\*/.test(word2)) {
+    return false;
+  }
+  if (word1.length !== word2.length) {
+    return false;
+  }
+  if (word1 === word2) {
+    return false;
+  }
+  let numSame = 0;
+  for (let i = 0; i < word1.length; ++i) {
+    if(word1[i] === word2[i]) {
+      ++numSame;
+    }
+  }
+  return numSame < 2;
 }
 
-function getChallengeUrl(target: string): string {
+function randomTargets(wordLength: number): string[] {
+  const eligible = targets.filter((word) => word.length === wordLength);
+  let candidate1: string;
+  let candidate2: string;
+  do {
+    candidate1 = pick(eligible);
+    candidate2 = pick(eligible);
+  } while (!isValidCluePair(candidate1,candidate2));
+  return [candidate1, candidate2];
+}
+
+function getChallengeUrl(targets: string[]): string {
   return (
     window.location.origin +
     window.location.pathname +
     "?challenge=" +
-    encode(target)
+    encode(targets[0] + ";" + targets[1]) 
   );
 }
 
-let initChallenge = "";
+let initChallenge : string[] = [];
 let challengeError = false;
 try {
-  initChallenge = decode(urlParam("challenge") ?? "").toLowerCase();
+  initChallenge = decode(urlParam("challenge") ?? "").toLowerCase().split(";");
 } catch (e) {
   console.warn(e);
   challengeError = true;
 }
-if (initChallenge && !dictionarySet.has(initChallenge)) {
-  initChallenge = "";
+if (initChallenge && initChallenge.length === 2 && (!dictionarySet.has(initChallenge[0]) || !dictionarySet.has(initChallenge[1])) ) { 
+  initChallenge = [];
   challengeError = true;
 }
 
@@ -86,16 +110,19 @@ function Game(props: GameProps) {
   const [gameState, setGameState] = useState(GameState.Playing);
   const [guesses, setGuesses] = useState<string[]>([]);
   const [currentGuess, setCurrentGuess] = useState<string>("");
-  const [challenge, setChallenge] = useState<string>(initChallenge);
+  const [challenge, setChallenge] = useState<string[]>(initChallenge);
   const [wordLength, setWordLength] = useState(
-    challenge ? challenge.length : parseUrlLength()
+    (challenge && challenge.length === 2 && challenge[0].length === challenge[1].length) ? challenge[0].length : parseUrlLength()
   );
   const [gameNumber, setGameNumber] = useState(parseUrlGameNumber());
-  const [target, setTarget] = useState(() => {
+  const [targets, setTargets] = useState(() => {
     resetRng();
     // Skip RNG ahead to the parsed initial game number:
-    for (let i = 1; i < gameNumber; i++) randomTarget(wordLength);
-    return challenge || randomTarget(wordLength);
+    for (let i = 1; i < gameNumber; i++) 
+    {
+      randomTargets(wordLength);
+    }
+    return challenge.length === 2 ? challenge : randomTargets(wordLength);
   });
   const [hint, setHint] = useState<string>(
     challengeError
@@ -119,10 +146,10 @@ function Game(props: GameProps) {
       // Clear the URL parameters:
       window.history.replaceState({}, document.title, window.location.pathname);
     }
-    setChallenge("");
+    setChallenge([]);
     const newWordLength = limitLength(wordLength);
     setWordLength(newWordLength);
-    setTarget(randomTarget(newWordLength));
+    setTargets(randomTargets(newWordLength));
     setHint("");
     setGuesses([]);
     setCurrentGuess("");
@@ -133,7 +160,7 @@ function Game(props: GameProps) {
   async function share(copiedHint: string, text?: string) {
     const url = seed
       ? window.location.origin + window.location.pathname + currentSeedParams()
-      : getChallengeUrl(target);
+      : getChallengeUrl(targets);
     const body = url + (text ? "\n\n" + text : "");
     if (
       /android|iphone|ipad|ipod|webos/i.test(navigator.userAgent) &&
@@ -183,10 +210,16 @@ function Game(props: GameProps) {
         return;
       }
       for (const g of guesses) {
-        const c = clue(g, target);
-        const feedback = violation(props.difficulty, c, currentGuess);
-        if (feedback) {
-          setHint(feedback);
+        const c1 = clue(g, targets[0]);
+        const c2 = clue(g, targets[1]);
+        const feedback1 = violation(props.difficulty, c1, currentGuess);
+        const feedback2 = violation(props.difficulty, c2, currentGuess);
+        if (feedback1) {
+          setHint(feedback1);
+          return;
+        }
+        if (feedback2) {
+          setHint(feedback2);
           return;
         }
       }
@@ -194,11 +227,11 @@ function Game(props: GameProps) {
       setCurrentGuess((guess) => "");
 
       const gameOver = (verbed: string) =>
-        `You ${verbed}! The answer was ${target.toUpperCase()}. (Enter to ${
+        `You ${verbed}! The answers were ${targets[0].toUpperCase()}, ${targets[1].toUpperCase()}. (Enter to ${
           challenge ? "play a random game" : "play again"
         })`;
 
-      if (currentGuess === target) {
+      if (currentGuess === targets[1] || currentGuess === targets[2]) {
         setHint(gameOver("won"));
         setGameState(GameState.Won);
       } else if (guesses.length + 1 === props.maxGuesses) {
@@ -206,7 +239,8 @@ function Game(props: GameProps) {
         setGameState(GameState.Lost);
       } else {
         setHint("");
-        speak(describeClue(clue(currentGuess, target)));
+        speak(describeClue(clue(currentGuess, targets[1])));
+        speak(describeClue(clue(currentGuess, targets[2])));
       }
     }
   };
@@ -231,7 +265,7 @@ function Game(props: GameProps) {
     .fill(undefined)
     .map((_, i) => {
       const guess = [...guesses, currentGuess][i] ?? "";
-      const cluedLetters = clue(guess, target);
+      const cluedLetters = xorclue(clue(guess, targets[0]),clue(guess, targets[1]));
       const lockedIn = i < guesses.length;
       if (lockedIn) {
         for (const { clue, letter } of cluedLetters) {
@@ -269,7 +303,7 @@ function Game(props: GameProps) {
           id="wordLength"
           disabled={
             gameState === GameState.Playing &&
-            (guesses.length > 0 || currentGuess !== "" || challenge !== "")
+            (guesses.length > 0 || currentGuess !== "" || challenge.length !== 2)
           }
           value={wordLength}
           onChange={(e) => {
@@ -279,7 +313,7 @@ function Game(props: GameProps) {
             setGameState(GameState.Playing);
             setGuesses([]);
             setCurrentGuess("");
-            setTarget(randomTarget(length));
+            setTargets(randomTargets(length));
             setWordLength(length);
             setHint(`${length} letters`);
           }}
@@ -289,7 +323,7 @@ function Game(props: GameProps) {
           disabled={gameState !== GameState.Playing || guesses.length === 0}
           onClick={() => {
             setHint(
-              `The answer was ${target.toUpperCase()}. (Enter to play again)`
+              `The answers were ${targets[0].toUpperCase()}, ${targets[1].toUpperCase()}. (Enter to play again)`
             );
             setGameState(GameState.Lost);
             (document.activeElement as HTMLElement)?.blur();
@@ -347,7 +381,7 @@ function Game(props: GameProps) {
                 `${gameName} ${score}/${props.maxGuesses}\n` +
                   guesses
                     .map((guess) =>
-                      clue(guess, target)
+                      clue(guess, targets[0]/*TODO*/)
                         .map((c) => emoji[c.clue ?? 0])
                         .join("")
                     )

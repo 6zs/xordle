@@ -6,15 +6,17 @@ export function About() {
   return (
     <div className="App-about">
       <p>
-        <i>{gameName}</i> is a remake of the word game{" "}
+        <i>{gameName}</i> is a variant of the word game{" "}
         <a href="https://www.powerlanguage.co.uk/wordle/">
           <i>Wordle</i>
         </a>{" "}
-        by <a href="https://twitter.com/powerlanguish">powerlanguage</a>, which
-        I think is based on the TV show <i>Lingo</i>.
+        by <a href="https://twitter.com/powerlanguish">powerlanguage</a>, 
+        TODO: based on a fork of hello-wordl
       </p>
       <p>
         You get {maxGuesses} tries to guess a target word.
+        <br />
+        There are TWO target words. Your guesses will be green if they would be green in *exactly one* of the secret words. Otherwise, yellow if they would be yellow in *exactly one* of the secret words. Otherwise: Black.
         <br />
         After each guess, you get Mastermind-style feedback.
       </p>
@@ -72,13 +74,12 @@ export function About() {
       />
       <p>
         Report issues{" "}
-        <a href="https://github.com/lynn/hello-wordl/issues">here</a>, or tweet{" "}
-        <a href="https://twitter.com/chordbug">@chordbug</a>.
+        <a href="https://github.com/6vz/xordle/issues">here</a>.
       </p>
       <p>
         This game will be free and ad-free forever,
         <br />
-        but you can <a href="https://ko-fi.com/chordbug">buy me a coffee</a> if
+        but you can <a href="https://ko-fi.com/chordbug">buy chordbug a coffee</a> if
         you'd like.
       </p>
     </div>
