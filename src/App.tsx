@@ -125,36 +125,6 @@ function App() {
             <label htmlFor="colorblind-setting">High-contrast colors</label>
           </div>
           <div className="Settings-setting">
-            <input
-              id="difficulty-setting"
-              type="range"
-              min="0"
-              max="2"
-              value={difficulty}
-              onChange={(e) => setDifficulty(+e.target.value)}
-            />
-            <div>
-              <label htmlFor="difficulty-setting">Difficulty:</label>
-              <strong>{["Normal", "Hard", "Ultra Hard"][difficulty]}</strong>
-              <div
-                style={{
-                  fontSize: 14,
-                  height: 40,
-                  marginLeft: 8,
-                  marginTop: 8,
-                }}
-              >
-                {
-                  [
-                    `Guesses must be valid dictionary words.`,
-                    `Wordle's "Hard Mode". Green letters must stay fixed, and yellow letters must be reused.`,
-                    `An even stricter Hard Mode. Yellow letters must move away from where they were clued, and gray clues must be obeyed.`,
-                  ][difficulty]
-                }
-              </div>
-            </div>
-          </div>
-          <div className="Settings-setting">
             <label htmlFor="keyboard-setting">Keyboard layout:</label>
             <select
               name="keyboard-setting"
