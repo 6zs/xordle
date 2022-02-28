@@ -34,11 +34,11 @@ export function clue(word: string, target: string): CluedLetter[] {
 
 export function xorclue(clue1: CluedLetter[], clue2: CluedLetter[]): CluedLetter[] {
   return clue1.map((cluedLetter,i) => {
-    if (cluedLetter != clue2[i]) {
-      if ( cluedLetter.clue == Clue.Correct || clue2[i].clue == Clue.Correct ) {
+    if (cluedLetter !== clue2[i]) {
+      if ( cluedLetter.clue === Clue.Correct || clue2[i].clue === Clue.Correct ) {
         return { clue: Clue.Correct, letter: cluedLetter.letter };
       }
-      if ( cluedLetter.clue == Clue.Elsewhere || clue2[i].clue == Clue.Elsewhere ) {
+      if ( cluedLetter.clue === Clue.Elsewhere || clue2[i].clue === Clue.Elsewhere ) {
         return { clue: Clue.Elsewhere, letter: cluedLetter.letter };
       }
       /*TODO* add more states?*/
