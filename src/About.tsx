@@ -11,67 +11,14 @@ export function About() {
           <i>Wordle</i>
         </a>{" "}
         by <a href="https://twitter.com/powerlanguish">powerlanguage</a>, 
-        TODO: based on a fork of hello-wordl
+        based on <a href="https://github.com/lynn/hello-wordl">hello wordl</a>
       </p>
       <p>
         You get {maxGuesses} tries to guess a target word.
         <br />
-        There are TWO target words. Your guesses will be green if they would be green in *exactly one* of the secret words. Otherwise, yellow if they would be yellow in *exactly one* of the secret words. Otherwise: Black.
-        <br />
-        After each guess, you get Mastermind-style feedback.
+        There are TWO target words. They share no letters in common. Letters in your guess are green if they would be green in either of the secret words in Wordle. Otherwise, they're yellow if they'd be yellow in either.
       </p>
       <hr />
-      <Row
-        rowState={RowState.LockedIn}
-        wordLength={4}
-        cluedLetters={[
-          { clue: Clue.Absent, letter: "w" },
-          { clue: Clue.Absent, letter: "o" },
-          { clue: Clue.Correct, letter: "r" },
-          { clue: Clue.Elsewhere, letter: "d" },
-        ]}
-      />
-      <p>
-        <b>W</b> and <b>O</b> aren't in the target word at all.
-      </p>
-      <p>
-        <b className={"green-bg"}>R</b> is correct! The third letter is{" "}
-        <b className={"green-bg"}>R</b>
-        .<br />
-        <strong>(There may still be a second R in the word.)</strong>
-      </p>
-      <p>
-        <b className={"yellow-bg"}>D</b> occurs <em>elsewhere</em> in the target
-        word.
-        <br />
-        <strong>(Perhaps more than once. 🤔)</strong>
-      </p>
-      <hr />
-      <p>
-        Let's move the <b>D</b> in our next guess:
-      </p>
-      <Row
-        rowState={RowState.LockedIn}
-        wordLength={4}
-        cluedLetters={[
-          { clue: Clue.Correct, letter: "d" },
-          { clue: Clue.Correct, letter: "a" },
-          { clue: Clue.Correct, letter: "r" },
-          { clue: Clue.Absent, letter: "k" },
-        ]}
-        annotation={"So close!"}
-      />
-      <Row
-        rowState={RowState.LockedIn}
-        wordLength={4}
-        cluedLetters={[
-          { clue: Clue.Correct, letter: "d" },
-          { clue: Clue.Correct, letter: "a" },
-          { clue: Clue.Correct, letter: "r" },
-          { clue: Clue.Correct, letter: "t" },
-        ]}
-        annotation={"Got it!"}
-      />
       <p>
         Report issues{" "}
         <a href="https://github.com/6vz/xordle/issues">here</a>.
