@@ -55,7 +55,7 @@ function isValidCluePair(word1: string, word2: string) {
     if(word1[i] === word2[i]) {
       return false;
     }
-    if (word2.search(word1[i]) != -1) {
+    if (word2.search(word1[i]) !== -1) {
       return false;
     }
   }
