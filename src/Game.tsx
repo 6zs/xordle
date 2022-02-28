@@ -51,13 +51,15 @@ function isValidCluePair(word1: string, word2: string) {
   if (word1 === word2) {
     return false;
   }
-  let numSame = 0;
   for (let i = 0; i < word1.length; ++i) {
     if(word1[i] === word2[i]) {
-      ++numSame;
+      return false;
+    }
+    if (word2.search(word1[i]) != -1) {
+      return false;
     }
   }
-  return numSame < 2;
+  return true;
 }
 
 function randomTargets(wordLength: number): string[] {
