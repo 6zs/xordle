@@ -211,6 +211,7 @@ function Game(props: GameProps) {
         setHint("Not a valid word");
         return;
       }
+     
       for (const g of guesses) {
         const c1 = clue(g, targets[0]);
         const c2 = clue(g, targets[1]);
@@ -233,7 +234,7 @@ function Game(props: GameProps) {
           challenge ? "play a random game" : "play again"
         })`;
 
-      if (currentGuess === targets[1] || currentGuess === targets[2]) {
+      if (currentGuess === targets[0] || currentGuess === targets[1]) {
         setHint(gameOver("won"));
         setGameState(GameState.Won);
       } else if (guesses.length + 1 === props.maxGuesses) {
@@ -241,8 +242,8 @@ function Game(props: GameProps) {
         setGameState(GameState.Lost);
       } else {
         setHint("");
+        speak(describeClue(clue(currentGuess, targets[0])));
         speak(describeClue(clue(currentGuess, targets[1])));
-        speak(describeClue(clue(currentGuess, targets[2])));
       }
     }
   };
