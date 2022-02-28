@@ -384,7 +384,7 @@ function Game(props: GameProps) {
                 `${gameName} ${score}/${props.maxGuesses}\n` +
                   guesses
                     .map((guess) =>
-                      clue(guess, targets[0]/*TODO*/)
+                      xorclue(clue(guess, targets[0]),clue(guess, targets[1]))
                         .map((c) => emoji[c.clue ?? 0])
                         .join("")
                     )
