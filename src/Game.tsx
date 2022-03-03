@@ -48,7 +48,11 @@ interface GameProps {
 }
 
 const targets = targetList.slice(0, targetList.indexOf("murky") + 1); // Words no rarer than this one
+const minLength = 4;
 const defaultLength = 5;
+const maxLength = 11;
+const limitLength = (n: number) =>
+  n >= minLength && n <= maxLength ? n : defaultLength;
 
 function isValidCluePair(word1: string, word2: string) {
   if (/\*/.test(word1)) {
@@ -89,7 +93,11 @@ function Game(props: GameProps) {
   const [gameState, setGameState] = useState(GameState.Playing);
   const [guesses, setGuesses] = useLocalStorage<string[]>("guesses-day-"+dayNum, []);
   const [currentGuess, setCurrentGuess] = useState<string>("");
-  const wordLength = defaultLength;
+  const wordLength = 5;
+  const [targets, setTargets] = useState(() => {
+    resetRng();
+    return randomTargets(wordLength);
+  });
   const [hint, setHint] = useState<string>(
      `Make your first guess!`
   );
