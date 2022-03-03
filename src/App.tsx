@@ -1,5 +1,5 @@
 import "./App.css";
-import { maxGuesses, seed, urlParam } from "./util";
+import { maxGuesses } from "./util";
 import Game from "./Game";
 import { useEffect, useState } from "react";
 import { About } from "./About";
@@ -26,12 +26,6 @@ function useSetting<T>(
   return [current, setSetting];
 }
 
-const now = new Date();
-const todaySeed =
-  now.toLocaleDateString("en-US", { year: "numeric" }) +
-  now.toLocaleDateString("en-US", { month: "2-digit" }) +
-  now.toLocaleDateString("en-US", { day: "2-digit" });
-
 function App() {
   type Page = "game" | "about" | "settings";
   const [page, setPage] = useState<Page>("game");
@@ -40,7 +34,6 @@ function App() {
     window.matchMedia("(prefers-color-scheme: dark)").matches;
   const [dark, setDark] = useSetting<boolean>("dark", prefersDark);
   const [colorBlind, setColorBlind] = useSetting<boolean>("colorblind", false);
-  const [difficulty, setDifficulty] = useSetting<number>("difficulty", 0);
   const [keyboard, setKeyboard] = useSetting<string>(
     "keyboard",
     "qwertyuiop-asdfghjkl-BzxcvbnmE"
@@ -49,9 +42,6 @@ function App() {
 
   useEffect(() => {
     document.body.className = dark ? "dark" : "";
-    if (urlParam("today") !== null || urlParam("todas") !== null) {
-      document.location = "?seed=" + todaySeed;
-    }
     setTimeout(() => {
       // Avoid transition on page load
       document.body.style.transition = "0.3s background-color ease-out";
@@ -74,8 +64,8 @@ function App() {
       <h1>
         <span
           style={{
-            color: difficulty > 0 ? "#e66" : "inherit",
-            fontStyle: difficulty > 1 ? "italic" : "inherit",
+            color: "inherit",
+            fontStyle: "inherit",
           }}
         >
          xordle
@@ -99,9 +89,6 @@ function App() {
           visibility: page === "game" ? "visible" : "hidden",
         }}
       >
-        <a href={seed ? "?random" : "?seed=" + todaySeed}>
-          {seed ? "Random" : "Today's"}
-        </a>
       </div>
       {page === "about" && <About />}
       {page === "settings" && (
@@ -152,7 +139,6 @@ function App() {
       <Game
         maxGuesses={maxGuesses}
         hidden={page !== "game"}
-        difficulty={difficulty}
         colorBlind={colorBlind}
         keyboardLayout={keyboard.replaceAll(
           /[BE]/g,

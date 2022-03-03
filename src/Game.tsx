@@ -1,21 +1,16 @@
 import { useEffect, useRef, useState } from "react";
 import { Row, RowState } from "./Row";
 import dictionary from "./dictionary.json";
-import { Clue, clue, describeClue, violation, xorclue } from "./clue";
+import { Clue, clue, describeClue, xorclue } from "./clue";
 import { Keyboard } from "./Keyboard";
 import targetList from "./targets.json";
 import {
-  describeSeed,
-  dictionarySet,
-  Difficulty,
   gameName,
   pick,
   resetRng,
-  seed,
   speak,
-  urlParam,
+  dayNum
 } from "./util";
-import { decode, encode } from "./base64";
 
 enum GameState {
   Playing,
@@ -23,10 +18,31 @@ enum GameState {
   Lost,
 }
 
+function useLocalStorage<T>(
+  key: string,
+  initial: T
+): [T, (value: T | ((t: T) => T)) => void] {
+  const [current, setCurrent] = useState<T>(() => {
+    try {
+      const item = window.localStorage.getItem(key);
+      return item ? JSON.parse(item) : initial;
+    } catch (e) {
+      return initial;
+    }
+  });
+  const setSetting = (value: T | ((t: T) => T)) => {
+    try {
+      const v = value instanceof Function ? value(current) : value;
+      setCurrent(v);
+      window.localStorage.setItem(key, JSON.stringify(v));
+    } catch (e) {}
+  };
+  return [current, setSetting];
+}
+
 interface GameProps {
   maxGuesses: number;
   hidden: boolean;
-  difficulty: Difficulty;
   colorBlind: boolean;
   keyboardLayout: string;
 }
@@ -73,97 +89,31 @@ function randomTargets(wordLength: number): string[] {
   return [candidate1, candidate2];
 }
 
-function getChallengeUrl(targets: string[]): string {
-  return (
-    window.location.origin +
-    window.location.pathname +
-    "?challenge=" +
-    encode(targets[0] + ";" + targets[1]) 
-  );
-}
-
-let initChallenge : string[] = [];
-let challengeError = false;
-try {
-  initChallenge = decode(urlParam("challenge") ?? "").toLowerCase().split(";");
-} catch (e) {
-  console.warn(e);
-  challengeError = true;
-}
-if (initChallenge && initChallenge.length === 2 && (!dictionarySet.has(initChallenge[0]) || !dictionarySet.has(initChallenge[1])) ) { 
-  initChallenge = [];
-  challengeError = true;
-}
-
-function parseUrlLength(): number {
-  const lengthParam = urlParam("length");
-  if (!lengthParam) return defaultLength;
-  return limitLength(Number(lengthParam));
-}
-
-function parseUrlGameNumber(): number {
-  const gameParam = urlParam("game");
-  if (!gameParam) return 1;
-  const gameNumber = Number(gameParam);
-  return gameNumber >= 1 && gameNumber <= 1000 ? gameNumber : 1;
-}
-
 function Game(props: GameProps) {
   const [gameState, setGameState] = useState(GameState.Playing);
-  const [guesses, setGuesses] = useState<string[]>([]);
+  const [guesses, setGuesses] = useLocalStorage<string[]>("guesses-day-"+dayNum, []);
   const [currentGuess, setCurrentGuess] = useState<string>("");
-  const [challenge, setChallenge] = useState<string[]>(initChallenge);
-  const [wordLength, setWordLength] = useState(
-    (challenge && challenge.length === 2 && challenge[0].length === challenge[1].length) ? challenge[0].length : parseUrlLength()
-  );
-  const [gameNumber, setGameNumber] = useState(parseUrlGameNumber());
+  const wordLength = 5;
   const [targets, setTargets] = useState(() => {
     resetRng();
-    // Skip RNG ahead to the parsed initial game number:
-    for (let i = 1; i < gameNumber; i++) 
-    {
-      randomTargets(wordLength);
-    }
-    return challenge.length === 2 ? challenge : randomTargets(wordLength);
+    return randomTargets(wordLength);
   });
   const [hint, setHint] = useState<string>(
-    challengeError
-      ? `Invalid challenge string, playing random game.`
-      : `Make your first guess!`
+     `Make your first guess!`
   );
-  const currentSeedParams = () =>
-    `?seed=${seed}&length=${wordLength}&game=${gameNumber}`;
-  useEffect(() => {
-    if (seed) {
-      window.history.replaceState(
-        {},
-        document.title,
-        window.location.pathname + currentSeedParams()
-      );
-    }
-  }, [wordLength, gameNumber]);
   const tableRef = useRef<HTMLTableElement>(null);
   const startNextGame = () => {
-    if (challenge) {
-      // Clear the URL parameters:
-      window.history.replaceState({}, document.title, window.location.pathname);
-    }
-    setChallenge([]);
     const newWordLength = limitLength(wordLength);
-    setWordLength(newWordLength);
     setTargets(randomTargets(newWordLength));
     setHint("");
     setGuesses([]);
     setCurrentGuess("");
     setGameState(GameState.Playing);
-    setGameNumber((x) => x + 1);
   };
 
   async function share(copiedHint: string, text?: string) {
-    const url = seed
-      ? window.location.origin + window.location.pathname + currentSeedParams()
-      : getChallengeUrl(targets);
-    const body = url + (text ? "\n\n" + text : "");
+    const url = window.location.origin + window.location.pathname;
+    const body = (text ? text + "\n" : "") + url;
     if (
       /android|iphone|ipad|ipod|webos/i.test(navigator.userAgent) &&
       !/firefox/i.test(navigator.userAgent)
@@ -212,26 +162,11 @@ function Game(props: GameProps) {
         return;
       }
      
-      for (const g of guesses) {
-        const c1 = clue(g, targets[0]);
-        const c2 = clue(g, targets[1]);
-        const feedback1 = violation(props.difficulty, c1, currentGuess);
-        const feedback2 = violation(props.difficulty, c2, currentGuess);
-        if (feedback1) {
-          setHint(feedback1);
-          return;
-        }
-        if (feedback2) {
-          setHint(feedback2);
-          return;
-        }
-      }
       setGuesses((guesses) => guesses.concat([currentGuess]));
       setCurrentGuess((guess) => "");
 
       const gameOver = (verbed: string) =>
-        `You ${verbed}! The answers were ${targets[0].toUpperCase()}, ${targets[1].toUpperCase()}. (Enter to ${
-          challenge ? "play a random game" : "play again"
+        `You ${verbed}! The answers were ${targets[0].toUpperCase()}, ${targets[1].toUpperCase()}. "Play again tomorrow!"
         })`;
 
       if (currentGuess === targets[0] || currentGuess === targets[1]) {
@@ -298,29 +233,6 @@ function Game(props: GameProps) {
   return (
     <div className="Game" style={{ display: props.hidden ? "none" : "block" }}>
       <div className="Game-options">
-        <label htmlFor="wordLength">Letters:</label>
-        <input
-          type="range"
-          min={minLength}
-          max={maxLength}
-          id="wordLength"
-          disabled={
-            gameState === GameState.Playing &&
-            (guesses.length > 0 || currentGuess !== "" || challenge.length !== 2)
-          }
-          value={wordLength}
-          onChange={(e) => {
-            const length = Number(e.target.value);
-            resetRng();
-            setGameNumber(1);
-            setGameState(GameState.Playing);
-            setGuesses([]);
-            setCurrentGuess("");
-            setTargets(randomTargets(length));
-            setWordLength(length);
-            setHint(`${length} letters`);
-          }}
-        ></input>
         <button
           style={{ flex: "0 0 auto" }}
           disabled={gameState !== GameState.Playing || guesses.length === 0}
@@ -357,21 +269,8 @@ function Game(props: GameProps) {
         letterInfo={letterInfo}
         onKey={onKey}
       />
-      <div className="Game-seed-info">
-        {challenge
-          ? "playing a challenge game"
-          : seed
-          ? `${describeSeed(seed)} — length ${wordLength}, game ${gameNumber}`
-          : "playing a random game"}
-      </div>
       <p>
-        <button
-          onClick={() => {
-            share("Link copied to clipboard!");
-          }}
-        >
-          Share a link to this game
-        </button>{" "}
+        {" "}
         {gameState !== GameState.Playing && (
           <button
             onClick={() => {
@@ -381,7 +280,7 @@ function Game(props: GameProps) {
               const score = gameState === GameState.Lost ? "X" : guesses.length;
               share(
                 "Result copied to clipboard!",
-                `${gameName} ${score}/${props.maxGuesses}\n` +
+                `${gameName} #${dayNum} ${score}/${props.maxGuesses}\n` +
                   guesses
                     .map((guess) =>
                       xorclue(clue(guess, targets[0]),clue(guess, targets[1]))

@@ -1,13 +1,16 @@
 import dictionary from "./dictionary.json";
 
-export enum Difficulty {
-  Normal,
-  Hard,
-  UltraHard,
-}
-
 export const gameName = "xordle";
-export const maxGuesses = 12;
+export const maxGuesses = 9;
+
+const now = new Date();
+const todayNumber = Number(
+  now.toLocaleDateString("en-US", { year: "numeric" }) +
+  now.toLocaleDateString("en-US", { month: "2-digit" }) +
+  now.toLocaleDateString("en-US", { day: "2-digit" }));
+const day1Number = Number(20220301);
+const debugDay = undefined;
+export const dayNum = debugDay ?? 1 + todayNumber - day1Number;
 
 export const dictionarySet: Set<string> = new Set(dictionary);
 
@@ -24,8 +27,7 @@ export function urlParam(name: string): string | null {
   return new URLSearchParams(window.location.search).get(name);
 }
 
-export const seed = Number(urlParam("seed"));
-const makeRandom = () => (seed ? mulberry32(seed) : () => Math.random());
+const makeRandom = () => mulberry32(Number(dayNum));
 let random = makeRandom();
 
 export function resetRng(): void {
@@ -58,7 +60,7 @@ export function speak(
 }
 
 export function ordinal(n: number): string {
-  return n + ([, "st", "nd", "rd"][(n % 100 >> 3) ^ 1 && n % 10] || "th");
+  return n + (["", "st", "nd", "rd"][(n % 100 >> 3) ^ 1 && n % 10] || "th");
 }
 
 export const englishNumbers =

@@ -21,7 +21,7 @@ export function About() {
       <hr />
       <p>
         Report issues{" "}
-        <a href="https://github.com/6vz/xordle/issues">here</a>.
+        <a href="https://github.com/6zs/xordle/issues">here</a>.
       </p>
       <p>
         This game will be free and ad-free forever,
