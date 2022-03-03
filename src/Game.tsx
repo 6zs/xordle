@@ -102,15 +102,6 @@ function Game(props: GameProps) {
      `Make your first guess!`
   );
   const tableRef = useRef<HTMLTableElement>(null);
-  const startNextGame = () => {
-    const newWordLength = limitLength(wordLength);
-    setTargets(randomTargets(newWordLength));
-    setHint("");
-    setGuesses([]);
-    setCurrentGuess("");
-    setGameState(GameState.Playing);
-  };
-
   async function share(copiedHint: string, text?: string) {
     const url = window.location.origin + window.location.pathname;
     const body = (text ? text + "\n" : "") + url;
@@ -137,9 +128,6 @@ function Game(props: GameProps) {
 
   const onKey = (key: string) => {
     if (gameState !== GameState.Playing) {
-      if (key === "Enter") {
-        startNextGame();
-      }
       return;
     }
     if (guesses.length === props.maxGuesses) return;
@@ -237,7 +225,7 @@ function Game(props: GameProps) {
           disabled={gameState !== GameState.Playing || guesses.length === 0}
           onClick={() => {
             setHint(
-              `The answers were ${targets[0].toUpperCase()}, ${targets[1].toUpperCase()}. (Enter to play again)`
+              `The answers were ${targets[0].toUpperCase()}, ${targets[1].toUpperCase()}.`
             );
             setGameState(GameState.Lost);
             (document.activeElement as HTMLElement)?.blur();
