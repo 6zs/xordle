@@ -154,7 +154,7 @@ function Game(props: GameProps) {
       setCurrentGuess((guess) => "");
 
       const gameOver = (verbed: string) =>
-        `You ${verbed}! The answers were ${targets[0].toUpperCase()}, ${targets[1].toUpperCase()}. "Play again tomorrow!"`;
+        `You ${verbed}! The answers were ${targets[0].toUpperCase()}, ${targets[1].toUpperCase()}. Play again tomorrow!`;
 
       if (currentGuess === targets[0] || currentGuess === targets[1]) {
         setHint(gameOver("won"));
