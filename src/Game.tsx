@@ -322,7 +322,7 @@ function Game(props: GameProps) {
               );
             }}
           >
-            Share emoji results
+            share emoji results
           </button>
         )}
       </p>
