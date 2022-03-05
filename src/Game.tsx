@@ -200,8 +200,7 @@ function Game(props: GameProps) {
     }
     if ( (guesses.includes(targets[0]) && guesses.includes(targets[1])) ) {
       setGameState(GameState.Won);
-    } 
-    if (guesses.length === props.maxGuesses) {
+    } else if (guesses.length === props.maxGuesses) {
       setGameState(GameState.Lost);
     } 
     setHint(getHintFromState());    
