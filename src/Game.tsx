@@ -224,7 +224,7 @@ function Game(props: GameProps) {
 
   useEffect(() => {
     doWinOrLose();
-  }, [currentGuess, guesses, targets]);
+  }, [currentGuess, gameState, guesses, targets]);
 
   let letterInfo = new Map<string, Clue>();
   const tableRows = Array(props.maxGuesses)
