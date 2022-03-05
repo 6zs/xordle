@@ -9,7 +9,8 @@ import {
   pick,
   resetRng,
   speak,
-  dayNum
+  dayNum,
+  cheat
 } from "./util";
 
 enum GameState {
@@ -89,18 +90,31 @@ function randomTargets(wordLength: number): string[] {
   return [candidate1, candidate2];
 }
 
+function randomClue(wordLength: number, targets: string[]) {
+  const eligible = targets.filter((word) => word.length === wordLength);
+  let candidate: string;
+  do {
+    candidate = pick(eligible);
+  } while (targets.includes(candidate));
+  return candidate;
+}
+
+function gameOverText(state: GameState, targets: string[]) : string {
+  const verbed = state === GameState.Won ? "won" : "lost";
+  return `you ${verbed}! the answers were ${targets[0].toUpperCase()}, ${targets[1].toUpperCase()}. play again tomorrow`; 
+}
+
 function Game(props: GameProps) {
-  const [gameState, setGameState] = useState(GameState.Playing);
-  const [guesses, setGuesses] = useLocalStorage<string[]>("guesses-day-"+dayNum, []);
-  const [currentGuess, setCurrentGuess] = useState<string>("");
   const wordLength = 5;
   const [targets, setTargets] = useState(() => {
     resetRng();
     return randomTargets(wordLength);
   });
-  const [hint, setHint] = useState<string>(
-     `Make your first guess!`
-  );
+  const [gameState, setGameState] = useLocalStorage<GameState>("game-day-"+dayNum, GameState.Playing);
+  const [guesses, setGuesses] = useLocalStorage<string[]>("guesses-day-"+dayNum, []);
+  const [currentGuess, setCurrentGuess] = useState<string>("");
+  const [hint, setHint] = useState<string>(getHintFromState());
+  
   const tableRef = useRef<HTMLTableElement>(null);
   async function share(copiedHint: string, text?: string) {
     const url = window.location.origin + window.location.pathname;
@@ -126,48 +140,71 @@ function Game(props: GameProps) {
     setHint(url);
   }
 
+  function getHintFromState() {    
+    if  (gameState === GameState.Won || gameState === GameState.Lost) {
+      return gameOverText(gameState, targets);
+    }
+    if (guesses.includes(targets[0])) {
+      return `you got ${targets[0].toUpperCase()}, one more to go`;
+    }     
+    if (guesses.includes(targets[1])) {
+      return `you got ${targets[1].toUpperCase()}, one more to go`;
+    }
+    if ( guesses.length === 0 && currentGuess === undefined ) {
+      return `start guessin'`;
+    }
+    return ``;
+  }
+
   const onKey = (key: string) => {
     if (gameState !== GameState.Playing) {
       return;
     }
-    if (guesses.length === props.maxGuesses) return;
+    if (guesses.length === props.maxGuesses) {
+      return;
+    }
     if (/^[a-z]$/i.test(key)) {
       setCurrentGuess((guess) =>
         (guess + key.toLowerCase()).slice(0, wordLength)
       );
       tableRef.current?.focus();
-      setHint("");
+      setHint(getHintFromState());
     } else if (key === "Backspace") {
       setCurrentGuess((guess) => guess.slice(0, -1));
-      setHint("");
+      setHint(getHintFromState());
     } else if (key === "Enter") {
+    
       if (currentGuess.length !== wordLength) {
-        setHint("Too short");
+        setHint("type more letters");
+        return;
+      }
+      if(guesses.includes(currentGuess)) {
+        setHint("you've already guessed that");
         return;
       }
       if (!dictionary.includes(currentGuess)) {
-        setHint("Not a valid word");
+        setHint(`that's not in the word list`);
         return;
       }
      
       setGuesses((guesses) => guesses.concat([currentGuess]));
-      setCurrentGuess((guess) => "");
-
-      const gameOver = (verbed: string) =>
-        `You ${verbed}! The answers were ${targets[0].toUpperCase()}, ${targets[1].toUpperCase()}. Play again tomorrow!`;
-
-      if (currentGuess === targets[0] || currentGuess === targets[1]) {
-        setHint(gameOver("won"));
-        setGameState(GameState.Won);
-      } else if (guesses.length + 1 === props.maxGuesses) {
-        setHint(gameOver("lost"));
-        setGameState(GameState.Lost);
-      } else {
-        setHint("");
-        speak(describeClue(clue(currentGuess, targets[0])));
-        speak(describeClue(clue(currentGuess, targets[1])));
-      }
+      setCurrentGuess("");
+      speak(describeClue(xorclue(clue(currentGuess, targets[0]), clue(currentGuess, targets[1]))))
+      doWinOrLose();
     }
+  };
+
+  const doWinOrLose = () => {
+    if ( targets.length != 2 ) {
+      return;
+    }
+    if ( (guesses.includes(targets[0]) && guesses.includes(targets[1])) ) {
+      setGameState(GameState.Won);
+    } 
+    if (guesses.length === props.maxGuesses) {
+      setGameState(GameState.Lost);
+    } 
+    setHint(getHintFromState());    
   };
 
   useEffect(() => {
@@ -184,6 +221,10 @@ function Game(props: GameProps) {
       document.removeEventListener("keydown", onKeyDown);
     };
   }, [currentGuess, gameState]);
+
+  useEffect(() => {
+    doWinOrLose();
+  }, [currentGuess, guesses, targets]);
 
   let letterInfo = new Map<string, Clue>();
   const tableRows = Array(props.maxGuesses)
@@ -217,6 +258,8 @@ function Game(props: GameProps) {
       );
     });
 
+  const cheatText = cheat ? ` ${targets}` : "";
+
   return (
     <div className="Game" style={{ display: props.hidden ? "none" : "block" }}>
       <div className="Game-options">
@@ -233,6 +276,7 @@ function Game(props: GameProps) {
         >
           Give up
         </button>
+        {`${cheatText}`}
       </div>
       <table
         className="Game-rows"
@@ -266,8 +310,8 @@ function Game(props: GameProps) {
                 : ["⬛", "🟨", "🟩"];
               const score = gameState === GameState.Lost ? "X" : guesses.length;
               share(
-                "Result copied to clipboard!",
-                `${gameName} #${dayNum} ${score}/${props.maxGuesses}\n` +
+                "result copied to clipboard!",
+                `daily ${gameName} #${dayNum} ${score}/${props.maxGuesses}\n` +
                   guesses
                     .map((guess) =>
                       xorclue(clue(guess, targets[0]),clue(guess, targets[1]))

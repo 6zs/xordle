@@ -9,9 +9,9 @@ const todayNumber = Number(
   now.toLocaleDateString("en-US", { month: "2-digit" }) +
   now.toLocaleDateString("en-US", { day: "2-digit" }));
 const day1Number = Number(20220301);
-const debugDay = undefined;
+const debugDay = new URLSearchParams(window.location.search).get("day") ?? undefined;
+export const cheat = new URLSearchParams(window.location.search).get("cheat") ?? undefined;
 export const dayNum = debugDay ?? 1 + todayNumber - day1Number;
-
 export const dictionarySet: Set<string> = new Set(dictionary);
 
 function mulberry32(a: number) {

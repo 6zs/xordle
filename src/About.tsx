@@ -5,29 +5,29 @@ import { gameName, maxGuesses } from "./util";
 export function About() {
   return (
     <div className="App-about">
-      <p>
-        <i>{gameName}</i> is a variant of the word game{" "}
-        <a href="https://www.powerlanguage.co.uk/wordle/">
-          <i>Wordle</i>
-        </a>{" "}
-        by <a href="https://twitter.com/powerlanguish">powerlanguage</a>, 
-        based on <a href="https://github.com/lynn/hello-wordl">hello wordl</a>
-      </p>
-      <p>
-        You get {maxGuesses} tries to guess a target word.
+        <p>
+          {gameName} is a variant of {" "}
+          <a href="https://www.powerlanguage.co.uk/wordle/">
+            wordle
+          </a>{" "}
+          <br />code based on a fork of <a href="https://github.com/lynn/hello-wordl">hello wordl</a>
+        </p>
+      <p className="App-instructions">
+        there are two secret words
+        <br />they share no letters in common
+        <br />you get {maxGuesses} tries to guess both words
         <br />
-        There are TWO target words. They share no letters in common. Letters in your guess are green if they would be green in either of the secret words in Wordle. Otherwise, they're yellow if they'd be yellow in either.
+        <br />letters in your guess are:
+        <br />🟩 green if it would be green in either secret word in wordle
+        <br />🟨 yellow if it would be yellow in either 
+        <br />⬛ grey if it does not appear in either word
       </p>
       <hr />
       <p>
-        Report issues{" "}
-        <a href="https://github.com/6zs/xordle/issues">here</a>.
+        report issues{" "}
+        <a href="https://github.com/6zs/xordle/issues">here</a>
       </p>
       <p>
-        This game will be free and ad-free forever,
-        <br />
-        but you can <a href="https://ko-fi.com/chordbug">buy chordbug a coffee</a> if
-        you'd like.
       </p>
     </div>
   );
