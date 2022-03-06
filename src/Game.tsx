@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Row, RowState } from "./Row";
 import dictionary from "./dictionary.json";
-import { Clue, clue, describeClue, xorclue } from "./clue";
+import { Clue, clue, CluedLetter, describeClue, xorclue } from "./clue";
 import { Keyboard } from "./Keyboard";
 import targetList from "./targets.json";
 import {
@@ -202,7 +202,7 @@ function Game(props: GameProps) {
   };
 
   const doWinOrLose = () => {
-    if ( targets.length != 2 ) {
+    if ( targets.length !== 2 ) {
       return;
     }
     if ( (guesses.includes(targets[0]) && guesses.includes(targets[1])) ) {
@@ -232,13 +232,23 @@ function Game(props: GameProps) {
     doWinOrLose();
   }, [currentGuess, gameState, guesses, targets]);
 
+  let reduceCorrect = (prev: CluedLetter, iter: CluedLetter, currentIndex: number, array: CluedLetter[]) => {
+    let reduced: CluedLetter = prev;
+    if ( iter.clue !== Clue.Correct ) {
+      reduced.clue = Clue.Absent;
+    }
+    return reduced;
+  };
+
   let letterInfo = new Map<string, Clue>();
   const tableRows = Array(props.maxGuesses)
     .fill(undefined)
     .map((_, i) => {
       const guess = [...guesses, currentGuess][i] ?? "";
       const cluedLetters = xorclue(clue(guess, targets[0]),clue(guess, targets[1]));
+      const isTarget = targets.includes(guess);
       const lockedIn = i < guesses.length;
+      const isAllGreen = lockedIn && cluedLetters.reduce( reduceCorrect, {clue: Clue.Correct, letter: ""} ).clue === Clue.Correct;                
       if (lockedIn) {
         for (const { clue, letter } of cluedLetters) {
           if (clue === undefined) break;
@@ -260,6 +270,7 @@ function Game(props: GameProps) {
               : RowState.Pending
           }
           cluedLetters={cluedLetters}
+          annotation={isAllGreen && !isTarget ? "huh?" : ""}
         />
       );
     });
@@ -317,7 +328,7 @@ function Game(props: GameProps) {
               const score = gameState === GameState.Lost ? "X" : guesses.length;
               share(
                 "result copied to clipboard!",
-                `daily ${gameName} #${dayNum} ${score}/${props.maxGuesses}\n` +
+                `${gameName} #${dayNum} ${score}/${props.maxGuesses}\n` +
                   guesses
                     .map((guess) =>
                       xorclue(clue(guess, targets[0]),clue(guess, targets[1]))

@@ -43,7 +43,9 @@ body {
 .Row-annotation {
   margin-inline-start: 16px;
   width: 5em;
-  text-align: start;
+  text-align: end;
+  margin-left: -80px;
+  padding-left: 80px;
 }
 
 .App-container {
