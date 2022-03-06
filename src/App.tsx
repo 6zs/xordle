@@ -3,6 +3,7 @@ import { maxGuesses } from "./util";
 import Game from "./Game";
 import { useEffect, useState } from "react";
 import { About } from "./About";
+import { Stats } from "./Stats";
 
 function useSetting<T>(
   key: string,
@@ -27,7 +28,7 @@ function useSetting<T>(
 }
 
 function App() {
-  type Page = "game" | "about" | "settings";
+  type Page = "game" | "about" | "settings" | "stats";
   const [page, setPage] = useState<Page>("game");
   const prefersDark =
     window.matchMedia &&
@@ -78,6 +79,7 @@ function App() {
           <>
             {link("❓", "About", "about")}
             {link("⚙️", "Settings", "settings")}
+            {link("📊", "Stats", "stats")}
           </>
         )}
       </div>
@@ -91,6 +93,7 @@ function App() {
       >
       </div>
       {page === "about" && <About />}
+      {page === "stats" && <Stats />}
       {page === "settings" && (
         <div className="Settings">
           <div className="Settings-setting">

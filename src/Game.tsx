@@ -10,14 +10,18 @@ import {
   resetRng,
   speak,
   dayNum,
-  cheat
+  cheat,
+  maxGuesses
 } from "./util";
 
-enum GameState {
+export enum GameState {
   Playing,
   Won,
   Lost,
 }
+
+export const gameDayStoragePrefix = "game-day-";
+export const guessesDayStoragePrefix = "guesses-day-";
 
 function useLocalStorage<T>(
   key: string,
@@ -47,6 +51,7 @@ interface GameProps {
   colorBlind: boolean;
   keyboardLayout: string;
 }
+
 
 const targets = targetList.slice(0, targetList.indexOf("murky") + 1); // Words no rarer than this one
 const minLength = 4;
@@ -104,17 +109,19 @@ function gameOverText(state: GameState, targets: string[]) : string {
   return `you ${verbed}! the answers were ${targets[0].toUpperCase()}, ${targets[1].toUpperCase()}. play again tomorrow`; 
 }
 
+
 function Game(props: GameProps) {
   const wordLength = 5;
   const [targets, setTargets] = useState(() => {
     resetRng();
     return randomTargets(wordLength);
   });
-  const [gameState, setGameState] = useLocalStorage<GameState>("game-day-"+dayNum, GameState.Playing);
-  const [guesses, setGuesses] = useLocalStorage<string[]>("guesses-day-"+dayNum, []);
+
+  const [gameState, setGameState] = useLocalStorage<GameState>(gameDayStoragePrefix+dayNum, GameState.Playing);
+  const [guesses, setGuesses] = useLocalStorage<string[]>(guessesDayStoragePrefix+dayNum, []);
   const [currentGuess, setCurrentGuess] = useState<string>("");
   const [hint, setHint] = useState<string>(getHintFromState());
-  
+    
   const tableRef = useRef<HTMLTableElement>(null);
   async function share(copiedHint: string, text?: string) {
     const url = window.location.origin + window.location.pathname;
@@ -267,20 +274,20 @@ function Game(props: GameProps) {
           disabled={gameState !== GameState.Playing || guesses.length === 0}
           onClick={() => {
             setHint(
-              `The answers were ${targets[0].toUpperCase()}, ${targets[1].toUpperCase()}.`
+              `the answers were ${targets[0].toUpperCase()}, ${targets[1].toUpperCase()}.`
             );
             setGameState(GameState.Lost);
             (document.activeElement as HTMLElement)?.blur();
           }}
         >
-          Give up
+          give up
         </button>
         {`${cheatText}`}
       </div>
       <table
         className="Game-rows"
         tabIndex={0}
-        aria-label="Table of guesses"
+        aria-label="table of guesses"
         ref={tableRef}
       >
         <tbody>{tableRows}</tbody>
