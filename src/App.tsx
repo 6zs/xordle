@@ -103,7 +103,7 @@ function App() {
               checked={dark}
               onChange={() => setDark((x: boolean) => !x)}
             />
-            <label htmlFor="dark-setting">Dark theme</label>
+            <label htmlFor="dark-setting">dark theme</label>
           </div>
           <div className="Settings-setting">
             <input
@@ -112,10 +112,10 @@ function App() {
               checked={colorBlind}
               onChange={() => setColorBlind((x: boolean) => !x)}
             />
-            <label htmlFor="colorblind-setting">High-contrast colors</label>
+            <label htmlFor="colorblind-setting">high-contrast colors</label>
           </div>
           <div className="Settings-setting">
-            <label htmlFor="keyboard-setting">Keyboard layout:</label>
+            <label htmlFor="keyboard-setting">keyboard layout:</label>
             <select
               name="keyboard-setting"
               id="keyboard-setting"

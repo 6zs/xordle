@@ -127,12 +127,14 @@ table.Game-rows > tbody {
 .letter-correct {
   border: 2px solid rgba(0, 0, 0, 0.3);
   background-color: rgb(87, 172, 120);
+  /*background-color: #0057b7;*/
   color: white !important;
 }
 
 .letter-elsewhere {
   border: 2px dotted rgba(0, 0, 0, 0.3);
   background-color: #e9c601;
+  /*background-color: #ffd700;*/
   color: white !important;
 }
 

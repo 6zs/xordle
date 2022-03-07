@@ -15,6 +15,21 @@ export function Keyboard(props: KeyboardProps) {
         .map((key) => key.replace("B", "Backspace").replace("E", "Enter"))
     );
 
+  let numAbsent = 0;
+  let numElsewhere = 0;
+  let numCorrect = 0;
+  props.letterInfo.forEach((value: Clue, key: string) => {
+    if ( value == Clue.Absent ) {
+      numAbsent++;
+    }
+    if ( value == Clue.Elsewhere ) {
+      numElsewhere++;
+    }
+    if ( value == Clue.Correct ) {
+      numCorrect++;
+    }
+  });
+
   return (
     <div className="Game-keyboard" aria-hidden="true">
       {keyboard.map((row, i) => (
@@ -43,6 +58,11 @@ export function Keyboard(props: KeyboardProps) {
           })}
         </div>
       ))}
+      <div className="Game-keyboard-row">
+        <div className="Game-keyboard-button letter-correct">{numCorrect}</div>
+        <div className="Game-keyboard-button letter-elsewhere">{numElsewhere}</div>
+        <div className="Game-keyboard-button letter-absent">{numAbsent}</div>
+      </div>
     </div>
   );
 }
