@@ -320,15 +320,8 @@ function Game(props: GameProps) {
         }}
       >
         {hint || `\u00a0`}
-      </p>
-      <Keyboard
-        layout={props.keyboardLayout}
-        letterInfo={letterInfo}
-        onKey={onKey}
-      />
-      <p>
-        {" "}
         {gameState !== GameState.Playing && (
+          <p>
           <button
             onClick={() => {
               const emoji = props.colorBlind
@@ -350,8 +343,14 @@ function Game(props: GameProps) {
           >
             share emoji results
           </button>
+          </p>
         )}
       </p>
+      <Keyboard
+        layout={props.keyboardLayout}
+        letterInfo={letterInfo}
+        onKey={onKey}
+      />
     </div>
   );
 }
