@@ -10,7 +10,6 @@ export function Stats() {
   let wins: number = 0;
   let maxHistogram : number = 0;
 
-
   for (let i = 2; i <= maxGuesses; ++i) {
     histogram[i] = 0;
   }

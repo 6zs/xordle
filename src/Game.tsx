@@ -121,6 +121,15 @@ function Game(props: GameProps) {
   const [guesses, setGuesses] = useLocalStorage<string[]>(guessesDayStoragePrefix+dayNum, []);
   const [currentGuess, setCurrentGuess] = useState<string>("");
   const [hint, setHint] = useState<string>(getHintFromState());
+
+  try {
+    let g = window.localStorage.getItem("game-day-5");
+    if ( g === "2" ) {
+      window.localStorage.setItem("game-day-5", "1");
+    }
+  } catch(e) {
+
+  }
     
   const tableRef = useRef<HTMLTableElement>(null);
   async function share(copiedHint: string, text?: string) {
@@ -270,7 +279,7 @@ function Game(props: GameProps) {
               : RowState.Pending
           }
           cluedLetters={cluedLetters}
-          annotation={isAllGreen && !isTarget ? "huh?" : ""}
+          annotation={isAllGreen && !isTarget ? "huh?" : `\u00a0`}
         />
       );
     });
