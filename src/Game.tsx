@@ -121,16 +121,7 @@ function Game(props: GameProps) {
   const [guesses, setGuesses] = useLocalStorage<string[]>(guessesDayStoragePrefix+dayNum, []);
   const [currentGuess, setCurrentGuess] = useState<string>("");
   const [hint, setHint] = useState<string>(getHintFromState());
-
-  try {
-    let g = window.localStorage.getItem("game-day-5");
-    if ( g === "2" ) {
-      window.localStorage.setItem("game-day-5", "1");
-    }
-  } catch(e) {
-
-  }
-    
+   
   const tableRef = useRef<HTMLTableElement>(null);
   async function share(copiedHint: string, text?: string) {
     const url = window.location.origin + window.location.pathname;
@@ -176,7 +167,11 @@ function Game(props: GameProps) {
     if (gameState !== GameState.Playing) {
       return;
     }
-    if (guesses.length === props.maxGuesses) {
+
+    const bonusGuess = guesses.length === maxGuesses && targets.includes(guesses[guesses.length-1]);
+    const realMaxGuesses = props.maxGuesses+(bonusGuess?1:0);
+  
+    if (guesses.length === realMaxGuesses) {
       return;
     }
     if (/^[a-z]$/i.test(key)) {
@@ -216,7 +211,11 @@ function Game(props: GameProps) {
     }
     if ( (guesses.includes(targets[0]) && guesses.includes(targets[1])) ) {
       setGameState(GameState.Won);
-    } else if (guesses.length === props.maxGuesses) {
+    } else if (guesses.length >= props.maxGuesses) {
+      if (targets.includes(guesses[guesses.length-1])) {
+        setHint("last chance! do a bonus guess")
+        return;
+      }        
       setGameState(GameState.Lost);
     } 
     setHint(getHintFromState());    
@@ -249,14 +248,17 @@ function Game(props: GameProps) {
     return reduced;
   };
 
+  const bonusGuess = guesses.length === maxGuesses && targets.includes(guesses[guesses.length-1]);
+  const realMaxGuesses = Math.max(guesses.length,props.maxGuesses+(bonusGuess?1:0));
   let letterInfo = new Map<string, Clue>();
-  const tableRows = Array(props.maxGuesses)
+  const tableRows = Array(realMaxGuesses)
     .fill(undefined)
     .map((_, i) => {
       const guess = [...guesses, currentGuess][i] ?? "";
       const cluedLetters = xorclue(clue(guess, targets[0]),clue(guess, targets[1]));
       const isTarget = targets.includes(guess);
-      const lockedIn = i < guesses.length;
+      const isBonusGuess = i === maxGuesses;
+      const lockedIn = (!isBonusGuess && i < guesses.length) || (isBonusGuess && guesses.length === realMaxGuesses);
       const isAllGreen = lockedIn && cluedLetters.reduce( reduceCorrect, {clue: Clue.Correct, letter: ""} ).clue === Clue.Correct;                
       if (lockedIn) {
         for (const { clue, letter } of cluedLetters) {
@@ -274,12 +276,12 @@ function Game(props: GameProps) {
           rowState={
             lockedIn
               ? RowState.LockedIn
-              : i === guesses.length
+              : (i === guesses.length || isBonusGuess)
               ? RowState.Editing
               : RowState.Pending
           }
           cluedLetters={cluedLetters}
-          annotation={isAllGreen && !isTarget ? "huh?" : `\u00a0`}
+          annotation={isBonusGuess ? "bonus!" : ((isAllGreen && !isTarget) ? "huh?" : `\u00a0`)}          
         />
       );
     });
