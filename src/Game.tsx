@@ -109,7 +109,6 @@ function gameOverText(state: GameState, targets: string[]) : string {
   return `you ${verbed}! the answers were ${targets[0].toUpperCase()}, ${targets[1].toUpperCase()}. play again tomorrow`; 
 }
 
-
 function Game(props: GameProps) {
   const wordLength = 5;
   const [targets, setTargets] = useState(() => {
@@ -248,8 +247,11 @@ function Game(props: GameProps) {
     return reduced;
   };
 
-  const bonusGuess = guesses.length === maxGuesses && targets.includes(guesses[guesses.length-1]);
-  const realMaxGuesses = Math.max(guesses.length,props.maxGuesses+(bonusGuess?1:0));
+  const showBonusGuessRow =  
+    (gameState === GameState.Playing && guesses.length === maxGuesses && targets.includes(guesses[guesses.length-1])) ||
+    (gameState !== GameState.Playing && guesses.length === (maxGuesses+1));
+
+  const realMaxGuesses = Math.max(guesses.length,(showBonusGuessRow ? props.maxGuesses+1 : props.maxGuesses ));
   let letterInfo = new Map<string, Clue>();
   const tableRows = Array(realMaxGuesses)
     .fill(undefined)
