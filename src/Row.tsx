@@ -8,7 +8,6 @@ export enum RowState {
 
 interface RowProps {
   rowState: RowState;
-  wordLength: number;
   cluedLetters: CluedLetter[];
   annotation?: string;
 }
@@ -17,8 +16,8 @@ export function Row(props: RowProps) {
   const isLockedIn = props.rowState === RowState.LockedIn;
   const isEditing = props.rowState === RowState.Editing;
   const letterDivs = props.cluedLetters
-    .concat(Array(props.wordLength).fill({ clue: Clue.Absent, letter: "" }))
-    .slice(0, props.wordLength)
+    .concat(Array(5).fill({ clue: Clue.Absent, letter: "" }))
+    .slice(0, 5)
     .map(({ clue, letter }, i) => {
       let letterClass = "Row-letter";
       if (isLockedIn && clue !== undefined) {

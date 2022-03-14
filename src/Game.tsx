@@ -52,13 +52,7 @@ interface GameProps {
   keyboardLayout: string;
 }
 
-
-const targets = targetList.slice(0, targetList.indexOf("murky") + 1); // Words no rarer than this one
-const minLength = 4;
-const defaultLength = 5;
-const maxLength = 11;
-const limitLength = (n: number) =>
-  n >= minLength && n <= maxLength ? n : defaultLength;
+const eligible = targetList.slice(0, targetList.indexOf("murky") + 1).filter((word) => word.length === 5); // Words no rarer than this one
 
 function isValidCluePair(word1: string, word2: string) {
   if (/\*/.test(word1)) {
@@ -84,8 +78,7 @@ function isValidCluePair(word1: string, word2: string) {
   return true;
 }
 
-function randomTargets(wordLength: number): string[] {
-  const eligible = targets.filter((word) => word.length === wordLength);
+function randomTargets(): string[] {
   let candidate1: string;
   let candidate2: string;
   do {
@@ -95,8 +88,15 @@ function randomTargets(wordLength: number): string[] {
   return [candidate1, candidate2];
 }
 
-function randomClue(wordLength: number, targets: string[]) {
-  const eligible = targets.filter((word) => word.length === wordLength);
+function initialGuess(targets: string[]): [string] {
+  let candidate: string;
+  do {
+    candidate = pick(eligible);
+  } while(targets.includes(candidate));
+  return [candidate];
+}
+
+function randomClue(targets: string[]) {
   let candidate: string;
   do {
     candidate = pick(eligible);
@@ -110,14 +110,14 @@ function gameOverText(state: GameState, targets: string[]) : string {
 }
 
 function Game(props: GameProps) {
-  const wordLength = 5;
+
   const [targets, setTargets] = useState(() => {
     resetRng();
-    return randomTargets(wordLength);
+    return randomTargets();
   });
 
   const [gameState, setGameState] = useLocalStorage<GameState>(gameDayStoragePrefix+dayNum, GameState.Playing);
-  const [guesses, setGuesses] = useLocalStorage<string[]>(guessesDayStoragePrefix+dayNum, []);
+  const [guesses, setGuesses] = useLocalStorage<string[]>(guessesDayStoragePrefix+dayNum, dayNum > 14 ? initialGuess(targets) : []);
   const [currentGuess, setCurrentGuess] = useState<string>("");
   const [hint, setHint] = useState<string>(getHintFromState());
    
@@ -175,7 +175,7 @@ function Game(props: GameProps) {
     }
     if (/^[a-z]$/i.test(key)) {
       setCurrentGuess((guess) =>
-        (guess + key.toLowerCase()).slice(0, wordLength)
+        (guess + key.toLowerCase()).slice(0, 5)
       );
       tableRef.current?.focus();
       setHint(getHintFromState());
@@ -184,7 +184,7 @@ function Game(props: GameProps) {
       setHint(getHintFromState());
     } else if (key === "Enter") {
     
-      if (currentGuess.length !== wordLength) {
+      if (currentGuess.length !== 5) {
         setHint("type more letters");
         return;
       }
@@ -273,8 +273,7 @@ function Game(props: GameProps) {
       }
       return (
         <Row
-          key={i}
-          wordLength={wordLength}
+          key={i}         
           rowState={
             lockedIn
               ? RowState.LockedIn
@@ -293,20 +292,7 @@ function Game(props: GameProps) {
   return (
     <div className="Game" style={{ display: props.hidden ? "none" : "block" }}>
       <div className="Game-options">
-        <button
-          style={{ flex: "0 0 auto" }}
-          disabled={gameState !== GameState.Playing || guesses.length === 0}
-          onClick={() => {
-            setHint(
-              `the answers were ${targets[0].toUpperCase()}, ${targets[1].toUpperCase()}.`
-            );
-            setGameState(GameState.Lost);
-            (document.activeElement as HTMLElement)?.blur();
-          }}
-        >
-          give up
-        </button>
-        {`${cheatText}`}
+        day {dayNum}{`${cheatText}`}
       </div>
       <table
         className="Game-rows"

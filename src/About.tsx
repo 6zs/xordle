@@ -17,10 +17,13 @@ export function About() {
         <br />they share no letters in common
         <br />you get {maxGuesses} tries to guess both words
         <br />
+        <br />you start with a random clue
+        <br />it's the same for everyone
+        <br />
         <br />letters in your guess are:
-        <br />🟩 green if it would be green in either secret word in wordle
-        <br />🟨 yellow if it would be yellow in either 
-        <br />⬛ grey if it does not appear in either word
+        <br />🟩 green if green in either word (right letter, right spot)
+        <br />🟨 yellow if yellow in either word (right letter, wrong spot) 
+        <br />⬛ grey if it does not appear in either word 
       </p>
       <hr />
       <p>
