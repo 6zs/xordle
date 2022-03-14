@@ -77,9 +77,9 @@ function App() {
           link("❌", "Close", "game")
         ) : (
           <>
-            {link("📊", "Stats", "stats")}
+            {link("❓", "About", "about")}          
             {link("⚙️", "Settings", "settings")}            
-            {link("❓", "About", "about")}
+            {link("📊", "Stats", "stats")}
           </>
         )}
       </div>

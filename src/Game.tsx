@@ -293,6 +293,8 @@ function Game(props: GameProps) {
     <div className="Game" style={{ display: props.hidden ? "none" : "block" }}>
       <div className="Game-options">
         day {dayNum}{`${cheatText}`}
+        {dayNum > 14 && <br/>}
+        {dayNum > 14 && "what's new: everyone starts with the same first clue"}
       </div>
       <table
         className="Game-rows"
