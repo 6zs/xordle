@@ -10,7 +10,7 @@ export function Stats() {
   let wins: number = 0;
   let maxHistogram : number = 0;
 
-  for (let i = 2; i <= maxGuesses; ++i) {
+  for (let i = 2; i <= maxGuesses+1; ++i) {
     histogram[i] = 0;
   }
 
@@ -93,7 +93,7 @@ export function Stats() {
       <div className="guess-stat"><div className="guess-count">7</div><div className="guess-graph"><div className="guess-bar" style={styles[7]}><div className="guess-games">{histogram[7]}</div></div></div></div>
       <div className="guess-stat"><div className="guess-count">8</div><div className="guess-graph"><div className="guess-bar" style={styles[8]}><div className="guess-games">{histogram[8]}</div></div></div></div>
       <div className="guess-stat"><div className="guess-count">9</div><div className="guess-graph"><div className="guess-bar" style={styles[9]}><div className="guess-games">{histogram[9]}</div></div></div></div>
-      
+      {histogram[maxGuesses+1] > 0 && <div className="guess-stat"><div className="guess-count">10</div><div className="guess-graph"><div className="guess-bar" style={styles[10]}><div className="guess-games">{histogram[10]}</div></div></div></div>}
     </div>
   </div>
   );

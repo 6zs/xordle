@@ -19,13 +19,13 @@ export function Keyboard(props: KeyboardProps) {
   let numElsewhere = 0;
   let numCorrect = 0;
   props.letterInfo.forEach((value: Clue, key: string) => {
-    if ( value == Clue.Absent ) {
+    if ( value === Clue.Absent ) {
       numAbsent++;
     }
-    if ( value == Clue.Elsewhere ) {
+    if ( value === Clue.Elsewhere ) {
       numElsewhere++;
     }
-    if ( value == Clue.Correct ) {
+    if ( value === Clue.Correct ) {
       numCorrect++;
     }
   });
