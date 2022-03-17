@@ -13,6 +13,7 @@ import {
   cheat,
   maxGuesses
 } from "./util";
+import { countReset } from "console";
 
 export enum GameState {
   Playing,
@@ -71,11 +72,36 @@ function isValidCluePair(word1: string, word2: string) {
     if(word1[i] === word2[i]) {
       return false;
     }
-    if (word2.search(word1[i]) !== -1) {
+    if (word2.lastIndexOf(word1[i]) !== -1) {
       return false;
     }
   }
   return true;
+}
+
+function countMatching(cluedLetters: CluedLetter[]) : Map<Clue, number> {
+  let counts = new Map<Clue,number>();
+  for (const letter of cluedLetters) {
+    let clue = letter.clue;
+    if (clue) {
+      let count = counts.get(clue) ?? 0;
+      counts.set(clue, count+1);
+    }
+  }
+  return counts;
+}
+
+function isGoodInitialGuess(targets: string[], candidate: string) {
+  if (/\*/.test(candidate)) {
+    return false;
+  }
+  let hints1 = clue(candidate, targets[0]);
+  let hints2 = clue(candidate, targets[1]);
+  let green1 = countMatching(hints1).get(Clue.Correct) ?? 0;
+  let yellow1 = countMatching(hints1).get(Clue.Elsewhere) ?? 0;
+  let green2 = countMatching(hints2).get(Clue.Correct) ?? 0;
+  let yellow2 = countMatching(hints2).get(Clue.Elsewhere) ?? 0;  
+  return green1+yellow1 < 5 && green2+yellow2 < 5;
 }
 
 function randomTargets(): string[] {
@@ -92,7 +118,7 @@ function initialGuess(targets: string[]): [string] {
   let candidate: string;
   do {
     candidate = pick(eligible);
-  } while(targets.includes(candidate));
+  } while(!isGoodInitialGuess(targets, candidate));
   return [candidate];
 }
 
@@ -254,7 +280,9 @@ function Game(props: GameProps) {
   const realMaxGuesses = Math.max(guesses.length,(showBonusGuessRow ? props.maxGuesses+1 : props.maxGuesses ));
   let letterInfo = new Map<string, Clue>();
   const correctGuess = 
-    guesses.includes(targets[0]) 
+    gameState === GameState.Won 
+    ? "" 
+    : guesses.includes(targets[0]) 
     ? targets[0]
     : guesses.includes(targets[1])
     ? targets[1]

@@ -20,7 +20,7 @@ export function Keyboard(props: KeyboardProps) {
   let numElsewhere = 0;
   let numCorrect = 0;
   props.letterInfo.forEach((value: Clue, key: string) => {
-    if (props.correctGuess.search(key) === -1) {
+    if (props.correctGuess.lastIndexOf(key) === -1) {
       if (value === Clue.Absent) {
         numAbsent++;
       }
@@ -41,7 +41,7 @@ export function Keyboard(props: KeyboardProps) {
             let className = "Game-keyboard-button";
             const clue = props.letterInfo.get(label);
             if (clue !== undefined) {
-              className += " " + clueClass(clue, props.correctGuess.search(label) !== -1);
+              className += " " + clueClass(clue, props.correctGuess.lastIndexOf(label) !== -1);
             }
             if (label.length > 1) {
               className += " Game-keyboard-button-wide";
