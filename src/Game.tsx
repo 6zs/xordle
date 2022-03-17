@@ -253,6 +253,13 @@ function Game(props: GameProps) {
 
   const realMaxGuesses = Math.max(guesses.length,(showBonusGuessRow ? props.maxGuesses+1 : props.maxGuesses ));
   let letterInfo = new Map<string, Clue>();
+  const correctGuess = 
+    guesses.includes(targets[0]) 
+    ? targets[0]
+    : guesses.includes(targets[1])
+    ? targets[1]
+    : "";
+
   const tableRows = Array(realMaxGuesses)
     .fill(undefined)
     .map((_, i) => {
@@ -282,6 +289,7 @@ function Game(props: GameProps) {
               : RowState.Pending
           }
           cluedLetters={cluedLetters}
+          correctGuess={correctGuess}
           annotation={isBonusGuess ? "bonus!" : ((isAllGreen && !isTarget) ? "huh?" : `\u00a0`)}          
         />
       );
@@ -339,6 +347,7 @@ function Game(props: GameProps) {
       <Keyboard
         layout={props.keyboardLayout}
         letterInfo={letterInfo}
+        correctGuess={correctGuess}
         onKey={onKey}
       />
     </div>

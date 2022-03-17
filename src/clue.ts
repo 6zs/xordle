@@ -39,19 +39,19 @@ export function xorclue(clue1: CluedLetter[], clue2: CluedLetter[]): CluedLetter
       if ( cluedLetter.clue === Clue.Elsewhere || clue2[i].clue === Clue.Elsewhere ) {
         return { clue: Clue.Elsewhere, letter: cluedLetter.letter };
       }
-      /*TODO* add more states?*/
     }
     return { clue: Clue.Absent, letter: cluedLetter.letter };
   });
 }
 
-export function clueClass(clue: Clue): string {
+export function clueClass(clue: Clue, correctGuess: boolean): string {
+  const suffix = (correctGuess ? "-fin" : "");
   if (clue === Clue.Absent) {
     return "letter-absent";
   } else if (clue === Clue.Elsewhere) {
-    return "letter-elsewhere";
+    return "letter-elsewhere" + suffix;
   } else {
-    return "letter-correct";
+    return "letter-correct" + suffix;
   }
 }
 

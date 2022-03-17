@@ -3,6 +3,7 @@ import { Clue, clueClass } from "./clue";
 interface KeyboardProps {
   layout: string;
   letterInfo: Map<string, Clue>;
+  correctGuess: string;
   onKey: (key: string) => void;
 }
 
@@ -19,14 +20,16 @@ export function Keyboard(props: KeyboardProps) {
   let numElsewhere = 0;
   let numCorrect = 0;
   props.letterInfo.forEach((value: Clue, key: string) => {
-    if ( value === Clue.Absent ) {
-      numAbsent++;
-    }
-    if ( value === Clue.Elsewhere ) {
-      numElsewhere++;
-    }
-    if ( value === Clue.Correct ) {
-      numCorrect++;
+    if (props.correctGuess.search(key) === -1) {
+      if (value === Clue.Absent) {
+        numAbsent++;
+      }
+      if (value === Clue.Elsewhere) {
+        numElsewhere++;
+      }
+      if (value === Clue.Correct) {
+        numCorrect++;
+      }
     }
   });
 
@@ -38,7 +41,7 @@ export function Keyboard(props: KeyboardProps) {
             let className = "Game-keyboard-button";
             const clue = props.letterInfo.get(label);
             if (clue !== undefined) {
-              className += " " + clueClass(clue);
+              className += " " + clueClass(clue, props.correctGuess.search(label) !== -1);
             }
             if (label.length > 1) {
               className += " Game-keyboard-button-wide";

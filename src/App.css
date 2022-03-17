@@ -124,21 +124,35 @@ table.Game-rows > tbody {
   outline: none;
 }
 
-.letter-correct {
+.letter-correct, .letter-correct-fin {
   border: 2px solid rgba(0, 0, 0, 0.3);
   background-color: rgb(87, 172, 120);
-  /*background-color: #0057b7;*/
   color: white !important;
 }
 
-.letter-elsewhere {
+.letter-elsewhere, .letter-elsewhere-fin {
   border: 2px dotted rgba(0, 0, 0, 0.3);
-  background-color: #e9c601;
-  /*background-color: #ffd700;*/
+  background-color: rgb(233, 198, 1);
   color: white !important;
 }
 
-.letter-absent {
+.letter-correct-fin {
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  background-color: rgba(87, 172, 120);
+  color: white !important;
+}
+
+.letter-elsewhere-fin {
+  border: 2px dotted rgba(0, 0, 0, 0.3);
+  background-color: rgba(233, 198, 1);
+  color: white !important;
+}
+
+.letter-absent, 
+.Game-keyboard-button.letter-correct-fin,
+.Game-keyboard-button.letter-elsewhere-fin,
+.App-container.color-blind .Game-keyboard-button.letter-correct-fin, 
+.App-container.color-blind .Game-keyboard-button.letter-elsewhere-fin {
   border: 2px solid transparent;
   background-color: rgb(162, 162, 162);
   color: white !important;
@@ -359,11 +373,13 @@ a:active {
 }
 
 .App-container.color-blind .letter-correct,
+.App-container.color-blind .letter-correct-fin,
 .App-container.color-blind .App-about b.green-bg {
   background-color: #f5793a;
 }
 
 .App-container.color-blind .letter-elsewhere,
+.App-container.color-blind .letter-elsewhere-fin,
 .App-container.color-blind .App-about b.yellow-bg {
   background-color: #85c0f9;
 }
