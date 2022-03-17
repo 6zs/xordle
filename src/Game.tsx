@@ -13,7 +13,6 @@ import {
   cheat,
   maxGuesses
 } from "./util";
-import { countReset } from "console";
 
 export enum GameState {
   Playing,
