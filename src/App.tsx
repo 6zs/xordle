@@ -16,8 +16,8 @@ function deserializeStorage(serialized: string) {
   }
 }
 
-const redirectFrom = "localhost:30001";
-const redirectTo = "http://xordle.xyz/";
+const redirectFrom = "6zs.github.io";
+const redirectTo = "https://xordle.xyz/";
 const save = new URLSearchParams(window.location.search).get("save") ?? "";
 
 function useSetting<T>(
@@ -56,18 +56,17 @@ function App() {
   );
   const [enterLeft, setEnterLeft] = useSetting<boolean>("enter-left", false);
 
-  /*useEffect(() => { 
+  useEffect(() => { 
     if (save !== "") {
       deserializeStorage(save);
       window.location.replace(window.location.origin);
       return;
     }
-
     if (window.location.host.lastIndexOf(redirectFrom) === 0) {
       window.location.replace(redirectTo + "?save=" + serializeStorage());
       return;
     }
-  });*/
+  });
 
   useEffect(() => {
     document.body.className = dark ? "dark" : "";
