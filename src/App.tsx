@@ -56,7 +56,7 @@ function App() {
   );
   const [enterLeft, setEnterLeft] = useSetting<boolean>("enter-left", false);
 
-  useEffect(() => { 
+  /*useEffect(() => { 
     if (save !== "") {
       deserializeStorage(save);
       window.location.replace(window.location.origin);
@@ -67,8 +67,7 @@ function App() {
       window.location.replace(redirectTo + "?save=" + serializeStorage());
       return;
     }
-  });
-
+  });*/
 
   useEffect(() => {
     document.body.className = dark ? "dark" : "";
