@@ -5,6 +5,21 @@ import { useEffect, useState } from "react";
 import { About } from "./About";
 import { Stats } from "./Stats";
 
+function serializeStorage() : string {
+  return window.btoa(window.JSON.stringify(window.localStorage));
+}
+
+function deserializeStorage(serialized: string) {
+  let o = window.JSON.parse(window.atob(serialized));
+  for (let [key, value] of Object.entries(o)) {
+     window.localStorage.setItem(key, typeof value === 'string' ? value : JSON.stringify(value))
+  }
+}
+
+const redirectFrom = "localhost:30001";
+const redirectTo = "http://xordle.xyz/";
+const save = new URLSearchParams(window.location.search).get("save") ?? "";
+
 function useSetting<T>(
   key: string,
   initial: T
@@ -40,6 +55,20 @@ function App() {
     "qwertyuiop-asdfghjkl-BzxcvbnmE"
   );
   const [enterLeft, setEnterLeft] = useSetting<boolean>("enter-left", false);
+
+  useEffect(() => { 
+    if (save !== "") {
+      deserializeStorage(save);
+      window.location.replace(window.location.origin);
+      return;
+    }
+
+    if (window.location.host.lastIndexOf(redirectFrom) === 0) {
+      window.location.replace(redirectTo + "?save=" + serializeStorage());
+      return;
+    }
+  });
+
 
   useEffect(() => {
     document.body.className = dark ? "dark" : "";
