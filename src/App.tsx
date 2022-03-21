@@ -10,9 +10,13 @@ function serializeStorage() : string {
 }
 
 function deserializeStorage(serialized: string) {
-  let o = window.JSON.parse(window.atob(serialized));
-  for (let [key, value] of Object.entries(o)) {
-     window.localStorage.setItem(key, typeof value === 'string' ? value : JSON.stringify(value))
+  try {
+    let o = window.JSON.parse(window.atob(serialized));
+    for (let [key, value] of Object.entries(o)) {
+      window.localStorage.setItem(key, typeof value === 'string' ? value : JSON.stringify(value))
+    }
+  } catch(e) {
+    console.log(e);
   }
 }
 
