@@ -1,4 +1,4 @@
 # xordle
-[wordle](https://www.powerlanguage.co.uk/wordle/) but with different rules
+[wordle](https://www.powerlanguage.co.uk/wordle/) but with two secret words that have have no letters in common
 
 play [**here**](https://6zs.github.io/xordle/)
