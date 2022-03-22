@@ -131,7 +131,7 @@ table.Game-rows > tbody {
 }
 
 .letter-elsewhere, .letter-elsewhere-fin {
-  border: 2px dotted rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(0, 0, 0, 0.3);
   background-color: rgb(233, 198, 1);
   color: white !important;
 }
@@ -143,7 +143,7 @@ table.Game-rows > tbody {
 }
 
 .letter-elsewhere-fin {
-  border: 2px dotted rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(0, 0, 0, 0.3);
   background-color: rgba(233, 198, 1);
   color: white !important;
 }
