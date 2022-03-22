@@ -11,6 +11,7 @@ export function About() {
             wordle
           </a>{" "}
           <br />code based on a fork of <a href="https://github.com/lynn/hello-wordl">hello wordl</a>
+          <br />see also: <a href="https://fibble.xyz">fibble</a>
         </p>
       <p className="App-instructions">
         there are two secret words
