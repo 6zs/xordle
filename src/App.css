@@ -385,6 +385,6 @@ a:active {
 }
 
 .react-calendar__tile pre {
-  min-height: 80px;
-  font-size: 8px;
+  height: 100%;
+  font-size: 6px;
 }

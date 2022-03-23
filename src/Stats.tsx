@@ -1,4 +1,4 @@
-import { maxGuesses, dayNum, day1Number, day1Date, dateToNumber } from "./util";
+import { maxGuesses, dayNum, day1Number, day1Date, dateToNumber, todayDayNum } from "./util";
 import { Puzzle, GameState, gameDayStoragePrefix, guessesDayStoragePrefix, makePuzzle } from "./Game"
 
 export interface Day
@@ -33,7 +33,7 @@ export function Stats() {
     histogram[i] = 0;
   }
 
-  for(let day: number = 0; day <= dayNum; ++day) 
+  for(let day: number = 0; day <= todayDayNum; ++day) 
   {
     let haveDay = false;
     let dayState: GameState = GameState.Playing;
