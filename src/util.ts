@@ -3,15 +3,25 @@ import dictionary from "./dictionary.json";
 export const gameName = "xordle";
 export const maxGuesses = 9;
 
-const now = new Date();
-const todayNumber = Number(
-  now.toLocaleDateString("en-US", { year: "numeric" }) +
-  now.toLocaleDateString("en-US", { month: "2-digit" }) +
-  now.toLocaleDateString("en-US", { day: "2-digit" }));
-const day1Number = Number(20220301);
-const debugDay = new URLSearchParams(window.location.search).get("day") ?? undefined;
+
+export function dateToNumber(date: Date) : number {
+  return Number(
+    date.toLocaleDateString("en-US", { year: "numeric" }) +
+    date.toLocaleDateString("en-US", { month: "2-digit" }) + 
+    date.toLocaleDateString("en-US", { day: "2-digit" }));
+}
+
+export const todayDate = new Date();
+const todayNumber = dateToNumber(todayDate);
+
+export const day1Date = new Date('March 01 2022');
+export const day1Number = dateToNumber(day1Date);
+
+const rando = 0;
+const debugDay = new URLSearchParams(window.location.search).get("d") ?? undefined;
 export const cheat = new URLSearchParams(window.location.search).get("cheat") ?? undefined;
-export const dayNum = debugDay ?? 1 + todayNumber - day1Number;
+export const dayNum : number = debugDay ? parseInt(debugDay) : 1 + todayNumber - day1Number;
+export const todayDayNum : number = 1 + todayNumber - day1Number;
 export const dictionarySet: Set<string> = new Set(dictionary);
 
 function mulberry32(a: number) {
@@ -27,14 +37,9 @@ export function urlParam(name: string): string | null {
   return new URLSearchParams(window.location.search).get(name);
 }
 
-const makeRandom = () => mulberry32(Number(dayNum));
-let random = makeRandom();
+export const makeRandom = (seed: number) => mulberry32(Number(seed));
 
-export function resetRng(): void {
-  random = makeRandom();
-}
-
-export function pick<T>(array: Array<T>): T {
+export function pick<T>(array: Array<T>, random: () => number ): T {
   return array[Math.floor(array.length * random())];
 }
 

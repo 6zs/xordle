@@ -1,5 +1,24 @@
-import { maxGuesses, dayNum } from "./util";
-import { GameState, gameDayStoragePrefix, guessesDayStoragePrefix } from "./Game"
+import { maxGuesses, dayNum, day1Number, day1Date, dateToNumber } from "./util";
+import { Puzzle, GameState, gameDayStoragePrefix, guessesDayStoragePrefix, makePuzzle } from "./Game"
+
+export interface Day
+{
+  puzzle: Puzzle,
+  guesses: string[],
+}
+
+export function GetDay(date: Date) : Day | null
+{
+  const day = 1 + dateToNumber(date) - day1Number;
+  try {
+    let guesses = window.localStorage.getItem(guessesDayStoragePrefix+day);
+    if ( guesses ) {
+      return { guesses: JSON.parse(guesses), puzzle: makePuzzle(day) };
+    }
+  } catch(e) {
+  }
+  return null;
+}
 
 export function Stats() {
 

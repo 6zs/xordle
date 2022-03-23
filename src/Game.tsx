@@ -7,12 +7,15 @@ import targetList from "./targets.json";
 import {
   gameName,
   pick,
-  resetRng,
   speak,
   dayNum,
+  todayDayNum,
   cheat,
-  maxGuesses
+  maxGuesses,
+  makeRandom
 } from "./util";
+
+import { Day } from "./Stats"
 
 export enum GameState {
   Playing,
@@ -90,7 +93,7 @@ function countMatching(cluedLetters: CluedLetter[]) : Map<Clue, number> {
   return counts;
 }
 
-function isGoodInitialGuess(targets: string[], candidate: string) {
+function isGoodInitialGuess(targets: [string,string], candidate: string) {
   if (/\*/.test(candidate)) {
     return false;
   }
@@ -103,46 +106,72 @@ function isGoodInitialGuess(targets: string[], candidate: string) {
   return green1+yellow1 < 5 && green2+yellow2 < 5;
 }
 
-function randomTargets(): string[] {
+function randomTargets(random: ()=>number): [string,string] {
   let candidate1: string;
   let candidate2: string;
   do {
-    candidate1 = pick(eligible);
-    candidate2 = pick(eligible);
+    candidate1 = pick(eligible, random);
+    candidate2 = pick(eligible, random);
   } while (!isValidCluePair(candidate1,candidate2));
   return [candidate1, candidate2];
 }
 
-function initialGuess(targets: string[]): [string] {
+function initialGuess(targets: [string,string], random: ()=>number): [string] {
   let candidate: string;
   do {
-    candidate = pick(eligible);
+    candidate = pick(eligible, random);
   } while(!isGoodInitialGuess(targets, candidate));
   return [candidate];
 }
 
-function randomClue(targets: string[]) {
+function randomClue(targets: string[], random: ()=>number) {
   let candidate: string;
   do {
-    candidate = pick(eligible);
+    candidate = pick(eligible, random);
   } while (targets.includes(candidate));
   return candidate;
 }
 
-function gameOverText(state: GameState, targets: string[]) : string {
+function gameOverText(state: GameState, targets: [string,string]) : string {
   const verbed = state === GameState.Won ? "won" : "lost";
   return `you ${verbed}! the answers were ${targets[0].toUpperCase()}, ${targets[1].toUpperCase()}. play again tomorrow`; 
 }
 
+export function makePuzzle(dayNum: number) : Puzzle {
+  let random = makeRandom(dayNum);
+  let targets =  randomTargets(random);
+  let puzzle: Puzzle = {
+    targets: targets,
+    initialGuesses: initialGuess(targets, random)
+  };
+  return puzzle;
+}
+
+export function emojiBlock(day: Day, colorBlind: boolean) : string {
+  const emoji = colorBlind
+    ? ["⬛", "🟦", "🟧"]
+    : ["⬛", "🟨", "🟩"];
+  return day.guesses.map((guess) =>
+        xorclue(clue(guess, day.puzzle.targets[0]),clue(guess, day.puzzle.targets[1]))
+          .map((c) => emoji[c.clue ?? 0])
+          .join("")
+      )
+      .join("\n");
+}
+
+export interface Puzzle {
+  targets: [string, string],
+  initialGuesses: string[]
+}
+
 function Game(props: GameProps) {
 
-  const [targets, setTargets] = useState(() => {
-    resetRng();
-    return randomTargets();
+  const [puzzle, setPuzzle] = useState(() => {
+    return makePuzzle(dayNum);
   });
 
   const [gameState, setGameState] = useLocalStorage<GameState>(gameDayStoragePrefix+dayNum, GameState.Playing);
-  const [guesses, setGuesses] = useLocalStorage<string[]>(guessesDayStoragePrefix+dayNum, dayNum > 14 ? initialGuess(targets) : []);
+  const [guesses, setGuesses] = useLocalStorage<string[]>(guessesDayStoragePrefix+dayNum, puzzle.initialGuesses);
   const [currentGuess, setCurrentGuess] = useState<string>("");
   const [hint, setHint] = useState<string>(getHintFromState());
    
@@ -173,13 +202,13 @@ function Game(props: GameProps) {
 
   function getHintFromState() {    
     if  (gameState === GameState.Won || gameState === GameState.Lost) {
-      return gameOverText(gameState, targets);
+      return gameOverText(gameState, puzzle.targets);
     }
-    if (guesses.includes(targets[0])) {
-      return `you got ${targets[0].toUpperCase()}, one more to go`;
+    if (guesses.includes(puzzle.targets[0])) {
+      return `you got ${puzzle.targets[0].toUpperCase()}, one more to go`;
     }     
-    if (guesses.includes(targets[1])) {
-      return `you got ${targets[1].toUpperCase()}, one more to go`;
+    if (guesses.includes(puzzle.targets[1])) {
+      return `you got ${puzzle.targets[1].toUpperCase()}, one more to go`;
     }
     if ( guesses.length === 0 && currentGuess === undefined ) {
       return `start guessin'`;
@@ -192,7 +221,7 @@ function Game(props: GameProps) {
       return;
     }
 
-    const bonusGuess = guesses.length === maxGuesses && targets.includes(guesses[guesses.length-1]);
+    const bonusGuess = guesses.length === maxGuesses && puzzle.targets.includes(guesses[guesses.length-1]);
     const realMaxGuesses = props.maxGuesses+(bonusGuess?1:0);
   
     if (guesses.length === realMaxGuesses) {
@@ -224,19 +253,19 @@ function Game(props: GameProps) {
      
       setGuesses((guesses) => guesses.concat([currentGuess]));
       setCurrentGuess("");
-      speak(describeClue(xorclue(clue(currentGuess, targets[0]), clue(currentGuess, targets[1]))))
+      speak(describeClue(xorclue(clue(currentGuess, puzzle.targets[0]), clue(currentGuess, puzzle.targets[1]))))
       doWinOrLose();
     }
   };
 
   const doWinOrLose = () => {
-    if ( targets.length !== 2 ) {
+    if ( puzzle.targets.length !== 2 ) {
       return;
     }
-    if ( (guesses.includes(targets[0]) && guesses.includes(targets[1])) ) {
+    if ( (guesses.includes(puzzle.targets[0]) && guesses.includes(puzzle.targets[1])) ) {
       setGameState(GameState.Won);
     } else if (guesses.length >= props.maxGuesses) {
-      if (targets.includes(guesses[guesses.length-1])) {
+      if (puzzle.targets.includes(guesses[guesses.length-1])) {
         setHint("last chance! do a bonus guess")
         return;
       }        
@@ -262,7 +291,7 @@ function Game(props: GameProps) {
 
   useEffect(() => {
     doWinOrLose();
-  }, [currentGuess, gameState, guesses, targets]);
+  }, [currentGuess, gameState, guesses, puzzle.targets]);
 
   let reduceCorrect = (prev: CluedLetter, iter: CluedLetter, currentIndex: number, array: CluedLetter[]) => {
     let reduced: CluedLetter = prev;
@@ -273,7 +302,7 @@ function Game(props: GameProps) {
   };
 
   const showBonusGuessRow =  
-    (gameState === GameState.Playing && guesses.length === maxGuesses && targets.includes(guesses[guesses.length-1])) ||
+    (gameState === GameState.Playing && guesses.length === maxGuesses && puzzle.targets.includes(guesses[guesses.length-1])) ||
     (gameState !== GameState.Playing && guesses.length === (maxGuesses+1));
 
   const realMaxGuesses = Math.max(guesses.length,(showBonusGuessRow ? props.maxGuesses+1 : props.maxGuesses ));
@@ -281,18 +310,18 @@ function Game(props: GameProps) {
   const correctGuess = 
     gameState === GameState.Won 
     ? "" 
-    : guesses.includes(targets[0]) 
-    ? targets[0]
-    : guesses.includes(targets[1])
-    ? targets[1]
+    : guesses.includes(puzzle.targets[0]) 
+    ? puzzle.targets[0]
+    : guesses.includes(puzzle.targets[1])
+    ? puzzle.targets[1]
     : "";
 
   const tableRows = Array(realMaxGuesses)
     .fill(undefined)
     .map((_, i) => {
       const guess = [...guesses, currentGuess][i] ?? "";
-      const cluedLetters = xorclue(clue(guess, targets[0]),clue(guess, targets[1]));
-      const isTarget = targets.includes(guess);
+      const cluedLetters = xorclue(clue(guess, puzzle.targets[0]),clue(guess, puzzle.targets[1]));
+      const isTarget = puzzle.targets.includes(guess);
       const isBonusGuess = i === maxGuesses;
       const lockedIn = (!isBonusGuess && i < guesses.length) || (isBonusGuess && guesses.length === realMaxGuesses);
       const isAllGreen = lockedIn && cluedLetters.reduce( reduceCorrect, {clue: Clue.Correct, letter: ""} ).clue === Clue.Correct;                
@@ -322,12 +351,18 @@ function Game(props: GameProps) {
       );
     });
 
-  const cheatText = cheat ? ` ${targets}` : "";
+  const cheatText = cheat ? ` ${puzzle.targets}` : "";
+  const canPrev = dayNum > 1;
+  const canNext = dayNum < todayDayNum;
+  const prevLink = "?d=" + (dayNum-1).toString();
+  const nextLink = "?d=" + (dayNum+1).toString();
 
   return (
     <div className="Game" style={{ display: props.hidden ? "none" : "block" }}>
       <div className="Game-options">
-        day {dayNum}{`${cheatText}`}
+        {canPrev && <span><a href={prevLink}>prev</a> |</span>}
+        <span>day {dayNum}{`${cheatText}`}</span>
+        {canNext && <span>| <a href={nextLink}>next</a></span>}
       </div>
       <table
         className="Game-rows"
@@ -349,20 +384,11 @@ function Game(props: GameProps) {
           <p>
           <button
             onClick={() => {
-              const emoji = props.colorBlind
-                ? ["⬛", "🟦", "🟧"]
-                : ["⬛", "🟨", "🟩"];
               const score = gameState === GameState.Lost ? "X" : guesses.length;
               share(
                 "result copied to clipboard!",
                 `${gameName} #${dayNum} ${score}/${props.maxGuesses}\n` +
-                  guesses
-                    .map((guess) =>
-                      xorclue(clue(guess, targets[0]),clue(guess, targets[1]))
-                        .map((c) => emoji[c.clue ?? 0])
-                        .join("")
-                    )
-                    .join("\n")
+                emojiBlock({guesses: guesses, puzzle:puzzle}, props.colorBlind)
               );
             }}
           >

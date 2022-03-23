@@ -383,3 +383,8 @@ a:active {
 .App-container.color-blind .App-about b.yellow-bg {
   background-color: #85c0f9;
 }
+
+.react-calendar__tile pre {
+  min-height: 80px;
+  font-size: 8px;
+}
