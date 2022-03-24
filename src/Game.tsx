@@ -388,7 +388,7 @@ function Game(props: GameProps) {
               share(
                 "result copied to clipboard!",
                 `${gameName} #${dayNum} ${score}/${props.maxGuesses}\n` +
-                emojiBlock({guesses: guesses, puzzle:puzzle}, props.colorBlind)
+                emojiBlock({guesses:guesses, puzzle:puzzle, gameState:gameState}, props.colorBlind)
               );
             }}
           >

@@ -4,6 +4,7 @@ import { Puzzle, GameState, gameDayStoragePrefix, guessesDayStoragePrefix, makeP
 export interface Day
 {
   puzzle: Puzzle,
+  gameState: GameState,
   guesses: string[],
 }
 
@@ -11,9 +12,14 @@ export function GetDay(date: Date) : Day | null
 {
   const day = 1 + dateToNumber(date) - day1Number;
   try {
-    let guesses = window.localStorage.getItem(guessesDayStoragePrefix+day);
-    if ( guesses ) {
-      return { guesses: JSON.parse(guesses), puzzle: makePuzzle(day) };
+    const storedState = window.localStorage.getItem(gameDayStoragePrefix+day);
+    const storedGuesses = window.localStorage.getItem(guessesDayStoragePrefix+day)
+    let state = GameState.Playing;
+    if (storedState) {
+      state = JSON.parse(storedState);
+    }
+    if ( storedGuesses ) {
+      return { guesses: JSON.parse(storedGuesses), puzzle: makePuzzle(day), gameState: state };
     }
   } catch(e) {
   }

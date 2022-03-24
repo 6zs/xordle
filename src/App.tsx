@@ -1,6 +1,6 @@
 import "./App.css";
 import { day1Date, todayDate, maxGuesses, dateToNumber, day1Number, todayDayNum, dayNum } from "./util";
-import Game, { emojiBlock } from "./Game";
+import Game, { emojiBlock, GameState } from "./Game";
 import { useEffect, useState } from "react";
 import { About } from "./About";
 import { GetDay, Stats } from "./Stats";
@@ -101,6 +101,20 @@ function App() {
     return ( day && <pre>{emojiBlock(day, colorBlind)}</pre> );
   }
 
+  function calendarFormatDay(locale: string, date: Date) {
+    let day = GetDay(date);
+    let result = "";
+    if ( day ) {
+      result = day.gameState === GameState.Playing
+      ? "🎲"
+      : day.gameState === GameState.Won
+      ? "✔️"
+      : "💀";
+    }
+    return date.toLocaleDateString(locale, { day: "numeric" }) + result;
+  }
+
+
   return (
     <div className={"App-container" + (colorBlind ? " color-blind" : "")}>
       <h1>
@@ -146,6 +160,7 @@ function App() {
             window.location.replace(window.location.origin + "?d="+(1 + dateToNumber(value) - day1Number));
           }
         }}
+        formatDay={(locale: string, date: Date) => calendarFormatDay(locale, date)}
         tileContent={({ activeStartDate, date, view }) => calendarTileContent(activeStartDate, date, view) }
       />}
       {page === "settings" && (
