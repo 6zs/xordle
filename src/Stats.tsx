@@ -1,4 +1,4 @@
-import { maxGuesses, dayNum, day1Number, day1Date, dateToNumber, todayDayNum } from "./util";
+import { maxGuesses, day1Number, dateToNumber, todayDayNum } from "./util";
 import { Puzzle, GameState, gameDayStoragePrefix, guessesDayStoragePrefix, makePuzzle } from "./Game"
 
 export interface Day

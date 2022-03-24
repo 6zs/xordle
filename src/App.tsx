@@ -1,5 +1,5 @@
 import "./App.css";
-import { day1Date, todayDate, maxGuesses, dateToNumber, day1Number, todayDayNum } from "./util";
+import { day1Date, todayDate, maxGuesses, dateToNumber, day1Number, todayDayNum, dayNum } from "./util";
 import Game, { emojiBlock } from "./Game";
 import { useEffect, useState } from "react";
 import { About } from "./About";
@@ -62,6 +62,10 @@ function App() {
   const [enterLeft, setEnterLeft] = useSetting<boolean>("enter-left", false);
 
   useEffect(() => { 
+    if (Number(dayNum) > Number(todayDayNum)) {
+      window.location.replace(redirectTo);
+      return;
+    }
     if (save !== "") {
       deserializeStorage(save);
       window.location.replace(window.location.origin);
