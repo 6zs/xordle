@@ -17,7 +17,7 @@ export function About() {
         </p>
       <p className="App-instructions">
         there are two secret words
-        <br />they share no letters in common
+        <br /><b>they share no letters in common</b>
         <br />you get {maxGuesses} tries to guess both words
         <br />
         <br />you start with a random clue
