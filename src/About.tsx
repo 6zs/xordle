@@ -9,9 +9,11 @@ export function About() {
           {gameName} is a variant of {" "}
           <a href="https://www.powerlanguage.co.uk/wordle/">
             wordle
-          </a>{" "}
+          </a> and is one of three sibling sites:{" "}
+          <br /><a href="https://xordle.xyz">xordle</a> -- two secret words, one board, no overlap between the words
+          <br /><a href="https://fibble.xyz">Fibble</a> -- lies to you once per row
+          <br /><a href="https://warmle.org">Warmle</a> -- yellows tell you if you've gotten close
           <br />code based on a fork of <a href="https://github.com/lynn/hello-wordl">hello wordl</a>
-          <br />see also: <a href="https://fibble.xyz">fibble</a>
         </p>
       <p className="App-instructions">
         there are two secret words
