@@ -18,7 +18,8 @@ export const day1Date = new Date('March 01 2022');
 export const day1Number = dateToNumber(day1Date);
 
 const debugDay = new URLSearchParams(window.location.search).get("d") ?? undefined;
-export const practice = new URLSearchParams(window.location.search).has("practice");
+export const allowPractice = false;
+export const practice = allowPractice && new URLSearchParams(window.location.search).has("practice");
 export const cheat = new URLSearchParams(window.location.search).has("cheat");
 export const dayNum : number = debugDay ? parseInt(debugDay) : 1 + todayNumber - day1Number;
 export const todayDayNum : number = 1 + todayNumber - day1Number;
