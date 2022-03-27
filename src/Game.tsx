@@ -8,6 +8,7 @@ import {
   gameName,
   pick,
   speak,
+  practice,
   dayNum,
   todayDayNum,
   cheat,
@@ -137,8 +138,9 @@ function gameOverText(state: GameState, targets: [string,string]) : string {
   return `you ${verbed}! the answers were ${targets[0].toUpperCase()}, ${targets[1].toUpperCase()}. play again tomorrow`; 
 }
 
-export function makePuzzle(dayNum: number) : Puzzle {
-  let random = makeRandom(dayNum);
+let uniqueGame = 0;
+export function makePuzzle(seed: number) : Puzzle {
+  let random = makeRandom(seed+uniqueGame);
   let targets =  randomTargets(random);
   let puzzle: Puzzle = {
     targets: targets,
@@ -166,12 +168,31 @@ export interface Puzzle {
 
 function Game(props: GameProps) {
 
+  let seed: number = dayNum;
+  if (practice) {
+    seed = new Date().getMilliseconds();
+    if (!(new URLSearchParams(window.location.search).has("new"))) {
+      try {
+        let storedSeed = window.localStorage.getItem("practice");
+        if (storedSeed) {
+          seed = parseInt(storedSeed);
+        } else {
+          window.localStorage.setItem("practice",""+seed);
+        }
+      } catch(e) {
+      }
+    }
+  }
+
   const [puzzle, setPuzzle] = useState(() => {
-    return makePuzzle(dayNum);
+    return makePuzzle(seed);
   });
 
-  const [gameState, setGameState] = useLocalStorage<GameState>(gameDayStoragePrefix+dayNum, GameState.Playing);
-  const [guesses, setGuesses] = useLocalStorage<string[]>(guessesDayStoragePrefix+dayNum, puzzle.initialGuesses);
+  let stateStorageKey = practice ? "practiceState" : (gameDayStoragePrefix+seed);
+  let guessesStorageKey = practice ? "practiceGuesses" : (guessesDayStoragePrefix+seed);
+
+  const [gameState, setGameState] = useLocalStorage<GameState>(stateStorageKey, GameState.Playing);
+  const [guesses, setGuesses] = useLocalStorage<string[]>(guessesStorageKey, puzzle.initialGuesses);
   const [currentGuess, setCurrentGuess] = useState<string>("");
   const [hint, setHint] = useState<string>(getHintFromState());
    
@@ -258,20 +279,30 @@ function Game(props: GameProps) {
     }
   };
 
+  const resetPractice = () => {
+    if (practice) {
+      window.localStorage.removeItem("practice");
+      window.localStorage.removeItem("practiceState");
+      window.localStorage.removeItem("practiceGuesses");
+    }
+  }
+
   const doWinOrLose = () => {
     if ( puzzle.targets.length !== 2 ) {
       return;
     }
     if ( (guesses.includes(puzzle.targets[0]) && guesses.includes(puzzle.targets[1])) ) {
       setGameState(GameState.Won);
+      resetPractice();
     } else if (guesses.length >= props.maxGuesses) {
       if (puzzle.targets.includes(guesses[guesses.length-1])) {
         setHint("last chance! do a bonus guess")
         return;
       }        
       setGameState(GameState.Lost);
+      resetPractice();
     } 
-    setHint(getHintFromState());    
+    setHint(getHintFromState());
   };
 
   useEffect(() => {
@@ -354,15 +385,22 @@ function Game(props: GameProps) {
   const cheatText = cheat ? ` ${puzzle.targets}` : "";
   const canPrev = dayNum > 1;
   const canNext = dayNum < todayDayNum;
+  const todayLink = "?";
+  const practiceLink = "?practice";
   const prevLink = "?d=" + (dayNum-1).toString();
   const nextLink = "?d=" + (dayNum+1).toString();
 
   return (
     <div className="Game" style={{ display: props.hidden ? "none" : "block" }}>
       <div className="Game-options">
-        {canPrev && <span><a href={prevLink}>prev</a> |</span>}
-        <span>day {dayNum}{`${cheatText}`}</span>
-        {canNext && <span>| <a href={nextLink}>next</a></span>}
+        {!practice && canPrev && <span><a href={prevLink}>prev</a> |</span>}
+        {!practice && <span>day {dayNum}{`${cheatText}`}</span>}
+        {!practice && canNext && <span>| <a href={nextLink}>next</a></span>}
+        {!practice && !canNext && <span>| <a href={practiceLink}>practice</a></span>}
+
+        {practice && <span><a href={todayLink}>today</a> |</span>}        
+        {practice && <span>practice{`${cheatText}`}</span>}
+        {practice && <span>| <a href={practiceLink} onClick={ ()=>{resetPractice();} }>new</a></span>}
       </div>
       <table
         className="Game-rows"
@@ -380,7 +418,7 @@ function Game(props: GameProps) {
         }}
       >
         {hint || `\u00a0`}
-        {gameState !== GameState.Playing && (
+        {gameState !== GameState.Playing && !practice && (
           <p>
           <button
             onClick={() => {
