@@ -59,6 +59,7 @@ body {
 
 .App-container h1 {
   margin-top: 0;
+  margin-bottom: 5px;
 }
 
 .Game,
@@ -181,7 +182,7 @@ a:active {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .Game-options > * + * {
@@ -190,6 +191,20 @@ a:active {
 
 .Game-options button {
   min-width: 4rem;
+}
+
+.Game-name-mode-container {
+  
+}
+
+.Game-name {
+  color: inherit;
+  font-style: inherit;
+  margin-right: 5px;
+}
+
+.Game-modes {
+  box-sizing:unset;
 }
 
 .Game-stats {
@@ -207,7 +222,6 @@ a:active {
   letter-spacing: 0.5px;
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: 10px;
 }
 
 .Game-stats-games {
@@ -387,4 +401,55 @@ a:active {
 .react-calendar__tile pre {
   height: 100%;
   font-size: 6px;
+}
+
+a { 
+  text-decoration: inherit;
+}
+
+
+.ModeEnabled
+{
+  border-radius: .375rem;
+  padding: .3rem .45rem;
+  font-size: .875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  text-decoration: inherit;
+  transition-property: color,background-color,border-color,fill,stroke,-webkit-text-decoration-color;
+  transition-property: color,background-color,border-color,text-decoration-color,fill,stroke;
+  transition-property: color,background-color,border-color,text-decoration-color,fill,stroke,-webkit-text-decoration-color;
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+  transition-duration: .15s;
+ 
+}
+
+.ModeEnabled, .ModeDisabled:hover {
+  background-color: rgb(72, 77, 87) !important;
+  color: rgb(209 213 219);
+}
+
+.ModeEnabled.dark, .ModeDisabled.dark:hover {
+  background-color: rgb(65, 72, 82) !important;
+  color: rgb(209 213 219);
+}
+
+.ModeDisabled
+{
+  border-radius: .375rem;
+  padding: .3rem .45rem;
+  font-size: .875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  text-decoration: inherit;
+  color: rgb(209 213 219);
+  transition-property: color,background-color,border-color,fill,stroke,-webkit-text-decoration-color;
+  transition-property: color,background-color,border-color,text-decoration-color,fill,stroke;
+  transition-property: color,background-color,border-color,text-decoration-color,fill,stroke,-webkit-text-decoration-color;
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+  transition-duration: .15s;
+}
+
+.News {
+  text-align: justify;
 }

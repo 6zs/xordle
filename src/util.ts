@@ -3,25 +3,25 @@ import dictionary from "./dictionary.json";
 export const gameName = "xordle";
 export const maxGuesses = 9;
 
+export const day1Date = new Date('April 01 2022');
+export const todayDate = new Date();
 
 export function dateToNumber(date: Date) : number {
-  return Number(
-    date.toLocaleDateString("en-US", { year: "numeric" }) +
-    date.toLocaleDateString("en-US", { month: "2-digit" }) + 
-    date.toLocaleDateString("en-US", { day: "2-digit" }));
+  return Math.floor((date.getTime() - day1Date.getTime())/(1000*60*60*24));
 }
 
-export const todayDate = new Date();
 const todayNumber = dateToNumber(todayDate);
-
-export const day1Date = new Date('March 01 2022');
 export const day1Number = dateToNumber(day1Date);
 
-const debugDay = new URLSearchParams(window.location.search).get("d") ?? undefined;
-export const allowPractice = false;
-export const practice = allowPractice && new URLSearchParams(window.location.search).has("practice");
-export const cheat = new URLSearchParams(window.location.search).has("cheat");
-export const dayNum : number = debugDay ? parseInt(debugDay) : 1 + todayNumber - day1Number;
+export function urlParam(name: string): string | null {
+  return new URLSearchParams(window.location.search).get(name);
+}
+
+const paramDay = urlParam("x") ?? undefined;
+export const allowPractice = true;
+export const practice = allowPractice && urlParam("unlimited") !== null;
+export const cheat = urlParam("cheat") !== null;
+export const dayNum : number = paramDay ? parseInt(paramDay) : 1 + todayNumber - day1Number;
 export const todayDayNum : number = 1 + todayNumber - day1Number;
 export const dictionarySet: Set<string> = new Set(dictionary);
 
@@ -32,10 +32,6 @@ function mulberry32(a: number) {
     t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
     return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
   };
-}
-
-export function urlParam(name: string): string | null {
-  return new URLSearchParams(window.location.search).get(name);
 }
 
 export const makeRandom = (seed: number) => mulberry32(Number(seed));

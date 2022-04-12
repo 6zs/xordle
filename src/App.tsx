@@ -1,5 +1,5 @@
 import "./App.css";
-import { day1Date, todayDate, maxGuesses, dateToNumber, day1Number, todayDayNum, dayNum } from "./util";
+import { day1Date, todayDate, maxGuesses, dateToNumber, day1Number, todayDayNum, dayNum, allowPractice, practice } from "./util";
 import Game, { emojiBlock, GameState } from "./Game";
 import { useEffect, useState } from "react";
 import { About } from "./About";
@@ -65,7 +65,7 @@ function App() {
     if (Number(dayNum) > Number(todayDayNum)) {
       window.location.replace(redirectTo);
       return;
-    }
+    }    
     if (save !== "") {
       deserializeStorage(save);
       window.location.replace(window.location.origin);
@@ -114,18 +114,22 @@ function App() {
     return date.toLocaleDateString(locale, { day: "numeric" }) + result;
   }
 
+  const dailyLink = "/";
+  const practiceLink = "/?unlimited";
+
 
   return (
     <div className={"App-container" + (colorBlind ? " color-blind" : "")}>
       <h1>
-        <span
-          style={{
-            color: "inherit",
-            fontStyle: "inherit",
-          }}
-        >
-         xordle
-        </span>
+        <div className="Game-name-mode-container">
+        <span className="Game-name">xordle</span>             
+        <div className="Game-modes">
+        {allowPractice && !practice && <a className="ModeEnabled">daily</a>}
+        {allowPractice && practice && <a className="ModeDisabled" href={dailyLink}>daily</a>}
+        {allowPractice && practice && <a className="ModeEnabled">unlimited</a>}
+        {allowPractice && !practice && <a className="ModeDisabled" href={practiceLink}>unlimited</a>}
+        </div>
+        </div>
       </h1>
       <div className="top-right">
         {page !== "game" ? (
@@ -157,7 +161,7 @@ function App() {
         maxDetail={"month"}
         onClickDay={(value: Date, event: any) => {
           if ( value >= day1Date && value <= todayDate  ) {
-            window.location.replace(window.location.origin + "?d="+(1 + dateToNumber(value) - day1Number));
+            window.location.replace(window.location.origin + "?x="+(1 + dateToNumber(value) - day1Number));
           }
         }}
         formatDay={(locale: string, date: Date) => calendarFormatDay(locale, date)}

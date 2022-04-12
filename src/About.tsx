@@ -7,15 +7,16 @@ export function About() {
     <div className="App-about">
         <p>
           {gameName} is a variant of {" "}
-          <a href="https://www.powerlanguage.co.uk/wordle/">
-            wordle
-          </a> and is one of three sibling sites:{" "}
-          <br /><a href="https://xordle.xyz">xordle</a> -- two secret words, one board, no overlap between the words
-          <br /><a href="https://fibble.xyz">Fibble</a> -- lies to you once per row
-          <br /><a href="https://warmle.org">Warmle</a> -- yellows tell you if you've gotten close
-          <br />code based on a fork of <a href="https://github.com/lynn/hello-wordl">hello wordl</a>
+          <a href="https://www.powerlanguage.co.uk/wordle/"> 
+            Wordle
+          </a> by Josh Wardle and is one of three sibling sites{" "}
+          <br /><br /> <a href="https://xordle.xyz">xordle</a> by <a href="https://twitter.com/kellydornhaus">keldor</a><br/>Two secret words, one board, no overlap between the words. 
+          <br /><br /> <a href="https://fibble.xyz">Fibble</a> by K &amp; R Garfield, coded by keldor <br/>Lies to you once per row.
+          <br /><br /> <a href="https://warmle.org">Warmle</a> by Mike Elliott, coded by keldor <br/>Yellows tell you if you've gotten close in that position.
         </p>
+      <hr />        
       <p className="App-instructions">
+        <h1>xordle rules</h1>
         there are two secret words
         <br /><b>they share no letters in common</b>
         <br />you get {maxGuesses} tries to guess both words
@@ -32,6 +33,7 @@ export function About() {
       <p>
         report issues{" "}
         <a href="https://github.com/6zs/xordle/issues">here</a>
+        <br />code based on a fork of <a href="https://github.com/lynn/hello-wordl">hello wordl</a>
       </p>
       <p>
       </p>

@@ -14,7 +14,8 @@ import {
   cheat,
   maxGuesses,
   makeRandom,
-  allowPractice
+  allowPractice,
+  todayDate
 } from "./util";
 
 import { Day } from "./Stats"
@@ -25,8 +26,8 @@ export enum GameState {
   Lost,
 }
 
-export const gameDayStoragePrefix = "game-day-";
-export const guessesDayStoragePrefix = "guesses-day-";
+export const gameDayStoragePrefix = "result-";
+export const guessesDayStoragePrefix = "guesses-";
 
 function useLocalStorage<T>(
   key: string,
@@ -139,7 +140,7 @@ function gameOverText(state: GameState, targets: [string,string]) : string {
   return `you ${verbed}! the answers were ${targets[0].toUpperCase()}, ${targets[1].toUpperCase()}. play again tomorrow`; 
 }
 
-let uniqueGame = 0;
+let uniqueGame = 1000;
 export function makePuzzle(seed: number) : Puzzle {
   let random = makeRandom(seed+uniqueGame);
   let targets =  randomTargets(random);
@@ -386,23 +387,39 @@ function Game(props: GameProps) {
   const cheatText = cheat ? ` ${puzzle.targets}` : "";
   const canPrev = dayNum > 1;
   const canNext = dayNum < todayDayNum;
-  const todayLink = "?";
-  const practiceLink = "?practice";
-  const prevLink = "?d=" + (dayNum-1).toString();
-  const nextLink = "?d=" + (dayNum+1).toString();
+  const practiceLink = "?unlimited";
+  const prevLink = "?x=" + (dayNum-1).toString();
+  const nextLink = "?x=" + (dayNum+1).toString();
+
+  const [readNewsDay, setReadNewsDay] = useLocalStorage<number>("read-news-", 0);
+  let showNews = false;
+  let newsPostedDay = 11;
+  const canShowNews = dayNum >= newsPostedDay;
+  const newsHasntBeenRead = readNewsDay < newsPostedDay;
+  const newsReadToday = readNewsDay == dayNum;
+  if (!practice && canShowNews && (newsHasntBeenRead || newsReadToday)) {
+    showNews = true;
+    if (!newsReadToday) {
+      setReadNewsDay(dayNum);
+    }
+  }
 
   return (
     <div className="Game" style={{ display: props.hidden ? "none" : "block" }}>
+
       <div className="Game-options">
         {!practice && canPrev && <span><a href={prevLink}>prev</a> |</span>}
         {!practice && <span>day {dayNum}{`${cheatText}`}</span>}
         {!practice && canNext && <span>| <a href={nextLink}>next</a></span>}
-        {allowPractice && !practice && !canNext && <span>| <a href={practiceLink}>practice</a></span>}
 
-        {practice && <span><a href={todayLink}>today</a> |</span>}        
-        {practice && <span>practice{`${cheatText}`}</span>}
-        {practice && <span>| <a href={practiceLink} onClick={ ()=>{resetPractice();} }>new</a></span>}
+        {practice && <span>{`${cheatText}`}</span>}
+        {practice && <span><a href={practiceLink} onClick={ ()=>{resetPractice();} }>+ new puzzle</a></span>}
       </div>
+      {showNews && (<div className="News">
+      BREAKING NEWS: Since April 1 there has been a bug causing players to play two different daily puzzles, depending on how you navigated the page.
+      The <b>calendar feature</b> above has been <b>reset</b> so that April 1 = Day 1. <b>This does not affect your stats</b>.
+      There is also now an <b>unlimited play</b> mode.
+      </div>) }
       <table
         className="Game-rows"
         tabIndex={0}

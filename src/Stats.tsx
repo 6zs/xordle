@@ -1,4 +1,4 @@
-import { maxGuesses, day1Number, dateToNumber, todayDayNum } from "./util";
+import { maxGuesses, day1Number, dateToNumber, todayDayNum, day1Date } from "./util";
 import { Puzzle, GameState, gameDayStoragePrefix, guessesDayStoragePrefix, makePuzzle } from "./Game"
 
 export interface Day
@@ -10,10 +10,16 @@ export interface Day
 
 export function GetDay(date: Date) : Day | null
 {
-  const day = 1 + dateToNumber(date) - day1Number;
+  return Day(1 + dateToNumber(date) - day1Number);
+}
+
+function Day(day: number) : Day | null 
+{
   try {
-    const storedState = window.localStorage.getItem(gameDayStoragePrefix+day);
-    const storedGuesses = window.localStorage.getItem(guessesDayStoragePrefix+day)
+    const resultKey = gameDayStoragePrefix+day;
+    const guessesKey = guessesDayStoragePrefix+day;
+    const storedState = window.localStorage.getItem(resultKey);
+    const storedGuesses = window.localStorage.getItem(guessesKey)
     let state = GameState.Playing;
     if (storedState) {
       state = JSON.parse(storedState);
@@ -28,7 +34,7 @@ export function GetDay(date: Date) : Day | null
 
 export function Stats() {
 
-  let histogram : Record<number,number> = {};
+  let histogram: Record<number,number> = {};
   let streak: number = 0;
   let maxStreak: number = 0;
   let games: number = 0;
@@ -39,39 +45,64 @@ export function Stats() {
     histogram[i] = 0;
   }
 
-  for(let day: number = 0; day <= todayDayNum; ++day) 
-  {
-    let haveDay = false;
-    let dayState: GameState = GameState.Playing;
-    let dayGuesses: string[] = [];
+  const OLD_gameDayStoragePrefix = "game-day-";
+  const OLD_guessesDayStoragePrefix = "guesses-day-";
+  for (let OLD_day: number = 0; OLD_day < 1000; ++OLD_day) {
     try {
-      const storedState = window.localStorage.getItem(gameDayStoragePrefix+day);
-      const storedGuesses = window.localStorage.getItem(guessesDayStoragePrefix+day);
+      const resultKey = OLD_gameDayStoragePrefix+OLD_day;
+      const guessesKey = OLD_guessesDayStoragePrefix+OLD_day;
+      const storedState = window.localStorage.getItem(resultKey);
+      const storedGuesses = window.localStorage.getItem(guessesKey)
+      let state = GameState.Playing;
+      let guesses = [];
+      
       if (storedState) {
-        dayState = JSON.parse(storedState);
-        haveDay = true;
+        state = JSON.parse(storedState);
+        games++;
       }
-      if (storedGuesses) {
-        dayGuesses = JSON.parse(storedGuesses);
-      }
-    } catch (e) {
-    }
 
-    if (!haveDay) {
+      if (storedGuesses) {
+        guesses = JSON.parse(storedGuesses);
+      }
+      
+      if (state === GameState.Lost) {
+        streak = 0;
+      }
+  
+      if (state === GameState.Won) {
+        histogram[guesses.length]++;
+        if (histogram[guesses.length] > maxHistogram) {
+          maxHistogram = histogram[guesses.length];
+        }
+        streak++;
+        wins++;
+        if (streak > maxStreak) {
+          maxStreak = streak;
+        }
+      }  
+    } catch(e) {
+    }   
+  }
+
+  for (let day: number = 0; day <= todayDayNum; ++day) 
+  {
+    let results = Day(day);
+    
+    if (!results) {
       streak = 0;
       continue;
     }
 
     games++;
 
-    if (dayState === GameState.Lost) {
+    if (results.gameState === GameState.Lost) {
       streak = 0;
     }
 
-    if (dayState === GameState.Won) {
-      histogram[dayGuesses.length]++;
-      if (histogram[dayGuesses.length] > maxHistogram) {
-        maxHistogram = histogram[dayGuesses.length];
+    if (results.gameState === GameState.Won) {
+      histogram[results.guesses.length]++;
+      if (histogram[results.guesses.length] > maxHistogram) {
+        maxHistogram = histogram[results.guesses.length];
       }
       streak++;
       wins++;
