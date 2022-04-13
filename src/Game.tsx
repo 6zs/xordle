@@ -392,9 +392,10 @@ function Game(props: GameProps) {
   const nextLink = "?x=" + (dayNum+1).toString();
 
   const [readNewsDay, setReadNewsDay] = useLocalStorage<number>("read-news-", 0);
+  let news = "";
   let showNews = false;
-  let newsPostedDay = 11;
-  const canShowNews = dayNum >= newsPostedDay;
+  let newsPostedDay = 13;
+  const canShowNews = news !== "" && dayNum >= newsPostedDay;
   const newsHasntBeenRead = readNewsDay < newsPostedDay;
   const newsReadToday = readNewsDay == dayNum;
   if (!practice && canShowNews && (newsHasntBeenRead || newsReadToday)) {
@@ -415,10 +416,7 @@ function Game(props: GameProps) {
         {practice && <span>{`${cheatText}`}</span>}
         {practice && <span><a href={practiceLink} onClick={ ()=>{resetPractice();} }>+ new puzzle</a></span>}
       </div>
-      {showNews && (<div className="News">
-      BREAKING NEWS: Since April 1 there has been a bug causing players to play two different daily puzzles, depending on how you navigated the page.
-      The <b>calendar feature</b> above has been <b>reset</b> so that April 1 = Day 1. <b>This does not affect your stats</b>.
-      There is also now an <b>unlimited play</b> mode.
+      {showNews && (<div className="News">{news}
       </div>) }
       <table
         className="Game-rows"
