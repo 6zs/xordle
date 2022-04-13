@@ -84,7 +84,7 @@ export function Stats() {
     }   
   }
 
-  for (let day: number = 0; day <= todayDayNum; ++day) 
+  for (let day: number = 1; day <= todayDayNum; ++day) 
   {
     let results = Day(day);
     
