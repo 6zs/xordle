@@ -124,10 +124,10 @@ function App() {
         <div className="Game-name-mode-container">
         <span className="Game-name">xordle</span>             
         <div className="Game-modes">
-        {allowPractice && !practice && <a className="ModeEnabled">daily</a>}
-        {allowPractice && practice && <a className="ModeDisabled" href={dailyLink}>daily</a>}
-        {allowPractice && practice && <a className="ModeEnabled">unlimited</a>}
-        {allowPractice && !practice && <a className="ModeDisabled" href={practiceLink}>unlimited</a>}
+        {allowPractice && !practice && <a className="ModeEnabled">Daily</a>}
+        {allowPractice && practice && <a className="ModeDisabled" href={dailyLink}>Daily</a>}
+        {allowPractice && practice && <a className="ModeEnabled">Unlimited</a>}
+        {allowPractice && !practice && <a className="ModeDisabled" href={practiceLink}>Unlimited</a>}
         </div>
         </div>
       </h1>

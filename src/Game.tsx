@@ -228,13 +228,13 @@ function Game(props: GameProps) {
       return gameOverText(gameState, puzzle.targets);
     }
     if (guesses.includes(puzzle.targets[0])) {
-      return `you got ${puzzle.targets[0].toUpperCase()}, one more to go`;
+      return `You got ${puzzle.targets[0].toUpperCase()}, one more to go.`;
     }     
     if (guesses.includes(puzzle.targets[1])) {
-      return `you got ${puzzle.targets[1].toUpperCase()}, one more to go`;
+      return `You got ${puzzle.targets[1].toUpperCase()}, one more to go.`;
     }
     if ( guesses.length === 0 && currentGuess === undefined ) {
-      return `start guessin'`;
+      return `Start guessin'`;
     }
     return ``;
   }
@@ -262,15 +262,15 @@ function Game(props: GameProps) {
     } else if (key === "Enter") {
     
       if (currentGuess.length !== 5) {
-        setHint("type more letters");
+        setHint("Type more letters");
         return;
       }
       if(guesses.includes(currentGuess)) {
-        setHint("you've already guessed that");
+        setHint("You've already guessed that");
         return;
       }
       if (!dictionary.includes(currentGuess)) {
-        setHint(`that's not in the word list`);
+        setHint(`That's not in the word list`);
         return;
       }
      
@@ -298,7 +298,7 @@ function Game(props: GameProps) {
       resetPractice();
     } else if (guesses.length >= props.maxGuesses) {
       if (puzzle.targets.includes(guesses[guesses.length-1])) {
-        setHint("last chance! do a bonus guess")
+        setHint("Last chance! Do a bonus guess.")
         return;
       }        
       setGameState(GameState.Lost);
@@ -414,7 +414,7 @@ function Game(props: GameProps) {
         {!practice && canNext && <span>| <a href={nextLink}>next</a></span>}
 
         {practice && <span>{`${cheatText}`}</span>}
-        {practice && <span><a href={practiceLink} onClick={ ()=>{resetPractice();} }>+ new puzzle</a></span>}
+        {practice && <span><a href={practiceLink} onClick={ ()=>{resetPractice();} }>+ New Puzzle</a></span>}
       </div>
       {showNews && (<div className="News">{news}
       </div>) }
@@ -440,7 +440,7 @@ function Game(props: GameProps) {
             onClick={() => {
               const score = gameState === GameState.Lost ? "X" : guesses.length;
               share(
-                "result copied to clipboard!",
+                "Result copied to clipboard!",
                 `${gameName} #${dayNum} ${score}/${props.maxGuesses}\n` +
                 emojiBlock({guesses:guesses, puzzle:puzzle, gameState:gameState}, props.colorBlind)
               );
