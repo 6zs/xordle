@@ -409,9 +409,9 @@ function Game(props: GameProps) {
     <div className="Game" style={{ display: props.hidden ? "none" : "block" }}>
 
       <div className="Game-options">
-        {!practice && canPrev && <span><a href={prevLink}>prev</a> |</span>}
-        {!practice && <span>day {dayNum}{`${cheatText}`}</span>}
-        {!practice && canNext && <span>| <a href={nextLink}>next</a></span>}
+        {!practice && canPrev && <span><a href={prevLink}>Previous</a> |</span>}
+        {!practice && <span>Day {dayNum}{`${cheatText}`}</span>}
+        {!practice && canNext && <span>| <a href={nextLink}>Next</a></span>}
 
         {practice && <span>{`${cheatText}`}</span>}
         {practice && <span><a href={practiceLink} onClick={ ()=>{resetPractice();} }>+ New Puzzle</a></span>}
