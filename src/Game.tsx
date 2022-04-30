@@ -15,8 +15,10 @@ import {
   maxGuesses,
   makeRandom,
   allowPractice,
-  todayDate
+  todayDate,
+  urlParam
 } from "./util";
+import { hardCodedPuzzles  } from "./hardcoded";
 
 import { Day } from "./Stats"
 
@@ -73,6 +75,18 @@ function isValidCluePair(word1: string, word2: string) {
   if (word1 === word2) {
     return false;
   }
+  for (let i = 0; i < word1.length; ++i) {
+    if(word1[i] === word2[i]) {
+      return false;
+    }
+    if (word2.lastIndexOf(word1[i]) !== -1) {
+      return false;
+    }
+  }
+  return true;
+}
+
+function wordsHaveNoOverlap(word1: string, word2: string) {
   for (let i = 0; i < word1.length; ++i) {
     if(word1[i] === word2[i]) {
       return false;
@@ -142,6 +156,15 @@ function gameOverText(state: GameState, targets: [string,string]) : string {
 
 let uniqueGame = 1000;
 export function makePuzzle(seed: number) : Puzzle {
+  let hardCoded = hardCodedPuzzles[seed];
+  if (hardCoded) {
+    if (wordsHaveNoOverlap(hardCoded.targets[0], hardCoded.targets[1]) ) {
+      return hardCoded;
+    }
+    else {
+      window.console.log("ERROR: " + hardCoded);
+    }
+  }
   let random = makeRandom(seed+uniqueGame);
   let targets =  randomTargets(random);
   let puzzle: Puzzle = {
@@ -169,6 +192,14 @@ export interface Puzzle {
 }
 
 function Game(props: GameProps) {
+
+  if (urlParam("export")) {
+    let values : Record<number, Puzzle> = {};    
+    for(let i = 1; i <= parseInt(urlParam("export") ?? "1"); ++i) {
+      values[i] = makePuzzle(i);
+    }
+    window.console.log( JSON.stringify(values, null, "\t") );
+  }
 
   let seed: number = dayNum;
   if (practice) {

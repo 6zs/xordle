@@ -1,5 +1,5 @@
 import "./App.css";
-import { day1Date, todayDate, maxGuesses, dateToNumber, day1Number, todayDayNum, dayNum, allowPractice, practice } from "./util";
+import { day1Date, todayDate, maxGuesses, dateToNumber, day1Number, todayDayNum, dayNum, allowPractice, practice, urlParam } from "./util";
 import Game, { emojiBlock, GameState } from "./Game";
 import { useEffect, useState } from "react";
 import { About } from "./About";
@@ -62,7 +62,7 @@ function App() {
   const [enterLeft, setEnterLeft] = useSetting<boolean>("enter-left", false);
 
   useEffect(() => { 
-    if (Number(dayNum) > Number(todayDayNum)) {
+    if (Number(dayNum) > Number(todayDayNum) && urlParam("xyzzyx") === null) {
       window.location.replace(redirectTo);
       return;
     }    
@@ -117,6 +117,20 @@ function App() {
   const dailyLink = "/";
   const practiceLink = "/?unlimited";
 
+  if (Number(dayNum) > Number(todayDayNum) && urlParam("xyzzyx") === null) {
+    return (
+      <div className={"App-container" + (colorBlind ? " color-blind" : "")}>
+      <h1>
+        <div className="Game-name-mode-container">
+          <span className="Game-name">Xordle</span>             
+        </div>
+        <div className="Game-modes">
+          Rewinding Time...
+        </div>
+      </h1>
+      </div>
+    )
+  }
 
   return (
     <div className={"App-container" + (colorBlind ? " color-blind" : "")}>
