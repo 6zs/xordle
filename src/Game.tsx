@@ -19,6 +19,7 @@ import {
   urlParam
 } from "./util";
 import { hardCodedPuzzles  } from "./hardcoded";
+import { checkVersion } from "./version";
 
 import { Day } from "./Stats"
 
@@ -192,6 +193,8 @@ export interface Puzzle {
 }
 
 function Game(props: GameProps) {
+
+  checkVersion();
 
   if (urlParam("export")) {
     let values : Record<number, Puzzle> = {};    

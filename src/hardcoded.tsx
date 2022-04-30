@@ -279,5 +279,14 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "pizza"
         ]
+    },
+    "35": {
+        "targets": [
+            "hyena",
+            "cross"
+        ],
+        "initialGuesses": [
+            "adieu"
+        ]
     }
   };
