@@ -1,5 +1,7 @@
+import { todayDate } from "./util";
+
 export function checkVersion() {
-    window.fetch(window.location.origin + window.location.pathname + "version.json")
+    window.fetch(window.location.origin + window.location.pathname + "version.json" + "?d=" + todayDate.toLocaleString('default', { month: 'long', year: 'numeric', day: "numeric" }))
     .then((response) => response.json())
     .then(
         (result) => {
