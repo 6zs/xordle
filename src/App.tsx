@@ -1,5 +1,5 @@
 import "./App.css";
-import { day1Date, todayDate, maxGuesses, dateToNumber, day1Number, todayDayNum, dayNum, allowPractice, practice, urlParam } from "./util";
+import { day1Date, todayDate, maxGuesses, dateToNumber, day1Number, todayDayNum, dayNum, allowPractice, practice, urlParam, gameName } from "./util";
 import Game, { emojiBlock, GameState } from "./Game";
 import { useEffect, useState } from "react";
 import { About } from "./About";
@@ -45,6 +45,28 @@ function useSetting<T>(
     } catch (e) {}
   };
   return [current, setSetting];
+}
+
+async function share(text?: string) {
+  const url = window.location.origin + window.location.pathname;
+  const body = (text ? text + "\n" : "") + url;
+  if (
+    /android|iphone|ipad|ipod|webos/i.test(navigator.userAgent) &&
+    !/firefox/i.test(navigator.userAgent)
+  ) {
+    try {
+      await navigator.share({ text: body });
+      return;
+    } catch (e) {
+      console.warn("navigator.share failed:", e);
+    }
+  }
+  try {
+    await navigator.clipboard.writeText(body);
+    return;
+  } catch (e) {
+    console.warn("navigator.clipboard.writeText failed:", e);
+  }
 }
 
 function App() {
@@ -114,6 +136,47 @@ function App() {
     return date.toLocaleDateString(locale, { day: "numeric" }) + result;
   }
 
+  function shouldShowMonthShare(date: Date) : boolean {
+    let numDays = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
+    for(let dayNumber = 1; dayNumber <= numDays; ++dayNumber)
+    {
+      let thisDate = new Date(date.getFullYear(), date.getMonth(), dayNumber);
+      let day = GetDay(thisDate);
+      if (!day || (day.gameState != GameState.Won && day.gameState != GameState.Lost))
+        return false;
+    }
+    return true;
+  }
+
+ function monthEmojiBlock(date: Date) : string {
+    let result = "";
+    for(let i = 0; i < new Date(date.getFullYear(), date.getMonth(), 1).getDay(); ++i)
+    {
+      result += "⬛";
+    }
+    let numDays = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
+    for(let dayNumber = 1; dayNumber <= numDays; ++dayNumber)
+    {
+      let thisDate = new Date(date.getFullYear(), date.getMonth(), dayNumber);
+      let day = GetDay(thisDate);
+      if ( day ) {
+        result += day.gameState === GameState.Playing
+          ? "🎲"
+          : day.gameState === GameState.Won
+          ? "✔️"
+          : "💀";
+      }
+      if(thisDate.getDay() == 6) {
+        result += "\n";
+      }
+    }
+    return result;
+  }
+  
+
+  const [startDate, setStartDate] = useState<Date>(todayDate);
+  const [showMonthShare, setShowMonthShare] = useState<boolean>(shouldShowMonthShare(todayDate));
+
   const dailyLink = "/";
   const practiceLink = "/?unlimited";
 
@@ -180,7 +243,18 @@ function App() {
         }}
         formatDay={(locale: string, date: Date) => calendarFormatDay(locale, date)}
         tileContent={({ activeStartDate, date, view }) => calendarTileContent(activeStartDate, date, view) }
+        onActiveStartDateChange={ ({ action, activeStartDate, value, view }) => {setStartDate(activeStartDate); setShowMonthShare(shouldShowMonthShare(activeStartDate));}}
       />}
+      {page === "calendar" && showMonthShare && (
+        <div>
+        <button
+          onClick={() => {share( 
+            `${gameName} ` + startDate.toLocaleString('default', { month: 'long', year: 'numeric' }) + '\n' + monthEmojiBlock(startDate));}}
+        >
+          share month results
+        </button>
+        </div> )
+      }
       {page === "settings" && (
         <div className="Settings">
           <div className="Settings-setting">
