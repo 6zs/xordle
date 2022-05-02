@@ -130,7 +130,7 @@ function App() {
       result = day.gameState === GameState.Playing
       ? "🎲"
       : day.gameState === GameState.Won
-      ? "✔️"
+      ? "🟢"
       : "💀";
     }
     return date.toLocaleDateString(locale, { day: "numeric" }) + result;
@@ -163,7 +163,7 @@ function App() {
         result += day.gameState === GameState.Playing
           ? "🎲"
           : day.gameState === GameState.Won
-          ? "✔️"
+          ? "🟢"
           : "💀";
       }
       if(thisDate.getDay() == 6) {
