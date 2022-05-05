@@ -317,6 +317,13 @@ function Game(props: GameProps) {
     }
   };
 
+  const resetDay = () => {
+    if (isDev) {
+      window.localStorage.removeItem(gameDayStoragePrefix+dayNum);
+      window.localStorage.removeItem(guessesDayStoragePrefix+dayNum);
+    }
+  }
+
   const resetPractice = () => {
     if (practice) {
       window.localStorage.removeItem("practice");
@@ -448,9 +455,10 @@ function Game(props: GameProps) {
         {!practice && canPrev && <span><a href={prevLink}>Previous</a> |</span>}
         {!practice && <span>Day {dayNum}{`${cheatText}`}</span>}
         {!practice && canNext && <span>| <a href={nextLink}>Next</a></span>}
+        {isDev && <span>| <a href={window.location.href} onClick={ ()=>{resetDay();} }>Reset</a></span>}
 
         {practice && <span>{`${cheatText}`}</span>}
-        {practice && <span><a href={practiceLink} onClick={ ()=>{resetPractice();} }>+ New Puzzle</a></span>}
+        {practice && <span><a href="#" onClick={ ()=>{resetPractice();} }>+ New Puzzle</a></span>}
       </div>
       {showNews && (<div className="News">{news}
       </div>) }
