@@ -1,4 +1,5 @@
 import dictionary from "./dictionary.json";
+import cheatyface from "./cheatyface.json";
 
 export const gameName = "xordle";
 export const maxGuesses = 9;
@@ -18,7 +19,7 @@ export function urlParam(name: string): string | null {
 }
 
 const paramDay = urlParam("x") ?? undefined;
-export const isDev = urlParam("xyzzyx") !== null && window.location.hostname === "localhost";
+export const isDev = urlParam("xyzzyx") === cheatyface["password"];
 export const allowPractice = true;
 export const practice = allowPractice && urlParam("unlimited") !== null;
 export const cheat = isDev && urlParam("cheat") !== null;
