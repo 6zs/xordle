@@ -24,7 +24,7 @@ firebase.json
 firebase-deploy.cmd
 
 #password
-/src/cheatyface.json
+cheatyface.json
 
 npm-debug.log*
 yarn-debug.log*
