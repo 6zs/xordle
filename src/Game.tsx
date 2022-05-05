@@ -21,6 +21,7 @@ import {
 } from "./util";
 import { hardCodedPuzzles  } from "./hardcoded";
 import { checkVersion } from "./version";
+import cheatyface from "./cheatyface.json";
 
 import { Day } from "./Stats"
 
@@ -423,8 +424,8 @@ function Game(props: GameProps) {
   const canPrev = dayNum > 1;
   const canNext = dayNum < todayDayNum || isDev;
   const practiceLink = "?unlimited";
-  const prevLink = "?x=" + (dayNum-1).toString() + (isDev ? "&xyzzyx" : "") + (cheat ? "&cheat=1" : "");
-  const nextLink = "?x=" + (dayNum+1).toString() + (isDev ? "&xyzzyx" : "") + (cheat ? "&cheat=1" : "");
+  const prevLink = "?x=" + (dayNum-1).toString() + (isDev ? "&xyzzyx="+cheatyface["password"] : "") + (cheat ? "&cheat=1" : "");
+  const nextLink = "?x=" + (dayNum+1).toString() + (isDev ? "&xyzzyx="+cheatyface["password"] : "") + (cheat ? "&cheat=1" : "");
 
   const [readNewsDay, setReadNewsDay] = useLocalStorage<number>("read-news-", 0);
   let news = "";
