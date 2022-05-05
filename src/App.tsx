@@ -1,5 +1,5 @@
 import "./App.css";
-import { day1Date, todayDate, maxGuesses, dateToNumber, day1Number, todayDayNum, dayNum, allowPractice, practice, urlParam, gameName } from "./util";
+import { day1Date, todayDate, maxGuesses, dateToNumber, day1Number, todayDayNum, dayNum, allowPractice, practice, urlParam, gameName, isDev } from "./util";
 import Game, { emojiBlock, GameState } from "./Game";
 import { useEffect, useState } from "react";
 import { About } from "./About";
@@ -48,8 +48,7 @@ function useSetting<T>(
 }
 
 async function share(text?: string) {
-  const url = window.location.origin + window.location.pathname;
-  const body = (text ? text + "\n" : "") + url;
+  const body = (text ? text + "\n" : "");
   if (
     /android|iphone|ipad|ipod|webos/i.test(navigator.userAgent) &&
     !/firefox/i.test(navigator.userAgent)
@@ -84,7 +83,7 @@ function App() {
   const [enterLeft, setEnterLeft] = useSetting<boolean>("enter-left", false);
 
   useEffect(() => { 
-    if (Number(dayNum) > Number(todayDayNum) && urlParam("xyzzyx") === null) {
+    if (Number(dayNum) > Number(todayDayNum) && !isDev) {
       window.location.replace(redirectTo);
       return;
     }    
@@ -136,18 +135,6 @@ function App() {
     return date.toLocaleDateString(locale, { day: "numeric" }) + result;
   }
 
-  function shouldShowMonthShare(date: Date) : boolean {
-    let numDays = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
-    for(let dayNumber = 1; dayNumber <= numDays; ++dayNumber)
-    {
-      let thisDate = new Date(date.getFullYear(), date.getMonth(), dayNumber);
-      let day = GetDay(thisDate);
-      if (!day || (day.gameState != GameState.Won && day.gameState != GameState.Lost))
-        return false;
-    }
-    return true;
-  }
-
  function monthEmojiBlock(date: Date) : string {
     let result = "";
     for(let i = 0; i < new Date(date.getFullYear(), date.getMonth(), 1).getDay(); ++i)
@@ -165,22 +152,22 @@ function App() {
           : day.gameState === GameState.Won
           ? "🟢"
           : "💀";
+      } else {
+        result += "⬛";
       }
       if(thisDate.getDay() == 6) {
         result += "\n";
       }
     }
-    return result;
-  }
-  
+    return result.trimEnd();
+  }  
 
   const [startDate, setStartDate] = useState<Date>(todayDate);
-  const [showMonthShare, setShowMonthShare] = useState<boolean>(shouldShowMonthShare(todayDate));
-
+  
   const dailyLink = "/";
   const practiceLink = "/?unlimited";
 
-  if (Number(dayNum) > Number(todayDayNum) && urlParam("xyzzyx") === null) {
+  if (Number(dayNum) > Number(todayDayNum) && !isDev) {
     return (
       <div className={"App-container" + (colorBlind ? " color-blind" : "")}>
       <h1>
@@ -243,9 +230,9 @@ function App() {
         }}
         formatDay={(locale: string, date: Date) => calendarFormatDay(locale, date)}
         tileContent={({ activeStartDate, date, view }) => calendarTileContent(activeStartDate, date, view) }
-        onActiveStartDateChange={ ({ action, activeStartDate, value, view }) => {setStartDate(activeStartDate); setShowMonthShare(shouldShowMonthShare(activeStartDate));}}
+        onActiveStartDateChange={ ({ action, activeStartDate, value, view }) => {setStartDate(activeStartDate);}}
       />}
-      {page === "calendar" && showMonthShare && (
+      {page === "calendar" && (
         <div>
         <button
           onClick={() => {share( 

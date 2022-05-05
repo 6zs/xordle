@@ -16,7 +16,8 @@ import {
   makeRandom,
   allowPractice,
   todayDate,
-  urlParam
+  urlParam,
+  isDev
 } from "./util";
 import { hardCodedPuzzles  } from "./hardcoded";
 import { checkVersion } from "./version";
@@ -420,15 +421,15 @@ function Game(props: GameProps) {
 
   const cheatText = cheat ? ` ${puzzle.targets}` : "";
   const canPrev = dayNum > 1;
-  const canNext = dayNum < todayDayNum;
+  const canNext = dayNum < todayDayNum || isDev;
   const practiceLink = "?unlimited";
-  const prevLink = "?x=" + (dayNum-1).toString();
-  const nextLink = "?x=" + (dayNum+1).toString();
+  const prevLink = "?x=" + (dayNum-1).toString() + (isDev ? "&xyzzyx" : "") + (cheat ? "&cheat=1" : "");
+  const nextLink = "?x=" + (dayNum+1).toString() + (isDev ? "&xyzzyx" : "") + (cheat ? "&cheat=1" : "");
 
   const [readNewsDay, setReadNewsDay] = useLocalStorage<number>("read-news-", 0);
   let news = "";
   let showNews = false;
-  let newsPostedDay = 13;
+  let newsPostedDay = 32;
   const canShowNews = news !== "" && dayNum >= newsPostedDay;
   const newsHasntBeenRead = readNewsDay < newsPostedDay;
   const newsReadToday = readNewsDay == dayNum;

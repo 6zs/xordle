@@ -271,6 +271,33 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
             "etude"
         ]
     },
+    "31": {
+        "targets": [
+            "sinus",
+            "hoard"
+        ],
+        "initialGuesses": [
+            "horse"
+        ]
+    },
+    "32": {
+        "targets": [
+            "petty",
+            "claim"
+        ],
+        "initialGuesses": [
+            "least"
+        ]
+    },
+    "33": {
+        "targets": [
+            "mucus",
+            "loyal"
+        ],
+        "initialGuesses": [
+            "vague"
+        ]
+    },
     "34": {
         "targets": [
             "lunar",
@@ -288,5 +315,230 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "adieu"
         ]
+    },
+    "36": {
+        "targets": [
+            "atlas",
+            "pouch"
+        ],
+        "initialGuesses": [
+            "hedge"
+        ]
+    },
+    "37": {
+        "targets": [
+            "taboo",
+            "fugue"
+        ],
+        "initialGuesses": [
+            "leach"
+        ]
+    },
+    "38": {
+        "targets": [
+            "truth",
+            "loved"
+        ],
+        "initialGuesses": [
+            "mamma"
+        ]
+    },
+    "39": {
+        "targets": [
+            "mural",
+            "diode"
+        ],
+        "initialGuesses": [
+            "mango"
+        ]
+    },
+    "40": {
+        "targets": [
+            "stalk",
+            "proud"
+        ],
+        "initialGuesses": [
+            "scent"
+        ]
+    },
+    "41": {
+        "targets": [
+            "fence",
+            "troop"
+        ],
+        "initialGuesses": [
+            "chaff"
+        ]
+    },
+    "42": {
+        "targets": [
+            "laugh",
+            "probe"
+        ],
+        "initialGuesses": [
+            "manor"
+        ]
+    },
+    "43": {
+        "targets": [
+            "tasty",
+            "cliff"
+        ],
+        "initialGuesses": [
+            "nymph"
+        ]
+    },
+    "44": {
+        "targets": [
+            "plane",
+            "rocky"
+        ],
+        "initialGuesses": [
+            "earth"
+        ]
+    },
+    "45": {
+        "targets": [
+            "fifth",
+            "gross"
+        ],
+        "initialGuesses": [
+            "gaudy"
+        ]
+    },
+    "46": {
+        "targets": [
+            "visit",
+            "whole"
+        ],
+        "initialGuesses": [
+            "wight"
+        ]
+    },
+    "47": {
+        "targets": [
+            "whale",
+            "broom"
+        ],
+        "initialGuesses": [
+            "edema"
+        ]
+    },
+    "48": {
+        "targets": [
+            "skill",
+            "chant"
+        ],
+        "initialGuesses": [
+            "angel"
+        ]
+    },
+    "49": {
+        "targets": [
+            "gamer",
+            "booty"
+        ],
+        "initialGuesses": [
+            "speak"
+        ]
+    },
+    "50": {
+        "targets": [
+            "villa",
+            "motor"
+        ],
+        "initialGuesses": [
+            "plate"
+        ]
+    },
+    "51": {
+        "targets": [
+            "braid",
+            "comet"
+        ],
+        "initialGuesses": [
+            "hedge"
+        ]
+    },
+    "52": {
+        "targets": [
+            "dress",
+            "quilt"
+        ],
+        "initialGuesses": [
+            "probe"
+        ]
+    },
+    "53": {
+        "targets": [
+            "shaft",
+            "comic"
+        ],
+        "initialGuesses": [
+            "chase"
+        ]
+    },
+    "54": {
+        "targets": [
+            "triad",
+            "goose"
+        ],
+        "initialGuesses": [
+            "scarf"
+        ]
+    },
+    "55": {
+        "targets": [
+            "bleed",
+            "shack"
+        ],
+        "initialGuesses": [
+            "empty"
+        ]
+    },
+    "56": {
+        "targets": [
+            "spasm",
+            "liver"
+        ],
+        "initialGuesses": [
+            "waltz"
+        ]
+    },
+    "57": {
+        "targets": [
+            "brick",
+            "small"
+        ],
+        "initialGuesses": [
+            "truth"
+        ]
+    },
+    "58": {
+        "targets": [
+            "rider",
+            "hotly"
+        ],
+        "initialGuesses": [
+            "rainy"
+        ]
+    },
+    "59": {
+        "targets": [
+            "laity",
+            "renew"
+        ],
+        "initialGuesses": [
+            "snout"
+        ]
+    },
+    "60": {
+        "targets": [
+            "spicy",
+            "exert"
+        ],
+        "initialGuesses": [
+            "grave"
+        ]
     }
-  };
+};
