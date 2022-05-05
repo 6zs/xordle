@@ -340,7 +340,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
             "loved"
         ],
         "initialGuesses": [
-            "mamma"
+            "mamma"            
         ]
     },
     "39": {
@@ -517,15 +517,15 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
     "58": {
         "targets": [
             "rider",
-            "hotly"
+            "ghost"
         ],
         "initialGuesses": [
-            "rainy"
+            "spook"
         ]
     },
     "59": {
         "targets": [
-            "laity",
+            "tacit",
             "renew"
         ],
         "initialGuesses": [
