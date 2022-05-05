@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { About } from "./About";
 import { GetDay, Stats } from "./Stats";
 import Calendar from "react-calendar";
+import cheatyface from "./cheatyface.json"
 
 function serializeStorage() : string {
   return window.btoa(window.JSON.stringify(window.localStorage));
@@ -219,12 +220,15 @@ function App() {
       {page === "about" && <About />}
       {page === "stats" && <Stats />}
       {page === "calendar" && <Calendar 
-        maxDate={todayDate}
+        maxDate={isDev ? new Date("January 1, 3000") : todayDate}
         minDate={day1Date}
         minDetail={"month"}
         maxDetail={"month"}
         onClickDay={(value: Date, event: any) => {
-          if ( value >= day1Date && value <= todayDate  ) {
+          if ( isDev )
+          {
+            window.location.replace(window.location.origin + "?x="+(1 + dateToNumber(value) - day1Number) + "&xyzzyx=" + cheatyface["password"]);
+          } else if ( value >= day1Date && value <= todayDate)  {
             window.location.replace(window.location.origin + "?x="+(1 + dateToNumber(value) - day1Number));
           }
         }}
