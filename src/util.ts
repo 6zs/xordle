@@ -22,6 +22,7 @@ const paramDay = urlParam("x") ?? undefined;
 export const isDev = urlParam("xyzzyx") === cheatyface["password"];
 export const allowPractice = true;
 export const practice = allowPractice && urlParam("unlimited") !== null;
+export const practiceSeed = practice && urlParam("unlimited") !== "" ? parseInt(urlParam("unlimited") ?? "0") : undefined;
 export const cheat = isDev && urlParam("cheat") !== null;
 export const dayNum : number = paramDay ? parseInt(paramDay) : 1 + todayNumber - day1Number;
 export const todayDayNum : number = 1 + todayNumber - day1Number;

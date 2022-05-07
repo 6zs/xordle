@@ -33,7 +33,18 @@
             console.log('Service worker registration failed, error:', error);
           });
       }
-    </script>        
+    </script>
+    <script>
+      function GoatEvent(str) {
+        let goatcounter = window.goatcounter;
+        if(goatcounter && goatcounter.count) {
+          goatcounter.count({
+            path: str,
+            event: true
+          });        
+        }
+      }
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
