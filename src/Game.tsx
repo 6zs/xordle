@@ -157,7 +157,7 @@ function randomClue(targets: string[], random: ()=>number) {
 
 function gameOverText(state: GameState, targets: [string,string]) : string {
   const verbed = state === GameState.Won ? "won" : "lost";
-  return `you ${verbed}! the answers were ${targets[0].toUpperCase()}, ${targets[1].toUpperCase()}. play again tomorrow`; 
+  return `You ${verbed}! the answers were ${targets[0].toUpperCase()}, ${targets[1].toUpperCase()}. Play again tomorrow!`; 
 }
 
 let uniqueGame = practice ? 100000 : 1000;
