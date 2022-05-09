@@ -157,11 +157,13 @@ function randomClue(targets: string[], random: ()=>number) {
 
 function gameOverText(state: GameState, targets: [string,string]) : string {
   const verbed = state === GameState.Won ? "won" : "lost";
-  return `You ${verbed}! the answers were ${targets[0].toUpperCase()}, ${targets[1].toUpperCase()}. Play again tomorrow!`; 
+  const playagain = practice ? " Go again!" : " Play again tomorrow!";
+  return `You ${verbed}! The answers were ${targets[0].toUpperCase()}, ${targets[1].toUpperCase()}.${playagain}`; 
 }
 
 let uniqueGame = practice ? 100000 : 1000;
 export function makePuzzle(seed: number) : Puzzle {
+  GoatEvent("Starting: " + (practice ? "Unlimited " : "Day ") + seed.toString());
   let hardCoded = hardCodedPuzzles[seed];
   if (hardCoded && !practice) {
     if (wordsHaveNoOverlap(hardCoded.targets[0], hardCoded.targets[1]) ) {
@@ -327,9 +329,12 @@ function Game(props: GameProps) {
         return;
       }
       if (!dictionary.includes(currentGuess)) {
+        GoatEvent("Nonword: " + currentGuess);
         setHint(`That's not in the word list`);
         return;
       }
+
+      GoatEvent("Guess " + (guesses.length+1) + ": " + currentGuess);
      
       setGuesses((guesses) => guesses.concat([currentGuess]));
       setCurrentGuess("");
@@ -464,7 +469,23 @@ function Game(props: GameProps) {
         {isDev && <span>| <a href={window.location.href} onClick={ ()=>{resetDay();} }>Reset</a></span>}
 
         {practice && <span>{`${cheatText}`}</span>}
-        {practice && <span><a href={practiceLink} onClick={ ()=>{resetPractice();} }>+ New Puzzle</a></span>}
+        {practice && <span>
+          <a href=""
+            onClick={(e) => {
+              const score = gameState === GameState.Lost ? "X" : guesses.length;
+              share(
+                "Challenge link copied to clipboard!",
+                ``
+              );
+              e.preventDefault();
+            }}
+          >
+            Share Puzzle
+          </a>
+        
+          <span> | </span>
+          <a href={practiceLink} onClick={ ()=>{resetPractice();} }>+ New Puzzle</a></span>}
+        
       </div>
       {showNews && (<div className="News">{news}
       </div>) }
@@ -496,10 +517,10 @@ function Game(props: GameProps) {
               );
             }}
           >
-            share emoji results
+            Share
           </button>
           </p>
-        )}
+        )}      
       </p>
       <Keyboard
         layout={props.keyboardLayout}

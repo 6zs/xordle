@@ -421,7 +421,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
             "broom"
         ],
         "initialGuesses": [
-            "edema"
+            "cloud"
         ]
     },
     "48": {
@@ -457,7 +457,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
             "comet"
         ],
         "initialGuesses": [
-            "hedge"
+            "point"
         ]
     },
     "52": {
@@ -511,7 +511,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
             "small"
         ],
         "initialGuesses": [
-            "truth"
+            "story"
         ]
     },
     "58": {
@@ -539,6 +539,15 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         ],
         "initialGuesses": [
             "grave"
+        ]
+    },
+    "69": {
+        "targets": [
+            "noisy",
+            "eater"
+        ],
+        "initialGuesses": [
+            "memes"
         ]
     }
 };

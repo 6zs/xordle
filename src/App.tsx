@@ -173,7 +173,13 @@ function App() {
       <div className={"App-container" + (colorBlind ? " color-blind" : "")}>
       <h1>
         <div className="Game-name-mode-container">
-          <span className="Game-name">Xordle</span>             
+          <span className="Game-name">
+          <div className="stack stacks3">
+            <span className="index0">Xordle</span>
+            <span className="index1">Xordle</span>
+            <span className="index2">Xordle</span>
+          </div>
+          </span>             
         </div>
         <div className="Game-modes">
           Rewinding Time...
@@ -187,7 +193,15 @@ function App() {
     <div className={"App-container" + (colorBlind ? " color-blind" : "")}>
       <h1>
         <div className="Game-name-mode-container">
-        <span className="Game-name"><img width="23" height="23" src="favicon.png"/> Xordle </span>             
+        <span className="Game-name">
+        
+          <span className="stack stacks3">            
+            <span className="index0"><img width="23" height="23" src="/xordle/favicon.png"/> Xordle</span>
+            <span className="index1"><img width="23" height="23" src="/xordle/favicon.png"/> Xordle</span>
+            <span className="index2"><img width="23" height="23" src="/xordle/favicon.png"/> Xordle</span>
+          </span>
+          
+         </span>             
         <div className="Game-modes">
         {allowPractice && !practice && <a className="ModeEnabled">Daily</a>}
         {allowPractice && practice && <a className="ModeDisabled" href={dailyLink}>Daily</a>}
