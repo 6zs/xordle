@@ -36,7 +36,7 @@ export function Row(props: RowProps) {
               : ""
           }
         >
-          {letter}
+        {letter}
         </td>
       );
     });
@@ -45,8 +45,15 @@ export function Row(props: RowProps) {
   return (
     <tr className={rowClass}>
       {letterDivs}
-      {props.annotation && (
-        <span className="Row-annotation">{props.annotation}</span>
+      {!props.annotation && <span className="Row-annotation">{'\u00a0'}</span>}
+      {props.annotation &&  (
+        <span className="Row-annotation">
+          <span className="stack stacks3">            
+            <span className="index0">{props.annotation}</span>
+            <span className="index1">{props.annotation}</span>
+            <span className="index2">{props.annotation}</span>
+          </span>
+        </span>
       )}
     </tr>
   );

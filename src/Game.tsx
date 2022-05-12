@@ -21,7 +21,6 @@ import {
   practiceSeed
 } from "./util";
 import { hardCodedPuzzles  } from "./hardcoded";
-import { checkVersion } from "./version";
 import cheatyface from "./cheatyface.json";
 
 import { Day } from "./Stats"
@@ -33,6 +32,7 @@ export enum GameState {
 }
 
 declare const GoatEvent: Function;
+declare const checkVersion: Function;
 
 export const gameDayStoragePrefix = "result-";
 export const guessesDayStoragePrefix = "guesses-";
@@ -199,10 +199,9 @@ export interface Puzzle {
   initialGuesses: string[]
 }
 
+let version = checkVersion();
 function Game(props: GameProps) {
-
   checkVersion();
-
   if (urlParam("export")) {
     let values : Record<number, Puzzle> = {};    
     for(let i = 1; i <= parseInt(urlParam("export") ?? "1"); ++i) {
@@ -292,10 +291,7 @@ function Game(props: GameProps) {
     if (guesses.includes(puzzle.targets[1])) {
       return `You got ${puzzle.targets[1].toUpperCase()}, one more to go.`;
     }
-    if ( guesses.length === 0 && currentGuess === undefined ) {
-      return `Start guessin'`;
-    }
-    return ``;
+    return `Two words remain.`;
   }
 
   const onKey = (key: string) => {
@@ -433,7 +429,7 @@ function Game(props: GameProps) {
           }
           cluedLetters={cluedLetters}
           correctGuess={correctGuess}
-          annotation={isBonusGuess ? "bonus!" : ((isAllGreen && !isTarget) ? "huh?" : `\u00a0`)}          
+          annotation={isBonusGuess ? "Bonus!" : ((isAllGreen && !isTarget) ? "Huh?" : undefined)}          
         />
       );
     });

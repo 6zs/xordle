@@ -479,7 +479,6 @@ a {
 }
 
 .stack span {
-  font-weight: bold;
   grid-row-start: 1;
   grid-column-start: 1;
 

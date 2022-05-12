@@ -72,9 +72,7 @@ async function share(text?: string) {
 function App() {
   type Page = "game" | "about" | "settings" | "stats" | "calendar";
   const [page, setPage] = useState<Page>("game");
-  const prefersDark =
-    window.matchMedia &&
-    window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const prefersDark = !window.matchMedia || (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches);
   const [dark, setDark] = useSetting<boolean>("dark", prefersDark);
   const [colorBlind, setColorBlind] = useSetting<boolean>("colorblind", false);
   const [keyboard, setKeyboard] = useSetting<string>(
@@ -196,9 +194,9 @@ function App() {
         <span className="Game-name">
         
           <span className="stack stacks3">            
-            <span className="index0"><img width="23" height="23" src="/xordle/favicon.png"/> Xordle</span>
-            <span className="index1"><img width="23" height="23" src="/xordle/favicon.png"/> Xordle</span>
-            <span className="index2"><img width="23" height="23" src="/xordle/favicon.png"/> Xordle</span>
+            <span className="index0"><img width="23" height="23" src="favicon.png"/> Xordle</span>
+            <span className="index1"><img width="23" height="23" src="favicon.png"/> Xordle</span>
+            <span className="index2"><img width="23" height="23" src="favicon.png"/> Xordle</span>
           </span>
           
          </span>             

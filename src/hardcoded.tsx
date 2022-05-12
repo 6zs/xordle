@@ -408,11 +408,11 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
     },
     "46": {
         "targets": [
-            "visit",
-            "whole"
+            "point",
+            "daddy"
         ],
         "initialGuesses": [
-            "wight"
+            "crews"
         ]
     },
     "47": {
@@ -426,11 +426,11 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
     },
     "48": {
         "targets": [
-            "skill",
-            "chant"
+            "cello",
+            "haunt"
         ],
         "initialGuesses": [
-            "angel"
+            "horse"
         ]
     },
     "49": {
@@ -541,6 +541,24 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
             "grave"
         ]
     },
+    "61": {
+        "targets": [
+            "visit",
+            "whole"
+        ],
+        "initialGuesses": [
+            "wight"
+        ]
+    },    
+    "62": {
+        "targets": [
+            "skill",
+            "chant"
+        ],
+        "initialGuesses": [
+            "angel"
+        ]
+    },    
     "69": {
         "targets": [
             "noisy",
