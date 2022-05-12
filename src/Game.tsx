@@ -163,7 +163,7 @@ function gameOverText(state: GameState, targets: [string,string]) : string {
 }
 
 let uniqueGame = practice ? 100000 : 1000;
-export function makePuzzle(seed: number) : Puzzle {
+export function makePuzzle(seed: number) : Puzzle { 
   GoatEvent("Starting: " + (practice ? "Unlimited " : "Day ") + seed.toString());
   let hardCoded = hardCodedPuzzles[seed];
   if (hardCoded && !practice) {
@@ -200,9 +200,7 @@ export interface Puzzle {
   initialGuesses: string[]
 }
 
-let version = checkVersion();
 function Game(props: GameProps) {
-  checkVersion();
   if (urlParam("export")) {
     let values : Record<number, Puzzle> = {};    
     for(let i = 1; i <= parseInt(urlParam("export") ?? "1"); ++i) {
