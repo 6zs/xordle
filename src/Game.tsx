@@ -18,11 +18,12 @@ import {
   todayDate,
   urlParam,
   isDev,
-  practiceSeed
+  practiceSeed,
+  nightmare
 } from "./util";
+
 import { hardCodedPuzzles  } from "./hardcoded";
 import cheatyface from "./cheatyface.json";
-
 import { Day } from "./Stats"
 
 export enum GameState {
@@ -291,7 +292,7 @@ function Game(props: GameProps) {
     if (guesses.includes(puzzle.targets[1])) {
       return `You got ${puzzle.targets[1].toUpperCase()}, one more to go.`;
     }
-    return `Two words remain.`;
+    return nightmare ? `Nightmare puzzle.` : `Two words remain.`;
   }
 
   const onKey = (key: string) => {
@@ -500,7 +501,14 @@ function Game(props: GameProps) {
           whiteSpace: "pre-wrap",
         }}
       >
-        {hint || `\u00a0`}
+        {!nightmare && (hint || `\u00a0`)}
+        {nightmare && 
+          <div className="stack stacks3 nightmare">
+            <span className="index0">{hint}</span>
+            <span className="index1">{hint}</span>
+            <span className="index2">{hint}</span>
+          </div>
+        }
         {gameState !== GameState.Playing && (
           <p>
           <button
@@ -508,7 +516,7 @@ function Game(props: GameProps) {
               const score = gameState === GameState.Lost ? "X" : guesses.length;
               share(
                 "Result copied to clipboard!",
-                `${gameName} ${practice ? ("Unlimited " + seed.toString()) : ("#"+dayNum.toString())} ${score}/${props.maxGuesses}\n` +
+                `${gameName} ${practice ? ((nightmare ? "nightmare " : "unlimited ") + seed.toString()) : ("#"+dayNum.toString())} ${score}/${props.maxGuesses}\n` +
                 emojiBlock({guesses:guesses, puzzle:puzzle, gameState:gameState}, props.colorBlind)
               );
             }}
