@@ -164,7 +164,7 @@ function gameOverText(state: GameState, targets: [string,string]) : string {
 
 let uniqueGame = practice ? 100000 : 1000;
 export function makePuzzle(seed: number) : Puzzle { 
-  GoatEvent("Starting: " + (practice ? "Unlimited " : "Day ") + seed.toString());
+  GoatEvent("Starting: " + (practice ? (nightmare ? "Nightmare " : "Unlimited " ) : "Day ") + seed.toString());
   let hardCoded = hardCodedPuzzles[seed];
   if (hardCoded && !practice) {
     if (wordsHaveNoOverlap(hardCoded.targets[0], hardCoded.targets[1]) ) {
@@ -290,7 +290,7 @@ function Game(props: GameProps) {
     if (guesses.includes(puzzle.targets[1])) {
       return `You got ${puzzle.targets[1].toUpperCase()}, one more to go.`;
     }
-    return nightmare ? `Nightmare puzzle.` : `Two words remain.`;
+    return nightmare ? `You found a nightmare puzzle.` : `Two words remain.`;
   }
 
   const onKey = (key: string) => {
@@ -344,14 +344,14 @@ function Game(props: GameProps) {
     }
     if ( (guesses.includes(puzzle.targets[0]) && guesses.includes(puzzle.targets[1])) ) {
       setGameState(GameState.Won);
-      GoatEvent("Won: " + (practice ? "Unlimited " : "Day ") + seed.toString() + ", " + guesses.length + " guesses");
+      GoatEvent("Won: " + (practice ? (nightmare ? "Nightmare " : "Unlimited " ) : "Day ") + seed.toString() + ", " + guesses.length + " guesses");
     } else if (guesses.length >= props.maxGuesses) {
       if (puzzle.targets.includes(guesses[guesses.length-1])) {
         setHint("Last chance! Do a bonus guess.")
         return;
       }        
       setGameState(GameState.Lost);
-      GoatEvent("Lost: " + (practice ? "Unlimited " : "Day ") + seed.toString());
+      GoatEvent("Lost: " + (practice ? (nightmare ? "Nightmare " : "Unlimited " ) : "Day ") + seed.toString());
     } 
     setHint(getHintFromState());
   };
@@ -492,7 +492,7 @@ function Game(props: GameProps) {
       >
         <tbody>{tableRows}</tbody>
       </table>
-      <p
+      <div
         role="alert"
         style={{
           userSelect: /https?:/.test(hint) ? "text" : "none",
@@ -523,7 +523,7 @@ function Game(props: GameProps) {
           </button>
           </p>
         )}      
-      </p>
+      </div>
       <Keyboard
         layout={props.keyboardLayout}
         letterInfo={letterInfo}

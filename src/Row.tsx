@@ -1,4 +1,5 @@
 import { Clue, clueClass, CluedLetter, clueWord } from "./clue";
+import { nightmare } from "./util";
 
 export enum RowState {
   LockedIn,
@@ -11,6 +12,16 @@ interface RowProps {
   cluedLetters: CluedLetter[];
   correctGuess: string;
   annotation?: string;
+}
+
+function glitch(content: any) {
+  return (
+  <span className="stack stacks3">            
+    <span className="index0">{content}</span>
+    <span className="index1">{content}</span>
+    <span className="index2">{content}</span>
+  </span>
+  )
 }
 
 export function Row(props: RowProps) {
@@ -36,7 +47,8 @@ export function Row(props: RowProps) {
               : ""
           }
         >
-        {letter}
+        {nightmare && isLockedIn && (<span>{glitch(letter)}</span>)}
+        {!(nightmare && isLockedIn) && (<span>{letter}</span>)}
         </td>
       );
     });
@@ -45,16 +57,12 @@ export function Row(props: RowProps) {
   return (
     <tr className={rowClass}>
       {letterDivs}
-      {!props.annotation && <span className="Row-annotation">{'\u00a0'}</span>}
-      {props.annotation &&  (
-        <span className="Row-annotation">
-          <span className="stack stacks3">            
-            <span className="index0">{props.annotation}</span>
-            <span className="index1">{props.annotation}</span>
-            <span className="index2">{props.annotation}</span>
-          </span>
-        </span>
-      )}
+      {!props.annotation && <td className="Row-annotation">{'\u00a0'}</td>}
+      {props.annotation &&  
+        <td className="Row-annotation">
+            {glitch(props.annotation)}
+        </td>
+      }
     </tr>
   );
 }

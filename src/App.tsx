@@ -1,5 +1,5 @@
 import "./App.css";
-import { day1Date, todayDate, maxGuesses, dateToNumber, day1Number, todayDayNum, dayNum, allowPractice, practice, urlParam, gameName, isDev } from "./util";
+import { day1Date, todayDate, maxGuesses, dateToNumber, day1Number, todayDayNum, dayNum, allowPractice, practice, urlParam, gameName, isDev, gameNameOrNightmare } from "./util";
 import Game, { emojiBlock, GameState } from "./Game";
 import { useEffect, useState } from "react";
 import { About } from "./About";
@@ -173,9 +173,9 @@ function App() {
         <div className="Game-name-mode-container">
           <span className="Game-name">
           <div className="stack stacks3">
-            <span className="index0">Xordle</span>
-            <span className="index1">Xordle</span>
-            <span className="index2">Xordle</span>
+            <span className="index0">{gameNameOrNightmare}</span>
+            <span className="index1">{gameNameOrNightmare}</span>
+            <span className="index2">{gameNameOrNightmare}</span>
           </div>
           </span>             
         </div>
@@ -194,9 +194,9 @@ function App() {
         <span className="Game-name">
         
           <span className="stack stacks3">            
-            <span className="index0"><img width="23" height="23" src="favicon.png"/> Xordle</span>
-            <span className="index1"><img width="23" height="23" src="favicon.png"/> Xordle</span>
-            <span className="index2"><img width="23" height="23" src="favicon.png"/> Xordle</span>
+            <span className="index0"><img width="23" height="23" src="favicon.png"/> {gameNameOrNightmare}</span>
+            <span className="index1"><img width="23" height="23" src="favicon.png"/> {gameNameOrNightmare}</span>
+            <span className="index2"><img width="23" height="23" src="favicon.png"/> {gameNameOrNightmare}</span>
           </span>
           
          </span>             

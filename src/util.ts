@@ -25,6 +25,7 @@ export const allowPractice = true;
 export const practice = allowPractice && urlParam("unlimited") !== null;
 export const practiceSeed = practice && urlParam("unlimited") !== "" ? parseInt(urlParam("unlimited") ?? "0") : undefined;
 export const nightmare = practiceSeed && nightmares.lastIndexOf(practiceSeed) != -1;
+export const gameNameOrNightmare = nightmare ? "Nightmare" : "Xordle"
 export const cheat = isDev && urlParam("cheat") !== null;
 export const dayNum : number = paramDay ? parseInt(paramDay) : 1 + todayNumber - day1Number;
 export const todayDayNum : number = 1 + todayNumber - day1Number;
