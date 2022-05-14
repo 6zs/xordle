@@ -1,11 +1,12 @@
 import "./App.css";
-import { day1Date, todayDate, maxGuesses, dateToNumber, day1Number, todayDayNum, dayNum, allowPractice, practice, urlParam, gameName, isDev, gameNameOrNightmare } from "./util";
+import { day1Date, todayDate, maxGuesses, dateToNumber, day1Number, todayDayNum, dayNum, allowPractice, practice, urlParam, gameName, isDev, gameNameOrNightmare, cheat } from "./util";
 import Game, { emojiBlock, GameState } from "./Game";
 import { useEffect, useState } from "react";
 import { About } from "./About";
 import { GetDay, Stats } from "./Stats";
 import Calendar from "react-calendar";
 import cheatyface from "./cheatyface.json"
+import { nightmares } from "./nightmares";
 
 function serializeStorage() : string {
   return window.btoa(window.JSON.stringify(window.localStorage));
@@ -86,6 +87,13 @@ function App() {
       window.location.replace(redirectTo);
       return;
     }    
+    if (isDev && urlParam("nightmare") !== null) {
+      window.location.replace(window.location.origin 
+        + "?unlimited=" + nightmares[parseInt(urlParam("nightmare") || "0")]
+        + "&xyzzyx=" + cheatyface['password']
+        + "&cheat=" + (cheat ? "0" : "1" )
+      );
+    }
     if (save !== "") {
       deserializeStorage(save);
       window.location.replace(window.location.origin);
