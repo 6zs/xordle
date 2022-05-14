@@ -14,12 +14,11 @@ import {
   cheat,
   maxGuesses,
   makeRandom,
-  allowPractice,
-  todayDate,
   urlParam,
   isDev,
-  practiceSeed,
-  nightmare
+  nightmare,
+  needResetPractice,
+  currentSeed
 } from "./util";
 
 import { hardCodedPuzzles  } from "./hardcoded";
@@ -222,33 +221,16 @@ function Game(props: GameProps) {
     window.localStorage.removeItem("practiceGuesses");
   }
 
-  let seed: number = dayNum;
-  if (practice) {
-    seed = new Date().getMilliseconds() + (1000 * (1 + new Date().getTime() % 10));
-    if (!(new URLSearchParams(window.location.search).has("new"))) {
-      try {
-        let storedSeed = window.localStorage.getItem("practice");
-        if (storedSeed) {
-          seed = parseInt(storedSeed);
-          if (practiceSeed && seed !== practiceSeed) {
-            resetPractice();
-            seed = practiceSeed;            
-          }
-        } else {
-          seed = practiceSeed ?? seed;
-          window.localStorage.setItem("practice",""+seed);
-        }
-      } catch(e) {
-      }
-    }
+  if (needResetPractice) {
+    resetPractice();
   }
 
   const [puzzle, setPuzzle] = useState(() => {
-    return makePuzzle(seed);
+    return makePuzzle(currentSeed);
   });
 
-  let stateStorageKey = practice ? "practiceState" : (gameDayStoragePrefix+seed);
-  let guessesStorageKey = practice ? "practiceGuesses" : (guessesDayStoragePrefix+seed);
+  let stateStorageKey = practice ? "practiceState" : (gameDayStoragePrefix+currentSeed);
+  let guessesStorageKey = practice ? "practiceGuesses" : (guessesDayStoragePrefix+currentSeed);
 
   const [gameState, setGameState] = useLocalStorage<GameState>(stateStorageKey, GameState.Playing);
   const [guesses, setGuesses] = useLocalStorage<string[]>(guessesStorageKey, puzzle.initialGuesses);
@@ -257,7 +239,7 @@ function Game(props: GameProps) {
    
   const tableRef = useRef<HTMLTableElement>(null);
   async function share(copiedHint: string, text?: string) {
-    const url = window.location.origin + window.location.pathname + (practice ? ("?unlimited=" + seed.toString()) : "");
+    const url = window.location.origin + window.location.pathname + (practice ? ("?unlimited=" + currentSeed.toString()) : "");
     const body = (text ? text + "\n" : "") + url;
     if (
       /android|iphone|ipad|ipod|webos/i.test(navigator.userAgent) &&
@@ -344,14 +326,14 @@ function Game(props: GameProps) {
     }
     if ( (guesses.includes(puzzle.targets[0]) && guesses.includes(puzzle.targets[1])) ) {
       setGameState(GameState.Won);
-      GoatEvent("Won: " + (practice ? (nightmare ? "Nightmare " : "Unlimited " ) : "Day ") + seed.toString() + ", " + guesses.length + " guesses");
+      GoatEvent("Won: " + (practice ? (nightmare ? "Nightmare " : "Unlimited " ) : "Day ") + currentSeed.toString() + ", " + guesses.length + " guesses");
     } else if (guesses.length >= props.maxGuesses) {
       if (puzzle.targets.includes(guesses[guesses.length-1])) {
         setHint("Last chance! Do a bonus guess.")
         return;
       }        
       setGameState(GameState.Lost);
-      GoatEvent("Lost: " + (practice ? (nightmare ? "Nightmare " : "Unlimited " ) : "Day ") + seed.toString());
+      GoatEvent("Lost: " + (practice ? (nightmare ? "Nightmare " : "Unlimited " ) : "Day ") + currentSeed.toString());
     } 
     setHint(getHintFromState());
   };
@@ -514,7 +496,7 @@ function Game(props: GameProps) {
               const score = gameState === GameState.Lost ? "X" : guesses.length;
               share(
                 "Result copied to clipboard!",
-                `${gameName} ${practice ? ((nightmare ? "nightmare " : "unlimited ") + seed.toString()) : ("#"+dayNum.toString())} ${score}/${props.maxGuesses}\n` +
+                `${gameName} ${practice ? ((nightmare ? "nightmare " : "unlimited ") + currentSeed.toString()) : ("#"+dayNum.toString())} ${score}/${props.maxGuesses}\n` +
                 emojiBlock({guesses:guesses, puzzle:puzzle, gameState:gameState}, props.colorBlind)
               );
             }}

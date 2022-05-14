@@ -23,13 +23,40 @@ const paramDay = urlParam("x") ?? undefined;
 export const isDev = urlParam("xyzzyx") === cheatyface["password"];
 export const allowPractice = true;
 export const practice = allowPractice && urlParam("unlimited") !== null;
-export const practiceSeed = practice && urlParam("unlimited") !== "" ? parseInt(urlParam("unlimited") ?? "0") : undefined;
-export const nightmare = practiceSeed && nightmares.lastIndexOf(practiceSeed) != -1;
-export const gameNameOrNightmare = nightmare ? "Nightmare" : "Xordle"
 export const cheat = isDev && urlParam("cheat") !== null;
 export const dayNum : number = paramDay ? parseInt(paramDay) : 1 + todayNumber - day1Number;
 export const todayDayNum : number = 1 + todayNumber - day1Number;
 export const dictionarySet: Set<string> = new Set(dictionary);
+
+function initInfo() : [number, boolean] {
+  let seed: number = dayNum;
+  let resetPractice : boolean = false;
+  if (practice) {
+    const practiceSeed = practice && urlParam("unlimited") !== "" ? parseInt(urlParam("unlimited") ?? "0") : undefined;
+    seed = new Date().getMilliseconds() + (1000 * (1 + new Date().getTime() % 10));
+    if (!(new URLSearchParams(window.location.search).has("new"))) {
+      try {
+        let storedSeed = window.localStorage.getItem("practice");
+        if (storedSeed) {
+          seed = parseInt(storedSeed);
+          if (practiceSeed && seed !== practiceSeed) {
+            seed = practiceSeed;      
+            resetPractice = true;
+          }
+        } else {
+          seed = practiceSeed ?? seed;
+          window.localStorage.setItem("practice",""+seed);
+        }
+      } catch(e) {
+      }
+    }
+  }
+  return [seed, resetPractice];
+}
+
+export const [currentSeed, needResetPractice] = initInfo();
+export const nightmare = practice && nightmares.lastIndexOf(currentSeed) !== -1;
+export const gameNameOrNightmare = nightmare ? "Nightmare" : "Xordle"
 
 function mulberry32(a: number) {
   return function () {
