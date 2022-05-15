@@ -163,7 +163,6 @@ function gameOverText(state: GameState, targets: [string,string]) : string {
 
 let uniqueGame = practice ? 100000 : 1000;
 export function makePuzzle(seed: number) : Puzzle { 
-  GoatEvent("Starting: " + (practice ? (nightmare ? "Nightmare " : "Unlimited " ) : "Day ") + seed.toString());
   let hardCoded = hardCodedPuzzles[seed];
   if (hardCoded && !practice) {
     if (wordsHaveNoOverlap(hardCoded.targets[0], hardCoded.targets[1]) ) {
@@ -200,7 +199,10 @@ export interface Puzzle {
 }
 
 function Game(props: GameProps) {
-  if (urlParam("export")) {
+  
+  GoatEvent("Starting: " + (practice ? (nightmare ? "Nightmare " : "Unlimited " ) : "Day ") + currentSeed.toString());
+  
+  if (isDev && urlParam("export")) {
     let values : Record<number, Puzzle> = {};    
     for(let i = 1; i <= parseInt(urlParam("export") ?? "1"); ++i) {
       values[i] = makePuzzle(i);
