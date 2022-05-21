@@ -24,6 +24,7 @@ import {
 import { hardCodedPuzzles  } from "./hardcoded";
 import cheatyface from "./cheatyface.json";
 import { Day } from "./Stats"
+import { nightmares } from "./nightmares";
 
 export enum GameState {
   Playing,
@@ -181,6 +182,17 @@ export function makePuzzle(seed: number) : Puzzle {
   return puzzle;
 }
 
+export function allGreenCount(puzzle: Puzzle) : number {
+  let allGreens = 0;
+  for(const word of eligible) {
+    let matching = countMatching(xorclue(clue(word, puzzle.targets[0]), clue(word,puzzle.targets[1])));    
+    if(matching.get(Clue.Correct) == 5) {
+      ++allGreens;
+    }
+  }
+  return allGreens;
+}
+
 export function emojiBlock(day: Day, colorBlind: boolean) : string {
   const emoji = colorBlind
     ? ["⬛", "🟦", "🟧"]
@@ -208,6 +220,20 @@ function Game(props: GameProps) {
       values[i] = makePuzzle(i);
     }
     window.console.log( JSON.stringify(values, null, "\t") );
+  }
+
+  if (isDev && urlParam("findgreen")) {
+    let largest: Puzzle;
+    let largestCount = -1;
+    for(let i = 1; i <= parseInt(urlParam("findgreen") ?? "1"); ++i) {
+      let candidate: Puzzle = makePuzzle(i);
+      let candidateCount = allGreenCount(candidate);
+      if (candidateCount >= largestCount) {
+        largest = candidate;
+        largestCount = candidateCount;
+        window.console.log( "\npuzzle #" + i + " has " + largestCount + " monogreens:" + JSON.stringify(largest, null, "\t") );
+      }
+    }
   }
 
   const resetDay = () => {
@@ -274,7 +300,7 @@ function Game(props: GameProps) {
     if (guesses.includes(puzzle.targets[1])) {
       return `You got ${puzzle.targets[1].toUpperCase()}, one more to go.`;
     }
-    return nightmare ? `You found a nightmare puzzle.` : `Two words remain.`;
+    return nightmare ? `You found hidden nightmare puzzle #${nightmares.indexOf(currentSeed)+1} of ${nightmares.length}.` : `Two words remain.`;
   }
 
   const onKey = (key: string) => {

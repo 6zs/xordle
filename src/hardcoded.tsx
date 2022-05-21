@@ -340,7 +340,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
             "loved"
         ],
         "initialGuesses": [
-            "mamma"            
+            "mamma"
         ]
     },
     "39": {
@@ -453,20 +453,20 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
     },
     "51": {
         "targets": [
-            "braid",
-            "comet"
+            "tidal",
+            "force"
         ],
         "initialGuesses": [
-            "point"
+            "lunar"
         ]
     },
     "52": {
         "targets": [
-            "dress",
-            "quilt"
+            "civic",
+            "dryer"
         ],
         "initialGuesses": [
-            "probe"
+            "diver"
         ]
     },
     "53": {
@@ -507,11 +507,11 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
     },
     "57": {
         "targets": [
-            "brick",
-            "small"
+            "these",
+            "daily"
         ],
         "initialGuesses": [
-            "story"
+            "solve"
         ]
     },
     "58": {
@@ -534,31 +534,85 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
     },
     "60": {
         "targets": [
-            "spicy",
-            "exert"
+            "tooth",
+            "clean"
         ],
         "initialGuesses": [
-            "grave"
+            "brush"
         ]
     },
     "61": {
         "targets": [
-            "visit",
-            "whole"
+            "smell",
+            "dirty"
         ],
         "initialGuesses": [
-            "wight"
+            "bathe"
         ]
-    },    
+    },
     "62": {
         "targets": [
-            "skill",
-            "chant"
+            "seven",
+            "fifth"
         ],
         "initialGuesses": [
-            "angel"
+            "haiku"
         ]
-    },    
+    },
+    "63": {
+        "targets": [
+            "braid",
+            "comet"
+        ],
+        "initialGuesses": [
+            "point"
+        ]
+    },
+    "64": {
+        "targets": [
+            "snout",
+            "rapid"
+        ],
+        "initialGuesses": [
+            "hotel"
+        ]
+    },
+    "65": {
+        "targets": [
+            "triad",
+            "goose"
+        ],
+        "initialGuesses": [
+            "scarf"
+        ]
+    },
+    "66": {
+        "targets": [
+            "cling",
+            "derby"
+        ],
+        "initialGuesses": [
+            "modal"
+        ]
+    },
+    "67": {
+        "targets": [
+            "expel",
+            "vomit"
+        ],
+        "initialGuesses": [
+            "being"
+        ]
+    },
+    "68": {
+        "targets": [
+            "brick",
+            "small"
+        ],
+        "initialGuesses": [
+            "story"
+        ]
+    },
     "69": {
         "targets": [
             "noisy",
@@ -567,5 +621,59 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "memes"
         ]
+    },
+    "70": {
+        "targets": [
+            "spicy",
+            "exert"
+        ],
+        "initialGuesses": [
+            "grave"
+        ]
+    },
+    "71": {
+        "targets": [
+            "sunny",
+            "beach"
+        ],
+        "initialGuesses": [
+            "ocean"
+        ]
+    },
+    "72": {
+        "targets": [
+            "visit",
+            "whole"
+        ],
+        "initialGuesses": [
+            "wight"
+        ]
+    },
+    "73": {
+        "targets": [
+            "night",
+            "dream"
+        ],
+        "initialGuesses": [
+            "sleep"
+        ]
+    },
+    "74": {
+        "targets": [
+            "skill",
+            "chant"
+        ],
+        "initialGuesses": [
+            "angel"
+        ]
+    },
+    "75": {
+        "targets": [
+            "blush",
+            "wreck"
+        ],
+        "initialGuesses": [
+            "nerve"
+        ]
     }
-};
+}
