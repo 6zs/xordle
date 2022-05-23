@@ -579,13 +579,13 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
     },
     "65": {
         "targets": [
-            "triad",
-            "goose"
+            "blush",
+            "wreck"
         ],
         "initialGuesses": [
-            "scarf"
+            "nerve"
         ]
-    },
+    },    
     "66": {
         "targets": [
             "cling",
@@ -665,15 +665,6 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         ],
         "initialGuesses": [
             "angel"
-        ]
-    },
-    "75": {
-        "targets": [
-            "blush",
-            "wreck"
-        ],
-        "initialGuesses": [
-            "nerve"
         ]
     }
 }
