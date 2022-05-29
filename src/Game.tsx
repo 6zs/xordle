@@ -215,11 +215,28 @@ function Game(props: GameProps) {
   GoatEvent("Starting: " + (practice ? (nightmare ? "Nightmare " : "Unlimited " ) : "Day ") + currentSeed.toString());
   
   if (isDev && urlParam("export")) {
+    let previous : Record<string, number[]> = {};
     let values : Record<number, Puzzle> = {};    
     for(let i = 1; i <= parseInt(urlParam("export") ?? "1"); ++i) {
       values[i] = makePuzzle(i);
+      for(let target of values[i].targets) {
+        if (previous[target] === undefined)
+        {
+          previous[target] = [i];
+        }
+        else
+        {
+          previous[target] = [...previous[target], i];
+        }
+      }
     }
     window.console.log( JSON.stringify(values, null, "\t") );
+    window.console.log( "Total Words: " + Object.keys(previous).length);
+    for(const target in previous) {
+      if (previous[target].length > 1) {
+        window.console.log(target + " duplicated on days " +previous[target].join(","));
+      }
+    }
   }
 
   if (isDev && urlParam("findgreen")) {
@@ -257,8 +274,8 @@ function Game(props: GameProps) {
     return makePuzzle(currentSeed);
   });
 
-  let stateStorageKey = practice ? "practiceState" : (gameDayStoragePrefix+currentSeed);
-  let guessesStorageKey = practice ? "practiceGuesses" : (guessesDayStoragePrefix+currentSeed);
+  let stateStorageKey = practice ? ("practiceState"+(nightmare?currentSeed.toString():"")) : (gameDayStoragePrefix+currentSeed);
+  let guessesStorageKey = practice ? ("practiceGuesses"+(nightmare?currentSeed.toString():"")) : (guessesDayStoragePrefix+currentSeed);
 
   const [gameState, setGameState] = useLocalStorage<GameState>(stateStorageKey, GameState.Playing);
   const [guesses, setGuesses] = useLocalStorage<string[]>(guessesStorageKey, puzzle.initialGuesses);
