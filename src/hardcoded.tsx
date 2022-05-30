@@ -624,8 +624,8 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
     },
     "70": {
         "targets": [
-            "spicy",
-            "exert"
+            "mummy",
+            "filth"
         ],
         "initialGuesses": [
             "grave"
@@ -666,5 +666,68 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "angel"
         ]
-    }
+    },
+    "75": {
+        "targets": [
+            "speed",
+            "limit"
+        ],
+        "initialGuesses": [
+            "fives"
+        ]
+    },
+    "76": {
+        "targets": [
+            "giant",
+            "jolly"
+        ],
+        "initialGuesses": [
+            "green"
+        ]
+    },
+    "77": {
+        "targets": [
+            "brawl",
+            "fight"
+        ],
+        "initialGuesses": [
+            "drunk"
+        ]
+    },
+    "78": {
+        "targets": [
+            "candy",
+            "sweet"
+        ],
+        "initialGuesses": [
+            "taste"
+        ]
+    },
+    "79": {
+        "targets": [
+            "royal",
+            "queen"
+        ],
+        "initialGuesses": [
+            "crown"
+        ]
+    },
+    "80": {
+        "targets": [
+            "watch",
+            "movie"
+        ],
+        "initialGuesses": [
+            "stare"
+        ]
+    },
+    "81": {
+        "targets": [
+            "begin",
+            "start"
+        ],
+        "initialGuesses": [
+            "ditto"
+        ]
+    },        
 }
