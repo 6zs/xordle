@@ -615,11 +615,11 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
     },
     "69": {
         "targets": [
-            "noisy",
-            "eater"
+            "swell",
+            "nifty"
         ],
         "initialGuesses": [
-            "memes"
+            "crude"
         ]
     },
     "70": {
@@ -729,5 +729,50 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "ditto"
         ]
-    },        
+    },      
+    "82": {
+        "targets": [
+            "child",
+            "money"
+        ],
+        "initialGuesses": [
+            "adult"
+        ]
+    },      
+    "83": {
+        "targets": [
+            "glyph",
+            "drawn"
+        ],
+        "initialGuesses": [
+            "image"
+        ]
+    },    
+    "84": {
+        "targets": [
+            "ninth",
+            "guess"
+        ],
+        "initialGuesses": [
+            "bonus"
+        ]
+    },         
+    "85": {
+        "targets": [
+            "prove",
+            "think"
+        ],
+        "initialGuesses": [
+            "maths"
+        ]
+    },           
+    "86": {
+        "targets": [
+            "quick",
+            "horse"
+        ],
+        "initialGuesses": [
+            "mount"
+        ]
+    },          
 }

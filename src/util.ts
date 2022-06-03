@@ -1,6 +1,7 @@
 import dictionary from "./dictionary.json";
 import cheatyface from "./cheatyface.json";
 import { nightmares } from "./nightmares";
+import { instants } from "./instants";
 
 export const gameName = "xordle";
 export const maxGuesses = 9;
@@ -56,7 +57,12 @@ function initInfo() : [number, boolean] {
 
 export const [currentSeed, needResetPractice] = initInfo();
 export const nightmare = practice && nightmares.lastIndexOf(currentSeed) !== -1;
-export const gameNameOrNightmare = nightmare ? "Nightmare" : "Xordle"
+export const instant = practice && instants.lastIndexOf(currentSeed) !== -1;
+export const gameNameOrNightmare = nightmare 
+  ? "Nightmare" 
+  : instant
+  ? "Instant"
+  : "Xordle"
 
 function mulberry32(a: number) {
   return function () {

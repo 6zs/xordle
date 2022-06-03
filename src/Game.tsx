@@ -17,14 +17,17 @@ import {
   urlParam,
   isDev,
   nightmare,
+  instant,
   needResetPractice,
   currentSeed
 } from "./util";
 
-import { hardCodedPuzzles  } from "./hardcoded";
+import { hardCodedPuzzles } from "./hardcoded";
+import { hardCodedPractice } from "./hardcoded_practice";
 import cheatyface from "./cheatyface.json";
 import { Day } from "./Stats"
 import { nightmares } from "./nightmares";
+import { instants } from "./instants";
 
 export enum GameState {
   Playing,
@@ -37,6 +40,11 @@ declare const checkVersion: Function;
 
 export const gameDayStoragePrefix = "result-";
 export const guessesDayStoragePrefix = "guesses-";
+
+const eventKey = (practice 
+  ? (nightmare ? "Nightmare " : instant ? "Instant" :  "Unlimited " ) 
+  : "Day "
+) + currentSeed.toString();
 
 function useLocalStorage<T>(
   key: string,
@@ -68,6 +76,7 @@ interface GameProps {
 }
 
 const eligible = targetList.slice(0, targetList.indexOf("murky") + 1).filter((word) => word.length === 5); // Words no rarer than this one
+const fivesDictionary = dictionary.filter((word) => word.length === 5); 
 
 function isValidCluePair(word1: string, word2: string) {
   if (/\*/.test(word1)) {
@@ -170,7 +179,16 @@ export function makePuzzle(seed: number) : Puzzle {
       return hardCoded;
     }
     else {
-      window.console.log("ERROR: " + hardCoded);
+      window.console.log("ERROR: " + hardCoded.targets.join(","));
+    }
+  }
+  hardCoded = hardCodedPractice[seed];
+  if (hardCoded && practice) {
+    if (wordsHaveNoOverlap(hardCoded.targets[0], hardCoded.targets[1]) ) {
+      return hardCoded;
+    }
+    else {
+      window.console.log("ERROR: " + hardCoded.targets.join(","));
     }
   }
   let random = makeRandom(seed+uniqueGame);
@@ -193,6 +211,86 @@ export function allGreenCount(puzzle: Puzzle) : number {
   return allGreens;
 }
 
+export function cluesEqual(clue1: CluedLetter[], clue2: CluedLetter[]) {
+  if (clue1.length != clue2.length ) {
+    return false;
+  }
+  for(var i = 0; i < clue1.length; ++i ) {
+    if(clue1[i].clue != clue2[i].clue ) {
+      return false;
+    }
+  }
+  return true;
+}
+
+export function clueCompatible(word: string, cluedPair: CluedLetter[]) {
+  if (word.length != cluedPair.length ) {
+    return false;
+  }
+  for(var i = 0; i < word.length; ++i ) {
+    if (word.lastIndexOf(cluedPair[i].letter) == -1 ) 
+      continue;
+    if(cluedPair[i].clue === Clue.Correct && word[i] !== cluedPair[i].letter)
+      return false;
+    if(cluedPair[i].clue === Clue.Elsewhere && word[i] === cluedPair[i].letter)
+      return false;
+  }
+  return true;
+}
+
+export function checkAnagrams(solutions1: [string, string], solutions2: [string,string]) {
+  var first = solutions1[0].split('').concat(solutions1[1].split('')).sort().join('');
+  var second = solutions2[0].split('').concat(solutions2[1].split('')).sort().join('');
+  return first.localeCompare(second) == 0;
+}
+
+export function countSolutions(puzzle: Puzzle, guesses: string[], dictionaryToUse: string[], stopat: number) : number {
+ 
+  let gotClues : CluedLetter[][] = [];
+  for(var i = 0; i < guesses.length; ++i) {
+    const guess = guesses[i];
+    gotClues[i] = xorclue(clue(guess,puzzle.targets[0]),clue(guess,puzzle.targets[1]));
+  }
+
+  dictionaryToUse = dictionaryToUse.filter((word) => {
+    for(var i = 0; i < guesses.length; ++i) {
+      const guess = guesses[i];  
+      if (!clueCompatible(word, gotClues[i])) {
+        return false;
+      }
+    }
+    return true;
+  });
+
+  let solutions = 0;
+  for(const word1 of dictionaryToUse) {
+    for (const word2 of dictionaryToUse) {
+      if (word2.localeCompare(word1) <= 0) 
+        continue;
+      if (!checkAnagrams(puzzle.targets, [word1, word2]))
+        continue;
+      window.console.log("checking: " + puzzle.targets.toString() + " <<>> " + [word1,word2].toString());
+      let contradicted = false;
+      for(var i = 0; i < guesses.length; ++i) {
+        const guess = guesses[i];
+        let gotClue = gotClues[i];        
+        let wouldClue = xorclue(clue(guess,word1),clue(guess,word2));
+        if (!cluesEqual(wouldClue,gotClue)) {
+          contradicted = true;
+          break;
+        }
+      }
+      if (!contradicted) {
+        ++solutions;
+        if (solutions >= stopat) {
+          return stopat;
+        }
+      }
+    }
+  }
+  return solutions;
+}
+
 export function emojiBlock(day: Day, colorBlind: boolean) : string {
   const emoji = colorBlind
     ? ["⬛", "🟦", "🟧"]
@@ -212,12 +310,14 @@ export interface Puzzle {
 
 function Game(props: GameProps) {
   
-  GoatEvent("Starting: " + (practice ? (nightmare ? "Nightmare " : "Unlimited " ) : "Day ") + currentSeed.toString());
+  GoatEvent("Starting: " + eventKey);
   
   if (isDev && urlParam("export")) {
     let previous : Record<string, number[]> = {};
     let values : Record<number, Puzzle> = {};    
     for(let i = 1; i <= parseInt(urlParam("export") ?? "1"); ++i) {
+      if (practice && -1 == nightmares.lastIndexOf(i) && -1 == instants.lastIndexOf(i))
+        continue;
       values[i] = makePuzzle(i);
       for(let target of values[i].targets) {
         if (previous[target] === undefined)
@@ -274,8 +374,8 @@ function Game(props: GameProps) {
     return makePuzzle(currentSeed);
   });
 
-  let stateStorageKey = practice ? ("practiceState"+(nightmare?currentSeed.toString():"")) : (gameDayStoragePrefix+currentSeed);
-  let guessesStorageKey = practice ? ("practiceGuesses"+(nightmare?currentSeed.toString():"")) : (guessesDayStoragePrefix+currentSeed);
+  let stateStorageKey = practice ? ("practiceState"+((nightmare||instant)?currentSeed.toString():"")) : (gameDayStoragePrefix+currentSeed);
+  let guessesStorageKey = practice ? ("practiceGuesses"+((nightmare||instant)?currentSeed.toString():"")) : (guessesDayStoragePrefix+currentSeed);
 
   const [gameState, setGameState] = useLocalStorage<GameState>(stateStorageKey, GameState.Playing);
   const [guesses, setGuesses] = useLocalStorage<string[]>(guessesStorageKey, puzzle.initialGuesses);
@@ -317,7 +417,14 @@ function Game(props: GameProps) {
     if (guesses.includes(puzzle.targets[1])) {
       return `You got ${puzzle.targets[1].toUpperCase()}, one more to go.`;
     }
-    return nightmare ? `You found hidden nightmare puzzle #${nightmares.indexOf(currentSeed)+1} of ${nightmares.length}.` : `Two words remain.`;
+    let text = `Two words remain.`;
+    if (nightmare) {
+      text = `You found hidden nightmare puzzle #${nightmares.indexOf(currentSeed)+1} of ${nightmares.length}.`;
+    }
+    if (instant) {
+      text = `You found an instant puzzle #${instants.indexOf(currentSeed)+1} of ${instants.length}! There's only one possible solution from here.`
+    }
+    return text;
   }
 
   const onKey = (key: string) => {
@@ -350,7 +457,7 @@ function Game(props: GameProps) {
         setHint("You've already guessed that");
         return;
       }
-      if (!dictionary.includes(currentGuess)) {
+      if (!fivesDictionary.includes(currentGuess)) {
         GoatEvent("Nonword: " + currentGuess);
         setHint(`That's not in the word list`);
         return;
@@ -371,16 +478,28 @@ function Game(props: GameProps) {
     }
     if ( (guesses.includes(puzzle.targets[0]) && guesses.includes(puzzle.targets[1])) ) {
       setGameState(GameState.Won);
-      GoatEvent("Won: " + (practice ? (nightmare ? "Nightmare " : "Unlimited " ) : "Day ") + currentSeed.toString() + ", " + guesses.length + " guesses");
+      GoatEvent("Won: " + eventKey + ", " + guesses.length + " guesses");
     } else if (guesses.length >= props.maxGuesses) {
       if (puzzle.targets.includes(guesses[guesses.length-1])) {
         setHint("Last chance! Do a bonus guess.")
         return;
       }        
       setGameState(GameState.Lost);
-      GoatEvent("Lost: " + (practice ? (nightmare ? "Nightmare " : "Unlimited " ) : "Day ") + currentSeed.toString());
+      GoatEvent("Lost: " + eventKey);
     } 
     setHint(getHintFromState());
+  };
+
+  const logSolutionCounts = () => {
+    if (isDev) {
+      let solutions = countSolutions(puzzle,guesses,eligible,10);
+      window.console.log(solutions + (solutions >= 10 ? "+" : "") + " common solution" + (solutions == 1 ? "" : "s"));
+      if (solutions <= 1 ) {         
+        let max = 5;
+        solutions = countSolutions(puzzle,guesses,fivesDictionary,max); 
+        window.console.log(solutions + (solutions >= max ? "+" : "") + " total solution" + (solutions == 1 ? "" : "s"));
+      }
+    }
   };
 
   useEffect(() => {
@@ -489,6 +608,7 @@ function Game(props: GameProps) {
         {!practice && <span>Day {dayNum}{`${cheatText}`}</span>}
         {!practice && canNext && <span>| <a href={nextLink}>Next</a></span>}
         {isDev && <span>| <a href={window.location.href} onClick={ ()=>{resetDay();} }>Reset</a></span>}
+        {isDev && <span>| <a href={window.location.href} onClick={ (e)=>{logSolutionCounts(); e.preventDefault();} }>Count</a></span>}
 
         {practice && <span>{`${cheatText}`}</span>}
         {practice && <span>
@@ -541,7 +661,7 @@ function Game(props: GameProps) {
               const score = gameState === GameState.Lost ? "X" : guesses.length;
               share(
                 "Result copied to clipboard!",
-                `${gameName} ${practice ? ((nightmare ? "nightmare " : "unlimited ") + currentSeed.toString()) : ("#"+dayNum.toString())} ${score}/${props.maxGuesses}\n` +
+                `${gameName} ${practice ? ((nightmare ? "nightmare " : instant ? "instant " : "unlimited ") + currentSeed.toString()) : ("#"+dayNum.toString())} ${score}/${props.maxGuesses}\n` +
                 emojiBlock({guesses:guesses, puzzle:puzzle, gameState:gameState}, props.colorBlind)
               );
             }}
