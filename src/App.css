@@ -13,6 +13,14 @@ body {
   justify-content: center;
 }
 
+.Row-separator {
+  border-bottom: 2px solid rgb(87, 172, 120);
+}
+
+.App-container.color-blind .Row-separator {
+  border-bottom: 2px solid #85c0f9;
+}
+
 .Row-letter {
   margin: 2px;
   border: 2px solid rgba(128, 128, 128, 0.8);

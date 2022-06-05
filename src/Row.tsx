@@ -12,6 +12,8 @@ interface RowProps {
   cluedLetters: CluedLetter[];
   correctGuess: string;
   annotation?: string;
+  rowNumber: number;
+  numInitialGuesses: number;
 }
 
 function glitch(content: any) {
@@ -54,6 +56,8 @@ export function Row(props: RowProps) {
     });
   let rowClass = "Row";
   if (isLockedIn) rowClass += " Row-locked-in";
+  if (props.numInitialGuesses <= props.rowNumber) rowClass  += " Row-initial-guess";
+  if (props.numInitialGuesses-1 == props.rowNumber) rowClass += " Row-separator";
   return (
     <tr className={rowClass}>
       {letterDivs}

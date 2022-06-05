@@ -42,7 +42,7 @@ export const gameDayStoragePrefix = "result-";
 export const guessesDayStoragePrefix = "guesses-";
 
 const eventKey = (practice 
-  ? (nightmare ? "Nightmare " : instant ? "Instant" :  "Unlimited " ) 
+  ? (nightmare ? "Nightmare " : instant ? "Instant " :  "Unlimited " ) 
   : "Day "
 ) + currentSeed.toString();
 
@@ -574,6 +574,8 @@ function Game(props: GameProps) {
           }
           cluedLetters={cluedLetters}
           correctGuess={correctGuess}
+          numInitialGuesses={puzzle.initialGuesses.length}
+          rowNumber={i}
           annotation={isBonusGuess ? "Bonus!" : ((isAllGreen && !isTarget) ? "Huh?" : undefined)}          
         />
       );
@@ -614,7 +616,7 @@ function Game(props: GameProps) {
         {practice && <span>
           <a href=""
             onClick={(e) => {
-              const score = gameState === GameState.Lost ? "X" : guesses.length;
+              const score = gameState === GameState.Lost ? "X" : (guesses.length-puzzle.initialGuesses.length);
               share(
                 "Challenge link copied to clipboard!",
                 ``
@@ -658,10 +660,10 @@ function Game(props: GameProps) {
           <p>
           <button
             onClick={() => {
-              const score = gameState === GameState.Lost ? "X" : guesses.length;
+              const score = gameState === GameState.Lost ? "X" : (guesses.length-puzzle.initialGuesses.length);
               share(
                 "Result copied to clipboard!",
-                `${gameName} ${practice ? ((nightmare ? "nightmare " : instant ? "instant " : "unlimited ") + currentSeed.toString()) : ("#"+dayNum.toString())} ${score}/${props.maxGuesses}\n` +
+                `${gameName} ${practice ? ((nightmare ? "nightmare " : instant ? "instant " : "unlimited ") + currentSeed.toString()) : ("#"+dayNum.toString())} ${score}/${props.maxGuesses-1}\n` +
                 emojiBlock({guesses:guesses, puzzle:puzzle, gameState:gameState}, props.colorBlind)
               );
             }}
