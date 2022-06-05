@@ -71,7 +71,23 @@ export const hardCodedPractice : Record<number, Puzzle> = {
                 "great",                                            
                 "solve",
             ]
-        },              
+        },           
+        
+        "1570": {
+            "targets": [
+                "teeth",
+                "blood"
+            ],
+            "initialGuesses": [
+                "shark",
+                "bites",
+                "human",
+                "ocean",
+                "scare", 
+                "movie",
+                "trope"
+            ]
+        },         
 
         "1120": {
             "targets": [

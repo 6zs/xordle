@@ -3,5 +3,6 @@ export const instants : number[] = [
     2234,
     1959,
     6505,
-    5443
+    5443,
+    1570
 ];

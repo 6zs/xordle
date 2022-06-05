@@ -13,12 +13,28 @@ body {
   justify-content: center;
 }
 
-.Row-separator {
-  border-bottom: 2px solid rgb(87, 172, 120);
+.Row-separator.Row-letter {
+  background-color: rgb(87, 172, 120);
+  flex: 1;
+  max-width: 40px;
+  height: 2px;
+  font-size: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 10px 0px 10px 0px;
+  border: 0px;
 }
 
 .App-container.color-blind .Row-separator {
-  border-bottom: 2px solid #85c0f9;
+  background-color: #85c0f9;
+}
+
+.NextPrev {
+  font-weight: bold;
+  font-size: 18px;
 }
 
 .Row-letter {
@@ -34,6 +50,7 @@ body {
   text-transform: uppercase;
   font-weight: bold;
 }
+
 .Row-letter-color {
   margin: 2px;
   border: 2px solid rgba(128, 128, 128, 0.8);

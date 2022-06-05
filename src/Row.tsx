@@ -56,8 +56,7 @@ export function Row(props: RowProps) {
     });
   let rowClass = "Row";
   if (isLockedIn) rowClass += " Row-locked-in";
-  if (props.numInitialGuesses <= props.rowNumber) rowClass  += " Row-initial-guess";
-  if (props.numInitialGuesses-1 == props.rowNumber) rowClass += " Row-separator";
+  if (props.rowNumber < props.numInitialGuesses) rowClass  += " Row-initial-guess";
   return (
     <tr className={rowClass}>
       {letterDivs}

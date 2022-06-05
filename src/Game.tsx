@@ -580,6 +580,11 @@ function Game(props: GameProps) {
         />
       );
     });
+    
+  if (puzzle.initialGuesses.length > 0) {
+    const cells: Element[] = Array(5).fill((<td className="Row-separator Row-letter"><span></span></td>));
+    tableRows.splice(puzzle.initialGuesses.length, 0, (<tr className="Row Row-locked-in">{cells}</tr>))
+  }
 
   const cheatText = cheat ? ` ${puzzle.targets}` : "";
   const canPrev = dayNum > 1;
@@ -606,9 +611,11 @@ function Game(props: GameProps) {
     <div className="Game" style={{ display: props.hidden ? "none" : "block" }}>
 
       <div className="Game-options">
-        {!practice && canPrev && <span><a href={prevLink}>Previous</a> |</span>}
+        {!practice && canPrev && <span><a className="NextPrev" href={prevLink}>«</a> </span>}
+        {!practice && !canPrev && <span> <a className="NextPrev">&nbsp;</a></span>}
         {!practice && <span>Day {dayNum}{`${cheatText}`}</span>}
-        {!practice && canNext && <span>| <a href={nextLink}>Next</a></span>}
+        {!practice && canNext && <span> <a className="NextPrev" href={nextLink}>»</a></span>}
+        {!practice && !canNext && <span> <a className="NextPrev">&nbsp;</a></span>}
         {isDev && <span>| <a href={window.location.href} onClick={ ()=>{resetDay();} }>Reset</a></span>}
         {isDev && <span>| <a href={window.location.href} onClick={ (e)=>{logSolutionCounts(); e.preventDefault();} }>Count</a></span>}
 
