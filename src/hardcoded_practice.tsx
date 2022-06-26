@@ -1,17 +1,20 @@
 import { Puzzle } from "./Game";
 
 export const hardCodedPractice : Record<number, Puzzle> = {
-    
+/*
         "10349": {
             "targets": [
                 "mania",
                 "sewer"
             ],
             "initialGuesses": [
+                "thank",
                 "feast",
                 "plaid",
-                "mocha",
+                "cabin",
+                "sweet",
                 "sugar",
+                "vexed",
             ]
         },
 
@@ -21,9 +24,12 @@ export const hardCodedPractice : Record<number, Puzzle> = {
                 "birth"
             ],
             "initialGuesses": [
-                "canon",
+                "canon",                
+                "march",
+                "flyer",                
                 "split",
-                "purge"
+                "purge",
+                "salvo",
             ]
         },
 
@@ -35,9 +41,11 @@ export const hardCodedPractice : Record<number, Puzzle> = {
             "initialGuesses": [
                 "blaze",
                 "green",
-                "couch",                
+                "couch",              
                 "pizza",
                 "chips",
+                "floor",
+                "grunt"
             ]
         },        
 
@@ -47,7 +55,7 @@ export const hardCodedPractice : Record<number, Puzzle> = {
                 "large"
             ],
             "initialGuesses": [
-                "horse",
+                "adieu",
                 "horse",
                 "horse",                
                 "horse",
@@ -67,9 +75,9 @@ export const hardCodedPractice : Record<number, Puzzle> = {
                 "crust",
                 "outer",
                 "layer",
-                "fiery", 
-                "great",                                            
-                "solve",
+                "fiery",
+                "gorge",
+                
             ]
         },           
         
@@ -87,7 +95,9 @@ export const hardCodedPractice : Record<number, Puzzle> = {
                 "movie",
                 "trope"
             ]
-        },         
+        },           
+*/
+
 
         "1120": {
             "targets": [

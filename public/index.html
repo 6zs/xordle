@@ -36,13 +36,17 @@
     </script>
     <script>
       function GoatEvent(str) {
-        let goatcounter = window.goatcounter;
-        if(goatcounter && goatcounter.count) {
-          goatcounter.count({
-            path: str,
-            event: true
-          });        
-        }
+        try {
+          let goatcounter = window.goatcounter;
+          if(goatcounter && goatcounter.count) {
+            goatcounter.count({
+              path: str,
+              event: true
+            });        
+          } else {
+            window.console.log(str);
+          }
+        } catch(e) {}
       }
     </script>
     <script src="%PUBLIC_URL%/version.js"></script>

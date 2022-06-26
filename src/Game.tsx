@@ -19,7 +19,8 @@ import {
   nightmare,
   instant,
   needResetPractice,
-  currentSeed
+  currentSeed,
+  day1Date
 } from "./util";
 
 import { hardCodedPuzzles } from "./hardcoded";
@@ -267,9 +268,9 @@ export function countSolutions(puzzle: Puzzle, guesses: string[], dictionaryToUs
     for (const word2 of dictionaryToUse) {
       if (word2.localeCompare(word1) <= 0) 
         continue;
-      if (!checkAnagrams(puzzle.targets, [word1, word2]))
-        continue;
-      window.console.log("checking: " + puzzle.targets.toString() + " <<>> " + [word1,word2].toString());
+      //if (!checkAnagrams(puzzle.targets, [word1, word2]))
+      //  continue;
+      //window.console.log("checking: " + puzzle.targets.toString() + " <<>> " + [word1,word2].toString());
       let contradicted = false;
       for(var i = 0; i < guesses.length; ++i) {
         const guess = guesses[i];
@@ -282,6 +283,7 @@ export function countSolutions(puzzle: Puzzle, guesses: string[], dictionaryToUs
       }
       if (!contradicted) {
         ++solutions;
+        window.console.log(word1+", "+word2);
         if (solutions >= stopat) {
           return stopat;
         }
@@ -309,9 +311,7 @@ export interface Puzzle {
 }
 
 function Game(props: GameProps) {
-  
-  GoatEvent("Starting: " + eventKey);
-  
+   
   if (isDev && urlParam("export")) {
     let previous : Record<string, number[]> = {};
     let values : Record<number, Puzzle> = {};    
@@ -476,17 +476,19 @@ function Game(props: GameProps) {
     if ( puzzle.targets.length !== 2 ) {
       return;
     }
-    if ( (guesses.includes(puzzle.targets[0]) && guesses.includes(puzzle.targets[1])) ) {
-      setGameState(GameState.Won);
-      GoatEvent("Won: " + eventKey + ", " + guesses.length + " guesses");
-    } else if (guesses.length >= props.maxGuesses) {
-      if (puzzle.targets.includes(guesses[guesses.length-1])) {
-        setHint("Last chance! Do a bonus guess.")
-        return;
-      }        
-      setGameState(GameState.Lost);
-      GoatEvent("Lost: " + eventKey);
-    } 
+    if ( gameState == GameState.Playing ) {      
+      if ( (guesses.includes(puzzle.targets[0]) && guesses.includes(puzzle.targets[1])) ) {
+        setGameState(GameState.Won);
+        GoatEvent("Won: " + eventKey + ", " + guesses.length + " guesses");
+      } else if (guesses.length >= props.maxGuesses) {
+        if (puzzle.targets.includes(guesses[guesses.length-1])) {
+          setHint("Last chance! Do a bonus guess.")
+          return;
+        }        
+        setGameState(GameState.Lost);
+        GoatEvent("Lost: " + eventKey);
+      } 
+    }
     setHint(getHintFromState());
   };
 
@@ -520,6 +522,12 @@ function Game(props: GameProps) {
   useEffect(() => {
     doWinOrLose();
   }, [currentGuess, gameState, guesses, puzzle.targets]);
+
+  useEffect(() => {
+    if ( gameState == GameState.Playing && guesses.length == puzzle.initialGuesses.length && currentGuess.length == 0 ) {
+      GoatEvent("Starting: " + eventKey);
+    }
+  }, [currentSeed]);
 
   let reduceCorrect = (prev: CluedLetter, iter: CluedLetter, currentIndex: number, array: CluedLetter[]) => {
     let reduced: CluedLetter = prev;
@@ -586,7 +594,7 @@ function Game(props: GameProps) {
     tableRows.splice(puzzle.initialGuesses.length, 0, (<tr className="Row Row-locked-in">{cells}</tr>))
   }
 
-  const cheatText = cheat ? ` ${puzzle.targets}` : "";
+  const cheatText = cheat ? ` ${puzzle.targets} ${new Date(day1Date.getTime()+(dayNum-1)*86400*1000).toDateString()}` : "";
   const canPrev = dayNum > 1;
   const canNext = dayNum < todayDayNum || isDev;
   const practiceLink = "?unlimited";

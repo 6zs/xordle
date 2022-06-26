@@ -7,6 +7,7 @@ import { GetDay, Stats } from "./Stats";
 import Calendar from "react-calendar";
 import cheatyface from "./cheatyface.json"
 import { nightmares } from "./nightmares";
+import { instants } from "./instants";
 
 function serializeStorage() : string {
   return window.btoa(window.JSON.stringify(window.localStorage));
@@ -94,6 +95,14 @@ function App() {
         + "&cheat=" + (cheat ? "0" : "1" )
       );
     }
+    if (isDev && urlParam("instant") !== null) {
+      window.location.replace(window.location.origin 
+        + "?unlimited=" + instants[parseInt(urlParam("instant") || "0")]
+        + "&xyzzyx=" + cheatyface['password']
+        + "&cheat=" + (cheat ? "0" : "1" )
+      );
+    }
+
     if (save !== "") {
       deserializeStorage(save);
       window.location.replace(window.location.origin);
@@ -299,6 +308,7 @@ function App() {
               <option value="qwertzuiop-asdfghjkl-ByxcvbnmE">QWERTZ</option>
               <option value="BpyfgcrlE-aoeuidhtns-qjkxbmwvz">Dvorak</option>
               <option value="qwfpgjluy-arstdhneio-BzxcvbkmE">Colemak</option>
+              <option value="earotilsn-ucyhdpgmbf-BkwvxzqjE">Frequency</option>
             </select>
             <input
               style={{ marginLeft: 20 }}
