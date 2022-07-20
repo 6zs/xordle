@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/xordle/static/css/main.e256fbaf.css",
-    "main.js": "/xordle/static/js/main.878f20fc.js",
+    "main.css": "/xordle/static/css/main.2b096324.css",
+    "main.js": "/xordle/static/js/main.78b710d2.js",
     "index.html": "/xordle/index.html",
-    "main.e256fbaf.css.map": "/xordle/static/css/main.e256fbaf.css.map",
-    "main.878f20fc.js.map": "/xordle/static/js/main.878f20fc.js.map"
+    "main.2b096324.css.map": "/xordle/static/css/main.2b096324.css.map",
+    "main.78b710d2.js.map": "/xordle/static/js/main.78b710d2.js.map"
   },
   "entrypoints": [
-    "static/css/main.e256fbaf.css",
-    "static/js/main.878f20fc.js"
+    "static/css/main.2b096324.css",
+    "static/js/main.78b710d2.js"
   ]
 }
