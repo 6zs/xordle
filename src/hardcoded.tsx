@@ -904,7 +904,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
     "101": {
         "targets": [
             "optic",
-            "lense"
+            "glass"
         ],
         "initialGuesses": [
             "views"
@@ -1011,11 +1011,11 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
     },
     "113": {
         "targets": [
-            "bunny",
-            "drier"
+            "stuff",
+            "weird"
         ],
         "initialGuesses": [
-            "harsh"
+            "gloop"
         ]
     },
     "114": {
@@ -1051,7 +1051,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
             "giver"
         ],
         "initialGuesses": [
-            "waist"
+            "waste"
         ]
     },
     "118": {

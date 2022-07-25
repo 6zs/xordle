@@ -8,14 +8,25 @@ import Calendar from "react-calendar";
 import cheatyface from "./cheatyface.json"
 import { nightmares } from "./nightmares";
 import { instants } from "./instants";
+import { compress, decompress } from 'lzw-compressor';
+
+function encode( str:string ) {
+  return window.btoa(str);
+}
+
+function decode( str:string ) {
+  return window.atob(str);
+}
 
 function serializeStorage() : string {
-  return window.btoa(window.JSON.stringify(window.localStorage));
+  const strPlain = window.JSON.stringify(window.localStorage);
+  const strEncoded = encode(strPlain);
+  return strEncoded;
 }
 
 function deserializeStorage(serialized: string) {
   try {
-    let o = window.JSON.parse(window.atob(serialized));
+    let o = window.JSON.parse(decode(serialized));
     for (let [key, value] of Object.entries(o)) {
       window.localStorage.setItem(key, typeof value === 'string' ? value : JSON.stringify(value))
     }
@@ -24,9 +35,11 @@ function deserializeStorage(serialized: string) {
   }
 }
 
-const redirectFrom = "6zs.github.io";
-const redirectTo = "https://xordle.xyz/";
-const save = new URLSearchParams(window.location.search).get("save") ?? "";
+const redirectFrom = ["6zs.github.io", "xordle.xyz"];
+const redirectTo = "https://xordle.org/";
+const importResponse = new URLSearchParams(window.location.search).get("importResponse") ?? "";
+const importPayload = importResponse !== "" ? window.location.hash.slice(1) : "";
+const importRequest = new URLSearchParams(window.location.search).get("importRequest") ?? "";
 
 function useSetting<T>(
   key: string,
@@ -84,10 +97,12 @@ function App() {
   const [enterLeft, setEnterLeft] = useSetting<boolean>("enter-left", false);
 
   useEffect(() => { 
+    
     if (Number(dayNum) > Number(todayDayNum) && !isDev) {
       window.location.replace(redirectTo);
       return;
     }    
+
     if (isDev && urlParam("nightmare") !== null) {
       window.location.replace(window.location.origin 
         + "?unlimited=" + nightmares[parseInt(urlParam("nightmare") || "0")]
@@ -95,6 +110,7 @@ function App() {
         + "&cheat=" + (cheat ? "0" : "1" )
       );
     }
+
     if (isDev && urlParam("instant") !== null) {
       window.location.replace(window.location.origin 
         + "?unlimited=" + instants[parseInt(urlParam("instant") || "0")]
@@ -103,14 +119,25 @@ function App() {
       );
     }
 
-    if (save !== "") {
-      deserializeStorage(save);
+    if (importPayload !== "") {
+      if (window.localStorage.getItem("waiting-import") !== null) {
+        window.localStorage.removeItem("waiting-import");
+        deserializeStorage(importPayload);
+      }
       window.location.replace(window.location.origin);
       return;
     }
-    if (window.location.host.lastIndexOf(redirectFrom) === 0) {
-      window.location.replace(redirectTo + "?save=" + serializeStorage());
-      return;
+
+    for(var from of redirectFrom) {
+      if (window.location.host.lastIndexOf(from) === 0) {
+        if (importRequest !== "") {
+          const str = serializeStorage();
+          window.location.replace(redirectTo + "?importResponse=1#" + str);
+        } else {          
+          window.location.replace(redirectTo);
+        }
+        return;
+      }  
     }
   });
 

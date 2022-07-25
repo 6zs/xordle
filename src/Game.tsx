@@ -311,6 +311,29 @@ export interface Puzzle {
 }
 
 function Game(props: GameProps) {
+
+  if (isDev && urlParam("fillFakeData")) {
+    for(let i = 1; i <= parseInt(urlParam("fillFakeData") ?? "1"); ++i) {
+      window.console.log("faking day " + i);
+      let fakeStateStorageKey = gameDayStoragePrefix+i;
+      let random = makeRandom(i);
+      let fakeResult : GameState = pick([GameState.Won, GameState.Lost, GameState.Playing], random);
+      localStorage.setItem(fakeStateStorageKey, JSON.stringify(fakeResult));
+      let fakeGuessesStorageKey = guessesDayStoragePrefix+i;
+      let fakeGuesses : string[] = [
+        randomClue([], random),
+        randomClue([], random),
+        randomClue([], random),
+        randomClue([], random),
+        randomClue([], random),
+        randomClue([], random),
+        randomClue([], random),
+        randomClue([], random),
+        randomClue([], random),
+      ];
+      localStorage.setItem(fakeGuessesStorageKey, JSON.stringify(fakeGuesses));
+    }
+  }
    
   if (isDev && urlParam("export")) {
     let previous : Record<string, number[]> = {};
@@ -602,7 +625,7 @@ function Game(props: GameProps) {
   const nextLink = "?x=" + (dayNum+1).toString() + (isDev ? "&xyzzyx="+cheatyface["password"] : "") + (cheat ? "&cheat=1" : "");
 
   const [readNewsDay, setReadNewsDay] = useLocalStorage<number>("read-news-", 0);
-  let news = "";
+  let news = "Dear Xordlers: The xordle.xyz domain name was reported for abuse and taken down by the top level domain service, gen.xyz, who hasn't been helpful getting it reinstated. So xordle has moved to xordle.org. Unfortuately you will have lost all your prior game state -- if the old domain is ever reinstated, I will work on a way to import that data. Happy Xordling!";
   let showNews = false;
   let newsPostedDay = 32;
   const canShowNews = news !== "" && dayNum >= newsPostedDay;

@@ -10,7 +10,7 @@ export function About() {
           <a href="https://www.powerlanguage.co.uk/wordle/"> 
             Wordle
           </a> by Josh Wardle and is one of three sibling sites.{" "}
-          <br /><br /> <a href="https://xordle.xyz">Xordle</a> by <a href="https://twitter.com/kellydornhaus">keldor</a><br/>Two secret words, one board, no overlap between the words. 
+          <br /><br /> <a href="https://xordle.org">Xordle</a> by <a href="https://twitter.com/kellydornhaus">keldor</a><br/>Two secret words, one board, no overlap between the words. 
           <br /><br /> <a href="https://fibble.xyz">Fibble</a> by K &amp; R Garfield, coded by keldor <br/>Lies to you once per row.
           <br /><br /> <a href="https://warmle.org">Warmle</a> by Mike Elliott, coded by keldor <br/>Yellows tell you if you've gotten close in that position.
         </p>
