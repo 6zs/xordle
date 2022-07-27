@@ -1092,11 +1092,11 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
     },
     "122": {
         "targets": [
-            "seven",
-            "chick"
+            "ample",
+            "witty"
         ],
         "initialGuesses": [
-            "loser"
+            "daily"
         ]
     },
     "123": {
@@ -1128,11 +1128,11 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
     },
     "126": {
         "targets": [
-            "oxide",
-            "gamma"
+            "lover",
+            "swift"
         ],
         "initialGuesses": [
-            "bliss"
+            "album"
         ]
     },
     "127": {
@@ -1173,11 +1173,11 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
     },
     "131": {
         "targets": [
-            "laity",
-            "serum"
+            "muddy",
+            "rhino"
         ],
         "initialGuesses": [
-            "other"
+            "gorge"
         ]
     },
     "132": {

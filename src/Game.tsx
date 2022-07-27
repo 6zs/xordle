@@ -20,7 +20,8 @@ import {
   instant,
   needResetPractice,
   currentSeed,
-  day1Date
+  day1Date,
+  research
 } from "./util";
 
 import { hardCodedPuzzles } from "./hardcoded";
@@ -332,6 +333,31 @@ function Game(props: GameProps) {
         randomClue([], random),
       ];
       localStorage.setItem(fakeGuessesStorageKey, JSON.stringify(fakeGuesses));
+    }
+  }
+
+  if (research !== null) {
+    const targets = research.split(",");
+    if ( targets.length == 1 || targets.length == 2) {
+      for(const word of eligible) {
+        if (/\*/.test(word)) {
+          continue;
+        }
+        let theClue = clue(word, targets[0]);
+        if ( targets.length == 2 ) {
+          theClue = xorclue(clue(word,targets[1]), theClue);
+        }
+        const theText = theClue.map((c) => ["⬛", "🟨", "🟩"][c.clue ?? 0]).join("");
+        window.console.log(word + ":" + theText + "\n");
+      }
+      for(const researchWord of targets) {
+        let str = researchWord + ": " + (eligible.lastIndexOf(researchWord) === -1 ? "not an answer word, " : "an answer word, ");
+        str = str + (fivesDictionary.lastIndexOf(researchWord) === -1 ? "not in dictionary" : "in dictionary");
+        window.console.log(str);
+      }
+      if (targets.length == 2) {
+        window.console.log(isValidCluePair(targets[0], targets[1]) ? "valid clue pair\n": "not valid clue pair\n");
+      }      
     }
   }
    

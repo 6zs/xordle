@@ -22,6 +22,7 @@ export function urlParam(name: string): string | null {
 
 const paramDay = urlParam("x") ?? undefined;
 export const isDev = urlParam("xyzzyx") === cheatyface["password"];
+export const research = urlParam("research");
 export const allowPractice = true;
 export const practice = allowPractice && urlParam("unlimited") !== null;
 export const cheat = isDev && urlParam("cheat") !== null;
