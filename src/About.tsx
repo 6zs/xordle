@@ -32,7 +32,7 @@ export function About() {
       <hr />
       <p>
         Report issues{" "}
-        <a href="https://github.com/6zs/xordle/issues">here</a>.
+        <a href="https://github.com/6zs/xordle/issues">here</a> or send me an <a href="mailto:kellydornhaus@gmail.com">email</a>, and feel free to send in puzzle suggestions, too.
         <br />Code based on a fork of <a href="https://github.com/lynn/hello-wordl">hello wordl</a>.
       </p>
       <p>

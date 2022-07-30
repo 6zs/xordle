@@ -1083,11 +1083,11 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
     },
     "121": {
         "targets": [
-            "woman",
+            "scene",
             "hilly"
         ],
         "initialGuesses": [
-            "cello"
+            "paint"
         ]
     },
     "122": {
