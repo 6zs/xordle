@@ -28,7 +28,9 @@ function deserializeStorage(serialized: string) {
   try {
     let o = window.JSON.parse(decode(serialized));
     for (let [key, value] of Object.entries(o)) {
-      window.localStorage.setItem(key, typeof value === 'string' ? value : JSON.stringify(value))
+      if ( window.localStorage.getItem(key) === null ) {
+        window.localStorage.setItem(key, typeof value === 'string' ? value : JSON.stringify(value))
+      }
     }
   } catch(e) {
     console.log(e);

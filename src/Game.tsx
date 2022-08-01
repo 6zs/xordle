@@ -467,7 +467,6 @@ function Game(props: GameProps) {
     request.onreadystatechange = function() {
       if (request.readyState == 4 && request.status == 200) {
         let contentType = request.getResponseHeader("content-type");
-        window.console.log(contentType);
         if ( contentType == "image/jpeg" ) {
           setHaveImage(true);
         }
