@@ -430,6 +430,7 @@ function Game(props: GameProps) {
   const [guesses, setGuesses] = useLocalStorage<string[]>(guessesStorageKey, puzzle.initialGuesses);
   const [currentGuess, setCurrentGuess] = useState<string>("");
   const [hint, setHint] = useState<string>(getHintFromState());
+  const [haveImage, setHaveImage] = useState<boolean>(false);
    
   const tableRef = useRef<HTMLTableElement>(null);
   async function share(copiedHint: string, text?: string) {
@@ -454,6 +455,24 @@ function Game(props: GameProps) {
       console.warn("navigator.clipboard.writeText failed:", e);
     }
     setHint(url);
+  }
+
+  function checkImage(puzzleNumber: number, puzzleStart: string) {
+    if (practice) {
+      return;
+    }
+    var request = new XMLHttpRequest();
+    request.open("GET", "/images/" + puzzleNumber.toString() + "-" + puzzleStart + "-sm.jpg", true);
+    request.send();
+    request.onreadystatechange = function() {
+      if (request.readyState == 4 && request.status == 200) {
+        let contentType = request.getResponseHeader("content-type");
+        window.console.log(contentType);
+        if ( contentType == "image/jpeg" ) {
+          setHaveImage(true);
+        }
+      }
+    };
   }
 
   function getHintFromState() {    
@@ -537,7 +556,7 @@ function Game(props: GameProps) {
         setGameState(GameState.Lost);
         GoatEvent("Lost: " + eventKey);
       } 
-    }
+    } 
     setHint(getHintFromState());
   };
 
@@ -567,6 +586,10 @@ function Game(props: GameProps) {
       document.removeEventListener("keydown", onKeyDown);
     };
   }, [currentGuess, gameState]);
+
+  useEffect(()=> {
+    checkImage(currentSeed, puzzle.initialGuesses[0]);
+  });
 
   useEffect(() => {
     doWinOrLose();
@@ -651,7 +674,7 @@ function Game(props: GameProps) {
   const nextLink = "?x=" + (dayNum+1).toString() + (isDev ? "&xyzzyx="+cheatyface["password"] : "") + (cheat ? "&cheat=1" : "");
 
   const [readNewsDay, setReadNewsDay] = useLocalStorage<number>("read-news-", 0);
-  let news = "Dear Xordlers: The xordle.xyz domain name was reported for abuse and taken down by the top level domain service, gen.xyz, who hasn't been helpful getting it reinstated. So xordle has moved to xordle.org. Unfortuately you will have lost all your prior game state -- if the old domain is ever reinstated, I will work on a way to import that data. Happy Xordling!";
+  let news = "";
   let showNews = false;
   let newsPostedDay = 32;
   const canShowNews = news !== "" && dayNum >= newsPostedDay;
@@ -737,12 +760,18 @@ function Game(props: GameProps) {
           </p>
         )}      
       </div>
+      {haveImage && gameState !== GameState.Playing &&
+        (<a className="rewardImageLink" href={`/images/${currentSeed}-${puzzle.initialGuesses[0]}.png`} target="_blank">
+          <img className="rewardImage" src={`/images/${currentSeed}-${puzzle.initialGuesses[0]}-sm.jpg`}/>
+        </a>)
+      }
+      {(gameState === GameState.Playing || !haveImage) && (
       <Keyboard
         layout={props.keyboardLayout}
         letterInfo={letterInfo}
         correctGuess={correctGuess}
         onKey={onKey}
-      />
+      />)}
     </div>
   );
 }

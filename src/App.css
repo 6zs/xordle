@@ -548,3 +548,12 @@ a {
   }
   4%, 100% {  text-shadow: none; transform: none; }
 }
+
+.rewardImage {
+  width: 300px;
+  height: 300px;
+}
+
+.rewardImageLink {
+  
+}
