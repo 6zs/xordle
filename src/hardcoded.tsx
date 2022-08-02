@@ -12,8 +12,8 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
     },
     "2": {
         "targets": [
-            "meter",
-            "panic"
+            "panic",
+            "meter"
         ],
         "initialGuesses": [
             "fuzzy"
@@ -39,8 +39,8 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
     },
     "5": {
         "targets": [
-            "straw",
-            "pinch"
+            "pinch",
+            "straw"
         ],
         "initialGuesses": [
             "heath"
@@ -111,8 +111,8 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
     },
     "13": {
         "targets": [
-            "shark",
-            "moody"
+            "moody",
+            "shark"
         ],
         "initialGuesses": [
             "surge"
@@ -138,8 +138,8 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
     },
     "16": {
         "targets": [
-            "tract",
-            "lousy"
+            "lousy",
+            "tract"
         ],
         "initialGuesses": [
             "notch"
@@ -147,8 +147,8 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
     },
     "17": {
         "targets": [
-            "glory",
-            "taste"
+            "taste",
+            "glory"
         ],
         "initialGuesses": [
             "along"
@@ -192,8 +192,8 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
     },
     "22": {
         "targets": [
-            "quail",
-            "steep"
+            "steep",
+            "quail"
         ],
         "initialGuesses": [
             "chess"
@@ -201,8 +201,8 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
     },
     "23": {
         "targets": [
-            "motor",
-            "nasal"
+            "nasal",
+            "motor"
         ],
         "initialGuesses": [
             "shark"
@@ -228,8 +228,8 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
     },
     "26": {
         "targets": [
-            "fight",
-            "older"
+            "older",
+            "fight"
         ],
         "initialGuesses": [
             "panic"
@@ -246,8 +246,8 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
     },
     "28": {
         "targets": [
-            "bunny",
-            "gamma"
+            "gamma",
+            "bunny"
         ],
         "initialGuesses": [
             "rebel"
@@ -255,8 +255,8 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
     },
     "29": {
         "targets": [
-            "basic",
-            "under"
+            "under",
+            "basic"
         ],
         "initialGuesses": [
             "stock"
@@ -264,8 +264,8 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
     },
     "30": {
         "targets": [
-            "attic",
-            "loose"
+            "loose",
+            "attic"
         ],
         "initialGuesses": [
             "etude"
@@ -291,8 +291,8 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
     },
     "33": {
         "targets": [
-            "mucus",
-            "loyal"
+            "loyal",
+            "mucus"
         ],
         "initialGuesses": [
             "vague"
@@ -309,8 +309,8 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
     },
     "35": {
         "targets": [
-            "hyena",
-            "cross"
+            "cross",
+            "hyena"
         ],
         "initialGuesses": [
             "adieu"
@@ -336,8 +336,8 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
     },
     "38": {
         "targets": [
-            "truth",
-            "loved"
+            "loved",
+            "truth"
         ],
         "initialGuesses": [
             "mamma"
@@ -345,8 +345,8 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
     },
     "39": {
         "targets": [
-            "mural",
-            "diode"
+            "diode",
+            "mural"
         ],
         "initialGuesses": [
             "mango"
@@ -390,8 +390,8 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
     },
     "44": {
         "targets": [
-            "plane",
-            "rocky"
+            "rocky",
+            "plane"
         ],
         "initialGuesses": [
             "earth"
@@ -399,8 +399,8 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
     },
     "45": {
         "targets": [
-            "fifth",
-            "gross"
+            "gross",
+            "fifth"
         ],
         "initialGuesses": [
             "gaudy"
@@ -408,8 +408,8 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
     },
     "46": {
         "targets": [
-            "point",
-            "daddy"
+            "daddy",
+            "point"
         ],
         "initialGuesses": [
             "crews"
@@ -426,8 +426,8 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
     },
     "48": {
         "targets": [
-            "cello",
-            "haunt"
+            "haunt",
+            "cello"
         ],
         "initialGuesses": [
             "horse"
@@ -444,8 +444,8 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
     },
     "50": {
         "targets": [
-            "villa",
-            "motor"
+            "motor",
+            "villa"
         ],
         "initialGuesses": [
             "plate"
@@ -489,8 +489,8 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
     },
     "55": {
         "targets": [
-            "towel",
-            "panic"
+            "panic",
+            "towel"
         ],
         "initialGuesses": [
             "guide"
@@ -498,8 +498,8 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
     },
     "56": {
         "targets": [
-            "spasm",
-            "liver"
+            "liver",
+            "spasm"
         ],
         "initialGuesses": [
             "waltz"
@@ -516,8 +516,8 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
     },
     "58": {
         "targets": [
-            "rider",
-            "ghost"
+            "ghost",
+            "rider"
         ],
         "initialGuesses": [
             "spook"
@@ -525,8 +525,8 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
     },
     "59": {
         "targets": [
-            "tacit",
-            "renew"
+            "renew",
+            "tacit"
         ],
         "initialGuesses": [
             "snout"
@@ -606,8 +606,8 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
     },
     "68": {
         "targets": [
-            "brick",
-            "small"
+            "small",
+            "brick"
         ],
         "initialGuesses": [
             "story"
@@ -678,8 +678,8 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
     },
     "76": {
         "targets": [
-            "giant",
-            "jolly"
+            "jolly",
+            "giant"
         ],
         "initialGuesses": [
             "green"
@@ -696,8 +696,8 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
     },
     "78": {
         "targets": [
-            "candy",
-            "sweet"
+            "sweet",
+            "candy"
         ],
         "initialGuesses": [
             "taste"
@@ -723,8 +723,8 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
     },
     "81": {
         "targets": [
-            "begin",
-            "start"
+            "start",
+            "begin"
         ],
         "initialGuesses": [
             "ditto"
@@ -759,8 +759,8 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
     },
     "85": {
         "targets": [
-            "glyph",
-            "drawn"
+            "drawn",
+            "glyph"
         ],
         "initialGuesses": [
             "image"
@@ -768,8 +768,8 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
     },
     "86": {
         "targets": [
-            "shave",
-            "bring"
+            "bring",
+            "shave"
         ],
         "initialGuesses": [
             "merry"
@@ -786,8 +786,8 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
     },
     "88": {
         "targets": [
-            "grass",
-            "mouth"
+            "mouth",
+            "grass"
         ],
         "initialGuesses": [
             "sixth"
@@ -795,8 +795,8 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
     },
     "89": {
         "targets": [
-            "prove",
-            "think"
+            "think",
+            "prove"
         ],
         "initialGuesses": [
             "brain"
@@ -1209,20 +1209,20 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
     },
     "135": {
         "targets": [
-            "drama",
-            "lofty"
+            "ninja",
+            "shell"
         ],
         "initialGuesses": [
-            "wield"
+            "pizza"
         ]
     },
     "136": {
         "targets": [
-            "silky",
-            "patch"
+            "shoot",
+            "leave"
         ],
         "initialGuesses": [
-            "level"
+            "panda"
         ]
     },
     "137": {
@@ -1236,17 +1236,17 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
     },
     "138": {
         "targets": [
-            "spake",
-            "micro"
+            "knife",
+            "sharp"
         ],
         "initialGuesses": [
-            "vicar"
+            "learn"
         ]
     },
     "139": {
         "targets": [
-            "algae",
-            "stoic"
+            "stoic",
+            "algae"
         ],
         "initialGuesses": [
             "cider"
@@ -1254,11 +1254,11 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
     },
     "140": {
         "targets": [
-            "messy",
-            "avant"
+            "point",
+            "guard"
         ],
         "initialGuesses": [
-            "stock"
+            "curry"
         ]
     },
     "141": {
@@ -1272,11 +1272,11 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
     },
     "142": {
         "targets": [
-            "would",
-            "birch"
+            "doubt",
+            "alien"
         ],
         "initialGuesses": [
-            "spite"
+            "venus"
         ]
     },
     "143": {
