@@ -167,10 +167,10 @@ function randomClue(targets: string[], random: ()=>number) {
   return candidate;
 }
 
-function gameOverText(state: GameState, targets: [string,string]) : string {
-  const verbed = state === GameState.Won ? "won" : "lost";
+function gameOverText(state: GameState, initialGuesses: string[], targets: [string,string]) : string {
+  const verbed = state === GameState.Won ? "won!" : "lost.";
   const playagain = practice ? " Go again!" : " Play again tomorrow!";
-  return `You ${verbed}! The answers were ${targets[0].toUpperCase()}, ${targets[1].toUpperCase()}.${playagain}`; 
+  return `You ${verbed}${playagain}`; 
 }
 
 let uniqueGame = practice ? 100000 : 1000;
@@ -476,7 +476,7 @@ function Game(props: GameProps) {
 
   function getHintFromState() {    
     if  (gameState === GameState.Won || gameState === GameState.Lost) {
-      return gameOverText(gameState, puzzle.targets);
+      return gameOverText(gameState, puzzle.initialGuesses, puzzle.targets);
     }
     if (guesses.includes(puzzle.targets[0])) {
       return `You got ${puzzle.targets[0].toUpperCase()}, one more to go.`;
@@ -759,12 +759,15 @@ function Game(props: GameProps) {
           </p>
         )}      
       </div>
+      {gameState !== GameState.Playing && (<p>
+        {puzzle.initialGuesses.map(s=>s.toUpperCase()).join(", ")} » {puzzle.targets[0].toUpperCase()} + {puzzle.targets[1].toUpperCase()}</p>)}
+
       {haveImage && gameState !== GameState.Playing &&
         (<a className="rewardImageLink" href={`/images/${currentSeed}-${puzzle.initialGuesses[0]}.png`} target="_blank">
           <img className="rewardImage" src={`/images/${currentSeed}-${puzzle.initialGuesses[0]}-sm.jpg`}/>
         </a>)
       }
-      {(gameState === GameState.Playing || !haveImage) && (
+      {(gameState === GameState.Playing) && (
       <Keyboard
         layout={props.keyboardLayout}
         letterInfo={letterInfo}

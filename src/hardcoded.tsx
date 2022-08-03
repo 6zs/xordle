@@ -1308,8 +1308,8 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
     },
     "146": {
         "targets": [
-            "knife",
-            "squat"
+            "toxic",
+            "grape"
         ],
         "initialGuesses": [
             "jelly"
@@ -1335,11 +1335,11 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
     },
     "149": {
         "targets": [
-            "scene",
-            "magma"
+            "magma",
+            "drink"
         ],
         "initialGuesses": [
-            "renew"
+            "death"
         ]
     },
     "150": {
@@ -1348,7 +1348,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
             "lying"
         ],
         "initialGuesses": [
-            "waste"
+            "share"
         ]
     },
     "151": {
@@ -1371,11 +1371,11 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
     },
     "153": {
         "targets": [
-            "essay",
-            "mount"
+            "mount",
+            "essay"
         ],
         "initialGuesses": [
-            "stoic"
+            "sleep"
         ]
     },
     "154": {
