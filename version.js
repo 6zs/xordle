@@ -9,12 +9,12 @@ function checkVersion() {
               if (!storedVersion || parseInt(storedVersion) != currentVersion) {
                   try { GoatEvent("Version: " + storedVersion + "=>" + currentVersion); } catch(e) {}
                   localStorage.setItem("version", currentVersion);
-                  window.location.reload();
                   caches.keys().then(function(names) {
                       for (let name of names) {
                           caches.delete(name);
                       }
                   });                
+                  window.location.reload();                  
               }            
           },
           (error) => {
