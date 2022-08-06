@@ -10,10 +10,10 @@ export interface Day
 
 export function GetDay(date: Date) : Day | null
 {
-  return Day(1 + dateToNumber(date) - day1Number);
+  return GetDaynum(1 + dateToNumber(date) - day1Number);
 }
 
-function Day(day: number) : Day | null 
+export function GetDaynum(day: number) : Day | null 
 {
   try {
     const resultKey = gameDayStoragePrefix+day;
@@ -86,7 +86,7 @@ export function Stats() {
 
   for (let day: number = 1; day <= todayDayNum; ++day) 
   {
-    let results = Day(day);
+    let results = GetDaynum(day);
     
     if (!results) {
       streak = 0;

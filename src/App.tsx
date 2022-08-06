@@ -4,6 +4,7 @@ import Game, { emojiBlock, GameState } from "./Game";
 import { useEffect, useState } from "react";
 import { About } from "./About";
 import { GetDay, Stats } from "./Stats";
+import { Gallery } from "./Gallery";
 import Calendar from "react-calendar";
 import cheatyface from "./cheatyface.json"
 import { nightmares } from "./nightmares";
@@ -37,7 +38,7 @@ function deserializeStorage(serialized: string) {
   }
 }
 
-const redirectFrom = ["6zs.github.io", "xordle.xyz"];
+const redirectFrom = ["6zs.github.io", "xordle.web.app", "xordle.xyz"];
 const redirectTo = "https://xordle.org/";
 const importResponse = new URLSearchParams(window.location.search).get("importResponse") ?? "";
 const importPayload = importResponse !== "" ? window.location.hash.slice(1) : "";
@@ -87,7 +88,7 @@ async function share(text?: string) {
 }
 
 function App() {
-  type Page = "game" | "about" | "settings" | "stats" | "calendar";
+  type Page = "game" | "about" | "settings" | "stats" | "calendar" | "gallery";
   const [page, setPage] = useState<Page>("game");
   const prefersDark = !window.matchMedia || (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches);
   const [dark, setDark] = useSetting<boolean>("dark", prefersDark);
@@ -130,16 +131,18 @@ function App() {
       return;
     }
 
-    for(var from of redirectFrom) {
-      if (window.location.host.lastIndexOf(from) === 0) {
-        if (importRequest !== "") {
-          const str = serializeStorage();
-          window.location.replace(redirectTo + "?importResponse=1#" + str);
-        } else {          
-          window.location.replace(redirectTo);
-        }
-        return;
-      }  
+    if ( urlParam("preventRedirect") === null ) {
+      for(var from of redirectFrom) {
+        if (window.location.host.lastIndexOf(from) === 0) {
+          if (importRequest !== "") {
+            const str = serializeStorage();
+            window.location.replace(redirectTo + "?importResponse=1#" + str);
+          } else {          
+            window.location.replace(redirectTo);
+          }
+          return;
+        }  
+      }
     }
   });
 
@@ -275,6 +278,7 @@ function App() {
         }}
       >
       </div>
+      {page === "gallery" && <Gallery />}
       {page === "about" && <About />}
       {page === "stats" && <Stats />}
       {page === "calendar" && <Calendar 
@@ -283,8 +287,7 @@ function App() {
         minDetail={"month"}
         maxDetail={"month"}
         onClickDay={(value: Date, event: any) => {
-          if ( isDev )
-          {
+          if ( isDev ) {
             window.location.replace(window.location.origin + "?x="+(1 + dateToNumber(value) - day1Number) + "&xyzzyx=" + cheatyface["password"]);
           } else if ( value >= day1Date && value <= todayDate)  {
             window.location.replace(window.location.origin + "?x="+(1 + dateToNumber(value) - day1Number));
@@ -300,10 +303,12 @@ function App() {
           onClick={() => {share( 
             `${gameName} ` + startDate.toLocaleString('default', { month: 'long', year: 'numeric' }) + '\n' + monthEmojiBlock(startDate));}}
         >
-          share month results
+          Share month results
         </button>
         </div> )
       }
+
+      {page === "calendar" && link("🖼️", "Gallery", "gallery")}
       {page === "settings" && (
         <div className="Settings">
           <div className="Settings-setting">

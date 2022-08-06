@@ -27,7 +27,7 @@ import {
 import { hardCodedPuzzles } from "./hardcoded";
 import { hardCodedPractice } from "./hardcoded_practice";
 import cheatyface from "./cheatyface.json";
-import { Day } from "./Stats"
+import { Day, GetDaynum } from "./Stats"
 import { nightmares } from "./nightmares";
 import { instants } from "./instants";
 
@@ -202,6 +202,13 @@ export function makePuzzle(seed: number) : Puzzle {
   return puzzle;
 }
 
+export function imageUrls(puzzleNumber: number) : [string,string] {
+  let day = GetDaynum(puzzleNumber);
+  let preview = "/images/" + puzzleNumber.toString() + "-" + day?.puzzle.initialGuesses[0] + "-sm.jpg";
+  let original = "/images/" + puzzleNumber.toString() + "-" + day?.puzzle.initialGuesses[0] + ".png";
+  return [preview, original];
+}
+
 export function allGreenCount(puzzle: Puzzle) : number {
   let allGreens = 0;
   for(const word of eligible) {
@@ -318,7 +325,7 @@ function Game(props: GameProps) {
       window.console.log("faking day " + i);
       let fakeStateStorageKey = gameDayStoragePrefix+i;
       let random = makeRandom(i);
-      let fakeResult : GameState = pick([GameState.Won, GameState.Lost, GameState.Playing], random);
+      let fakeResult : GameState = pick([GameState.Won, GameState.Lost], random);
       localStorage.setItem(fakeStateStorageKey, JSON.stringify(fakeResult));
       let fakeGuessesStorageKey = guessesDayStoragePrefix+i;
       let fakeGuesses : string[] = [

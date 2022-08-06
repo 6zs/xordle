@@ -1,8 +1,13 @@
 import { Clue } from "./clue";
 import { Row, RowState } from "./Row";
-import { gameName, maxGuesses } from "./util";
+import { gameName, isDev, maxGuesses } from "./util";
 
 export function About() {
+  let importLink = (
+  <p>Click <button onClick={() =>{window.localStorage.setItem('waiting-import', "1"); window.location.replace("https://xordle.xyz?importRequest=1"); }}>here</button> to import games from the old domain.
+  </p>
+  );
+
   return (
     <div className="App-about">
         <p>
@@ -19,7 +24,7 @@ export function About() {
         <h1>Xordle rules</h1>
         There are two secret words.
         <br /><b>They share no letters in common.</b>
-        <br />You get {maxGuesses} tries to guess both words.
+        <br />You get {maxGuesses-1} tries to guess both words.
         <br />
         <br />You start with a random clue.
         <br />It's the same for everyone.
@@ -35,6 +40,7 @@ export function About() {
         <a href="https://github.com/6zs/xordle/issues">here</a> or send me an <a href="mailto:kellydornhaus@gmail.com">email</a>, and feel free to send in puzzle suggestions, too.
         <br />Code based on a fork of <a href="https://github.com/lynn/hello-wordl">hello wordl</a>.
       </p>
+      {importLink}
       <p>
       </p>
     </div>
