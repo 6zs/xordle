@@ -184,6 +184,18 @@ table.Game-rows > tbody {
   color: white !important;
 }
 
+.Typing-known-absent {
+  border: 1px dotted white;
+}
+
+.Typing-known-elsewhere{
+  border: 1px dotted rgba(233, 198, 1);
+}
+
+.Typing-known-correct {
+  border: 1px solid rgba(87, 172, 120);
+}
+
 body.dark {
   background-color: #202020;
   color: #e0e0e0;
@@ -433,9 +445,7 @@ a {
   text-decoration: inherit;
 }
 
-
-.ModeEnabled
-{
+.ModeEnabled {
   border-radius: .375rem;
   padding: .3rem .45rem;
   font-size: .875rem;

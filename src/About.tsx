@@ -1,11 +1,15 @@
+import { readOnly } from "./App";
 import { Clue } from "./clue";
 import { Row, RowState } from "./Row";
 import { gameName, isDev, maxGuesses } from "./util";
 
 export function About() {
   let importLink = (
-  <p>Click <button onClick={() =>{window.localStorage.setItem('waiting-import', "1"); window.location.replace("https://xordle.xyz?importRequest=1"); }}>here</button> to import games from the old domain.
+  <div>
+  <p>The site has permanently moved to https://xordle.org (that's .org rather than .xyz) due to a problem with the .xyz domain name service. The old domain is temporarily in a read-only state at <a href="https://xordle.xyz?preventRedirect">https://xordle.xyz?preventRedirect</a> if you wish to look at your old games.</p>  
+  <p>Click <button onClick={() =>{window.localStorage.setItem('waiting-import', "1"); window.location.replace("https://xordle.xyz?importRequest=1"); }}>here</button> to import your games from the old domain.
   </p>
+  </div>
   );
 
   return (

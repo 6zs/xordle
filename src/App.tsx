@@ -9,7 +9,6 @@ import Calendar from "react-calendar";
 import cheatyface from "./cheatyface.json"
 import { nightmares } from "./nightmares";
 import { instants } from "./instants";
-import { compress, decompress } from 'lzw-compressor';
 
 function encode( str:string ) {
   return window.btoa(str);
@@ -37,12 +36,6 @@ function deserializeStorage(serialized: string) {
     console.log(e);
   }
 }
-
-const redirectFrom = ["6zs.github.io", "xordle.web.app", "xordle.xyz"];
-const redirectTo = "https://xordle.org/";
-const importResponse = new URLSearchParams(window.location.search).get("importResponse") ?? "";
-const importPayload = importResponse !== "" ? window.location.hash.slice(1) : "";
-const importRequest = new URLSearchParams(window.location.search).get("importRequest") ?? "";
 
 function useSetting<T>(
   key: string,
@@ -85,6 +78,21 @@ async function share(text?: string) {
   } catch (e) {
     console.warn("navigator.clipboard.writeText failed:", e);
   }
+}
+
+const redirectFrom = ["6zs.github.io", "xordle.web.app", "xordle.xyz"];
+export const redirectTo = "https://xordle.org/";
+const importResponse = new URLSearchParams(window.location.search).get("importResponse") ?? "";
+const importPayload = importResponse !== "" ? window.location.hash.slice(1) : "";
+const importRequest = new URLSearchParams(window.location.search).get("importRequest") ?? "";
+
+export function readOnly() {
+  for(var from of redirectFrom) {
+    if (window.location.host.lastIndexOf(from) === 0) {
+      return true;
+    }
+  }
+  return false;
 }
 
 function App() {
@@ -131,18 +139,17 @@ function App() {
       return;
     }
 
-    if ( urlParam("preventRedirect") === null ) {
-      for(var from of redirectFrom) {
-        if (window.location.host.lastIndexOf(from) === 0) {
-          if (importRequest !== "") {
-            const str = serializeStorage();
-            window.location.replace(redirectTo + "?importResponse=1#" + str);
-          } else {          
-            window.location.replace(redirectTo);
-          }
-          return;
-        }  
-      }
+    for(var from of redirectFrom) {
+      if (window.location.host.lastIndexOf(from) === 0) {
+        if (importRequest !== "") {
+          const str = serializeStorage();
+          window.location.replace(redirectTo + "?importResponse=1#" + str);
+        }
+        if ( urlParam("preventRedirect") === null ) {
+          window.location.replace(redirectTo);
+        }
+        return;
+      }  
     }
   });
 
@@ -250,10 +257,10 @@ function App() {
           
          </span>             
         <div className="Game-modes">
-        {allowPractice && !practice && <a className="ModeEnabled">Daily</a>}
-        {allowPractice && practice && <a className="ModeDisabled" href={dailyLink}>Daily</a>}
-        {allowPractice && practice && <a className="ModeEnabled">Unlimited</a>}
-        {allowPractice && !practice && <a className="ModeDisabled" href={practiceLink}>Unlimited</a>}
+        {!readOnly() && allowPractice && !practice && <a className="ModeEnabled">Daily</a>}
+        {!readOnly() && allowPractice && practice && <a className="ModeDisabled" href={dailyLink}>Daily</a>}
+        {!readOnly() && allowPractice && practice && <a className="ModeEnabled">Unlimited</a>}
+        {!readOnly() && allowPractice && !practice && <a className="ModeDisabled" href={practiceLink}>Unlimited</a>}
         </div>
         </div>
       </h1>
@@ -262,8 +269,8 @@ function App() {
           link("❌", "Close", "game")
         ) : (
           <>
-            {link("❓", "About", "about")}          
-            {link("⚙️", "Settings", "settings")}            
+            {!readOnly() && link("❓", "About", "about")}          
+            {!readOnly() && link("⚙️", "Settings", "settings")}            
             {link("📊", "Stats", "stats")}
             {link("📅", "Calendar", "calendar")}
           </>
@@ -290,7 +297,7 @@ function App() {
           if ( isDev ) {
             window.location.replace(window.location.origin + "?x="+(1 + dateToNumber(value) - day1Number) + "&xyzzyx=" + cheatyface["password"]);
           } else if ( value >= day1Date && value <= todayDate)  {
-            window.location.replace(window.location.origin + "?x="+(1 + dateToNumber(value) - day1Number));
+            window.location.replace(window.location.origin + "?x="+(1 + dateToNumber(value) - day1Number) + (urlParam("preventRedirect") !== null ? "&preventRedirect" : ""));
           }
         }}
         formatDay={(locale: string, date: Date) => calendarFormatDay(locale, date)}

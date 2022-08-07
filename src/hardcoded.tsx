@@ -1384,7 +1384,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
             "bluff"
         ],
         "initialGuesses": [
-            "orbit"
+            "puppy"
         ]
     },
     "155": {
@@ -1407,11 +1407,11 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
     },
     "157": {
         "targets": [
-            "olive",
-            "bunny"
+            "cupid",
+            "arrow"
         ],
         "initialGuesses": [
-            "rebel"
+            "point"
         ]
     },
     "158": {
@@ -1420,16 +1420,16 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
             "hinge"
         ],
         "initialGuesses": [
-            "cough"
+            "rhyme"
         ]
     },
     "159": {
         "targets": [
-            "pouch",
-            "remit"
+            "octal",
+            "nerdy"
         ],
         "initialGuesses": [
-            "equip"
+            "eight"
         ]
     },
     "160": {
@@ -1443,11 +1443,11 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
     },
     "161": {
         "targets": [
-            "array",
-            "toxic"
+            "truth",
+            "maxim"
         ],
         "initialGuesses": [
-            "famed"
+            "evoke"
         ]
     },
     "162": {

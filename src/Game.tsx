@@ -30,6 +30,7 @@ import cheatyface from "./cheatyface.json";
 import { Day, GetDaynum } from "./Stats"
 import { nightmares } from "./nightmares";
 import { instants } from "./instants";
+import { readOnly, redirectTo } from "./App";
 
 export enum GameState {
   Playing,
@@ -276,9 +277,6 @@ export function countSolutions(puzzle: Puzzle, guesses: string[], dictionaryToUs
     for (const word2 of dictionaryToUse) {
       if (word2.localeCompare(word1) <= 0) 
         continue;
-      //if (!checkAnagrams(puzzle.targets, [word1, word2]))
-      //  continue;
-      //window.console.log("checking: " + puzzle.targets.toString() + " <<>> " + [word1,word2].toString());
       let contradicted = false;
       for(var i = 0; i < guesses.length; ++i) {
         const guess = guesses[i];
@@ -630,11 +628,18 @@ function Game(props: GameProps) {
     ? puzzle.targets[1]
     : "";
 
+  const cluedRows = Array(realMaxGuesses)
+    .fill(undefined)
+    .map((_,i)=>{
+      const guess = [...guesses, currentGuess][i] ?? "";
+      return xorclue(clue(guess, puzzle.targets[0]),clue(guess, puzzle.targets[1])); 
+    });
+
   const tableRows = Array(realMaxGuesses)
     .fill(undefined)
-    .map((_, i) => {
+    .map((_, i) => {      
       const guess = [...guesses, currentGuess][i] ?? "";
-      const cluedLetters = xorclue(clue(guess, puzzle.targets[0]),clue(guess, puzzle.targets[1]));
+      const cluedLetters = cluedRows[i];
       const isTarget = puzzle.targets.includes(guess);
       const isBonusGuess = i === maxGuesses;
       const lockedIn = (!isBonusGuess && i < guesses.length) || (isBonusGuess && guesses.length === realMaxGuesses);
@@ -658,7 +663,9 @@ function Game(props: GameProps) {
               ? RowState.Editing
               : RowState.Pending
           }
+          cluedRows={cluedRows.slice(undefined, guesses.length)}
           cluedLetters={cluedLetters}
+          letterInfo={letterInfo}
           correctGuess={correctGuess}
           numInitialGuesses={puzzle.initialGuesses.length}
           rowNumber={i}
@@ -676,8 +683,8 @@ function Game(props: GameProps) {
   const canPrev = dayNum > 1;
   const canNext = dayNum < todayDayNum || isDev;
   const practiceLink = "?unlimited";
-  const prevLink = "?x=" + (dayNum-1).toString() + (isDev ? "&xyzzyx="+cheatyface["password"] : "") + (cheat ? "&cheat=1" : "");
-  const nextLink = "?x=" + (dayNum+1).toString() + (isDev ? "&xyzzyx="+cheatyface["password"] : "") + (cheat ? "&cheat=1" : "");
+  const prevLink = "?x=" + (dayNum-1).toString() + (isDev ? "&xyzzyx="+cheatyface["password"] : "") + (cheat ? "&cheat=1" : "") + (urlParam("preventRedirect") !== null ? "&preventRedirect" : "");
+  const nextLink = "?x=" + (dayNum+1).toString() + (isDev ? "&xyzzyx="+cheatyface["password"] : "") + (cheat ? "&cheat=1" : "") + (urlParam("preventRedirect") !== null ? "&preventRedirect" : "");
 
   const [readNewsDay, setReadNewsDay] = useLocalStorage<number>("read-news-", 0);
   let news = "";
@@ -726,6 +733,7 @@ function Game(props: GameProps) {
       </div>
       {showNews && (<div className="News">{news}
       </div>) }
+      {readOnly() && (<div><p>The site has <b>permanently moved</b> to <a href='https://xordle.org'>https://xordle.org</a>. That's .org rather than .xyz. It's still up here temporarily and in a read-only state, you can't play here. <b>When you visit the new site</b>, you can click ❓, and there will be a link at the bottom to <b>import your game history from this site.</b></p></div>)}
       <table
         className="Game-rows"
         tabIndex={0}
@@ -774,7 +782,7 @@ function Game(props: GameProps) {
           <img className="rewardImage" src={`/images/${currentSeed}-${puzzle.initialGuesses[0]}-sm.jpg`}/>
         </a>)
       }
-      {(gameState === GameState.Playing) && (
+      {(gameState === GameState.Playing && !readOnly() ) && (
       <Keyboard
         layout={props.keyboardLayout}
         letterInfo={letterInfo}

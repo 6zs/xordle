@@ -10,10 +10,12 @@ export enum RowState {
 interface RowProps {
   rowState: RowState;
   cluedLetters: CluedLetter[];
+  letterInfo: Map<string, Clue>;
   correctGuess: string;
   annotation?: string;
   rowNumber: number;
   numInitialGuesses: number;
+  cluedRows: CluedLetter[][];
 }
 
 function glitch(content: any) {
@@ -36,6 +38,32 @@ export function Row(props: RowProps) {
       let letterClass = "Row-letter";
       if (isLockedIn && clue !== undefined) {
         letterClass += " " + clueClass(clue, props.correctGuess.lastIndexOf(letter) !== -1);
+      }
+      if (!isLockedIn) {
+        let knownInfo : Clue | undefined;
+        if ( props.letterInfo.get(letter) === Clue.Absent ) {
+          knownInfo = Clue.Absent;
+        }
+        for(let prevClue of props.cluedRows) {
+          if (prevClue.length <= i )
+            continue;
+          if ( prevClue[i].letter == letter ) {
+            if (prevClue[i].clue === Clue.Absent ) {
+              knownInfo = Clue.Absent;
+            } else if (prevClue[i].clue === Clue.Correct) {
+              knownInfo = Clue.Correct;
+            } else if (prevClue[i].clue === Clue.Elsewhere && knownInfo === undefined) {
+              knownInfo = Clue.Elsewhere;
+            } 
+          }
+        }
+        if (knownInfo === Clue.Elsewhere ) {
+          letterClass += " Typing-known-elsewhere";
+        } else if (knownInfo === Clue.Absent ) {
+          letterClass += " Typing-known-absent";
+        } else if (knownInfo === Clue.Correct ) {
+          letterClass += " Typing-known-correct";
+        }
       }
       return (
         <td
