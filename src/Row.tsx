@@ -39,32 +39,36 @@ export function Row(props: RowProps) {
       if (isLockedIn && clue !== undefined) {
         letterClass += " " + clueClass(clue, props.correctGuess.lastIndexOf(letter) !== -1);
       }
-      if (!isLockedIn) {
-        let knownInfo : Clue | undefined;
-        if ( props.letterInfo.get(letter) === Clue.Absent ) {
+
+      let knownInfo : Clue | undefined;
+      if (!isLockedIn && letter !== "") {
+        if ( props.letterInfo.get(letter) === Clue.Absent || props.correctGuess.lastIndexOf(letter) !== -1 ) {
           knownInfo = Clue.Absent;
-        }
-        for(let prevClue of props.cluedRows) {
-          if (prevClue.length <= i )
-            continue;
-          if ( prevClue[i].letter == letter ) {
-            if (prevClue[i].clue === Clue.Absent ) {
-              knownInfo = Clue.Absent;
-            } else if (prevClue[i].clue === Clue.Correct) {
-              knownInfo = Clue.Correct;
-            } else if (prevClue[i].clue === Clue.Elsewhere && knownInfo === undefined) {
-              knownInfo = Clue.Elsewhere;
-            } 
-          }
-        }
-        if (knownInfo === Clue.Elsewhere ) {
-          letterClass += " Typing-known-elsewhere";
-        } else if (knownInfo === Clue.Absent ) {
-          letterClass += " Typing-known-absent";
-        } else if (knownInfo === Clue.Correct ) {
-          letterClass += " Typing-known-correct";
+        } else {
+          for(let prevClue of props.cluedRows) {
+            if (prevClue.length <= i )
+              continue;
+            if ( prevClue[i].letter == letter ) {
+              if (prevClue[i].clue === Clue.Absent ) {
+                knownInfo = Clue.Absent;
+              } else if (prevClue[i].clue === Clue.Correct && knownInfo !== Clue.Absent) {
+                knownInfo = Clue.Correct;
+              } else if (prevClue[i].clue === Clue.Elsewhere && knownInfo === undefined) {
+                knownInfo = Clue.Elsewhere;
+              } 
+            }
+          }       
         }
       }
+
+      if (knownInfo === Clue.Elsewhere ) {
+        letterClass += " Typing-known-elsewhere";
+      } else if (knownInfo === Clue.Absent ) {
+        letterClass += " Typing-known-absent";
+      } else if (knownInfo === Clue.Correct ) {
+        letterClass += " Typing-known-correct";
+      }
+
       return (
         <td
           key={i}

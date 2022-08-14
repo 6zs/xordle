@@ -30,7 +30,7 @@ import cheatyface from "./cheatyface.json";
 import { Day, GetDaynum } from "./Stats"
 import { nightmares } from "./nightmares";
 import { instants } from "./instants";
-import { readOnly, redirectTo } from "./App";
+import { readOnly, redirectTo, serializeStorage } from "./App";
 
 export enum GameState {
   Playing,
@@ -172,6 +172,15 @@ function gameOverText(state: GameState, initialGuesses: string[], targets: [stri
   const verbed = state === GameState.Won ? "won!" : "lost.";
   const playagain = practice ? " Go again!" : " Play again tomorrow!";
   return `You ${verbed}${playagain}`; 
+}
+
+export async function copyImportCode() {
+  try {
+    await navigator.clipboard.writeText(serializeStorage());
+    return;
+  } catch (e) {
+    console.warn("navigator.clipboard.writeText failed:", e);
+  }
 }
 
 let uniqueGame = practice ? 100000 : 1000;
@@ -764,7 +773,7 @@ function Game(props: GameProps) {
               const score = gameState === GameState.Lost ? "X" : (guesses.length-puzzle.initialGuesses.length);
               share(
                 "Result copied to clipboard!",
-                `${gameName} ${practice ? ((nightmare ? "nightmare " : instant ? "instant " : "unlimited ") + currentSeed.toString()) : ("#"+dayNum.toString())} ${score}/${props.maxGuesses-1}\n` +
+                `${gameNameDecorated} ${practice ? ((nightmare ? "nightmare " : instant ? "instant " : "unlimited ") + currentSeed.toString()) : ("#"+dayNum.toString())} ${score}/${props.maxGuesses-1}\n` +
                 emojiBlock({guesses:guesses, puzzle:puzzle, gameState:gameState}, props.colorBlind)
               );
             }}
@@ -782,13 +791,20 @@ function Game(props: GameProps) {
           <img className="rewardImage" src={`/images/${currentSeed}-${puzzle.initialGuesses[0]}-sm.jpg`}/>
         </a>)
       }
+      {readOnly() && (
+        <p>
+        <button onClick={() => {copyImportCode();}} >
+          Copy import code
+        </button>
+        </p>
+      )}
       {(gameState === GameState.Playing && !readOnly() ) && (
-      <Keyboard
-        layout={props.keyboardLayout}
-        letterInfo={letterInfo}
-        correctGuess={correctGuess}
-        onKey={onKey}
-      />)}
+        <Keyboard
+          layout={props.keyboardLayout}
+          letterInfo={letterInfo}
+          correctGuess={correctGuess}
+          onKey={onKey}
+        />)}
     </div>
   );
 }

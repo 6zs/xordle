@@ -1,13 +1,23 @@
-import { readOnly } from "./App";
-import { Clue } from "./clue";
-import { Row, RowState } from "./Row";
-import { gameName, isDev, maxGuesses } from "./util";
+import { deserializeStorage } from "./App";
+import { copyImportCode } from "./Game";
+import { gameName, maxGuesses } from "./util";
+
+export async function pasteImportCode() {
+  const enteredCode = prompt('Please paste your import code');
+  if ( enteredCode !== null ) {
+    deserializeStorage(enteredCode);
+  }
+}
 
 export function About() {
   let importLink = (
   <div>
+  <br/>
+  <p><h2>Importing game history (from the old domain, or to a new device)</h2></p>
   <p>The site has permanently moved to https://xordle.org (that's .org rather than .xyz) due to a problem with the .xyz domain name service. The old domain is temporarily in a read-only state at <a href="https://xordle.xyz?preventRedirect">https://xordle.xyz?preventRedirect</a> if you wish to look at your old games.</p>  
-  <p>Click <button onClick={() =>{window.localStorage.setItem('waiting-import', "1"); window.location.replace("https://xordle.xyz?importRequest=1"); }}>here</button> to import your games from the old domain.
+  <p>Click <button onClick={() =>{window.localStorage.setItem('waiting-import', "1"); window.location.replace("https://xordle.xyz?importRequest=1"); }}>here</button> to automatically import your games from the old domain.
+  <p>Click <button onClick={() =>{copyImportCode();}}>here</button> to copy an import code to your clipboard which you can use to transfer your stats to another device.</p>
+  <p>Click <button onClick={() =>{pasteImportCode();}}>here</button> to paste an import code from your clipboard.</p>
   </p>
   </div>
   );

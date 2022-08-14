@@ -18,13 +18,13 @@ function decode( str:string ) {
   return window.atob(str);
 }
 
-function serializeStorage() : string {
+export function serializeStorage() : string {
   const strPlain = window.JSON.stringify(window.localStorage);
   const strEncoded = encode(strPlain);
   return strEncoded;
 }
 
-function deserializeStorage(serialized: string) {
+export function deserializeStorage(serialized: string) {
   try {
     let o = window.JSON.parse(decode(serialized));
     for (let [key, value] of Object.entries(o)) {
@@ -87,7 +87,7 @@ const importPayload = importResponse !== "" ? window.location.hash.slice(1) : ""
 const importRequest = new URLSearchParams(window.location.search).get("importRequest") ?? "";
 
 export function readOnly() {
-  for(var from of redirectFrom) {
+  for(var from of [...redirectFrom]) {
     if (window.location.host.lastIndexOf(from) === 0) {
       return true;
     }
@@ -135,7 +135,6 @@ function App() {
         window.localStorage.removeItem("waiting-import");
         deserializeStorage(importPayload);
       }
-      window.location.replace(window.location.origin);
       return;
     }
 
