@@ -162,7 +162,7 @@ function App() {
 
   const link = (emoji: string, label: string, page: Page) => (
     <button
-      className="emoji-link"
+      className={emoji === "" ? ("link-Image link-"+label) : "emoji-link"}
       onClick={() => setPage(page)}
       title={label}
       aria-label={label}
@@ -268,10 +268,10 @@ function App() {
           link("❌", "Close", "game")
         ) : (
           <>
-            {!readOnly() && link("❓", "About", "about")}          
-            {!readOnly() && link("⚙️", "Settings", "settings")}            
-            {link("📊", "Stats", "stats")}
-            {link("📅", "Calendar", "calendar")}
+            {!readOnly() && link("", "About", "about")}          
+            {!readOnly() && link("", "Settings", "settings")}            
+            {link("", "Stats", "stats")}
+            {link("", "Calendar", "calendar")}
           </>
         )}
       </div>

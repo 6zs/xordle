@@ -350,9 +350,11 @@ function Game(props: GameProps) {
     }
   }
 
+  let researchDivs : JSX.Element[] = [];
   if (research !== null) {
     const targets = research.split(",");
     if ( targets.length == 1 || targets.length == 2) {
+      let clues : string[][] = [];
       for(const word of eligible) {
         if (/\*/.test(word)) {
           continue;
@@ -361,16 +363,26 @@ function Game(props: GameProps) {
         if ( targets.length == 2 ) {
           theClue = xorclue(clue(word,targets[1]), theClue);
         }
-        const theText = theClue.map((c) => ["⬛", "🟨", "🟩"][c.clue ?? 0]).join("");
-        window.console.log(word + ":" + theText + "\n");
+        const matching = countMatching(theClue);
+        const sortscore = (matching.get(Clue.Elsewhere) ?? 0 ) + (matching.get(Clue.Correct) ?? 0) * 6;
+        const theText = word + ":" + (theClue.map((c) => ["⬛", "🟨", "🟩"][c.clue ?? 0]).join(""));
+        clues[sortscore] = clues[sortscore] ? [...clues[sortscore], theText] : [theText];
       }
+      for(let scorewords of clues) {
+        if (scorewords) {
+          for(let word of scorewords) {
+            researchDivs = [...researchDivs, (<p>{word}</p>)];
+          }
+        }
+      }      
       for(const researchWord of targets) {
         let str = researchWord + ": " + (eligible.lastIndexOf(researchWord) === -1 ? "not an answer word, " : "an answer word, ");
         str = str + (fivesDictionary.lastIndexOf(researchWord) === -1 ? "not in dictionary" : "in dictionary");
-        window.console.log(str);
+        researchDivs = [...researchDivs, (<p>{str}</p>)];
       }
       if (targets.length == 2) {
-        window.console.log(isValidCluePair(targets[0], targets[1]) ? "valid clue pair\n": "not valid clue pair\n");
+        let str = isValidCluePair(targets[0], targets[1]) ? "valid clue pair\n": "not valid clue pair\n";
+        researchDivs = [...researchDivs, (<p>{str}</p>)];
       }      
     }
   }
@@ -773,7 +785,7 @@ function Game(props: GameProps) {
               const score = gameState === GameState.Lost ? "X" : (guesses.length-puzzle.initialGuesses.length);
               share(
                 "Result copied to clipboard!",
-                `${gameNameDecorated} ${practice ? ((nightmare ? "nightmare " : instant ? "instant " : "unlimited ") + currentSeed.toString()) : ("#"+dayNum.toString())} ${score}/${props.maxGuesses-1}\n` +
+                `${gameName} ${practice ? ((nightmare ? "nightmare " : instant ? "instant " : "unlimited ") + currentSeed.toString()) : ("#"+dayNum.toString())} ${score}/${props.maxGuesses-1}\n` +
                 emojiBlock({guesses:guesses, puzzle:puzzle, gameState:gameState}, props.colorBlind)
               );
             }}
@@ -791,6 +803,8 @@ function Game(props: GameProps) {
           <img className="rewardImage" src={`/images/${currentSeed}-${puzzle.initialGuesses[0]}-sm.jpg`}/>
         </a>)
       }
+
+      {researchDivs}
       {readOnly() && (
         <p>
         <button onClick={() => {copyImportCode();}} >

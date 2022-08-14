@@ -1434,20 +1434,20 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
     },
     "160": {
         "targets": [
-            "seize",
-            "notch"
+            "levee",
+            "oasis"
         ],
         "initialGuesses": [
-            "rivet"
+            "hydro"
         ]
     },
     "161": {
         "targets": [
-            "truth",
-            "maxim"
+            "ahead",
+            "torso"
         ],
         "initialGuesses": [
-            "evoke"
+            "upper"
         ]
     },
     "162": {
@@ -1456,25 +1456,25 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
             "mourn"
         ],
         "initialGuesses": [
-            "power"
+            "vigil"
         ]
     },
     "163": {
         "targets": [
-            "weave",
-            "broth"
+            "hurry",
+            "pasta"
         ],
         "initialGuesses": [
-            "choir"
+            "elbow"
         ]
     },
     "164": {
         "targets": [
-            "shake",
-            "ditto"
+            "snake",
+            "twirl"
         ],
         "initialGuesses": [
-            "drive"
+            "zebra"
         ]
     },
     "165": {
@@ -1483,7 +1483,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
             "vicar"
         ],
         "initialGuesses": [
-            "elegy"
+            "flock"
         ]
     },
     "166": {
