@@ -188,6 +188,7 @@ export function makePuzzle(seed: number) : Puzzle {
   let hardCoded = hardCodedPuzzles[seed];
   if (hardCoded && !practice) {
     if (wordsHaveNoOverlap(hardCoded.targets[0], hardCoded.targets[1]) ) {
+      hardCoded.imageCredit = hardCoded.imageCredit == "" ? "midjourney ai with prompts by keldor" : hardCoded.imageCredit;
       return hardCoded;
     }
     else {
@@ -207,7 +208,9 @@ export function makePuzzle(seed: number) : Puzzle {
   let targets =  randomTargets(random);
   let puzzle: Puzzle = {
     targets: targets,
-    initialGuesses: initialGuess(targets, random)
+    initialGuesses: initialGuess(targets, random),
+    puzzleCredit: "",
+    imageCredit: ""
   };
   return puzzle;
 }
@@ -322,7 +325,9 @@ export function emojiBlock(day: Day, colorBlind: boolean) : string {
 
 export interface Puzzle {
   targets: [string, string],
-  initialGuesses: string[]
+  initialGuesses: string[],
+  puzzleCredit: string,
+  imageCredit: string
 }
 
 function Game(props: GameProps) {
@@ -721,6 +726,9 @@ function Game(props: GameProps) {
     }
   }
 
+
+    const imageCredit = puzzle.imageCredit !== "" ? ("Image by " + puzzle.imageCredit + ".") : "";
+  
   return (
     <div className="Game" style={{ display: props.hidden ? "none" : "block" }}>
 
@@ -749,8 +757,7 @@ function Game(props: GameProps) {
           </a>
         
           <span> | </span>
-          <a href={practiceLink} onClick={ ()=>{resetPractice();} }>+ New Puzzle</a></span>}
-        
+          <a href={practiceLink} onClick={ ()=>{resetPractice();} }>+ New Puzzle</a></span>}        
       </div>
       {showNews && (<div className="News">{news}
       </div>) }
@@ -800,9 +807,11 @@ function Game(props: GameProps) {
 
       {haveImage && gameState !== GameState.Playing &&
         (<a className="rewardImageLink" href={`/images/${currentSeed}-${puzzle.initialGuesses[0]}.png`} target="_blank">
-          <img className="rewardImage" src={`/images/${currentSeed}-${puzzle.initialGuesses[0]}-sm.jpg`}/>
+          <img className="rewardImage" title={imageCredit} src={`/images/${currentSeed}-${puzzle.initialGuesses[0]}-sm.jpg`}/>
         </a>)
       }
+
+      {haveImage && gameState !== GameState.Playing && puzzle.puzzleCredit !== "" && (<p>Puzzle submitted by {puzzle.puzzleCredit}.</p>)}
 
       {researchDivs}
       {readOnly() && (

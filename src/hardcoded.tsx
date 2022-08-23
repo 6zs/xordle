@@ -9,7 +9,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "build"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "2": {
         "targets": [
             "panic",
@@ -18,7 +18,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "fuzzy"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "3": {
         "targets": [
             "roach",
@@ -27,7 +27,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "prize"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "4": {
         "targets": [
             "dread",
@@ -36,7 +36,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "flint"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "5": {
         "targets": [
             "pinch",
@@ -45,7 +45,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "heath"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "6": {
         "targets": [
             "leafy",
@@ -54,7 +54,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "frank"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "7": {
         "targets": [
             "rapid",
@@ -63,7 +63,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "group"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "8": {
         "targets": [
             "fling",
@@ -72,7 +72,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "rhyme"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "9": {
         "targets": [
             "small",
@@ -81,7 +81,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "frock"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "10": {
         "targets": [
             "tweed",
@@ -90,7 +90,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "print"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "11": {
         "targets": [
             "nylon",
@@ -99,7 +99,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "lousy"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "12": {
         "targets": [
             "ditch",
@@ -108,7 +108,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "beard"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "13": {
         "targets": [
             "moody",
@@ -117,7 +117,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "surge"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "14": {
         "targets": [
             "lyric",
@@ -126,7 +126,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "whole"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "15": {
         "targets": [
             "trace",
@@ -135,7 +135,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "quote"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "16": {
         "targets": [
             "lousy",
@@ -144,7 +144,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "notch"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "17": {
         "targets": [
             "taste",
@@ -153,7 +153,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "along"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "18": {
         "targets": [
             "expel",
@@ -162,7 +162,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "dwell"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "19": {
         "targets": [
             "close",
@@ -171,7 +171,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "merit"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "20": {
         "targets": [
             "shady",
@@ -180,7 +180,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "plank"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "21": {
         "targets": [
             "juror",
@@ -189,7 +189,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "nurse"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "22": {
         "targets": [
             "steep",
@@ -198,7 +198,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "chess"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "23": {
         "targets": [
             "nasal",
@@ -207,7 +207,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "shark"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "24": {
         "targets": [
             "mimic",
@@ -216,7 +216,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "facet"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "25": {
         "targets": [
             "loyal",
@@ -225,7 +225,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "leave"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "26": {
         "targets": [
             "older",
@@ -234,7 +234,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "panic"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "27": {
         "targets": [
             "nancy",
@@ -243,7 +243,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "forty"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "28": {
         "targets": [
             "gamma",
@@ -252,7 +252,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "rebel"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "29": {
         "targets": [
             "under",
@@ -261,7 +261,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "stock"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "30": {
         "targets": [
             "loose",
@@ -270,7 +270,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "etude"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "31": {
         "targets": [
             "sinus",
@@ -279,7 +279,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "horse"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "32": {
         "targets": [
             "petty",
@@ -288,7 +288,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "least"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "33": {
         "targets": [
             "loyal",
@@ -297,7 +297,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "vague"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "34": {
         "targets": [
             "lunar",
@@ -306,7 +306,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "pizza"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "35": {
         "targets": [
             "cross",
@@ -315,7 +315,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "adieu"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "36": {
         "targets": [
             "atlas",
@@ -324,7 +324,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "hedge"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "37": {
         "targets": [
             "taboo",
@@ -333,7 +333,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "leach"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "38": {
         "targets": [
             "loved",
@@ -342,7 +342,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "mamma"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "39": {
         "targets": [
             "diode",
@@ -351,7 +351,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "mango"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "40": {
         "targets": [
             "stalk",
@@ -360,7 +360,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "scent"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "41": {
         "targets": [
             "fence",
@@ -369,7 +369,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "chaff"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "42": {
         "targets": [
             "laugh",
@@ -378,7 +378,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "manor"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "43": {
         "targets": [
             "tasty",
@@ -387,7 +387,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "nymph"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "44": {
         "targets": [
             "rocky",
@@ -396,7 +396,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "earth"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "45": {
         "targets": [
             "gross",
@@ -405,7 +405,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "gaudy"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "46": {
         "targets": [
             "daddy",
@@ -414,7 +414,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "crews"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "47": {
         "targets": [
             "whale",
@@ -423,7 +423,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "cloud"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "48": {
         "targets": [
             "haunt",
@@ -432,7 +432,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "horse"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "49": {
         "targets": [
             "gamer",
@@ -441,7 +441,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "speak"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "50": {
         "targets": [
             "motor",
@@ -450,7 +450,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "plate"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "51": {
         "targets": [
             "tidal",
@@ -459,7 +459,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "lunar"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "52": {
         "targets": [
             "civic",
@@ -468,7 +468,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "diver"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "53": {
         "targets": [
             "shaft",
@@ -477,7 +477,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "chase"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "54": {
         "targets": [
             "triad",
@@ -486,7 +486,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "scarf"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "55": {
         "targets": [
             "panic",
@@ -495,7 +495,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "guide"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "56": {
         "targets": [
             "liver",
@@ -504,7 +504,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "waltz"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "57": {
         "targets": [
             "these",
@@ -513,7 +513,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "solve"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "58": {
         "targets": [
             "ghost",
@@ -522,7 +522,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "spook"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "59": {
         "targets": [
             "renew",
@@ -531,7 +531,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "snout"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "60": {
         "targets": [
             "tooth",
@@ -540,7 +540,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "brush"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "61": {
         "targets": [
             "smell",
@@ -549,7 +549,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "bathe"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "62": {
         "targets": [
             "seven",
@@ -558,7 +558,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "haiku"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "63": {
         "targets": [
             "braid",
@@ -567,7 +567,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "point"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "64": {
         "targets": [
             "snout",
@@ -576,7 +576,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "hotel"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "65": {
         "targets": [
             "blush",
@@ -585,7 +585,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "nerve"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "66": {
         "targets": [
             "cling",
@@ -594,7 +594,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "modal"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "67": {
         "targets": [
             "expel",
@@ -603,7 +603,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "being"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "68": {
         "targets": [
             "small",
@@ -612,7 +612,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "story"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "69": {
         "targets": [
             "swell",
@@ -621,7 +621,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "crude"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "70": {
         "targets": [
             "mummy",
@@ -630,7 +630,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "grave"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "71": {
         "targets": [
             "sunny",
@@ -639,7 +639,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "ocean"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "72": {
         "targets": [
             "visit",
@@ -648,7 +648,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "wight"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "73": {
         "targets": [
             "night",
@@ -657,7 +657,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "sleep"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "74": {
         "targets": [
             "skill",
@@ -666,7 +666,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "angel"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "75": {
         "targets": [
             "speed",
@@ -675,7 +675,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "fives"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "76": {
         "targets": [
             "jolly",
@@ -684,7 +684,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "green"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "77": {
         "targets": [
             "brawl",
@@ -693,7 +693,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "drunk"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "78": {
         "targets": [
             "sweet",
@@ -702,7 +702,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "taste"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "79": {
         "targets": [
             "glove",
@@ -711,7 +711,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "filth"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "80": {
         "targets": [
             "black",
@@ -720,7 +720,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "voice"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "81": {
         "targets": [
             "start",
@@ -729,7 +729,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "ditto"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "82": {
         "targets": [
             "assay",
@@ -738,7 +738,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "climb"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "83": {
         "targets": [
             "child",
@@ -747,7 +747,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "adult"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "84": {
         "targets": [
             "sheen",
@@ -756,7 +756,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "quick"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "85": {
         "targets": [
             "drawn",
@@ -765,7 +765,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "image"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "86": {
         "targets": [
             "bring",
@@ -774,7 +774,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "merry"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "87": {
         "targets": [
             "ninth",
@@ -783,7 +783,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "bonus"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "88": {
         "targets": [
             "mouth",
@@ -792,7 +792,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "sixth"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "89": {
         "targets": [
             "think",
@@ -801,7 +801,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "brain"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "90": {
         "targets": [
             "knock",
@@ -810,7 +810,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "fritz"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "91": {
         "targets": [
             "pride",
@@ -819,7 +819,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "color"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "92": {
         "targets": [
             "arson",
@@ -828,7 +828,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "pluck"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "93": {
         "targets": [
             "quick",
@@ -837,7 +837,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "mount"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "94": {
         "targets": [
             "scope",
@@ -846,7 +846,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "graft"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "95": {
         "targets": [
             "turbo",
@@ -855,7 +855,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "racer"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "96": {
         "targets": [
             "parch",
@@ -864,7 +864,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "brews"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "97": {
         "targets": [
             "squad",
@@ -873,7 +873,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "drift"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "98": {
         "targets": [
             "union",
@@ -882,7 +882,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "fault"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "99": {
         "targets": [
             "noisy",
@@ -891,7 +891,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "chomp"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "100": {
         "targets": [
             "bulky",
@@ -900,7 +900,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "surge"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "101": {
         "targets": [
             "optic",
@@ -909,7 +909,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "views"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "102": {
         "targets": [
             "spike",
@@ -918,7 +918,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "holly"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "103": {
         "targets": [
             "climb",
@@ -927,7 +927,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "milky"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "104": {
         "targets": [
             "watch",
@@ -936,7 +936,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "stare"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "105": {
         "targets": [
             "vocal",
@@ -945,7 +945,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "brief"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "106": {
         "targets": [
             "dusty",
@@ -954,7 +954,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "ozone"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "107": {
         "targets": [
             "royal",
@@ -963,7 +963,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "crown"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "108": {
         "targets": [
             "login",
@@ -972,7 +972,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "slack"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "109": {
         "targets": [
             "heart",
@@ -981,7 +981,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "thump"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "110": {
         "targets": [
             "piano",
@@ -990,7 +990,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "lucky"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "111": {
         "targets": [
             "camel",
@@ -999,7 +999,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "lease"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "112": {
         "targets": [
             "tribe",
@@ -1008,7 +1008,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "hence"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "113": {
         "targets": [
             "stuff",
@@ -1017,7 +1017,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "gloop"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "114": {
         "targets": [
             "grime",
@@ -1026,7 +1026,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "above"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "115": {
         "targets": [
             "stony",
@@ -1035,7 +1035,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "usual"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "116": {
         "targets": [
             "spice",
@@ -1044,7 +1044,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "faint"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "117": {
         "targets": [
             "annoy",
@@ -1053,7 +1053,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "waste"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "118": {
         "targets": [
             "exile",
@@ -1062,7 +1062,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "storm"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "119": {
         "targets": [
             "voice",
@@ -1071,7 +1071,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "shale"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "120": {
         "targets": [
             "pouch",
@@ -1080,7 +1080,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "vocal"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "121": {
         "targets": [
             "scene",
@@ -1089,7 +1089,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "paint"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "122": {
         "targets": [
             "ample",
@@ -1098,7 +1098,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "daily"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "123": {
         "targets": [
             "tough",
@@ -1107,7 +1107,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "below"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "124": {
         "targets": [
             "rigor",
@@ -1116,7 +1116,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "windy"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "125": {
         "targets": [
             "piano",
@@ -1125,7 +1125,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "alter"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "126": {
         "targets": [
             "lover",
@@ -1134,7 +1134,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "album"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "127": {
         "targets": [
             "green",
@@ -1143,7 +1143,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "amiss"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "128": {
         "targets": [
             "rusty",
@@ -1152,7 +1152,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "ethic"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "129": {
         "targets": [
             "plume",
@@ -1161,7 +1161,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "exist"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "130": {
         "targets": [
             "shout",
@@ -1170,7 +1170,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "cycle"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "131": {
         "targets": [
             "muddy",
@@ -1179,7 +1179,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "gorge"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "132": {
         "targets": [
             "baker",
@@ -1188,7 +1188,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "nylon"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "133": {
         "targets": [
             "colon",
@@ -1197,7 +1197,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "decor"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "134": {
         "targets": [
             "patch",
@@ -1206,7 +1206,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "tithe"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "135": {
         "targets": [
             "ninja",
@@ -1215,7 +1215,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "pizza"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "136": {
         "targets": [
             "shoot",
@@ -1224,7 +1224,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "panda"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "137": {
         "targets": [
             "abide",
@@ -1233,7 +1233,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "madly"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "138": {
         "targets": [
             "knife",
@@ -1242,7 +1242,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "learn"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "139": {
         "targets": [
             "stoic",
@@ -1251,7 +1251,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "cider"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "140": {
         "targets": [
             "point",
@@ -1260,7 +1260,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "curry"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "141": {
         "targets": [
             "glaze",
@@ -1269,7 +1269,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "papal"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "142": {
         "targets": [
             "doubt",
@@ -1278,7 +1278,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "venus"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "143": {
         "targets": [
             "guild",
@@ -1287,7 +1287,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "plank"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "144": {
         "targets": [
             "fancy",
@@ -1296,7 +1296,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "ozone"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "145": {
         "targets": [
             "storm",
@@ -1305,7 +1305,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "goose"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "146": {
         "targets": [
             "toxic",
@@ -1314,7 +1314,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "jelly"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "147": {
         "targets": [
             "showy",
@@ -1323,7 +1323,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "silly"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "148": {
         "targets": [
             "dozen",
@@ -1332,7 +1332,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "blond"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "149": {
         "targets": [
             "magma",
@@ -1341,7 +1341,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "death"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "150": {
         "targets": [
             "stock",
@@ -1350,16 +1350,16 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "share"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "151": {
         "targets": [
-            "ionic",
-            "where"
+            "drone",
+            "still"
         ],
         "initialGuesses": [
-            "camel"
+            "hover"
         ]
-    },
+    ,"puzzleCredit":"John P", "imageCredit":"", },
     "152": {
         "targets": [
             "float",
@@ -1368,7 +1368,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "sense"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "153": {
         "targets": [
             "mount",
@@ -1377,7 +1377,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "sleep"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "154": {
         "targets": [
             "grove",
@@ -1386,7 +1386,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "puppy"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "155": {
         "targets": [
             "radar",
@@ -1395,7 +1395,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "early"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "156": {
         "targets": [
             "grail",
@@ -1404,7 +1404,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "dread"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "157": {
         "targets": [
             "cupid",
@@ -1413,7 +1413,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "point"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "158": {
         "targets": [
             "floor",
@@ -1422,7 +1422,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "rhyme"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "159": {
         "targets": [
             "octal",
@@ -1431,7 +1431,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "eight"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "160": {
         "targets": [
             "levee",
@@ -1440,7 +1440,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "hydro"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "161": {
         "targets": [
             "ahead",
@@ -1449,7 +1449,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "upper"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "162": {
         "targets": [
             "haste",
@@ -1458,7 +1458,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "vigil"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "163": {
         "targets": [
             "hurry",
@@ -1467,7 +1467,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "elbow"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "164": {
         "targets": [
             "snake",
@@ -1476,7 +1476,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "zebra"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "165": {
         "targets": [
             "husky",
@@ -1485,52 +1485,52 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "flock"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "166": {
         "targets": [
-            "heron",
-            "digit"
+            "comic",
+            "guard"
         ],
         "initialGuesses": [
-            "along"
+            "mouse"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "167": {
         "targets": [
-            "eight",
-            "coral"
+            "alibi",
+            "photo"
         ],
         "initialGuesses": [
-            "steel"
+            "proof"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "168": {
         "targets": [
-            "image",
-            "brook"
+            "brass",
+            "tempo"
         ],
         "initialGuesses": [
-            "shunt"
+            "music"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "169": {
         "targets": [
-            "gleam",
-            "which"
+            "jumpy",
+            "scare"
         ],
         "initialGuesses": [
-            "rigor"
+            "night"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "170": {
         "targets": [
-            "squat",
-            "wrong"
+            "leggy",
+            "afoot"
         ],
         "initialGuesses": [
-            "rhyme"
+            "pants"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "171": {
         "targets": [
             "smoky",
@@ -1539,7 +1539,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "groom"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "172": {
         "targets": [
             "glove",
@@ -1548,7 +1548,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "giver"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "173": {
         "targets": [
             "dandy",
@@ -1557,7 +1557,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "steam"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "174": {
         "targets": [
             "flood",
@@ -1566,7 +1566,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "penny"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "175": {
         "targets": [
             "booty",
@@ -1575,7 +1575,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "tread"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "176": {
         "targets": [
             "fetus",
@@ -1584,7 +1584,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "bathe"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "177": {
         "targets": [
             "porch",
@@ -1593,7 +1593,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "smack"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "178": {
         "targets": [
             "witty",
@@ -1602,7 +1602,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "slime"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "179": {
         "targets": [
             "quiet",
@@ -1611,7 +1611,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "event"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "180": {
         "targets": [
             "spicy",
@@ -1620,7 +1620,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "piece"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "181": {
         "targets": [
             "rigor",
@@ -1629,7 +1629,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "tally"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "182": {
         "targets": [
             "greed",
@@ -1638,7 +1638,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "black"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "183": {
         "targets": [
             "niche",
@@ -1647,7 +1647,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "board"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "184": {
         "targets": [
             "level",
@@ -1656,7 +1656,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "trick"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "185": {
         "targets": [
             "plumb",
@@ -1665,7 +1665,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "posse"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "186": {
         "targets": [
             "frail",
@@ -1674,7 +1674,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "child"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "187": {
         "targets": [
             "canon",
@@ -1683,7 +1683,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "slant"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "188": {
         "targets": [
             "brick",
@@ -1692,7 +1692,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "atlas"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "189": {
         "targets": [
             "polar",
@@ -1701,7 +1701,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "bonus"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "190": {
         "targets": [
             "owner",
@@ -1710,7 +1710,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "chant"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "191": {
         "targets": [
             "aloud",
@@ -1719,7 +1719,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "sport"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "192": {
         "targets": [
             "franc",
@@ -1728,7 +1728,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "black"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "193": {
         "targets": [
             "datum",
@@ -1737,7 +1737,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "purge"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "194": {
         "targets": [
             "shove",
@@ -1746,7 +1746,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "teeth"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "195": {
         "targets": [
             "sweet",
@@ -1755,7 +1755,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "bless"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "196": {
         "targets": [
             "bunch",
@@ -1764,7 +1764,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "beech"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "197": {
         "targets": [
             "scrub",
@@ -1773,7 +1773,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "moose"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "198": {
         "targets": [
             "smash",
@@ -1782,7 +1782,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "cloud"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "199": {
         "targets": [
             "sweep",
@@ -1791,7 +1791,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "sound"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "200": {
         "targets": [
             "stack",
@@ -1800,7 +1800,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "shade"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "201": {
         "targets": [
             "vigor",
@@ -1809,7 +1809,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "nexus"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "202": {
         "targets": [
             "wedge",
@@ -1818,7 +1818,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "envoy"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "203": {
         "targets": [
             "float",
@@ -1827,7 +1827,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "libel"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "204": {
         "targets": [
             "avian",
@@ -1836,7 +1836,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "about"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "205": {
         "targets": [
             "flame",
@@ -1845,7 +1845,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "pluck"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "206": {
         "targets": [
             "given",
@@ -1854,7 +1854,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "cross"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "207": {
         "targets": [
             "broth",
@@ -1863,7 +1863,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "otter"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "208": {
         "targets": [
             "plank",
@@ -1872,7 +1872,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "fleet"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "209": {
         "targets": [
             "finch",
@@ -1881,7 +1881,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "learn"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "210": {
         "targets": [
             "plaza",
@@ -1890,7 +1890,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "spoil"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "211": {
         "targets": [
             "faith",
@@ -1899,7 +1899,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "chief"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "212": {
         "targets": [
             "plump",
@@ -1908,7 +1908,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "greed"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "213": {
         "targets": [
             "cabin",
@@ -1917,7 +1917,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "hover"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "214": {
         "targets": [
             "merit",
@@ -1926,7 +1926,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "clasp"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "215": {
         "targets": [
             "altar",
@@ -1935,7 +1935,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "greed"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "216": {
         "targets": [
             "staid",
@@ -1944,7 +1944,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "franc"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "217": {
         "targets": [
             "rapid",
@@ -1953,7 +1953,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "would"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "218": {
         "targets": [
             "frank",
@@ -1962,7 +1962,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "sunny"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "219": {
         "targets": [
             "funny",
@@ -1971,7 +1971,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "could"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "220": {
         "targets": [
             "slack",
@@ -1980,7 +1980,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "poppy"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "221": {
         "targets": [
             "frock",
@@ -1989,7 +1989,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "spore"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "222": {
         "targets": [
             "micro",
@@ -1998,7 +1998,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "agree"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "223": {
         "targets": [
             "kitty",
@@ -2007,7 +2007,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "skull"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "224": {
         "targets": [
             "lucid",
@@ -2016,7 +2016,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "utter"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "225": {
         "targets": [
             "sheep",
@@ -2025,7 +2025,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "local"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "226": {
         "targets": [
             "witch",
@@ -2034,7 +2034,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "sable"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "227": {
         "targets": [
             "wreck",
@@ -2043,7 +2043,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "beach"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "228": {
         "targets": [
             "vault",
@@ -2052,7 +2052,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "vogue"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "229": {
         "targets": [
             "vivid",
@@ -2061,7 +2061,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "fever"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "230": {
         "targets": [
             "smoky",
@@ -2070,7 +2070,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "sable"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "231": {
         "targets": [
             "rigor",
@@ -2079,7 +2079,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "lymph"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "232": {
         "targets": [
             "birch",
@@ -2088,7 +2088,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "genre"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "233": {
         "targets": [
             "atlas",
@@ -2097,7 +2097,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "tempo"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "234": {
         "targets": [
             "scary",
@@ -2106,7 +2106,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "sense"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "235": {
         "targets": [
             "dwell",
@@ -2115,7 +2115,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "hilly"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "236": {
         "targets": [
             "thumb",
@@ -2124,7 +2124,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "fetal"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "237": {
         "targets": [
             "cruel",
@@ -2133,7 +2133,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "image"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "238": {
         "targets": [
             "latch",
@@ -2142,7 +2142,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "crank"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "239": {
         "targets": [
             "shook",
@@ -2151,7 +2151,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "weary"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "240": {
         "targets": [
             "stump",
@@ -2160,7 +2160,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "tower"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "241": {
         "targets": [
             "dough",
@@ -2169,7 +2169,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "shade"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "242": {
         "targets": [
             "quilt",
@@ -2178,7 +2178,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "dusty"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "243": {
         "targets": [
             "dusty",
@@ -2187,7 +2187,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "newly"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "244": {
         "targets": [
             "still",
@@ -2196,7 +2196,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "forty"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "245": {
         "targets": [
             "amber",
@@ -2205,7 +2205,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "storm"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "246": {
         "targets": [
             "idiom",
@@ -2214,7 +2214,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "equip"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "247": {
         "targets": [
             "await",
@@ -2223,7 +2223,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "being"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "248": {
         "targets": [
             "eagle",
@@ -2232,7 +2232,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "exert"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "249": {
         "targets": [
             "civic",
@@ -2241,7 +2241,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "morse"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "250": {
         "targets": [
             "muddy",
@@ -2250,7 +2250,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "smear"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "251": {
         "targets": [
             "ratio",
@@ -2259,7 +2259,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "crane"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "252": {
         "targets": [
             "brown",
@@ -2268,7 +2268,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "craft"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "253": {
         "targets": [
             "booth",
@@ -2277,7 +2277,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "gloom"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "254": {
         "targets": [
             "lemon",
@@ -2286,7 +2286,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "broom"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "255": {
         "targets": [
             "start",
@@ -2295,7 +2295,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "shave"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "256": {
         "targets": [
             "short",
@@ -2304,7 +2304,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "faint"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "257": {
         "targets": [
             "squad",
@@ -2313,7 +2313,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "thief"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "258": {
         "targets": [
             "vinyl",
@@ -2322,7 +2322,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "skill"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "259": {
         "targets": [
             "round",
@@ -2331,7 +2331,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "elder"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "260": {
         "targets": [
             "fifth",
@@ -2340,7 +2340,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "drier"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "261": {
         "targets": [
             "bough",
@@ -2349,7 +2349,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "rider"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "262": {
         "targets": [
             "blind",
@@ -2358,7 +2358,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "chaff"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "263": {
         "targets": [
             "board",
@@ -2367,7 +2367,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "voter"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "264": {
         "targets": [
             "which",
@@ -2376,7 +2376,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "issue"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "265": {
         "targets": [
             "brook",
@@ -2385,7 +2385,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "usual"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "266": {
         "targets": [
             "saint",
@@ -2394,7 +2394,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "enjoy"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "267": {
         "targets": [
             "vault",
@@ -2403,7 +2403,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "essay"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "268": {
         "targets": [
             "prior",
@@ -2412,7 +2412,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "assay"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "269": {
         "targets": [
             "woody",
@@ -2421,7 +2421,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "shaft"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "270": {
         "targets": [
             "uncle",
@@ -2430,7 +2430,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "brown"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "271": {
         "targets": [
             "aware",
@@ -2439,7 +2439,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "lapse"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "272": {
         "targets": [
             "tough",
@@ -2448,7 +2448,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "hazel"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "273": {
         "targets": [
             "shock",
@@ -2457,7 +2457,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "stuff"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "274": {
         "targets": [
             "email",
@@ -2466,7 +2466,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "plane"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "275": {
         "targets": [
             "bison",
@@ -2475,7 +2475,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "ionic"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "276": {
         "targets": [
             "nurse",
@@ -2484,7 +2484,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "alike"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "277": {
         "targets": [
             "humid",
@@ -2493,7 +2493,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "blood"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "278": {
         "targets": [
             "amuse",
@@ -2502,7 +2502,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "mould"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "279": {
         "targets": [
             "ensue",
@@ -2511,7 +2511,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "label"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "280": {
         "targets": [
             "rally",
@@ -2520,7 +2520,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "which"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "281": {
         "targets": [
             "hotly",
@@ -2529,7 +2529,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "etude"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "282": {
         "targets": [
             "cubic",
@@ -2538,7 +2538,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "chaff"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "283": {
         "targets": [
             "panel",
@@ -2547,7 +2547,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "viral"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "284": {
         "targets": [
             "pound",
@@ -2556,7 +2556,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "civic"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "285": {
         "targets": [
             "bowel",
@@ -2565,7 +2565,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "belly"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "286": {
         "targets": [
             "silly",
@@ -2574,7 +2574,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "adapt"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "287": {
         "targets": [
             "boost",
@@ -2583,7 +2583,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "grant"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "288": {
         "targets": [
             "laser",
@@ -2592,7 +2592,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "salon"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "289": {
         "targets": [
             "stout",
@@ -2601,7 +2601,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "flock"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "290": {
         "targets": [
             "enter",
@@ -2610,7 +2610,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "scent"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "291": {
         "targets": [
             "plane",
@@ -2619,7 +2619,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "reign"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "292": {
         "targets": [
             "petty",
@@ -2628,7 +2628,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "arrow"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "293": {
         "targets": [
             "prior",
@@ -2637,7 +2637,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "brave"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "294": {
         "targets": [
             "issue",
@@ -2646,7 +2646,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "stray"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "295": {
         "targets": [
             "chuck",
@@ -2655,7 +2655,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "bread"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "296": {
         "targets": [
             "dense",
@@ -2664,7 +2664,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "steel"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "297": {
         "targets": [
             "bosom",
@@ -2673,7 +2673,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "uncle"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "298": {
         "targets": [
             "choir",
@@ -2682,7 +2682,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "bunny"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "299": {
         "targets": [
             "avail",
@@ -2691,7 +2691,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "overt"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "300": {
         "targets": [
             "rover",
@@ -2700,7 +2700,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "stake"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "301": {
         "targets": [
             "snowy",
@@ -2709,7 +2709,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "exalt"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "302": {
         "targets": [
             "holly",
@@ -2718,7 +2718,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "linen"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "303": {
         "targets": [
             "grind",
@@ -2727,7 +2727,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "think"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "304": {
         "targets": [
             "tally",
@@ -2736,7 +2736,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "peril"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "305": {
         "targets": [
             "swine",
@@ -2745,7 +2745,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "mount"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "306": {
         "targets": [
             "blast",
@@ -2754,7 +2754,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "nasty"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "307": {
         "targets": [
             "fully",
@@ -2763,7 +2763,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "night"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "308": {
         "targets": [
             "godly",
@@ -2772,7 +2772,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "avant"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "309": {
         "targets": [
             "vital",
@@ -2781,7 +2781,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "glaze"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "310": {
         "targets": [
             "ferry",
@@ -2790,7 +2790,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "buyer"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "311": {
         "targets": [
             "exile",
@@ -2799,7 +2799,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "motor"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "312": {
         "targets": [
             "fluid",
@@ -2808,7 +2808,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "legal"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "313": {
         "targets": [
             "adapt",
@@ -2817,7 +2817,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "witty"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "314": {
         "targets": [
             "shank",
@@ -2826,7 +2826,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "ovary"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "315": {
         "targets": [
             "drama",
@@ -2835,7 +2835,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "chest"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "316": {
         "targets": [
             "verse",
@@ -2844,7 +2844,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "molar"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "317": {
         "targets": [
             "magma",
@@ -2853,7 +2853,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "revel"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "318": {
         "targets": [
             "repay",
@@ -2862,7 +2862,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "house"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "319": {
         "targets": [
             "field",
@@ -2871,7 +2871,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "brush"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "320": {
         "targets": [
             "elude",
@@ -2880,7 +2880,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "globe"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "321": {
         "targets": [
             "staff",
@@ -2889,7 +2889,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "trunk"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "322": {
         "targets": [
             "child",
@@ -2898,7 +2898,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "moral"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "323": {
         "targets": [
             "slain",
@@ -2907,7 +2907,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "bribe"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "324": {
         "targets": [
             "ounce",
@@ -2916,7 +2916,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "fence"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "325": {
         "targets": [
             "scalp",
@@ -2925,7 +2925,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "watch"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "326": {
         "targets": [
             "brook",
@@ -2934,7 +2934,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "snuff"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "327": {
         "targets": [
             "frame",
@@ -2943,7 +2943,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "serve"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "328": {
         "targets": [
             "world",
@@ -2952,7 +2952,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "radar"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "329": {
         "targets": [
             "steel",
@@ -2961,7 +2961,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "spine"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "330": {
         "targets": [
             "shave",
@@ -2970,7 +2970,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "drill"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "331": {
         "targets": [
             "heron",
@@ -2979,7 +2979,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "thief"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "332": {
         "targets": [
             "robot",
@@ -2988,7 +2988,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "vomit"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "333": {
         "targets": [
             "apply",
@@ -2997,7 +2997,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "sheer"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "334": {
         "targets": [
             "crash",
@@ -3006,7 +3006,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "canon"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "335": {
         "targets": [
             "teeth",
@@ -3015,7 +3015,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "again"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "336": {
         "targets": [
             "shaft",
@@ -3024,7 +3024,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "check"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "337": {
         "targets": [
             "fifth",
@@ -3033,7 +3033,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "triad"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "338": {
         "targets": [
             "ought",
@@ -3042,7 +3042,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "aging"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "339": {
         "targets": [
             "fauna",
@@ -3051,7 +3051,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "rifle"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "340": {
         "targets": [
             "cheap",
@@ -3060,7 +3060,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "chair"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "341": {
         "targets": [
             "villa",
@@ -3069,7 +3069,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "viral"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "342": {
         "targets": [
             "strap",
@@ -3078,7 +3078,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "blood"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "343": {
         "targets": [
             "globe",
@@ -3087,7 +3087,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "study"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "344": {
         "targets": [
             "ninth",
@@ -3096,7 +3096,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "pause"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "345": {
         "targets": [
             "whirl",
@@ -3105,7 +3105,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "sneak"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "346": {
         "targets": [
             "motto",
@@ -3114,7 +3114,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "never"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "347": {
         "targets": [
             "devon",
@@ -3123,7 +3123,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "windy"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "348": {
         "targets": [
             "maybe",
@@ -3132,7 +3132,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "local"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "349": {
         "targets": [
             "flour",
@@ -3141,7 +3141,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "weary"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "350": {
         "targets": [
             "flake",
@@ -3150,7 +3150,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "final"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "351": {
         "targets": [
             "solve",
@@ -3159,7 +3159,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "alley"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "352": {
         "targets": [
             "tempo",
@@ -3168,7 +3168,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "sling"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "353": {
         "targets": [
             "husky",
@@ -3177,7 +3177,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "witty"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "354": {
         "targets": [
             "dozen",
@@ -3186,7 +3186,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "fritz"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "355": {
         "targets": [
             "aloud",
@@ -3195,7 +3195,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "bluff"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "356": {
         "targets": [
             "story",
@@ -3204,7 +3204,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "manly"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "357": {
         "targets": [
             "spend",
@@ -3213,7 +3213,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "karma"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "358": {
         "targets": [
             "marry",
@@ -3222,7 +3222,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "shake"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "359": {
         "targets": [
             "spell",
@@ -3231,7 +3231,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "bathe"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "360": {
         "targets": [
             "graze",
@@ -3240,7 +3240,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "axial"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "361": {
         "targets": [
             "crest",
@@ -3249,7 +3249,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "mixer"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "362": {
         "targets": [
             "magma",
@@ -3258,7 +3258,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "storm"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "363": {
         "targets": [
             "drake",
@@ -3267,7 +3267,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "royal"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "364": {
         "targets": [
             "sting",
@@ -3276,7 +3276,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "amiss"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "365": {
         "targets": [
             "lemon",
@@ -3285,7 +3285,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "amend"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "366": {
         "targets": [
             "swamp",
@@ -3294,7 +3294,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "leave"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "367": {
         "targets": [
             "rhyme",
@@ -3303,7 +3303,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "micro"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "368": {
         "targets": [
             "shall",
@@ -3312,7 +3312,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "laity"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "369": {
         "targets": [
             "shelf",
@@ -3321,7 +3321,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "micro"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "370": {
         "targets": [
             "hotly",
@@ -3330,7 +3330,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "brisk"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "371": {
         "targets": [
             "forty",
@@ -3339,7 +3339,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "stray"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "372": {
         "targets": [
             "plaza",
@@ -3348,7 +3348,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "tonal"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "373": {
         "targets": [
             "strip",
@@ -3357,7 +3357,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "hello"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "374": {
         "targets": [
             "dairy",
@@ -3366,7 +3366,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "bowel"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "375": {
         "targets": [
             "sense",
@@ -3375,7 +3375,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "metro"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "376": {
         "targets": [
             "kneel",
@@ -3384,7 +3384,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "ultra"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "377": {
         "targets": [
             "dwarf",
@@ -3393,7 +3393,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "ahead"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "378": {
         "targets": [
             "digit",
@@ -3402,7 +3402,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "evade"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "379": {
         "targets": [
             "groom",
@@ -3411,7 +3411,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "genre"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "380": {
         "targets": [
             "snuff",
@@ -3420,7 +3420,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "jolly"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "381": {
         "targets": [
             "drive",
@@ -3429,7 +3429,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "wrist"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "382": {
         "targets": [
             "dodge",
@@ -3438,7 +3438,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "award"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "383": {
         "targets": [
             "flush",
@@ -3447,7 +3447,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "abbot"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "384": {
         "targets": [
             "cubic",
@@ -3456,7 +3456,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "cloak"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "385": {
         "targets": [
             "noise",
@@ -3465,7 +3465,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "arrow"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "386": {
         "targets": [
             "chick",
@@ -3474,7 +3474,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "blond"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "387": {
         "targets": [
             "maxim",
@@ -3483,7 +3483,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "vague"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "388": {
         "targets": [
             "snake",
@@ -3492,7 +3492,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "broad"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "389": {
         "targets": [
             "aptly",
@@ -3501,7 +3501,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "urban"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "390": {
         "targets": [
             "least",
@@ -3510,7 +3510,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "guilt"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "391": {
         "targets": [
             "trash",
@@ -3519,7 +3519,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "awful"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "392": {
         "targets": [
             "robot",
@@ -3528,7 +3528,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "chile"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "393": {
         "targets": [
             "avian",
@@ -3537,7 +3537,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "rough"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "394": {
         "targets": [
             "chunk",
@@ -3546,7 +3546,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "suite"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "395": {
         "targets": [
             "shift",
@@ -3555,7 +3555,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "aptly"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "396": {
         "targets": [
             "breed",
@@ -3564,7 +3564,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "grasp"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "397": {
         "targets": [
             "couch",
@@ -3573,7 +3573,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "power"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "398": {
         "targets": [
             "excel",
@@ -3582,7 +3582,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "throw"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "399": {
         "targets": [
             "array",
@@ -3591,7 +3591,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "tease"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "400": {
         "targets": [
             "crave",
@@ -3600,7 +3600,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "orbit"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "401": {
         "targets": [
             "giddy",
@@ -3609,7 +3609,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "money"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "402": {
         "targets": [
             "wharf",
@@ -3618,7 +3618,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "strap"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "403": {
         "targets": [
             "cross",
@@ -3627,7 +3627,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "phone"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "404": {
         "targets": [
             "stiff",
@@ -3636,7 +3636,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "block"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "405": {
         "targets": [
             "spore",
@@ -3645,7 +3645,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "light"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "406": {
         "targets": [
             "merry",
@@ -3654,7 +3654,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "think"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "407": {
         "targets": [
             "straw",
@@ -3663,7 +3663,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "patch"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "408": {
         "targets": [
             "crack",
@@ -3672,7 +3672,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "perch"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "409": {
         "targets": [
             "raise",
@@ -3681,7 +3681,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "cloud"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "410": {
         "targets": [
             "worth",
@@ -3690,7 +3690,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "excel"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "411": {
         "targets": [
             "fight",
@@ -3699,7 +3699,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "shook"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "412": {
         "targets": [
             "thorn",
@@ -3708,7 +3708,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "rogue"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "413": {
         "targets": [
             "point",
@@ -3717,7 +3717,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "ruler"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "414": {
         "targets": [
             "motor",
@@ -3726,7 +3726,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "vista"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "415": {
         "targets": [
             "smile",
@@ -3735,7 +3735,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "equip"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "416": {
         "targets": [
             "toxic",
@@ -3744,7 +3744,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "heath"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "417": {
         "targets": [
             "fancy",
@@ -3753,7 +3753,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "graft"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "418": {
         "targets": [
             "aptly",
@@ -3762,7 +3762,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "bride"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "419": {
         "targets": [
             "tying",
@@ -3771,7 +3771,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "quick"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "420": {
         "targets": [
             "spill",
@@ -3780,7 +3780,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "alias"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "421": {
         "targets": [
             "award",
@@ -3789,7 +3789,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "flask"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "422": {
         "targets": [
             "river",
@@ -3798,7 +3798,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "noise"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "423": {
         "targets": [
             "delay",
@@ -3807,7 +3807,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "rouse"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "424": {
         "targets": [
             "larva",
@@ -3816,7 +3816,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "grate"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "425": {
         "targets": [
             "cheek",
@@ -3825,7 +3825,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "chess"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "426": {
         "targets": [
             "wheat",
@@ -3834,7 +3834,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "lower"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "427": {
         "targets": [
             "fuzzy",
@@ -3843,7 +3843,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "chief"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "428": {
         "targets": [
             "femur",
@@ -3852,7 +3852,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "admit"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "429": {
         "targets": [
             "inlet",
@@ -3861,7 +3861,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "rouge"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "430": {
         "targets": [
             "pouch",
@@ -3870,7 +3870,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "chute"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "431": {
         "targets": [
             "joint",
@@ -3879,7 +3879,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "bully"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "432": {
         "targets": [
             "stoop",
@@ -3888,7 +3888,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "bless"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "433": {
         "targets": [
             "sieve",
@@ -3897,7 +3897,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "chili"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "434": {
         "targets": [
             "offer",
@@ -3906,7 +3906,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "joint"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "435": {
         "targets": [
             "enter",
@@ -3915,7 +3915,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "crime"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "436": {
         "targets": [
             "upset",
@@ -3924,7 +3924,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "night"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "437": {
         "targets": [
             "bound",
@@ -3933,7 +3933,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "amuse"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "438": {
         "targets": [
             "worry",
@@ -3942,7 +3942,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "print"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "439": {
         "targets": [
             "weary",
@@ -3951,7 +3951,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "probe"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "440": {
         "targets": [
             "trans",
@@ -3960,7 +3960,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "epoch"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "441": {
         "targets": [
             "oddly",
@@ -3969,7 +3969,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "drove"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "442": {
         "targets": [
             "squid",
@@ -3978,7 +3978,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "shove"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "443": {
         "targets": [
             "grate",
@@ -3987,7 +3987,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "award"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "444": {
         "targets": [
             "shawl",
@@ -3996,7 +3996,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "brine"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "445": {
         "targets": [
             "daily",
@@ -4005,7 +4005,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "using"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "446": {
         "targets": [
             "berry",
@@ -4014,7 +4014,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "flora"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "447": {
         "targets": [
             "sunny",
@@ -4023,7 +4023,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "grove"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "448": {
         "targets": [
             "verge",
@@ -4032,7 +4032,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "elegy"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "449": {
         "targets": [
             "opium",
@@ -4041,7 +4041,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "maker"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "450": {
         "targets": [
             "woody",
@@ -4050,7 +4050,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "movie"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "451": {
         "targets": [
             "maxim",
@@ -4059,7 +4059,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "karma"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "452": {
         "targets": [
             "press",
@@ -4068,7 +4068,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "eerie"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "453": {
         "targets": [
             "poppy",
@@ -4077,7 +4077,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "groom"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "454": {
         "targets": [
             "float",
@@ -4086,7 +4086,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "sable"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "455": {
         "targets": [
             "digit",
@@ -4095,7 +4095,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "leech"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "456": {
         "targets": [
             "cargo",
@@ -4104,7 +4104,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "speak"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "457": {
         "targets": [
             "hound",
@@ -4113,7 +4113,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "allow"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "458": {
         "targets": [
             "comma",
@@ -4122,7 +4122,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "refer"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "459": {
         "targets": [
             "tenth",
@@ -4131,7 +4131,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "paste"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "460": {
         "targets": [
             "wound",
@@ -4140,7 +4140,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "bless"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "461": {
         "targets": [
             "smoky",
@@ -4149,7 +4149,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "pulse"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "462": {
         "targets": [
             "large",
@@ -4158,7 +4158,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "lapse"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "463": {
         "targets": [
             "femur",
@@ -4167,7 +4167,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "grail"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "464": {
         "targets": [
             "larva",
@@ -4176,7 +4176,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "cough"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "465": {
         "targets": [
             "verge",
@@ -4185,7 +4185,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "scare"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "466": {
         "targets": [
             "while",
@@ -4194,7 +4194,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "leach"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "467": {
         "targets": [
             "libel",
@@ -4203,7 +4203,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "shook"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "468": {
         "targets": [
             "white",
@@ -4212,7 +4212,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "debit"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "469": {
         "targets": [
             "triad",
@@ -4221,7 +4221,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "alter"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "470": {
         "targets": [
             "baron",
@@ -4230,7 +4230,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "plume"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "471": {
         "targets": [
             "deity",
@@ -4239,7 +4239,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "birch"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "472": {
         "targets": [
             "thorn",
@@ -4248,7 +4248,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "finch"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "473": {
         "targets": [
             "giant",
@@ -4257,7 +4257,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "share"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "474": {
         "targets": [
             "locus",
@@ -4266,7 +4266,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "build"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "475": {
         "targets": [
             "shaft",
@@ -4275,7 +4275,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "place"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "476": {
         "targets": [
             "skull",
@@ -4284,7 +4284,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "thick"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "477": {
         "targets": [
             "muddy",
@@ -4293,7 +4293,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "viral"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "478": {
         "targets": [
             "shake",
@@ -4302,7 +4302,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "snail"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "479": {
         "targets": [
             "heave",
@@ -4311,7 +4311,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "three"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "480": {
         "targets": [
             "surge",
@@ -4320,7 +4320,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "cream"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "481": {
         "targets": [
             "valid",
@@ -4329,7 +4329,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "still"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "482": {
         "targets": [
             "bulge",
@@ -4338,7 +4338,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "scout"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "483": {
         "targets": [
             "squad",
@@ -4347,7 +4347,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "truth"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "484": {
         "targets": [
             "orbit",
@@ -4356,7 +4356,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "onion"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "485": {
         "targets": [
             "ridge",
@@ -4365,7 +4365,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "super"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "486": {
         "targets": [
             "snowy",
@@ -4374,7 +4374,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "valid"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "487": {
         "targets": [
             "force",
@@ -4383,7 +4383,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "wight"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "488": {
         "targets": [
             "adobe",
@@ -4392,7 +4392,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "tiger"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "489": {
         "targets": [
             "extra",
@@ -4401,7 +4401,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "fritz"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "490": {
         "targets": [
             "creek",
@@ -4410,7 +4410,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "otter"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "491": {
         "targets": [
             "dirty",
@@ -4419,7 +4419,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "rouge"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "492": {
         "targets": [
             "renew",
@@ -4428,7 +4428,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "lunar"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "493": {
         "targets": [
             "aging",
@@ -4437,7 +4437,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "exact"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "494": {
         "targets": [
             "mount",
@@ -4446,7 +4446,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "spend"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "495": {
         "targets": [
             "proxy",
@@ -4455,7 +4455,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "daily"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "496": {
         "targets": [
             "stack",
@@ -4464,7 +4464,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "price"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "497": {
         "targets": [
             "salty",
@@ -4473,7 +4473,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "would"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "498": {
         "targets": [
             "tenet",
@@ -4482,7 +4482,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "suite"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "499": {
         "targets": [
             "fling",
@@ -4491,7 +4491,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "crowd"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "500": {
         "targets": [
             "delta",
@@ -4500,7 +4500,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "greed"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "501": {
         "targets": [
             "motor",
@@ -4509,7 +4509,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "dryer"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "502": {
         "targets": [
             "thing",
@@ -4518,7 +4518,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "novel"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "503": {
         "targets": [
             "swine",
@@ -4527,7 +4527,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "enter"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "504": {
         "targets": [
             "sloop",
@@ -4536,7 +4536,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "queen"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "505": {
         "targets": [
             "humid",
@@ -4545,7 +4545,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "brood"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "506": {
         "targets": [
             "metro",
@@ -4554,7 +4554,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "speck"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "507": {
         "targets": [
             "check",
@@ -4563,7 +4563,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "steam"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "508": {
         "targets": [
             "proud",
@@ -4572,7 +4572,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "serve"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "509": {
         "targets": [
             "boxer",
@@ -4581,7 +4581,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "wield"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "510": {
         "targets": [
             "going",
@@ -4590,7 +4590,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "reuse"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "511": {
         "targets": [
             "fleet",
@@ -4599,7 +4599,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "brick"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "512": {
         "targets": [
             "their",
@@ -4608,7 +4608,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "dough"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "513": {
         "targets": [
             "brink",
@@ -4617,7 +4617,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "prove"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "514": {
         "targets": [
             "magic",
@@ -4626,7 +4626,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "windy"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "515": {
         "targets": [
             "event",
@@ -4635,7 +4635,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "melon"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "516": {
         "targets": [
             "queue",
@@ -4644,7 +4644,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "onion"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "517": {
         "targets": [
             "helix",
@@ -4653,7 +4653,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "staid"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "518": {
         "targets": [
             "amiss",
@@ -4662,7 +4662,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "glaze"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "519": {
         "targets": [
             "rural",
@@ -4671,7 +4671,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "flint"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "520": {
         "targets": [
             "adopt",
@@ -4680,7 +4680,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "exact"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "521": {
         "targets": [
             "bunny",
@@ -4689,7 +4689,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "gloom"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "522": {
         "targets": [
             "robin",
@@ -4698,7 +4698,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "dance"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "523": {
         "targets": [
             "count",
@@ -4707,7 +4707,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "stare"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "524": {
         "targets": [
             "lying",
@@ -4716,7 +4716,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "shaft"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "525": {
         "targets": [
             "berry",
@@ -4725,7 +4725,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "uncle"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "526": {
         "targets": [
             "thyme",
@@ -4734,7 +4734,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "ethos"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "527": {
         "targets": [
             "crime",
@@ -4743,7 +4743,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "flair"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "528": {
         "targets": [
             "sunny",
@@ -4752,7 +4752,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "prize"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "529": {
         "targets": [
             "sleep",
@@ -4761,7 +4761,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "spill"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "530": {
         "targets": [
             "karma",
@@ -4770,7 +4770,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "sixth"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "531": {
         "targets": [
             "count",
@@ -4779,7 +4779,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "found"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "532": {
         "targets": [
             "dizzy",
@@ -4788,7 +4788,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "birch"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "533": {
         "targets": [
             "crook",
@@ -4797,7 +4797,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "mirth"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "534": {
         "targets": [
             "inset",
@@ -4806,7 +4806,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "viral"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "535": {
         "targets": [
             "bloom",
@@ -4815,7 +4815,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "toxin"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "536": {
         "targets": [
             "juice",
@@ -4824,7 +4824,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "brine"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "537": {
         "targets": [
             "cloak",
@@ -4833,7 +4833,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "blind"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "538": {
         "targets": [
             "angel",
@@ -4842,7 +4842,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "rally"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "539": {
         "targets": [
             "click",
@@ -4851,7 +4851,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "stone"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "540": {
         "targets": [
             "attic",
@@ -4860,7 +4860,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "layer"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "541": {
         "targets": [
             "fuzzy",
@@ -4869,7 +4869,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "crush"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "542": {
         "targets": [
             "child",
@@ -4878,7 +4878,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "irony"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "543": {
         "targets": [
             "fitch",
@@ -4887,7 +4887,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "teach"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "544": {
         "targets": [
             "maple",
@@ -4896,7 +4896,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "vinyl"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "545": {
         "targets": [
             "wedge",
@@ -4905,7 +4905,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "shout"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "546": {
         "targets": [
             "goose",
@@ -4914,7 +4914,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "crisp"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "547": {
         "targets": [
             "lodge",
@@ -4923,7 +4923,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "tinge"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "548": {
         "targets": [
             "climb",
@@ -4932,7 +4932,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "snake"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "549": {
         "targets": [
             "larva",
@@ -4941,7 +4941,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "repay"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "550": {
         "targets": [
             "drunk",
@@ -4950,7 +4950,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "snail"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "551": {
         "targets": [
             "dread",
@@ -4959,7 +4959,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "eerie"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "552": {
         "targets": [
             "batch",
@@ -4968,7 +4968,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "grail"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "553": {
         "targets": [
             "dwarf",
@@ -4977,7 +4977,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "haste"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "554": {
         "targets": [
             "graph",
@@ -4986,7 +4986,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "pious"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "555": {
         "targets": [
             "forum",
@@ -4995,7 +4995,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "water"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "556": {
         "targets": [
             "audit",
@@ -5004,7 +5004,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "forth"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "557": {
         "targets": [
             "boxer",
@@ -5013,7 +5013,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "lousy"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "558": {
         "targets": [
             "witty",
@@ -5022,7 +5022,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "chess"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "559": {
         "targets": [
             "folly",
@@ -5031,7 +5031,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "steel"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "560": {
         "targets": [
             "brisk",
@@ -5040,7 +5040,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "elite"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "561": {
         "targets": [
             "chill",
@@ -5049,7 +5049,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "terra"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "562": {
         "targets": [
             "avail",
@@ -5058,7 +5058,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "smear"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "563": {
         "targets": [
             "chute",
@@ -5067,7 +5067,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "table"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "564": {
         "targets": [
             "giddy",
@@ -5076,7 +5076,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "bunny"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "565": {
         "targets": [
             "mount",
@@ -5085,7 +5085,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "frail"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "566": {
         "targets": [
             "stony",
@@ -5094,7 +5094,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "avert"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "567": {
         "targets": [
             "truth",
@@ -5103,7 +5103,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "tenth"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "568": {
         "targets": [
             "billy",
@@ -5112,7 +5112,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "which"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "569": {
         "targets": [
             "vinyl",
@@ -5121,7 +5121,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "stoic"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "570": {
         "targets": [
             "datum",
@@ -5130,7 +5130,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "havoc"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "571": {
         "targets": [
             "snowy",
@@ -5139,7 +5139,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "edema"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "572": {
         "targets": [
             "jewel",
@@ -5148,7 +5148,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "camel"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "573": {
         "targets": [
             "gauze",
@@ -5157,7 +5157,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "shear"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "574": {
         "targets": [
             "elude",
@@ -5166,7 +5166,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "ankle"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "575": {
         "targets": [
             "tidal",
@@ -5175,7 +5175,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "spicy"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "576": {
         "targets": [
             "river",
@@ -5184,7 +5184,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "share"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "577": {
         "targets": [
             "pitch",
@@ -5193,7 +5193,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "butte"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "578": {
         "targets": [
             "login",
@@ -5202,7 +5202,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "cloak"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "579": {
         "targets": [
             "elbow",
@@ -5211,7 +5211,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "paddy"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "580": {
         "targets": [
             "glide",
@@ -5220,7 +5220,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "lobby"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "581": {
         "targets": [
             "peace",
@@ -5229,7 +5229,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "exert"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "582": {
         "targets": [
             "roach",
@@ -5238,7 +5238,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "orbit"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "583": {
         "targets": [
             "serum",
@@ -5247,7 +5247,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "pause"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "584": {
         "targets": [
             "glove",
@@ -5256,7 +5256,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "mimic"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "585": {
         "targets": [
             "nymph",
@@ -5265,7 +5265,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "spade"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "586": {
         "targets": [
             "seize",
@@ -5274,7 +5274,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "label"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "587": {
         "targets": [
             "bring",
@@ -5283,7 +5283,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "sugar"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "588": {
         "targets": [
             "widow",
@@ -5292,7 +5292,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "woody"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "589": {
         "targets": [
             "chick",
@@ -5301,7 +5301,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "magma"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "590": {
         "targets": [
             "sixty",
@@ -5310,7 +5310,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "wager"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "591": {
         "targets": [
             "owner",
@@ -5319,7 +5319,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "demon"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "592": {
         "targets": [
             "music",
@@ -5328,7 +5328,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "chill"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "593": {
         "targets": [
             "exist",
@@ -5337,7 +5337,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "aside"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "594": {
         "targets": [
             "prior",
@@ -5346,7 +5346,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "wield"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "595": {
         "targets": [
             "algae",
@@ -5355,7 +5355,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "steep"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "596": {
         "targets": [
             "candy",
@@ -5364,7 +5364,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "hardy"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "597": {
         "targets": [
             "hatch",
@@ -5373,7 +5373,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "brave"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "598": {
         "targets": [
             "miner",
@@ -5382,7 +5382,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "fauna"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "599": {
         "targets": [
             "clump",
@@ -5391,7 +5391,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "torso"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "600": {
         "targets": [
             "dying",
@@ -5400,7 +5400,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "amuse"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "601": {
         "targets": [
             "folly",
@@ -5409,7 +5409,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "molar"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "602": {
         "targets": [
             "rough",
@@ -5418,7 +5418,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "dream"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "603": {
         "targets": [
             "onset",
@@ -5427,7 +5427,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "tally"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "604": {
         "targets": [
             "oddly",
@@ -5436,7 +5436,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "molar"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "605": {
         "targets": [
             "align",
@@ -5445,7 +5445,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "hairy"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "606": {
         "targets": [
             "shall",
@@ -5454,7 +5454,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "drake"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "607": {
         "targets": [
             "tight",
@@ -5463,7 +5463,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "spend"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "608": {
         "targets": [
             "aback",
@@ -5472,7 +5472,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "bulge"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "609": {
         "targets": [
             "treat",
@@ -5481,7 +5481,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "uncle"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "610": {
         "targets": [
             "dummy",
@@ -5490,7 +5490,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "baker"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "611": {
         "targets": [
             "laden",
@@ -5499,7 +5499,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "issue"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "612": {
         "targets": [
             "debit",
@@ -5508,7 +5508,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "awful"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "613": {
         "targets": [
             "silky",
@@ -5517,7 +5517,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "field"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "614": {
         "targets": [
             "arrow",
@@ -5526,7 +5526,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "tweed"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "615": {
         "targets": [
             "aging",
@@ -5535,7 +5535,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "chile"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "616": {
         "targets": [
             "mummy",
@@ -5544,7 +5544,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "dryer"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "617": {
         "targets": [
             "dizzy",
@@ -5553,7 +5553,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "small"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "618": {
         "targets": [
             "gleam",
@@ -5562,7 +5562,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "union"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "619": {
         "targets": [
             "wrist",
@@ -5571,7 +5571,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "paint"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "620": {
         "targets": [
             "shift",
@@ -5580,7 +5580,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "night"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "621": {
         "targets": [
             "bless",
@@ -5589,7 +5589,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "axiom"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "622": {
         "targets": [
             "knock",
@@ -5598,7 +5598,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "lotus"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "623": {
         "targets": [
             "urine",
@@ -5607,7 +5607,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "widow"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "624": {
         "targets": [
             "index",
@@ -5616,7 +5616,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "rusty"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "625": {
         "targets": [
             "saint",
@@ -5625,7 +5625,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "brave"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "626": {
         "targets": [
             "house",
@@ -5634,7 +5634,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "alarm"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "627": {
         "targets": [
             "freak",
@@ -5643,7 +5643,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "penny"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "628": {
         "targets": [
             "aloud",
@@ -5652,7 +5652,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "rusty"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "629": {
         "targets": [
             "elegy",
@@ -5661,7 +5661,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "hello"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "630": {
         "targets": [
             "grind",
@@ -5670,7 +5670,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "vague"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "631": {
         "targets": [
             "there",
@@ -5679,7 +5679,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "speak"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "632": {
         "targets": [
             "ivory",
@@ -5688,7 +5688,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "syrup"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "633": {
         "targets": [
             "spine",
@@ -5697,7 +5697,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "sneer"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "634": {
         "targets": [
             "chaos",
@@ -5706,7 +5706,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "avoid"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "635": {
         "targets": [
             "nasty",
@@ -5715,7 +5715,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "winch"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "636": {
         "targets": [
             "basic",
@@ -5724,7 +5724,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "stoic"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "637": {
         "targets": [
             "demon",
@@ -5733,7 +5733,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "blind"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "638": {
         "targets": [
             "stick",
@@ -5742,7 +5742,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "prior"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "639": {
         "targets": [
             "cubic",
@@ -5751,7 +5751,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "shrub"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "640": {
         "targets": [
             "gloss",
@@ -5760,7 +5760,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "share"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "641": {
         "targets": [
             "three",
@@ -5769,7 +5769,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "dying"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "642": {
         "targets": [
             "rally",
@@ -5778,7 +5778,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "array"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "643": {
         "targets": [
             "scarf",
@@ -5787,7 +5787,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "seize"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "644": {
         "targets": [
             "shout",
@@ -5796,7 +5796,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "bully"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "645": {
         "targets": [
             "carve",
@@ -5805,7 +5805,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "debut"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "646": {
         "targets": [
             "organ",
@@ -5814,7 +5814,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "grand"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "647": {
         "targets": [
             "grand",
@@ -5823,7 +5823,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "blank"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "648": {
         "targets": [
             "aware",
@@ -5832,7 +5832,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "flood"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "649": {
         "targets": [
             "rusty",
@@ -5841,7 +5841,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "spade"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "650": {
         "targets": [
             "robot",
@@ -5850,7 +5850,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "vivid"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "651": {
         "targets": [
             "humid",
@@ -5859,7 +5859,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "usher"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "652": {
         "targets": [
             "baron",
@@ -5868,7 +5868,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "rogue"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "653": {
         "targets": [
             "allow",
@@ -5877,7 +5877,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "envoy"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "654": {
         "targets": [
             "lurid",
@@ -5886,7 +5886,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "gauze"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "655": {
         "targets": [
             "rabbi",
@@ -5895,7 +5895,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "plank"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "656": {
         "targets": [
             "think",
@@ -5904,7 +5904,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "faint"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "657": {
         "targets": [
             "touch",
@@ -5913,7 +5913,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "sweet"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "658": {
         "targets": [
             "gamma",
@@ -5922,7 +5922,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "shawl"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "659": {
         "targets": [
             "grief",
@@ -5931,7 +5931,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "amber"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "660": {
         "targets": [
             "habit",
@@ -5940,7 +5940,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "milky"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "661": {
         "targets": [
             "etude",
@@ -5949,7 +5949,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "tithe"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "662": {
         "targets": [
             "sloop",
@@ -5958,7 +5958,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "micro"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "663": {
         "targets": [
             "grail",
@@ -5967,7 +5967,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "alert"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "664": {
         "targets": [
             "horde",
@@ -5976,7 +5976,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "drive"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "665": {
         "targets": [
             "hello",
@@ -5985,7 +5985,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "mouse"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "666": {
         "targets": [
             "idiot",
@@ -5994,7 +5994,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "knife"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "667": {
         "targets": [
             "stoic",
@@ -6003,7 +6003,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "olive"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "668": {
         "targets": [
             "seize",
@@ -6012,7 +6012,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "punch"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "669": {
         "targets": [
             "build",
@@ -6021,7 +6021,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "vital"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "670": {
         "targets": [
             "juror",
@@ -6030,7 +6030,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "frost"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "671": {
         "targets": [
             "plaza",
@@ -6039,7 +6039,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "bonus"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "672": {
         "targets": [
             "brunt",
@@ -6048,7 +6048,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "bowel"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "673": {
         "targets": [
             "azure",
@@ -6057,7 +6057,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "metro"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "674": {
         "targets": [
             "slick",
@@ -6066,7 +6066,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "filth"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "675": {
         "targets": [
             "ranch",
@@ -6075,7 +6075,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "anvil"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "676": {
         "targets": [
             "grove",
@@ -6084,7 +6084,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "later"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "677": {
         "targets": [
             "stoop",
@@ -6093,7 +6093,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "melon"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "678": {
         "targets": [
             "nymph",
@@ -6102,7 +6102,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "prize"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "679": {
         "targets": [
             "pious",
@@ -6111,7 +6111,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "truce"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "680": {
         "targets": [
             "rainy",
@@ -6120,7 +6120,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "batch"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "681": {
         "targets": [
             "dummy",
@@ -6129,7 +6129,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "steel"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "682": {
         "targets": [
             "mouth",
@@ -6138,7 +6138,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "sixty"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "683": {
         "targets": [
             "avian",
@@ -6147,7 +6147,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "floor"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "684": {
         "targets": [
             "avail",
@@ -6156,7 +6156,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "stead"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "685": {
         "targets": [
             "groan",
@@ -6165,7 +6165,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "cloud"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "686": {
         "targets": [
             "beset",
@@ -6174,7 +6174,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "panel"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "687": {
         "targets": [
             "rabbi",
@@ -6183,7 +6183,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "slope"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "688": {
         "targets": [
             "chuck",
@@ -6192,7 +6192,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "plank"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "689": {
         "targets": [
             "fetal",
@@ -6201,7 +6201,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "debit"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "690": {
         "targets": [
             "venom",
@@ -6210,7 +6210,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "amend"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "691": {
         "targets": [
             "clock",
@@ -6219,7 +6219,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "gauze"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "692": {
         "targets": [
             "shock",
@@ -6228,7 +6228,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "baron"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "693": {
         "targets": [
             "chuck",
@@ -6237,7 +6237,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "ovary"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "694": {
         "targets": [
             "vowel",
@@ -6246,7 +6246,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "setup"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "695": {
         "targets": [
             "bunch",
@@ -6255,7 +6255,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "blame"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "696": {
         "targets": [
             "axiom",
@@ -6264,7 +6264,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "black"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "697": {
         "targets": [
             "dough",
@@ -6273,7 +6273,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "plate"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "698": {
         "targets": [
             "graph",
@@ -6282,7 +6282,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "pedal"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "699": {
         "targets": [
             "lodge",
@@ -6291,7 +6291,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "petit"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "700": {
         "targets": [
             "phase",
@@ -6300,7 +6300,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "chick"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "701": {
         "targets": [
             "etude",
@@ -6309,7 +6309,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "coast"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "702": {
         "targets": [
             "camel",
@@ -6318,7 +6318,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "pivot"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "703": {
         "targets": [
             "light",
@@ -6327,7 +6327,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "while"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "704": {
         "targets": [
             "orbit",
@@ -6336,7 +6336,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "video"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "705": {
         "targets": [
             "palsy",
@@ -6345,7 +6345,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "think"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "706": {
         "targets": [
             "syrup",
@@ -6354,7 +6354,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "sheep"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "707": {
         "targets": [
             "award",
@@ -6363,7 +6363,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "cover"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "708": {
         "targets": [
             "while",
@@ -6372,7 +6372,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "tense"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "709": {
         "targets": [
             "winch",
@@ -6381,7 +6381,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "woody"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "710": {
         "targets": [
             "again",
@@ -6390,7 +6390,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "blink"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "711": {
         "targets": [
             "gloom",
@@ -6399,7 +6399,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "chick"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "712": {
         "targets": [
             "write",
@@ -6408,7 +6408,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "speck"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "713": {
         "targets": [
             "expel",
@@ -6417,7 +6417,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "panel"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "714": {
         "targets": [
             "salad",
@@ -6426,7 +6426,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "cross"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "715": {
         "targets": [
             "birth",
@@ -6435,7 +6435,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "fitch"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "716": {
         "targets": [
             "clean",
@@ -6444,7 +6444,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "third"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "717": {
         "targets": [
             "shame",
@@ -6453,7 +6453,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "lance"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "718": {
         "targets": [
             "valet",
@@ -6462,7 +6462,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "shaft"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "719": {
         "targets": [
             "expel",
@@ -6471,7 +6471,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "steal"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "720": {
         "targets": [
             "wrath",
@@ -6480,7 +6480,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "manor"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "721": {
         "targets": [
             "perch",
@@ -6489,7 +6489,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "diode"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "722": {
         "targets": [
             "renew",
@@ -6498,7 +6498,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "aisle"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "723": {
         "targets": [
             "speck",
@@ -6507,7 +6507,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "enemy"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "724": {
         "targets": [
             "below",
@@ -6516,7 +6516,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "humor"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "725": {
         "targets": [
             "screw",
@@ -6525,7 +6525,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "witty"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "726": {
         "targets": [
             "worse",
@@ -6534,7 +6534,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "slate"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "727": {
         "targets": [
             "never",
@@ -6543,7 +6543,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "sting"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "728": {
         "targets": [
             "milky",
@@ -6552,7 +6552,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "error"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "729": {
         "targets": [
             "fungi",
@@ -6561,7 +6561,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "recur"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "730": {
         "targets": [
             "snuff",
@@ -6570,7 +6570,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "braid"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "731": {
         "targets": [
             "width",
@@ -6579,7 +6579,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "sling"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "732": {
         "targets": [
             "chute",
@@ -6588,7 +6588,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "taint"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "733": {
         "targets": [
             "truss",
@@ -6597,7 +6597,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "envoy"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "734": {
         "targets": [
             "boost",
@@ -6606,7 +6606,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "shave"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "735": {
         "targets": [
             "flame",
@@ -6615,7 +6615,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "least"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "736": {
         "targets": [
             "clamp",
@@ -6624,7 +6624,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "those"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "737": {
         "targets": [
             "taint",
@@ -6633,7 +6633,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "award"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "738": {
         "targets": [
             "snuff",
@@ -6642,7 +6642,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "short"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "739": {
         "targets": [
             "truth",
@@ -6651,7 +6651,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "lymph"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "740": {
         "targets": [
             "annoy",
@@ -6660,7 +6660,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "skull"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "741": {
         "targets": [
             "admit",
@@ -6669,7 +6669,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "cable"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "742": {
         "targets": [
             "baton",
@@ -6678,7 +6678,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "pedal"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "743": {
         "targets": [
             "mourn",
@@ -6687,7 +6687,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "witch"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "744": {
         "targets": [
             "dummy",
@@ -6696,7 +6696,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "datum"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "745": {
         "targets": [
             "major",
@@ -6705,7 +6705,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "value"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "746": {
         "targets": [
             "heavy",
@@ -6714,7 +6714,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "quilt"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "747": {
         "targets": [
             "quart",
@@ -6723,7 +6723,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "birth"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "748": {
         "targets": [
             "sauce",
@@ -6732,7 +6732,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "flame"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "749": {
         "targets": [
             "chalk",
@@ -6741,7 +6741,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "chill"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "750": {
         "targets": [
             "bland",
@@ -6750,7 +6750,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "early"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "751": {
         "targets": [
             "buyer",
@@ -6759,7 +6759,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "vicar"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "752": {
         "targets": [
             "linen",
@@ -6768,7 +6768,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "cover"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "753": {
         "targets": [
             "inert",
@@ -6777,7 +6777,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "winch"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "754": {
         "targets": [
             "opera",
@@ -6786,7 +6786,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "basil"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "755": {
         "targets": [
             "novel",
@@ -6795,7 +6795,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "logic"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "756": {
         "targets": [
             "booth",
@@ -6804,7 +6804,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "flour"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "757": {
         "targets": [
             "cabin",
@@ -6813,7 +6813,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "react"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "758": {
         "targets": [
             "cubic",
@@ -6822,7 +6822,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "drunk"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "759": {
         "targets": [
             "reuse",
@@ -6831,7 +6831,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "toast"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "760": {
         "targets": [
             "dodge",
@@ -6840,7 +6840,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "shalt"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "761": {
         "targets": [
             "happy",
@@ -6849,7 +6849,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "paint"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "762": {
         "targets": [
             "batch",
@@ -6858,7 +6858,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "heave"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "763": {
         "targets": [
             "windy",
@@ -6867,7 +6867,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "flesh"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "764": {
         "targets": [
             "plaza",
@@ -6876,7 +6876,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "stead"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "765": {
         "targets": [
             "olive",
@@ -6885,7 +6885,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "bless"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "766": {
         "targets": [
             "arbor",
@@ -6894,7 +6894,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "voice"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "767": {
         "targets": [
             "humor",
@@ -6903,7 +6903,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "kappa"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "768": {
         "targets": [
             "grand",
@@ -6912,7 +6912,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "cheer"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "769": {
         "targets": [
             "tying",
@@ -6921,7 +6921,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "field"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "770": {
         "targets": [
             "fleet",
@@ -6930,7 +6930,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "pixel"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "771": {
         "targets": [
             "steep",
@@ -6939,7 +6939,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "waist"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "772": {
         "targets": [
             "widow",
@@ -6948,7 +6948,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "spine"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "773": {
         "targets": [
             "demon",
@@ -6957,7 +6957,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "hedge"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "774": {
         "targets": [
             "spake",
@@ -6966,7 +6966,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "youth"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "775": {
         "targets": [
             "prior",
@@ -6975,7 +6975,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "ready"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "776": {
         "targets": [
             "stony",
@@ -6984,7 +6984,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "prize"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "777": {
         "targets": [
             "bleed",
@@ -6993,7 +6993,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "whose"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "778": {
         "targets": [
             "blond",
@@ -7002,7 +7002,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "video"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "779": {
         "targets": [
             "avail",
@@ -7011,7 +7011,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "sweep"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "780": {
         "targets": [
             "scrub",
@@ -7020,7 +7020,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "gorge"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "781": {
         "targets": [
             "thorn",
@@ -7029,7 +7029,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "creek"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "782": {
         "targets": [
             "siege",
@@ -7038,7 +7038,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "forte"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "783": {
         "targets": [
             "thigh",
@@ -7047,7 +7047,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "where"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "784": {
         "targets": [
             "glass",
@@ -7056,7 +7056,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "login"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "785": {
         "targets": [
             "fauna",
@@ -7065,7 +7065,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "sable"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "786": {
         "targets": [
             "tunic",
@@ -7074,7 +7074,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "maker"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "787": {
         "targets": [
             "bloom",
@@ -7083,7 +7083,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "chief"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "788": {
         "targets": [
             "south",
@@ -7092,7 +7092,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "worth"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "789": {
         "targets": [
             "molar",
@@ -7101,7 +7101,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "seven"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "790": {
         "targets": [
             "party",
@@ -7110,7 +7110,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "newly"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "791": {
         "targets": [
             "fauna",
@@ -7119,7 +7119,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "clone"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "792": {
         "targets": [
             "civic",
@@ -7128,7 +7128,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "pizza"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "793": {
         "targets": [
             "bring",
@@ -7137,7 +7137,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "quill"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "794": {
         "targets": [
             "frost",
@@ -7146,7 +7146,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "frock"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "795": {
         "targets": [
             "money",
@@ -7155,7 +7155,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "relic"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "796": {
         "targets": [
             "chalk",
@@ -7164,7 +7164,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "ample"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "797": {
         "targets": [
             "click",
@@ -7173,7 +7173,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "lodge"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "798": {
         "targets": [
             "torso",
@@ -7182,7 +7182,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "table"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "799": {
         "targets": [
             "hotly",
@@ -7191,7 +7191,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "shock"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "800": {
         "targets": [
             "assay",
@@ -7200,7 +7200,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "fifty"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "801": {
         "targets": [
             "glove",
@@ -7209,7 +7209,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "bulge"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "802": {
         "targets": [
             "kappa",
@@ -7218,7 +7218,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "oxide"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "803": {
         "targets": [
             "wrist",
@@ -7227,7 +7227,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "aptly"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "804": {
         "targets": [
             "align",
@@ -7236,7 +7236,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "snuff"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "805": {
         "targets": [
             "tacit",
@@ -7245,7 +7245,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "sense"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "806": {
         "targets": [
             "trust",
@@ -7254,7 +7254,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "swine"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "807": {
         "targets": [
             "proud",
@@ -7263,7 +7263,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "undue"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "808": {
         "targets": [
             "width",
@@ -7272,7 +7272,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "later"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "809": {
         "targets": [
             "tacit",
@@ -7281,7 +7281,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "expel"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "810": {
         "targets": [
             "chalk",
@@ -7290,7 +7290,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "chill"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "811": {
         "targets": [
             "unfit",
@@ -7299,7 +7299,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "swift"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "812": {
         "targets": [
             "armor",
@@ -7308,7 +7308,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "cocoa"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "813": {
         "targets": [
             "draft",
@@ -7317,7 +7317,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "learn"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "814": {
         "targets": [
             "hurry",
@@ -7326,7 +7326,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "bribe"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "815": {
         "targets": [
             "still",
@@ -7335,7 +7335,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "chile"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "816": {
         "targets": [
             "youth",
@@ -7344,7 +7344,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "ionic"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "817": {
         "targets": [
             "tweed",
@@ -7353,7 +7353,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "bluff"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "818": {
         "targets": [
             "level",
@@ -7362,7 +7362,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "split"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "819": {
         "targets": [
             "nymph",
@@ -7371,7 +7371,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "happy"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "820": {
         "targets": [
             "child",
@@ -7380,7 +7380,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "micro"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "821": {
         "targets": [
             "serum",
@@ -7389,7 +7389,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "vicar"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "822": {
         "targets": [
             "algae",
@@ -7398,7 +7398,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "group"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "823": {
         "targets": [
             "mommy",
@@ -7407,7 +7407,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "while"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "824": {
         "targets": [
             "knoll",
@@ -7416,7 +7416,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "exact"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "825": {
         "targets": [
             "vomit",
@@ -7425,7 +7425,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "shook"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "826": {
         "targets": [
             "watch",
@@ -7434,7 +7434,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "brisk"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "827": {
         "targets": [
             "frock",
@@ -7443,7 +7443,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "crypt"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "828": {
         "targets": [
             "fitch",
@@ -7452,7 +7452,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "brick"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "829": {
         "targets": [
             "puppy",
@@ -7461,7 +7461,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "proud"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "830": {
         "targets": [
             "await",
@@ -7470,7 +7470,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "brood"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "831": {
         "targets": [
             "bring",
@@ -7479,7 +7479,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "stone"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "832": {
         "targets": [
             "blond",
@@ -7488,7 +7488,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "taste"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "833": {
         "targets": [
             "drain",
@@ -7497,7 +7497,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "worst"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "834": {
         "targets": [
             "white",
@@ -7506,7 +7506,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "super"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "835": {
         "targets": [
             "trunk",
@@ -7515,7 +7515,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "queer"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "836": {
         "targets": [
             "large",
@@ -7524,7 +7524,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "canoe"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "837": {
         "targets": [
             "vicar",
@@ -7533,7 +7533,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "rinse"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "838": {
         "targets": [
             "visit",
@@ -7542,7 +7542,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "mimic"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "839": {
         "targets": [
             "shiny",
@@ -7551,7 +7551,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "avant"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "840": {
         "targets": [
             "envoy",
@@ -7560,7 +7560,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "agree"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "841": {
         "targets": [
             "triad",
@@ -7569,7 +7569,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "house"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "842": {
         "targets": [
             "shear",
@@ -7578,7 +7578,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "setup"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "843": {
         "targets": [
             "grand",
@@ -7587,7 +7587,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "blaze"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "844": {
         "targets": [
             "spade",
@@ -7596,7 +7596,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "privy"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "845": {
         "targets": [
             "hotel",
@@ -7605,7 +7605,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "lilac"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "846": {
         "targets": [
             "hairy",
@@ -7614,7 +7614,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "anger"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "847": {
         "targets": [
             "civic",
@@ -7623,7 +7623,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "vista"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "848": {
         "targets": [
             "hatch",
@@ -7632,7 +7632,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "prior"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "849": {
         "targets": [
             "video",
@@ -7641,7 +7641,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "angel"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "850": {
         "targets": [
             "spine",
@@ -7650,7 +7650,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "coast"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "851": {
         "targets": [
             "stoic",
@@ -7659,7 +7659,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "shear"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "852": {
         "targets": [
             "brace",
@@ -7668,7 +7668,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "chili"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "853": {
         "targets": [
             "filth",
@@ -7677,7 +7677,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "edema"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "854": {
         "targets": [
             "bluff",
@@ -7686,7 +7686,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "marry"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "855": {
         "targets": [
             "mimic",
@@ -7695,7 +7695,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "exile"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "856": {
         "targets": [
             "young",
@@ -7704,7 +7704,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "irony"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "857": {
         "targets": [
             "satin",
@@ -7713,7 +7713,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "locus"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "858": {
         "targets": [
             "quick",
@@ -7722,7 +7722,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "slide"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "859": {
         "targets": [
             "gleam",
@@ -7731,7 +7731,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "shady"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "860": {
         "targets": [
             "gamma",
@@ -7740,7 +7740,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "clear"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "861": {
         "targets": [
             "click",
@@ -7749,7 +7749,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "beach"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "862": {
         "targets": [
             "exist",
@@ -7758,7 +7758,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "motto"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "863": {
         "targets": [
             "clump",
@@ -7767,7 +7767,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "kappa"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "864": {
         "targets": [
             "raven",
@@ -7776,7 +7776,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "broad"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "865": {
         "targets": [
             "vinyl",
@@ -7785,7 +7785,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "jelly"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "866": {
         "targets": [
             "blame",
@@ -7794,7 +7794,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "paste"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "867": {
         "targets": [
             "drove",
@@ -7803,7 +7803,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "smoky"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "868": {
         "targets": [
             "mucus",
@@ -7812,7 +7812,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "ready"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "869": {
         "targets": [
             "grave",
@@ -7821,7 +7821,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "groom"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "870": {
         "targets": [
             "slick",
@@ -7830,7 +7830,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "sting"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "871": {
         "targets": [
             "guild",
@@ -7839,7 +7839,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "agile"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "872": {
         "targets": [
             "total",
@@ -7848,7 +7848,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "store"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "873": {
         "targets": [
             "bluff",
@@ -7857,7 +7857,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "dress"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "874": {
         "targets": [
             "shoot",
@@ -7866,7 +7866,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "crime"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "875": {
         "targets": [
             "aback",
@@ -7875,7 +7875,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "login"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "876": {
         "targets": [
             "which",
@@ -7884,7 +7884,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "bloom"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "877": {
         "targets": [
             "frown",
@@ -7893,7 +7893,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "mixer"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "878": {
         "targets": [
             "twist",
@@ -7902,7 +7902,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "rouge"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "879": {
         "targets": [
             "vodka",
@@ -7911,7 +7911,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "rugby"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "880": {
         "targets": [
             "batch",
@@ -7920,7 +7920,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "aback"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "881": {
         "targets": [
             "fight",
@@ -7929,7 +7929,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "major"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "882": {
         "targets": [
             "franc",
@@ -7938,7 +7938,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "incur"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "883": {
         "targets": [
             "vomit",
@@ -7947,7 +7947,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "graft"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "884": {
         "targets": [
             "dying",
@@ -7956,7 +7956,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "aside"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "885": {
         "targets": [
             "milky",
@@ -7965,7 +7965,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "tough"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "886": {
         "targets": [
             "lance",
@@ -7974,7 +7974,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "fiery"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "887": {
         "targets": [
             "taint",
@@ -7983,7 +7983,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "tenet"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "888": {
         "targets": [
             "field",
@@ -7992,7 +7992,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "haste"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "889": {
         "targets": [
             "shady",
@@ -8001,7 +8001,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "shark"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "890": {
         "targets": [
             "thigh",
@@ -8010,7 +8010,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "level"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "891": {
         "targets": [
             "flock",
@@ -8019,7 +8019,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "madly"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "892": {
         "targets": [
             "dryer",
@@ -8028,7 +8028,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "havoc"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "893": {
         "targets": [
             "theft",
@@ -8037,7 +8037,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "lover"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "894": {
         "targets": [
             "agree",
@@ -8046,7 +8046,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "thick"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "895": {
         "targets": [
             "panic",
@@ -8055,7 +8055,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "stone"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "896": {
         "targets": [
             "shake",
@@ -8064,7 +8064,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "cater"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "897": {
         "targets": [
             "moist",
@@ -8073,7 +8073,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "sauce"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "898": {
         "targets": [
             "aware",
@@ -8082,7 +8082,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "whose"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "899": {
         "targets": [
             "ditto",
@@ -8091,7 +8091,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "aware"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "900": {
         "targets": [
             "cello",
@@ -8100,7 +8100,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "award"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "901": {
         "targets": [
             "derby",
@@ -8109,7 +8109,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "arson"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "902": {
         "targets": [
             "proof",
@@ -8118,7 +8118,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "swift"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "903": {
         "targets": [
             "music",
@@ -8127,7 +8127,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "loose"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "904": {
         "targets": [
             "tunic",
@@ -8136,7 +8136,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "cheap"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "905": {
         "targets": [
             "whose",
@@ -8145,7 +8145,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "stern"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "906": {
         "targets": [
             "funny",
@@ -8154,7 +8154,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "psalm"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "907": {
         "targets": [
             "booth",
@@ -8163,7 +8163,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "evade"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "908": {
         "targets": [
             "third",
@@ -8172,7 +8172,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "tread"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "909": {
         "targets": [
             "feast",
@@ -8181,7 +8181,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "piece"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "910": {
         "targets": [
             "lowly",
@@ -8190,7 +8190,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "scrub"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "911": {
         "targets": [
             "visit",
@@ -8199,7 +8199,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "tween"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "912": {
         "targets": [
             "ethic",
@@ -8208,7 +8208,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "triad"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "913": {
         "targets": [
             "their",
@@ -8217,7 +8217,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "creed"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "914": {
         "targets": [
             "house",
@@ -8226,7 +8226,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "stand"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "915": {
         "targets": [
             "clamp",
@@ -8235,7 +8235,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "rebel"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "916": {
         "targets": [
             "exalt",
@@ -8244,7 +8244,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "alone"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "917": {
         "targets": [
             "kneel",
@@ -8253,7 +8253,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "thief"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "918": {
         "targets": [
             "broth",
@@ -8262,7 +8262,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "first"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "919": {
         "targets": [
             "jolly",
@@ -8271,7 +8271,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "where"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "920": {
         "targets": [
             "crane",
@@ -8280,7 +8280,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "villa"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "921": {
         "targets": [
             "burst",
@@ -8289,7 +8289,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "arbor"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "922": {
         "targets": [
             "sting",
@@ -8298,7 +8298,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "front"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "923": {
         "targets": [
             "mound",
@@ -8307,7 +8307,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "daddy"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "924": {
         "targets": [
             "drive",
@@ -8316,7 +8316,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "amend"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "925": {
         "targets": [
             "drove",
@@ -8325,7 +8325,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "mummy"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "926": {
         "targets": [
             "scoop",
@@ -8334,7 +8334,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "cleft"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "927": {
         "targets": [
             "brook",
@@ -8343,7 +8343,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "spite"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "928": {
         "targets": [
             "adopt",
@@ -8352,7 +8352,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "dogma"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "929": {
         "targets": [
             "creed",
@@ -8361,7 +8361,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "hello"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "930": {
         "targets": [
             "major",
@@ -8370,7 +8370,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "shrub"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "931": {
         "targets": [
             "notch",
@@ -8379,7 +8379,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "curry"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "932": {
         "targets": [
             "theme",
@@ -8388,7 +8388,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "hobby"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "933": {
         "targets": [
             "brave",
@@ -8397,7 +8397,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "helix"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "934": {
         "targets": [
             "quest",
@@ -8406,7 +8406,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "avert"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "935": {
         "targets": [
             "newly",
@@ -8415,7 +8415,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "chaos"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "936": {
         "targets": [
             "shiny",
@@ -8424,7 +8424,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "attic"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "937": {
         "targets": [
             "timid",
@@ -8433,7 +8433,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "thumb"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "938": {
         "targets": [
             "wield",
@@ -8442,7 +8442,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "saint"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "939": {
         "targets": [
             "stout",
@@ -8451,7 +8451,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "using"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "940": {
         "targets": [
             "modal",
@@ -8460,7 +8460,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "cruel"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "941": {
         "targets": [
             "annoy",
@@ -8469,7 +8469,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "surge"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "942": {
         "targets": [
             "vigor",
@@ -8478,7 +8478,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "relay"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "943": {
         "targets": [
             "gamma",
@@ -8487,7 +8487,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "layer"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "944": {
         "targets": [
             "chunk",
@@ -8496,7 +8496,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "refer"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "945": {
         "targets": [
             "satin",
@@ -8505,7 +8505,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "joint"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "946": {
         "targets": [
             "pride",
@@ -8514,7 +8514,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "amuse"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "947": {
         "targets": [
             "tweed",
@@ -8523,7 +8523,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "bison"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "948": {
         "targets": [
             "click",
@@ -8532,7 +8532,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "midst"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "949": {
         "targets": [
             "hello",
@@ -8541,7 +8541,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "basin"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "950": {
         "targets": [
             "dying",
@@ -8550,7 +8550,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "frown"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "951": {
         "targets": [
             "booty",
@@ -8559,7 +8559,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "obese"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "952": {
         "targets": [
             "lobby",
@@ -8568,7 +8568,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "round"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "953": {
         "targets": [
             "glide",
@@ -8577,7 +8577,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "treat"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "954": {
         "targets": [
             "extra",
@@ -8586,7 +8586,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "mango"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "955": {
         "targets": [
             "sugar",
@@ -8595,7 +8595,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "flint"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "956": {
         "targets": [
             "karma",
@@ -8604,7 +8604,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "stain"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "957": {
         "targets": [
             "flint",
@@ -8613,7 +8613,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "snout"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "958": {
         "targets": [
             "whirl",
@@ -8622,7 +8622,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "moist"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "959": {
         "targets": [
             "rifle",
@@ -8631,7 +8631,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "noble"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "960": {
         "targets": [
             "hence",
@@ -8640,7 +8640,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "winch"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "961": {
         "targets": [
             "repel",
@@ -8649,7 +8649,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "tenor"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "962": {
         "targets": [
             "weigh",
@@ -8658,7 +8658,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "trans"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "963": {
         "targets": [
             "venue",
@@ -8667,7 +8667,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "nymph"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "964": {
         "targets": [
             "fugue",
@@ -8676,7 +8676,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "flint"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "965": {
         "targets": [
             "budge",
@@ -8685,7 +8685,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "quill"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "966": {
         "targets": [
             "trail",
@@ -8694,7 +8694,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "shalt"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "967": {
         "targets": [
             "brunt",
@@ -8703,7 +8703,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "build"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "968": {
         "targets": [
             "petit",
@@ -8712,7 +8712,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "spite"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "969": {
         "targets": [
             "knoll",
@@ -8721,7 +8721,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "steep"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "970": {
         "targets": [
             "where",
@@ -8730,7 +8730,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "polar"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "971": {
         "targets": [
             "power",
@@ -8739,7 +8739,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "gamut"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "972": {
         "targets": [
             "foyer",
@@ -8748,7 +8748,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "evoke"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "973": {
         "targets": [
             "liter",
@@ -8757,7 +8757,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "fitch"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "974": {
         "targets": [
             "dodge",
@@ -8766,7 +8766,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "grant"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "975": {
         "targets": [
             "hazel",
@@ -8775,7 +8775,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "radio"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "976": {
         "targets": [
             "purse",
@@ -8784,7 +8784,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "toxin"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "977": {
         "targets": [
             "rinse",
@@ -8793,7 +8793,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "elder"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "978": {
         "targets": [
             "funny",
@@ -8802,7 +8802,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "glass"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "979": {
         "targets": [
             "spoke",
@@ -8811,7 +8811,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "sperm"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "980": {
         "targets": [
             "worry",
@@ -8820,7 +8820,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "sharp"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "981": {
         "targets": [
             "fuzzy",
@@ -8829,7 +8829,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "stare"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "982": {
         "targets": [
             "flesh",
@@ -8838,7 +8838,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "virus"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "983": {
         "targets": [
             "union",
@@ -8847,7 +8847,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "cling"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "984": {
         "targets": [
             "hello",
@@ -8856,7 +8856,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "siege"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "985": {
         "targets": [
             "stage",
@@ -8865,7 +8865,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "trend"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "986": {
         "targets": [
             "thigh",
@@ -8874,7 +8874,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "yeast"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "987": {
         "targets": [
             "ample",
@@ -8883,7 +8883,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "above"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "988": {
         "targets": [
             "meter",
@@ -8892,7 +8892,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "mercy"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "989": {
         "targets": [
             "handy",
@@ -8901,7 +8901,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "famed"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "990": {
         "targets": [
             "purse",
@@ -8910,7 +8910,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "timer"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "991": {
         "targets": [
             "aging",
@@ -8919,7 +8919,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "fluid"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "992": {
         "targets": [
             "ardor",
@@ -8928,7 +8928,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "shalt"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "993": {
         "targets": [
             "thing",
@@ -8937,7 +8937,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "chess"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "994": {
         "targets": [
             "tribe",
@@ -8946,7 +8946,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "flint"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "995": {
         "targets": [
             "chart",
@@ -8955,7 +8955,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "devil"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "996": {
         "targets": [
             "freak",
@@ -8964,7 +8964,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "ready"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "997": {
         "targets": [
             "peace",
@@ -8973,7 +8973,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "swamp"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "998": {
         "targets": [
             "prove",
@@ -8982,7 +8982,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "blond"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "999": {
         "targets": [
             "creep",
@@ -8991,7 +8991,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "virus"
         ]
-    },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "1000": {
         "targets": [
             "stack",
@@ -9000,5 +9000,6 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "green"
         ]
+    ,"puzzleCredit":"", "imageCredit":"",
     }
 }

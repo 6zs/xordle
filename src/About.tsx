@@ -12,7 +12,7 @@ export async function pasteImportCode() {
 export function About() {
   let importLink = (
   <div>
-  <br/>
+  <hr/>
   <p><h2>Importing game history (from the old domain, or to a new device)</h2></p>
   <p>The site has permanently moved to https://xordle.org (that's .org rather than .xyz) due to a problem with the .xyz domain name service. The old domain is temporarily in a read-only state at <a href="https://xordle.xyz?preventRedirect">https://xordle.xyz?preventRedirect</a> if you wish to look at your old games.</p>  
   <p>Click <button onClick={() =>{window.localStorage.setItem('waiting-import', "1"); window.location.replace("https://xordle.xyz?importRequest=1"); }}>here</button> to automatically import your games from the old domain.
@@ -32,6 +32,7 @@ export function About() {
           <br /><br /> <a href="https://xordle.org">Xordle</a> by <a href="https://twitter.com/kellydornhaus">keldor</a><br/>Two secret words, one board, no overlap between the words. 
           <br /><br /> <a href="https://fibble.xyz">Fibble</a> by K &amp; R Garfield, coded by keldor <br/>Lies to you once per row.
           <br /><br /> <a href="https://warmle.org">Warmle</a> by Mike Elliott, coded by keldor <br/>Yellows tell you if you've gotten close in that position.
+          <br /><br />Code based on a fork of <a href="https://github.com/lynn/hello-wordl">hello wordl</a>.
         </p>
       <hr />        
       <p className="App-instructions">
@@ -47,12 +48,17 @@ export function About() {
         <br />🟩 Green if green in either word (right letter, right spot).
         <br />🟨 Yellow if yellow in either word (right letter, wrong spot).
         <br />⬛ Grey if it does not appear in either word.
+        <br />
       </p>
+      <hr />      
+      <h1>Xordle images</h1>
+      A note about the images that appear when you complete a daily puzzle. Unless otherwise noted, the images are generated using the Midjourney AI, with prompts, exploration, and selection of output by keldor.
       <hr />
       <p>
+        <h1>Contact</h1>
         Report issues{" "}
         <a href="https://github.com/6zs/xordle/issues">here</a> or send me an <a href="mailto:kellydornhaus@gmail.com">email</a>, and feel free to send in puzzle suggestions, too.
-        <br />Code based on a fork of <a href="https://github.com/lynn/hello-wordl">hello wordl</a>.
+        <br />Keldor blog exists at <a href="https://keldor.org">keldor.org</a> and includes image galleries of past puzzles.        
       </p>
       {importLink}
       <p>
