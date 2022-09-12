@@ -1542,121 +1542,121 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
     ,"puzzleCredit":"", "imageCredit":"", },
     "172": {
         "targets": [
-            "glove",
-            "brand"
+            "quark",
+            "field"
         ],
         "initialGuesses": [
-            "giver"
+            "charm"
         ]
     ,"puzzleCredit":"", "imageCredit":"", },
     "173": {
         "targets": [
-            "dandy",
-            "thigh"
+            "kabob",
+            "grill"
         ],
         "initialGuesses": [
-            "steam"
+            "stick"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"John P", "imageCredit":"", },
     "174": {
         "targets": [
-            "flood",
-            "sheer"
+            "whale",
+            "mummy"
         ],
         "initialGuesses": [
-            "penny"
+            "actor"
         ]
     ,"puzzleCredit":"", "imageCredit":"", },
     "175": {
         "targets": [
-            "booty",
-            "vicar"
+            "ankle",
+            "wrist"
         ],
         "initialGuesses": [
-            "tread"
+            "joint"
         ]
     ,"puzzleCredit":"", "imageCredit":"", },
     "176": {
         "targets": [
-            "fetus",
-            "lymph"
+            "lunch",
+            "break"
         ],
         "initialGuesses": [
-            "bathe"
+            "shift"
         ]
     ,"puzzleCredit":"", "imageCredit":"", },
     "177": {
         "targets": [
-            "porch",
-            "maxim"
+            "quite",
+            "savvy"
         ],
         "initialGuesses": [
-            "smack"
+            "shrew"
         ]
     ,"puzzleCredit":"", "imageCredit":"", },
     "178": {
         "targets": [
-            "witty",
-            "blood"
+            "apnea",
+            "blurb"
         ],
         "initialGuesses": [
-            "slime"
+            "aandb"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"John P", "imageCredit":"", },
     "179": {
         "targets": [
             "quiet",
             "hobby"
         ],
         "initialGuesses": [
-            "event"
+            "books"
         ]
     ,"puzzleCredit":"", "imageCredit":"", },
     "180": {
         "targets": [
-            "spicy",
-            "trout"
+            "goofy",
+            "inane"
         ],
         "initialGuesses": [
-            "piece"
+            "vapid"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"John P", "imageCredit":"", },
     "181": {
         "targets": [
-            "rigor",
-            "chaff"
+            "paris",
+            "hotel"
         ],
         "initialGuesses": [
-            "tally"
+            "vegas"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"John P", "imageCredit":"", },
     "182": {
         "targets": [
-            "greed",
-            "faith"
+            "sushi",
+            "plate"
         ],
         "initialGuesses": [
-            "black"
+            "feast"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"John P", "imageCredit":"", },
     "183": {
         "targets": [
-            "niche",
-            "award"
+            "solid",
+            "water"
         ],
         "initialGuesses": [
-            "board"
+            "melon"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"John P", "imageCredit":"", },
     "184": {
         "targets": [
-            "level",
-            "karma"
+            "chess",
+            "board"
         ],
         "initialGuesses": [
-            "trick"
+            "tiled"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"John P", "imageCredit":"", },
     "185": {
         "targets": [
             "plumb",
