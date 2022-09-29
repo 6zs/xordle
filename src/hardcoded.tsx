@@ -1659,13 +1659,13 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
     ,"puzzleCredit":"John P", "imageCredit":"", },
     "185": {
         "targets": [
-            "plumb",
-            "resin"
+            "dwarf",
+            "comet"
         ],
         "initialGuesses": [
-            "posse"
+            "space"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"Michael L", "imageCredit":"", },
     "186": {
         "targets": [
             "frail",
@@ -1677,31 +1677,31 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
     ,"puzzleCredit":"", "imageCredit":"", },
     "187": {
         "targets": [
-            "canon",
-            "split"
+            "stick",
+            "flame"
         ],
         "initialGuesses": [
-            "slant"
+            "match"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"Libby C", "imageCredit":"", },
     "188": {
         "targets": [
-            "brick",
-            "mould"
+            "muted",
+            "color"
         ],
         "initialGuesses": [
-            "atlas"
+            "grays"
         ]
     ,"puzzleCredit":"", "imageCredit":"", },
     "189": {
         "targets": [
-            "polar",
-            "queen"
+            "flips",
+            "queue"
         ],
         "initialGuesses": [
-            "bonus"
+            "stack"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"Juice", "imageCredit":"", },
     "190": {
         "targets": [
             "owner",
