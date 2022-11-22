@@ -13,11 +13,10 @@ export function About() {
   let importLink = (
   <div>
   <hr/>
-  <p><h2>Importing game history (from the old domain, or to a new device)</h2></p>
-  <p>The site has permanently moved to https://xordle.org (that's .org rather than .xyz) due to a problem with the .xyz domain name service. The old domain is temporarily in a read-only state at <a href="https://xordle.xyz?preventRedirect">https://xordle.xyz?preventRedirect</a> if you wish to look at your old games.</p>  
-  <p>Click <button onClick={() =>{window.localStorage.setItem('waiting-import', "1"); window.location.replace("https://xordle.xyz?importRequest=1"); }}>here</button> to automatically import your games from the old domain.
-  <p>Click <button onClick={() =>{copyImportCode();}}>here</button> to copy an import code to your clipboard which you can use to transfer your stats to another device.</p>
-  <p>Click <button onClick={() =>{pasteImportCode();}}>here</button> to paste an import code from your clipboard.</p>
+  <p><h2>Transferring game history to a new device or browser</h2></p>
+  <p>
+    <p>Click <button onClick={() =>{copyImportCode();}}>here</button> to copy an import code to your clipboard which you can use to transfer your stats to another device.</p>
+    <p>Click <button onClick={() =>{pasteImportCode();}}>here</button> to paste an import code from your clipboard.</p>
   </p>
   </div>
   );
@@ -36,13 +35,13 @@ export function About() {
         </p>
       <hr />        
       <p className="App-instructions">
-        <h1>Xordle rules</h1>
+        <h1>Xordle Rules!</h1>
         There are two secret words.
         <br /><b>They share no letters in common.</b>
         <br />You get {maxGuesses-1} tries to guess both words.
         <br />
-        <br />You start with a random clue.
-        <br />It's the same for everyone.
+        <br />You start with a clue already given. It's the same for everyone. 
+        <br />The daily puzzle is often themed, but not always, and the theme is often not obvious.
         <br />
         <br />Letters in your guess are:
         <br />🟩 Green if green in either word (right letter, right spot).
@@ -51,13 +50,14 @@ export function About() {
         <br />
       </p>
       <hr />      
-      <h1>Xordle images</h1>
-      A note about the images that appear when you complete a daily puzzle. Unless otherwise noted, the images are generated using the Midjourney AI, with prompts, exploration, and selection of output by keldor.
+      <h1>Daily puzzle images</h1>
+      The images are generated using the Midjourney AI with prompts authored by keldor.
       <hr />
       <p>
-        <h1>Contact</h1>
-        Report issues{" "}
-        <a href="https://github.com/6zs/xordle/issues">here</a> or send me an <a href="mailto:kellydornhaus@gmail.com">email</a>, and feel free to send in puzzle suggestions, too.
+        <h1>User submissions and contact info</h1>
+        Feel free to send in puzzle suggestions using <a href="https://forms.gle/CMc6BAzwjzMWqgS17">this form</a>.  
+        You can report game issues{" "}
+        <a href="https://github.com/6zs/xordle/issues">here</a> or send me an <a href="mailto:kellydornhaus@gmail.com">email</a> about whatever is on your mind.<br/>        
         <br />Keldor blog exists at <a href="https://keldor.org">keldor.org</a> and includes image galleries of past puzzles.        
       </p>
       {importLink}

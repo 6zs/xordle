@@ -163,7 +163,7 @@ function App() {
   const link = (emoji: string, label: string, page: Page) => (
     <button
       className={emoji === "" ? ("link-Image link-"+label) : "emoji-link"}
-      onClick={() => setPage(page)}
+      onClick={() => { setPage(page); if ( page !== "game") { setMenuExpanded(false); } }}
       title={label}
       aria-label={label}
     >
@@ -217,6 +217,7 @@ function App() {
   }  
 
   const [startDate, setStartDate] = useState<Date>(todayDate);
+  const [menuExpanded, setMenuExpanded] = useState<boolean>(false);
   
   const dailyLink = "/";
   const practiceLink = "/?unlimited";
@@ -241,7 +242,7 @@ function App() {
       </div>
     )
   }
-
+  
   return (
     <div className={"App-container" + (colorBlind ? " color-blind" : "")}>
       <h1>
@@ -264,15 +265,28 @@ function App() {
         </div>
       </h1>
       <div className="top-right">
-        {page !== "game" ? (
-          link("❌", "Close", "game")
+        <button className={"collapsible link-Image" + ((menuExpanded || page !== "game") ? "" : " active")} onClick={() => 
+        {
+          if(menuExpanded || page !== "game") {
+            setPage("game");
+            setMenuExpanded(false);
+          } else {
+            setMenuExpanded(true);
+          }
+        }
+        }></button>
+      </div>            
+      <div className={"top-right content " + (menuExpanded ? "menuExpanded" : "menuCollapsed")}>
+        {page !== "game" ? ( 
+          <div/>        
         ) : (
-          <>
-            {!readOnly() && link("", "About", "about")}          
+          <div className="flowDown">
+            {!readOnly() && link("", "About", "about")}
             {!readOnly() && link("", "Settings", "settings")}            
             {link("", "Stats", "stats")}
             {link("", "Calendar", "calendar")}
-          </>
+            {link("", "Gallery", "gallery")}
+          </div>
         )}
       </div>
       <div
@@ -314,7 +328,6 @@ function App() {
         </div> )
       }
 
-      {page === "calendar" && link("🖼️", "Gallery", "gallery")}
       {page === "settings" && (
         <div className="Settings">
           <div className="Settings-setting">

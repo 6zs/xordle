@@ -34,6 +34,11 @@ body {
 
 .NextPrev {
   font-weight: bold;
+  font-size: 40px;
+  line-height: .5;
+}
+
+.DayNum {
   font-size: 18px;
 }
 
@@ -585,6 +590,8 @@ a {
 
   width: 32px;
   height: 32px;
+
+  display: block;
 }
 
 
@@ -602,4 +609,59 @@ a {
 
 .link-Calendar {
   background-image: url("calendar.png");  
+}
+
+.link-Gallery {
+  background-image: url("gallery.png");  
+}
+
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 18px;
+  background-image: url("collapse-arrow.png");  
+}
+
+.collapsible.active {
+  background-image: url("expand-arrow.png");  
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.collapsible:after {
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+}
+
+.content {  
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+  margin-top: 32px;
+}
+
+.menuCollapsed.content {
+  max-height: 0px;;
+}
+
+.menuExpanded.content{
+  max-height: 500px;
+}
+
+.flowDown {
+  flex: 1;
+  flex-direction: column;;
 }

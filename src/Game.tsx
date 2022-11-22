@@ -735,7 +735,7 @@ function Game(props: GameProps) {
       <div className="Game-options">
         {!practice && canPrev && <span><a className="NextPrev" href={prevLink}>«</a> </span>}
         {!practice && !canPrev && <span> <a className="NextPrev">&nbsp;</a></span>}
-        {!practice && <span>Day {dayNum}{`${cheatText}`}</span>}
+        {!practice && <span className="DayNum">Day {dayNum}{`${cheatText}`}</span>}
         {!practice && canNext && <span> <a className="NextPrev" href={nextLink}>»</a></span>}
         {!practice && !canNext && <span> <a className="NextPrev">&nbsp;</a></span>}
         {isDev && <span>| <a href={window.location.href} onClick={ ()=>{resetDay();} }>Reset</a></span>}
