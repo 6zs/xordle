@@ -9,6 +9,7 @@ import Calendar from "react-calendar";
 import cheatyface from "./cheatyface.json"
 import { nightmares } from "./nightmares";
 import { instants } from "./instants";
+import { openGallery, spoilers } from "./util";
 
 function encode( str:string ) {
   return window.btoa(str);
@@ -100,6 +101,7 @@ function App() {
   const [page, setPage] = useState<Page>("game");
   const prefersDark = !window.matchMedia || (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches);
   const [dark, setDark] = useSetting<boolean>("dark", prefersDark);
+  const [hardMode, setHardMode] = useSetting<boolean>("hardMode", false);
   const [colorBlind, setColorBlind] = useSetting<boolean>("colorblind", false);
   const [keyboard, setKeyboard] = useSetting<string>(
     "keyboard",
@@ -257,13 +259,14 @@ function App() {
           
          </span>             
         <div className="Game-modes">
-        {!readOnly() && allowPractice && !practice && <a className="ModeEnabled">Daily</a>}
-        {!readOnly() && allowPractice && practice && <a className="ModeDisabled" href={dailyLink}>Daily</a>}
-        {!readOnly() && allowPractice && practice && <a className="ModeEnabled">Unlimited</a>}
-        {!readOnly() && allowPractice && !practice && <a className="ModeDisabled" href={practiceLink}>Unlimited</a>}
+        {!readOnly() && !openGallery && allowPractice && !practice && <a className="ModeEnabled">Daily</a>}
+        {!readOnly() && !openGallery && allowPractice && practice && <a className="ModeDisabled" href={dailyLink}>Daily</a>}
+        {!readOnly() && !openGallery && allowPractice && practice && <a className="ModeEnabled">Unlimited</a>}
+        {!readOnly() && !openGallery && allowPractice && !practice && <a className="ModeDisabled" href={practiceLink}>Unlimited</a>}
         </div>
         </div>
       </h1>
+      {!openGallery && 
       <div className="top-right">
         <button className={"collapsible link-Image" + ((menuExpanded || page !== "game") ? "" : " active")} onClick={() => 
         {
@@ -276,7 +279,8 @@ function App() {
         }
         }></button>
       </div>            
-      <div className={"top-right content " + (menuExpanded ? "menuExpanded" : "menuCollapsed")}>
+      }
+      {!openGallery && <div className={"top-right content " + (menuExpanded ? "menuExpanded" : "menuCollapsed")}>
         {page !== "game" ? ( 
           <div/>        
         ) : (
@@ -289,6 +293,7 @@ function App() {
           </div>
         )}
       </div>
+      }
       <div
         style={{
           position: "absolute",
@@ -298,8 +303,8 @@ function App() {
         }}
       >
       </div>
-      {page === "gallery" && <Gallery />}
-      {page === "about" && <About />}
+      {(page === "gallery" || openGallery) && <Gallery />}
+      {page === "about"  && <About />}
       {page === "stats" && <Stats />}
       {page === "calendar" && <Calendar 
         maxDate={isDev ? new Date("January 1, 3000") : todayDate}
@@ -337,8 +342,17 @@ function App() {
               checked={dark}
               onChange={() => setDark((x: boolean) => !x)}
             />
-            <label htmlFor="dark-setting">dark theme</label>
+            <label htmlFor="dark-setting">Dark theme</label>
           </div>
+          <div className="Settings-setting">
+            <input
+              id="hard-mode-setting"
+              type="checkbox"
+              checked={hardMode}
+              onChange={() => setHardMode((x: boolean) => !x)}
+            />
+            <label htmlFor="hard-mode-setting">Hard mode (initial clue gradually revealed)</label>
+          </div>          
           <div className="Settings-setting">
             <input
               id="colorblind-setting"
@@ -349,7 +363,7 @@ function App() {
             <label htmlFor="colorblind-setting">high-contrast colors</label>
           </div>
           <div className="Settings-setting">
-            <label htmlFor="keyboard-setting">keyboard layout:</label>
+            <label htmlFor="keyboard-setting">Keyboard layout:</label>
             <select
               name="keyboard-setting"
               id="keyboard-setting"
@@ -374,15 +388,17 @@ function App() {
           </div>
         </div>
       )}
-      <Game
+      {!openGallery && <Game
         maxGuesses={maxGuesses}
         hidden={page !== "game"}
         colorBlind={colorBlind}
+        hardMode={hardMode}
         keyboardLayout={keyboard.replaceAll(
           /[BE]/g,
           (x) => (enterLeft ? "EB" : "BE")["BE".indexOf(x)]
         )}
       />
+      }
     </div>
   );
 }

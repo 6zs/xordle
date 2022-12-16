@@ -8,8 +8,7 @@ export interface Day
   guesses: string[],
 }
 
-export function GetDay(date: Date) : Day | null
-{
+export function GetDay(date: Date) : Day | null {
   return GetDaynum(1 + dateToNumber(date) - day1Number);
 }
 

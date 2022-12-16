@@ -26,6 +26,8 @@ export const research = urlParam("research");
 export const allowPractice = true;
 export const practice = allowPractice && urlParam("unlimited") !== null;
 export const cheat = isDev && urlParam("cheat") !== null;
+export const spoilers = urlParam("spoilers") !== null;
+export const openGallery = urlParam("gallery") !== null;
 export const dayNum : number = paramDay ? parseInt(paramDay) : 1 + todayNumber - day1Number;
 export const todayDayNum : number = 1 + todayNumber - day1Number;
 export const dictionarySet: Set<string> = new Set(dictionary);

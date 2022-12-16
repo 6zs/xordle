@@ -2241,7 +2241,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "cloud"
         ]
-    ,"puzzleCredit":"Marissa S. & Sam S.", "imageCredit":"", },
+    ,"puzzleCredit":"Marissa S. & Sam S", "imageCredit":"", },
     "250": {
         "targets": [
             "joker",
@@ -2250,178 +2250,178 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "comic"
         ]
-    ,"puzzleCredit":"Joshua C.", "imageCredit":"", },
+    ,"puzzleCredit":"Joshua C", "imageCredit":"", },
     "251": {
         "targets": [
-            "ratio",
-            "bunch"
-        ],
-        "initialGuesses": [
-            "crane"
-        ]
-    ,"puzzleCredit":"", "imageCredit":"", },
-    "252": {
-        "targets": [
-            "cupid",
-            "vixen"
-        ],
-        "initialGuesses": [
-            "comet"
-        ]
-    ,"puzzleCredit":"Danielle M. ", "imageCredit":"", },
-    "253": {
-        "targets": [
-            "booth",
-            "raven"
-        ],
-        "initialGuesses": [
-            "gloom"
-        ]
-    ,"puzzleCredit":"", "imageCredit":"", },
-    "254": {
-        "targets": [
-            "lemon",
-            "abyss"
-        ],
-        "initialGuesses": [
-            "broom"
-        ]
-    ,"puzzleCredit":"", "imageCredit":"", },
-    "255": {
-        "targets": [
-            "start",
-            "knife"
-        ],
-        "initialGuesses": [
-            "shave"
-        ]
-    ,"puzzleCredit":"", "imageCredit":"", },
-    "256": {
-        "targets": [
-            "short",
-            "quail"
-        ],
-        "initialGuesses": [
-            "faint"
-        ]
-    ,"puzzleCredit":"", "imageCredit":"", },
-    "257": {
-        "targets": [
-            "squad",
-            "cleft"
-        ],
-        "initialGuesses": [
-            "thief"
-        ]
-    ,"puzzleCredit":"", "imageCredit":"", },
-    "258": {
-        "targets": [
-            "vinyl",
-            "cedar"
-        ],
-        "initialGuesses": [
-            "skill"
-        ]
-    ,"puzzleCredit":"", "imageCredit":"", },
-    "259": {
-        "targets": [
-            "round",
+            "fishy",
             "place"
         ],
         "initialGuesses": [
-            "elder"
+            "ocean"
+        ]
+    ,"puzzleCredit":"Michael P", "imageCredit":"", },
+    "252": {
+        "targets": [
+            "blank",
+            "guess"
+        ],
+        "initialGuesses": [
+            ""
         ]
     ,"puzzleCredit":"", "imageCredit":"", },
+    "253": {
+        "targets": [
+            "paper",
+            "dolls"
+        ],
+        "initialGuesses": [
+            "craft"
+        ]
+    ,"puzzleCredit":"G.D. Fox", "imageCredit":"", },
+    "254": {
+        "targets": [
+            "black",
+            "widow"
+        ],
+        "initialGuesses": [
+            "agent"
+        ]
+    ,"puzzleCredit":"Typhoon Freeze", "imageCredit":"", },
+    "255": {
+        "targets": [
+            "apple",
+            "crumb"
+        ],
+        "initialGuesses": [
+            "crisp"
+        ]
+    ,"puzzleCredit":"Bob L", "imageCredit":"", },
+    "256": {
+        "targets": [
+            "smile",
+            "frown"
+        ],
+        "initialGuesses": [
+            "masks"
+        ]
+    ,"puzzleCredit":"@avarialaine", "imageCredit":"", },
+    "257": {
+        "targets": [
+            "trust",
+            "money"
+        ],
+        "initialGuesses": [
+            "banks"
+        ]
+    ,"puzzleCredit":"@avarialaine", "imageCredit":"", },
+    "258": {
+        "targets": [
+            "value",
+            "goods"
+        ],
+        "initialGuesses": [
+            "labor"
+        ]
+    ,"puzzleCredit":"Hassan S", "imageCredit":"", },
+    "259": {
+        "targets": [
+            "wrist",
+            "clock"
+        ],
+        "initialGuesses": [
+            "watch"
+        ]
+    ,"puzzleCredit":"Libby C", "imageCredit":"", },
     "260": {
         "targets": [
-            "fifth",
-            "mucus"
+            "chirp",
+            "tweet"
         ],
         "initialGuesses": [
-            "drier"
+            "birds"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"John P", "imageCredit":"", },
     "261": {
         "targets": [
-            "bough",
-            "since"
+            "chick",
+            "brood"
         ],
         "initialGuesses": [
-            "rider"
+            "birds"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"John P", "imageCredit":"", },
     "262": {
         "targets": [
-            "blind",
-            "recur"
+            "flock",
+            "avian"
         ],
         "initialGuesses": [
-            "chaff"
+            "birds"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"John P", "imageCredit":"", },
     "263": {
         "targets": [
-            "board",
-            "clump"
+            "final",
+            "words"
         ],
         "initialGuesses": [
-            "voter"
+            "oopsy"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"Marius B", "imageCredit":"", },
     "264": {
         "targets": [
-            "which",
-            "brake"
+            "guilt",
+            "sorry"
         ],
         "initialGuesses": [
-            "issue"
+            "atone"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"Adam", "imageCredit":"", },
     "265": {
         "targets": [
-            "brook",
-            "shalt"
+            "solar",
+            "event"
         ],
         "initialGuesses": [
-            "usual"
+            "uturn"
         ]
     ,"puzzleCredit":"", "imageCredit":"", },
     "266": {
         "targets": [
-            "saint",
-            "flood"
+            "blink",
+            "stare"
         ],
         "initialGuesses": [
-            "enjoy"
+            "angel"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"K Griffis", "imageCredit":"", },
     "267": {
         "targets": [
-            "vault",
-            "creed"
+            "snowy",
+            "dream"
         ],
         "initialGuesses": [
-            "essay"
+            "white"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"Carly&James", "imageCredit":"", },
     "268": {
         "targets": [
-            "prior",
-            "exalt"
+            "laugh",
+            "merry"
         ],
         "initialGuesses": [
-            "assay"
+            "sleep"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"Emma C", "imageCredit":"", },
     "269": {
         "targets": [
-            "woody",
-            "shrug"
+            "gifts",
+            "under"
         ],
         "initialGuesses": [
-            "shaft"
+            "trees"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"J. Russell", "imageCredit":"", },    
     "270": {
         "targets": [
             "uncle",

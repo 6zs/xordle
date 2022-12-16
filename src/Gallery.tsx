@@ -1,13 +1,21 @@
-import { GameState, imageUrls } from "./Game";
-import { GetDaynum } from "./Stats";
-import { todayDayNum } from "./util";
+import { GameState, imageUrls, makePuzzle } from "./Game";
+import { GetDaynum, Day } from "./Stats";
+import { todayDayNum, spoilers } from "./util";
+
+export function GetDaySpoilers(day: number) : Day | null {
+  return  { 
+    puzzle: makePuzzle(day),
+    gameState: GameState.Won,
+    guesses: []
+  }
+}
 
 export function Gallery() {
   const galleryDivs = new Array(todayDayNum-1).fill(undefined)
   .map((_,i) => {
-    let day = GetDaynum(i+1);
+    let day = spoilers ? GetDaySpoilers(i+1) : GetDaynum(i+1);
     let linkurl = "?x=" + (i+1);
-    if ( !day || day.gameState === GameState.Playing) {
+    if ( !day || (day.gameState === GameState.Playing )) {
       return (
         <div>
           <p><a href={linkurl}>Day {i+1}</a></p>
@@ -16,7 +24,6 @@ export function Gallery() {
         </div>);
     }
     let [preview, original] = imageUrls(i+1);
-
     return (
       <div>
         <p><a href={linkurl}>Day {i+1}</a></p>

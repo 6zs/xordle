@@ -21,7 +21,7 @@ import {
   needResetPractice,
   currentSeed,
   day1Date,
-  research
+  research,
 } from "./util";
 
 import { hardCodedPuzzles } from "./hardcoded";
@@ -31,6 +31,7 @@ import { Day, GetDaynum } from "./Stats"
 import { nightmares } from "./nightmares";
 import { instants } from "./instants";
 import { readOnly, redirectTo, serializeStorage } from "./App";
+import { GetDaySpoilers } from "./Gallery";
 
 export enum GameState {
   Playing,
@@ -76,6 +77,7 @@ interface GameProps {
   hidden: boolean;
   colorBlind: boolean;
   keyboardLayout: string;
+  hardMode: boolean;
 }
 
 const eligible = targetList.slice(0, targetList.indexOf("murky") + 1).filter((word) => word.length === 5); // Words no rarer than this one
@@ -216,7 +218,7 @@ export function makePuzzle(seed: number) : Puzzle {
 }
 
 export function imageUrls(puzzleNumber: number) : [string,string] {
-  let day = GetDaynum(puzzleNumber);
+  let day = GetDaySpoilers(puzzleNumber);
   let preview = "/images/" + puzzleNumber.toString() + "-" + day?.puzzle.initialGuesses[0] + "-sm.jpg";
   let original = "/images/" + puzzleNumber.toString() + "-" + day?.puzzle.initialGuesses[0] + ".png";
   return [preview, original];
@@ -458,10 +460,23 @@ function Game(props: GameProps) {
   let guessesStorageKey = practice ? ("practiceGuesses"+((nightmare||instant)?currentSeed.toString():"")) : (guessesDayStoragePrefix+currentSeed);
 
   const [gameState, setGameState] = useLocalStorage<GameState>(stateStorageKey, GameState.Playing);
-  const [guesses, setGuesses] = useLocalStorage<string[]>(guessesStorageKey, puzzle.initialGuesses);
+  const [guesses, setGuesses] = useLocalStorage<string[]>(guessesStorageKey, new Array(puzzle.initialGuesses.length));
   const [currentGuess, setCurrentGuess] = useState<string>("");
   const [hint, setHint] = useState<string>(getHintFromState());
   const [haveImage, setHaveImage] = useState<boolean>(isDev);
+
+  let guessesChanged = false;
+  let newGuesses = [...guesses];
+  for(let i = 0; i < puzzle.initialGuesses.length; ++i) {
+    let knownGuess = (props.hardMode && gameState === GameState.Playing) ? puzzle.initialGuesses[i].slice(0, guesses.length-puzzle.initialGuesses.length) : puzzle.initialGuesses[i];
+    if ( newGuesses[i] != knownGuess) {
+      newGuesses[i] = knownGuess;
+      guessesChanged = true;
+    }
+  }
+  if (guessesChanged) {
+    setGuesses(newGuesses);
+  }
    
   const tableRef = useRef<HTMLTableElement>(null);
   async function share(copiedHint: string, text?: string) {
@@ -705,7 +720,8 @@ function Game(props: GameProps) {
     tableRows.splice(puzzle.initialGuesses.length, 0, (<tr className="Row Row-locked-in">{cells}</tr>))
   }
 
-  const cheatText = cheat ? ` ${puzzle.targets} ${new Date(day1Date.getTime()+(dayNum-1)*86400*1000).toDateString()}` : "";
+  const dateText = `, ${new Date(day1Date.getTime()+(dayNum)*86400*1000).toLocaleDateString(undefined, { month: 'short', day: 'numeric' })}`;
+  const cheatText = cheat ? ` ${puzzle.targets}` : "";
   const canPrev = dayNum > 1;
   const canNext = dayNum < todayDayNum || isDev;
   const practiceLink = "?unlimited";
@@ -726,8 +742,7 @@ function Game(props: GameProps) {
     }
   }
 
-
-    const imageCredit = puzzle.imageCredit !== "" ? ("Image by " + puzzle.imageCredit + ".") : "";
+  const imageCredit = puzzle.imageCredit !== "" ? ("Image by " + puzzle.imageCredit + ".") : "";
   
   return (
     <div className="Game" style={{ display: props.hidden ? "none" : "block" }}>
@@ -735,7 +750,7 @@ function Game(props: GameProps) {
       <div className="Game-options">
         {!practice && canPrev && <span><a className="NextPrev" href={prevLink}>«</a> </span>}
         {!practice && !canPrev && <span> <a className="NextPrev">&nbsp;</a></span>}
-        {!practice && <span className="DayNum">Day {dayNum}{`${cheatText}`}</span>}
+        {!practice && <span className="DayNum">Day {dayNum}{`${cheatText}`}{`${dateText}`}</span>}
         {!practice && canNext && <span> <a className="NextPrev" href={nextLink}>»</a></span>}
         {!practice && !canNext && <span> <a className="NextPrev">&nbsp;</a></span>}
         {isDev && <span>| <a href={window.location.href} onClick={ ()=>{resetDay();} }>Reset</a></span>}
