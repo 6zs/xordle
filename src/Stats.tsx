@@ -1,11 +1,12 @@
 import { maxGuesses, day1Number, dateToNumber, todayDayNum, day1Date } from "./util";
-import { Puzzle, GameState, gameDayStoragePrefix, guessesDayStoragePrefix, makePuzzle } from "./Game"
+import { Puzzle, GameState, gameDayStoragePrefix, guessesDayStoragePrefix, hardModeStoragePrefix, makePuzzle } from "./Game"
 
 export interface Day
 {
   puzzle: Puzzle,
   gameState: GameState,
   guesses: string[],
+  hardMode: boolean
 }
 
 export function GetDay(date: Date) : Day | null {
@@ -17,21 +18,23 @@ export function GetDaynum(day: number) : Day | null
   try {
     const resultKey = gameDayStoragePrefix+day;
     const guessesKey = guessesDayStoragePrefix+day;
+    const hardModeKey = hardModeStoragePrefix+day;
     const storedState = window.localStorage.getItem(resultKey);
-    const storedGuesses = window.localStorage.getItem(guessesKey)
+    const storedGuesses = window.localStorage.getItem(guessesKey);
+    const storedHardMode = JSON.parse(window.localStorage.getItem(hardModeKey) ?? "false");
     let state = GameState.Playing;
     if (storedState) {
       state = JSON.parse(storedState);
     }
     if ( storedGuesses ) {
-      return { guesses: JSON.parse(storedGuesses), puzzle: makePuzzle(day), gameState: state };
+      return { guesses: JSON.parse(storedGuesses), puzzle: makePuzzle(day), gameState: state, hardMode: storedHardMode };
     }
   } catch(e) {
   }
   return null;
 }
 
-export function Stats() {
+export function RawStats() {
 
   let histogram: Record<number,number> = {};
   let streak: number = 0;
@@ -111,9 +114,23 @@ export function Stats() {
     }
   }
 
+  return {
+    histogram: histogram,
+    streak: streak,
+    maxStreak: maxStreak,
+    games: games,
+    wins: wins,
+    maxHistogram: maxHistogram
+  };
+}
+
+export function Stats() {
+
+  let rawStats = RawStats();
+
   let styles : Record<number,Object> = {};  
-  for (let key in histogram) {
-   styles[key] = { 'width' : Math.max( 7, Math.floor(100 * histogram[key] / maxHistogram) ) + '%', 'align' : 'right' };
+  for (let key in rawStats.histogram) {
+   styles[key] = { 'width' : Math.max( 7, Math.floor(100 * rawStats.histogram[key] / rawStats.maxHistogram) ) + '%', 'align' : 'right' };
   }
 
   return (
@@ -121,32 +138,32 @@ export function Stats() {
     <h1>games</h1>
     <div className="Game-stats-games">
       <div className="stat">
-        <div className="stat-num">{games}</div>
+        <div className="stat-num">{rawStats.games}</div>
         <div className="stat-label">played</div>
       </div>
       <div className="stat">
-        <div className="stat-num">{games === 0 ? 0 : Math.floor(100*wins/games)}</div>
+        <div className="stat-num">{rawStats.games === 0 ? 0 : Math.floor(100*rawStats.wins/rawStats.games)}</div>
         <div className="stat-label">win %</div>
       </div>
       <div className="stat">
-        <div className="stat-num">{streak}</div>
+        <div className="stat-num">{rawStats.streak}</div>
         <div className="stat-label">streak</div>
       </div>
       <div className="stat">
-        <div className="stat-num">{maxStreak}</div>
+        <div className="stat-num">{rawStats.maxStreak}</div>
         <div className="stat-label">max streak</div>
       </div>
     </div>
     <h1>guesses</h1>
     <div className="Game-stats-guesses">
-      <div className="guess-stat"><div className="guess-count">2</div><div className="guess-graph"><div className="guess-bar" style={styles[3]}><div className="guess-games">{histogram[3]}</div></div></div></div>
-      <div className="guess-stat"><div className="guess-count">3</div><div className="guess-graph"><div className="guess-bar" style={styles[4]}><div className="guess-games">{histogram[4]}</div></div></div></div>
-      <div className="guess-stat"><div className="guess-count">4</div><div className="guess-graph"><div className="guess-bar" style={styles[5]}><div className="guess-games">{histogram[5]}</div></div></div></div>
-      <div className="guess-stat"><div className="guess-count">5</div><div className="guess-graph"><div className="guess-bar" style={styles[6]}><div className="guess-games">{histogram[6]}</div></div></div></div>
-      <div className="guess-stat"><div className="guess-count">6</div><div className="guess-graph"><div className="guess-bar" style={styles[7]}><div className="guess-games">{histogram[7]}</div></div></div></div>
-      <div className="guess-stat"><div className="guess-count">7</div><div className="guess-graph"><div className="guess-bar" style={styles[8]}><div className="guess-games">{histogram[8]}</div></div></div></div>
-      <div className="guess-stat"><div className="guess-count">8</div><div className="guess-graph"><div className="guess-bar" style={styles[9]}><div className="guess-games">{histogram[9]}</div></div></div></div>
-      {histogram[maxGuesses+1] > 0 && <div className="guess-stat"><div className="guess-count">9</div><div className="guess-graph"><div className="guess-bar" style={styles[10]}><div className="guess-games">{histogram[10]}</div></div></div></div>}
+      <div className="guess-stat"><div className="guess-count">2</div><div className="guess-graph"><div className="guess-bar" style={styles[3]}><div className="guess-games">{rawStats.histogram[3]}</div></div></div></div>
+      <div className="guess-stat"><div className="guess-count">3</div><div className="guess-graph"><div className="guess-bar" style={styles[4]}><div className="guess-games">{rawStats.histogram[4]}</div></div></div></div>
+      <div className="guess-stat"><div className="guess-count">4</div><div className="guess-graph"><div className="guess-bar" style={styles[5]}><div className="guess-games">{rawStats.histogram[5]}</div></div></div></div>
+      <div className="guess-stat"><div className="guess-count">5</div><div className="guess-graph"><div className="guess-bar" style={styles[6]}><div className="guess-games">{rawStats.histogram[6]}</div></div></div></div>
+      <div className="guess-stat"><div className="guess-count">6</div><div className="guess-graph"><div className="guess-bar" style={styles[7]}><div className="guess-games">{rawStats.histogram[7]}</div></div></div></div>
+      <div className="guess-stat"><div className="guess-count">7</div><div className="guess-graph"><div className="guess-bar" style={styles[8]}><div className="guess-games">{rawStats.histogram[8]}</div></div></div></div>
+      <div className="guess-stat"><div className="guess-count">8</div><div className="guess-graph"><div className="guess-bar" style={styles[9]}><div className="guess-games">{rawStats.histogram[9]}</div></div></div></div>
+      {rawStats.histogram[maxGuesses+1] > 0 && <div className="guess-stat"><div className="guess-count">9</div><div className="guess-graph"><div className="guess-bar" style={styles[10]}><div className="guess-games">{rawStats.histogram[10]}</div></div></div></div>}
     </div>
   </div>
   );

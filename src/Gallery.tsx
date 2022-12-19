@@ -6,7 +6,8 @@ export function GetDaySpoilers(day: number) : Day | null {
   return  { 
     puzzle: makePuzzle(day),
     gameState: GameState.Won,
-    guesses: []
+    guesses: [],
+    hardMode: false
   }
 }
 

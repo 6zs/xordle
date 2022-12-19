@@ -180,6 +180,7 @@ function App() {
 
   function calendarFormatDay(locale: string, date: Date) {
     let day = GetDay(date);
+    let hardModeIndicator = "";
     let result = "";
     if ( day ) {
       result = day.gameState === GameState.Playing
@@ -187,8 +188,9 @@ function App() {
       : day.gameState === GameState.Won
       ? "🟢"
       : "💀";
+      hardModeIndicator = day.hardMode ? "!!! " : "";
     }
-    return date.toLocaleDateString(locale, { day: "numeric" }) + result;
+    return date.toLocaleDateString(locale, { day: "numeric" }) + hardModeIndicator +  result;
   }
 
  function monthEmojiBlock(date: Date) : string {
@@ -346,21 +348,12 @@ function App() {
           </div>
           <div className="Settings-setting">
             <input
-              id="hard-mode-setting"
-              type="checkbox"
-              checked={hardMode}
-              onChange={() => setHardMode((x: boolean) => !x)}
-            />
-            <label htmlFor="hard-mode-setting">Hard mode (initial clue gradually revealed)</label>
-          </div>          
-          <div className="Settings-setting">
-            <input
               id="colorblind-setting"
               type="checkbox"
               checked={colorBlind}
               onChange={() => setColorBlind((x: boolean) => !x)}
             />
-            <label htmlFor="colorblind-setting">high-contrast colors</label>
+            <label htmlFor="colorblind-setting">High-contrast colors</label>
           </div>
           <div className="Settings-setting">
             <label htmlFor="keyboard-setting">Keyboard layout:</label>
@@ -385,14 +378,27 @@ function App() {
               onChange={() => setEnterLeft((x: boolean) => !x)}
             />
             <label htmlFor="enter-left-setting">"Enter" on left side</label>
+            
           </div>
+          <div className="Settings-setting">
+            <input
+              id="hard-mode-setting"
+              type="checkbox"
+              checked={hardMode}
+              onChange={() => setHardMode((x: boolean) => !x)}
+            />
+            <label htmlFor="hard-mode-setting">Hard mode!!!</label>
+          </div>          
+
+          <p><div><b>Hard Mode</b></div>Hard Mode will only reveal the starting clue for you one letter at a time (as you make your first 5 guesses.) Takes effect on the next puzzle you start since you will have already seen the starting clue before going into settings. Emoji-results for sharing and the calendar will indicate puzzles completed in hard mode with "!!!".
+          </p>
         </div>
       )}
       {!openGallery && <Game
         maxGuesses={maxGuesses}
         hidden={page !== "game"}
         colorBlind={colorBlind}
-        hardMode={hardMode}
+        hardMode={practice ? urlParam("hard") !== null : hardMode}
         keyboardLayout={keyboard.replaceAll(
           /[BE]/g,
           (x) => (enterLeft ? "EB" : "BE")["BE".indexOf(x)]

@@ -3,6 +3,7 @@ import { Row, RowState } from "./Row";
 import dictionary from "./dictionary.json";
 import { Clue, clue, CluedLetter, describeClue, xorclue } from "./clue";
 import { Keyboard } from "./Keyboard";
+import { PopUp } from "./PopUp"
 import targetList from "./targets.json";
 import {
   gameName,
@@ -27,10 +28,10 @@ import {
 import { hardCodedPuzzles } from "./hardcoded";
 import { hardCodedPractice } from "./hardcoded_practice";
 import cheatyface from "./cheatyface.json";
-import { Day, GetDaynum } from "./Stats"
+import { Day, RawStats } from "./Stats"
 import { nightmares } from "./nightmares";
 import { instants } from "./instants";
-import { readOnly, redirectTo, serializeStorage } from "./App";
+import { readOnly, serializeStorage } from "./App";
 import { GetDaySpoilers } from "./Gallery";
 
 export enum GameState {
@@ -43,6 +44,7 @@ declare const GoatEvent: Function;
 declare const checkVersion: Function;
 
 export const gameDayStoragePrefix = "result-";
+export const hardModeStoragePrefix = "hard-mode-";
 export const guessesDayStoragePrefix = "guesses-";
 
 const eventKey = (practice 
@@ -71,6 +73,33 @@ function useLocalStorage<T>(
   };
   return [current, setSetting];
 }
+
+function useLocalStorageWriteImmediately<T>(
+  key: string,
+  initial: T
+): [T, (value: T | ((t: T) => T)) => void] {
+  const [current, setCurrent] = useState<T>(() => {
+    try {
+      const item = window.localStorage.getItem(key);
+      if (!item) {
+        window.localStorage.setItem(key, JSON.stringify(initial));
+      }
+      return item ? JSON.parse(item) : initial;
+    } catch (e) {
+      window.localStorage.setItem(key, JSON.stringify(initial));
+      return initial;
+    }
+  });
+  const setSetting = (value: T | ((t: T) => T)) => {
+    try {
+      const v = value instanceof Function ? value(current) : value;
+      setCurrent(v);
+      window.localStorage.setItem(key, JSON.stringify(v));
+    } catch (e) {}
+  };
+  return [current, setSetting];
+}
+
 
 interface GameProps {
   maxGuesses: number;
@@ -438,6 +467,7 @@ function Game(props: GameProps) {
   const resetDay = () => {
     if (isDev) {
       window.localStorage.removeItem(gameDayStoragePrefix+dayNum);
+      window.localStorage.removeItem(hardModeStoragePrefix+dayNum);
       window.localStorage.removeItem(guessesDayStoragePrefix+dayNum);
     }
   }
@@ -445,6 +475,7 @@ function Game(props: GameProps) {
   const resetPractice = () => {
     window.localStorage.removeItem("practice");
     window.localStorage.removeItem("practiceState");
+    window.localStorage.removeItem("practiceHardMode");
     window.localStorage.removeItem("practiceGuesses");
   }
 
@@ -456,10 +487,12 @@ function Game(props: GameProps) {
     return makePuzzle(currentSeed);
   });
 
+  let hardModeStorageKey = practice ? ("practiceHardMode"+((nightmare||instant)?currentSeed.toString():"")) : (hardModeStoragePrefix+currentSeed);
   let stateStorageKey = practice ? ("practiceState"+((nightmare||instant)?currentSeed.toString():"")) : (gameDayStoragePrefix+currentSeed);
   let guessesStorageKey = practice ? ("practiceGuesses"+((nightmare||instant)?currentSeed.toString():"")) : (guessesDayStoragePrefix+currentSeed);
 
   const [gameState, setGameState] = useLocalStorage<GameState>(stateStorageKey, GameState.Playing);
+  const [hardModeState, setHardModeState] = useLocalStorageWriteImmediately<boolean>(hardModeStorageKey, props.hardMode);
   const [guesses, setGuesses] = useLocalStorage<string[]>(guessesStorageKey, new Array(puzzle.initialGuesses.length));
   const [currentGuess, setCurrentGuess] = useState<string>("");
   const [hint, setHint] = useState<string>(getHintFromState());
@@ -468,12 +501,13 @@ function Game(props: GameProps) {
   let guessesChanged = false;
   let newGuesses = [...guesses];
   for(let i = 0; i < puzzle.initialGuesses.length; ++i) {
-    let knownGuess = (props.hardMode && gameState === GameState.Playing) ? puzzle.initialGuesses[i].slice(0, guesses.length-puzzle.initialGuesses.length) : puzzle.initialGuesses[i];
+    let knownGuess = (hardModeState && gameState === GameState.Playing) ? puzzle.initialGuesses[i].slice(0, guesses.length-puzzle.initialGuesses.length) : puzzle.initialGuesses[i];
     if ( newGuesses[i] != knownGuess) {
       newGuesses[i] = knownGuess;
       guessesChanged = true;
     }
   }
+
   if (guessesChanged) {
     setGuesses(newGuesses);
   }
@@ -685,6 +719,8 @@ function Game(props: GameProps) {
       const isBonusGuess = i === maxGuesses;
       const lockedIn = (!isBonusGuess && i < guesses.length) || (isBonusGuess && guesses.length === realMaxGuesses);
       const isAllGreen = lockedIn && cluedLetters.reduce( reduceCorrect, {clue: Clue.Correct, letter: ""} ).clue === Clue.Correct;                
+      const isPartial = guess.length < 5;
+      const isInitialGuess = i < puzzle.initialGuesses.length;
       if (lockedIn) {
         for (const { clue, letter } of cluedLetters) {
           if (clue === undefined) break;
@@ -710,7 +746,7 @@ function Game(props: GameProps) {
           correctGuess={correctGuess}
           numInitialGuesses={puzzle.initialGuesses.length}
           rowNumber={i}
-          annotation={isBonusGuess ? "Bonus!" : ((isAllGreen && !isTarget) ? "Huh?" : undefined)}          
+          annotation={isBonusGuess ? "Bonus!" : (isPartial && isInitialGuess && hardModeState) ? "!!!": ((isAllGreen && !isTarget) ? "Huh?" : undefined)}          
         />
       );
     });
@@ -725,28 +761,20 @@ function Game(props: GameProps) {
   const canPrev = dayNum > 1;
   const canNext = dayNum < todayDayNum || isDev;
   const practiceLink = "?unlimited";
+  const practiceLinkHard = "?unlimited&hard";
   const prevLink = "?x=" + (dayNum-1).toString() + (isDev ? "&xyzzyx="+cheatyface["password"] : "") + (cheat ? "&cheat=1" : "") + (urlParam("preventRedirect") !== null ? "&preventRedirect" : "");
   const nextLink = "?x=" + (dayNum+1).toString() + (isDev ? "&xyzzyx="+cheatyface["password"] : "") + (cheat ? "&cheat=1" : "") + (urlParam("preventRedirect") !== null ? "&preventRedirect" : "");
 
-  const [readNewsDay, setReadNewsDay] = useLocalStorage<number>("read-news-", 0);
-  let news = "";
-  let showNews = false;
-  let newsPostedDay = 32;
-  const canShowNews = news !== "" && dayNum >= newsPostedDay;
-  const newsHasntBeenRead = readNewsDay < newsPostedDay;
-  const newsReadToday = readNewsDay == dayNum;
-  if (!practice && canShowNews && (newsHasntBeenRead || newsReadToday)) {
-    showNews = true;
-    if (!newsReadToday) {
-      setReadNewsDay(dayNum);
-    }
-  }
-
+  const newsIndex = 9;
+  const [readNewsItem, setReadNewsItem] = useLocalStorageWriteImmediately<number>("read-news-item", 0);
+  const news: string = "There's now an experimental 'hard mode' available in game settings that makes it so the starting clue is only revealed one letter at a time as you guess. Emoji-results and game history will be marked with !!! to indicate the puzzle was played in hard mode. Changing the setting will take effect on the *next* puzzle you start.";
+  const showNews = readNewsItem < newsIndex && RawStats().wins >= 1 && gameState == GameState.Playing;
+  const hardModeIndicator = hardModeState ? " !!!" : "";
   const imageCredit = puzzle.imageCredit !== "" ? ("Image by " + puzzle.imageCredit + ".") : "";
   
   return (
     <div className="Game" style={{ display: props.hidden ? "none" : "block" }}>
-
+      {showNews && (<PopUp text={news} title={"News!"} onClick={ ()=>{setReadNewsItem(newsIndex); } }/>) }
       <div className="Game-options">
         {!practice && canPrev && <span><a className="NextPrev" href={prevLink}>«</a> </span>}
         {!practice && !canPrev && <span> <a className="NextPrev">&nbsp;</a></span>}
@@ -759,6 +787,7 @@ function Game(props: GameProps) {
         {practice && <span>{`${cheatText}`}</span>}
         {practice && <span>
           <a href=""
+            className="practiceLink"
             onClick={(e) => {
               const score = gameState === GameState.Lost ? "X" : (guesses.length-puzzle.initialGuesses.length);
               share(
@@ -768,14 +797,14 @@ function Game(props: GameProps) {
               e.preventDefault();
             }}
           >
-            Share Puzzle
+            Share
           </a>
         
-          <span> | </span>
-          <a href={practiceLink} onClick={ ()=>{resetPractice();} }>+ New Puzzle</a></span>}        
+          <a href={practiceLink} className="practiceLink" onClick={ ()=>{resetPractice();} }> +New </a>
+
+          <a href={practiceLinkHard} className="practiceLink" onClick={ ()=>{resetPractice();} }> +New (Hard Mode)</a></span>
+        }
       </div>
-      {showNews && (<div className="News">{news}
-      </div>) }
       {readOnly() && (<div><p>The site has <b>permanently moved</b> to <a href='https://xordle.org'>https://xordle.org</a>. That's .org rather than .xyz. It's still up here temporarily and in a read-only state, you can't play here. <b>When you visit the new site</b>, you can click ❓, and there will be a link at the bottom to <b>import your game history from this site.</b></p></div>)}
       <table
         className="Game-rows"
@@ -807,8 +836,8 @@ function Game(props: GameProps) {
               const score = gameState === GameState.Lost ? "X" : (guesses.length-puzzle.initialGuesses.length);
               share(
                 "Result copied to clipboard!",
-                `${gameName} ${practice ? ((nightmare ? "nightmare " : instant ? "instant " : "unlimited ") + currentSeed.toString()) : ("#"+dayNum.toString())} ${score}/${props.maxGuesses-1}\n` +
-                emojiBlock({guesses:guesses, puzzle:puzzle, gameState:gameState}, props.colorBlind)
+                `${gameName} ${practice ? ((nightmare ? "nightmare " : instant ? "instant " : "unlimited ") + currentSeed.toString()) : ("#"+dayNum.toString())}${hardModeIndicator} ${score}/${props.maxGuesses-1}\n` +
+                emojiBlock({guesses:guesses, puzzle:puzzle, gameState:gameState, hardMode:hardModeState}, props.colorBlind)
               );
             }}
           >
