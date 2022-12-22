@@ -498,6 +498,10 @@ function Game(props: GameProps) {
   const [hint, setHint] = useState<string>(getHintFromState());
   const [haveImage, setHaveImage] = useState<boolean>(isDev);
 
+  let Goat = (str: string) => {
+    GoatEvent(str + (hardModeState ? ", Hard" : ""));
+  };  
+
   let guessesChanged = false;
   let newGuesses = [...guesses];
   for(let i = 0; i < puzzle.initialGuesses.length; ++i) {
@@ -605,12 +609,12 @@ function Game(props: GameProps) {
         return;
       }
       if (!fivesDictionary.includes(currentGuess)) {
-        GoatEvent("Nonword: " + currentGuess);
+        Goat("Nonword: " + currentGuess);
         setHint(`That's not in the word list`);
         return;
       }
 
-      GoatEvent("Guess " + (guesses.length+1) + ": " + currentGuess);
+      Goat("Guess " + (guesses.length+1) + ": " + currentGuess);
      
       setGuesses((guesses) => guesses.concat([currentGuess]));
       setCurrentGuess("");
@@ -626,14 +630,14 @@ function Game(props: GameProps) {
     if ( gameState == GameState.Playing ) {      
       if ( (guesses.includes(puzzle.targets[0]) && guesses.includes(puzzle.targets[1])) ) {
         setGameState(GameState.Won);
-        GoatEvent("Won: " + eventKey + ", " + guesses.length + " guesses");
+        Goat("Won: " + eventKey + ", " + guesses.length + " guesses");
       } else if (guesses.length >= props.maxGuesses) {
         if (puzzle.targets.includes(guesses[guesses.length-1])) {
           setHint("Last chance! Do a bonus guess.")
           return;
         }        
         setGameState(GameState.Lost);
-        GoatEvent("Lost: " + eventKey);
+        Goat("Lost: " + eventKey);
       } 
     } 
     setHint(getHintFromState());
@@ -676,7 +680,7 @@ function Game(props: GameProps) {
 
   useEffect(() => {
     if ( gameState == GameState.Playing && guesses.length == puzzle.initialGuesses.length && currentGuess.length == 0 ) {
-      GoatEvent("Starting: " + eventKey);
+      Goat("Starting: " + eventKey);
     }
   }, [currentSeed]);
 

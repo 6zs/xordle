@@ -2424,94 +2424,94 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
     ,"puzzleCredit":"J. Russell", "imageCredit":"", },    
     "270": {
         "targets": [
-            "uncle",
-            "pizza"
+            "dance",
+            "shout"
         ],
         "initialGuesses": [
-            "brown"
+            "twist"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"G.D. Fox", "imageCredit":"", },
     "271": {
         "targets": [
-            "aware",
-            "mouth"
+            "poppy",
+            "bread"
         ],
         "initialGuesses": [
-            "lapse"
+            "lemon"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"Haley H", "imageCredit":"", },
     "272": {
         "targets": [
-            "tough",
-            "break"
+            "hello",
+            "kitty"
         ],
         "initialGuesses": [
-            "hazel"
+            "brand"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"G.D. Fox", "imageCredit":"", },
     "273": {
         "targets": [
-            "shock",
-            "fritz"
+            "sweet",
+            "child"
         ],
         "initialGuesses": [
-            "stuff"
+            "roses"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"deBare", "imageCredit":"", },
     "274": {
         "targets": [
-            "email",
-            "touch"
+            "aroma",
+            "spice"
         ],
         "initialGuesses": [
-            "plane"
+            "cider"
         ]
     ,"puzzleCredit":"", "imageCredit":"", },
     "275": {
         "targets": [
-            "bison",
-            "leafy"
+            "forty",
+            "winks"
         ],
         "initialGuesses": [
-            "ionic"
+            "sleep"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"Bob L", "imageCredit":"", },
     "276": {
         "targets": [
-            "nurse",
-            "lofty"
+            "polka",
+            "river"
         ],
         "initialGuesses": [
-            "alike"
+            "dance"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"John P", "imageCredit":"", },
     "277": {
         "targets": [
-            "humid",
-            "tasty"
+            "power",
+            "buggy"
         ],
         "initialGuesses": [
-            "blood"
+            "horse"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"John P", "imageCredit":"", },
     "278": {
         "targets": [
-            "amuse",
-            "groin"
+            "ninth",
+            "dwarf"
         ],
         "initialGuesses": [
-            "mould"
+            "pluto"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"A. C", "imageCredit":"", },
     "279": {
         "targets": [
-            "ensue",
-            "aloft"
+            "think",
+            "small"
         ],
         "initialGuesses": [
-            "label"
+            "atoms"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"G. D. Fox", "imageCredit":"", },
     "280": {
         "targets": [
             "rally",
