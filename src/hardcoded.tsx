@@ -2466,7 +2466,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "cider"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"Danielle M", "imageCredit":"", },
     "275": {
         "targets": [
             "forty",
@@ -2514,67 +2514,67 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
     ,"puzzleCredit":"G. D. Fox", "imageCredit":"", },
     "280": {
         "targets": [
-            "rally",
-            "beech"
+            "count",
+            "sheep"
         ],
         "initialGuesses": [
-            "which"
+            "tired"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"Mira K", "imageCredit":"", },
     "281": {
         "targets": [
-            "hotly",
-            "fence"
+            "fuzzy",
+            "warms"
         ],
         "initialGuesses": [
-            "etude"
+            "socks"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"Sarah G", "imageCredit":"", },
     "282": {
         "targets": [
-            "cubic",
-            "deter"
+            "wharf",
+            "ledge"
         ],
         "initialGuesses": [
-            "chaff"
+            "shore"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"Elise K", "imageCredit":"", },
     "283": {
         "targets": [
-            "panel",
-            "dough"
+            "codes",
+            "plain"
         ],
         "initialGuesses": [
-            "viral"
+            "spies"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"John H", "imageCredit":"", },
     "284": {
         "targets": [
-            "pound",
-            "waist"
+            "world",
+            "magic"
         ],
         "initialGuesses": [
-            "civic"
+            "realm"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"Mike B", "imageCredit":"", },
     "285": {
         "targets": [
-            "bowel",
-            "shady"
+            "fatal",
+            "error"
         ],
         "initialGuesses": [
-            "belly"
+            "crash"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"Standback", "imageCredit":"", },
     "286": {
         "targets": [
-            "silly",
-            "abbot"
+            "minus",
+            "cloth"
         ],
         "initialGuesses": [
-            "adapt"
+            "naked"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"G.D. Fox", "imageCredit":"", },
     "287": {
         "targets": [
             "boost",
