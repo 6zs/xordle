@@ -2,6 +2,13 @@
   box-sizing: border-box;
 }
 
+:root {
+  --theme-color-primary: rgb(87, 172, 120);
+  --theme-color-secondary: rgb(233, 198, 1);
+  --theme-color-colorBlind-primary: #f5793a;
+  --theme-color-colorBlind-secondary: #85c0f9;
+}
+
 body {
   text-align: center;
   background-color: #eeeeee;
@@ -14,7 +21,7 @@ body {
 }
 
 .Row-separator.Row-letter {
-  background-color: rgb(87, 172, 120);
+  background-color: var(--theme-color-primary);
   flex: 1;
   max-width: 40px;
   height: 2px;
@@ -29,13 +36,13 @@ body {
 }
 
 .App-container.color-blind .Row-separator {
-  background-color: #85c0f9;
+  background-color: var(--theme-color-colorBlind-secondary);
 }
 
 .NextPrev {
   font-weight: bold;
   font-size: 40px;
-  line-height: .5;
+  line-height: 0.5;
 }
 
 .DayNum {
@@ -155,13 +162,15 @@ table.Game-rows > tbody {
   outline: none;
 }
 
-.letter-correct, .letter-correct-fin {
+.letter-correct,
+.letter-correct-fin {
   border: 2px solid rgba(0, 0, 0, 0.3);
-  background-color: rgb(87, 172, 120);
+  background-color: var(--theme-color-primary);
   color: white !important;
 }
 
-.letter-elsewhere, .letter-elsewhere-fin {
+.letter-elsewhere,
+.letter-elsewhere-fin {
   border: 2px solid rgba(0, 0, 0, 0.3);
   background-color: rgb(233, 198, 1);
   color: white !important;
@@ -179,10 +188,10 @@ table.Game-rows > tbody {
   color: white !important;
 }
 
-.letter-absent, 
+.letter-absent,
 .Game-keyboard-button.letter-correct-fin,
 .Game-keyboard-button.letter-elsewhere-fin,
-.App-container.color-blind .Game-keyboard-button.letter-correct-fin, 
+.App-container.color-blind .Game-keyboard-button.letter-correct-fin,
 .App-container.color-blind .Game-keyboard-button.letter-elsewhere-fin {
   border: 2px solid transparent;
   background-color: rgb(162, 162, 162);
@@ -193,7 +202,7 @@ table.Game-rows > tbody {
   border: 1px dotted white;
 }
 
-.Typing-known-elsewhere{
+.Typing-known-elsewhere {
   border: 1px dotted rgba(233, 198, 1);
 }
 
@@ -246,7 +255,7 @@ a:active {
 }
 
 .Game-modes {
-  box-sizing:unset;
+  box-sizing: unset;
   margin-top: -10px;
 }
 
@@ -257,6 +266,7 @@ a:active {
   justify-content: center;
   padding: 16px 0;
   width: 80%;
+  margin: auto;
 }
 
 .Game-stats h1 {
@@ -271,6 +281,8 @@ a:active {
   display: flex;
   flex-direction: row;
   padding-bottom: 10px;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .stat {
@@ -328,10 +340,14 @@ a:active {
   line-height: 20px;
   width: 0%;
   position: relative;
-  background-color: black;
+  background-color: var(--theme-color-primary);
   display: flex;
   justify-content: flex-end;
   padding-right: 7px;
+}
+
+.color-blind .guess-bar {
+  background-color: var(--theme-color-colorBlind-primary);
 }
 
 .guess-games {
@@ -339,6 +355,7 @@ a:active {
   color: white;
   height: 20px;
   line-height: 20px;
+  text-shadow: black 1px 1px 0px;
 }
 
 .App-footer {
@@ -361,11 +378,11 @@ a:active {
 }
 
 .App-about b.green-bg {
-  background-color: rgb(87, 172, 120);
+  background-color: var(--theme-color-primary);
 }
 
 .App-about b.yellow-bg {
-  background-color: #e9c601;
+  background-color: var(--theme-color-secondary);
 }
 
 .Game-seed-info {
@@ -432,13 +449,13 @@ a:active {
 .App-container.color-blind .letter-correct,
 .App-container.color-blind .letter-correct-fin,
 .App-container.color-blind .App-about b.green-bg {
-  background-color: #f5793a;
+  background-color: var(--theme-color-colorBlind-primary);
 }
 
 .App-container.color-blind .letter-elsewhere,
 .App-container.color-blind .letter-elsewhere-fin,
 .App-container.color-blind .App-about b.yellow-bg {
-  background-color: #85c0f9;
+  background-color: var(--theme-color-colorBlind-secondary);
 }
 
 .react-calendar__tile pre {
@@ -446,59 +463,65 @@ a:active {
   font-size: 6px;
 }
 
-a { 
+a {
   text-decoration: inherit;
 }
 
 .practiceLink {
   padding: 3px;
-  border-radius: .375rem;
+  border-radius: 0.375rem;
 }
 
 a.practiceLink:hover {
-  background-color:  rgb(72, 77, 87);
-  border-radius: .375rem;
+  background-color: rgb(72, 77, 87);
+  border-radius: 0.375rem;
 }
 
 .ModeEnabled {
-  border-radius: .375rem;
-  padding: .3rem .45rem;
-  font-size: .875rem;
+  border-radius: 0.375rem;
+  padding: 0.3rem 0.45rem;
+  font-size: 0.875rem;
   line-height: 1.25rem;
   font-weight: 500;
   text-decoration: inherit;
-  transition-property: color,background-color,border-color,fill,stroke,-webkit-text-decoration-color;
-  transition-property: color,background-color,border-color,text-decoration-color,fill,stroke;
-  transition-property: color,background-color,border-color,text-decoration-color,fill,stroke,-webkit-text-decoration-color;
-  transition-timing-function: cubic-bezier(.4,0,.2,1);
-  transition-duration: .15s;
- 
+  transition-property: color, background-color, border-color, fill, stroke,
+    -webkit-text-decoration-color;
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke;
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke, -webkit-text-decoration-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.15s;
 }
 
-.ModeEnabled, .ModeDisabled:hover {
+.ModeEnabled,
+.ModeDisabled:hover {
   background-color: rgb(72, 77, 87) !important;
   color: rgb(209 213 219);
 }
 
-.ModeEnabled.dark, .ModeDisabled.dark:hover {
+.ModeEnabled.dark,
+.ModeDisabled.dark:hover {
   background-color: rgb(65, 72, 82) !important;
   color: rgb(209 213 219);
 }
 
-.ModeDisabled
-{
-  border-radius: .375rem;
-  padding: .3rem .45rem;
-  font-size: .875rem;
+.ModeDisabled {
+  border-radius: 0.375rem;
+  padding: 0.3rem 0.45rem;
+  font-size: 0.875rem;
   line-height: 1.25rem;
   font-weight: 500;
   text-decoration: inherit;
   color: rgb(209 213 219);
-  transition-property: color,background-color,border-color,fill,stroke,-webkit-text-decoration-color;
-  transition-property: color,background-color,border-color,text-decoration-color,fill,stroke;
-  transition-property: color,background-color,border-color,text-decoration-color,fill,stroke,-webkit-text-decoration-color;
-  transition-timing-function: cubic-bezier(.4,0,.2,1);
-  transition-duration: .15s;
+  transition-property: color, background-color, border-color, fill, stroke,
+    -webkit-text-decoration-color;
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke;
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke, -webkit-text-decoration-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.15s;
 }
 
 .News {
@@ -535,18 +558,24 @@ a.practiceLink:hover {
   --clip-top: calc(var(--stack-height) * var(--index));
   --clip-bottom: calc(var(--stack-height) * var(--inverse-index));
   clip-path: inset(var(--clip-top) 0 var(--clip-bottom) 0);
-  animation: stack 340ms cubic-bezier(.46,.29,0,1.24) 1 backwards calc(var(--index) * 120ms), glitch 2s ease 3 2s alternate-reverse;
+  animation: stack 340ms cubic-bezier(0.46, 0.29, 0, 1.24) 1 backwards
+      calc(var(--index) * 120ms),
+    glitch 2s ease 3 2s alternate-reverse;
 }
 
-.stack span:nth-child(odd) { --glitch-translate: 8px; }
-.stack span:nth-child(even) { --glitch-translate: -8px; }
+.stack span:nth-child(odd) {
+  --glitch-translate: 8px;
+}
+.stack span:nth-child(even) {
+  --glitch-translate: -8px;
+}
 
 @keyframes stack {
   0% {
     opacity: 0;
     transform: translateX(-50%);
     text-shadow: -2px 3px 0 red, 2px -3px 0 blue;
-  };
+  }
   60% {
     opacity: 0.5;
     transform: translateX(50%);
@@ -569,7 +598,11 @@ a.practiceLink:hover {
   2% {
     text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
   }
-  4%, 100% {  text-shadow: none; transform: none; }
+  4%,
+  100% {
+    text-shadow: none;
+    transform: none;
+  }
 }
 
 .rewardImage {
@@ -578,11 +611,9 @@ a.practiceLink:hover {
 }
 
 .rewardImageLink {
-  
 }
 
 .Gallery {
-  
 }
 
 .link-Image {
@@ -602,25 +633,24 @@ a.practiceLink:hover {
   display: block;
 }
 
-
 .link-About {
-  background-image: url("info.png");  
+  background-image: url("info.png");
 }
 
 .link-Stats {
-  background-image: url("stats.png");  
+  background-image: url("stats.png");
 }
 
 .link-Settings {
-  background-image: url("settings.png");  
+  background-image: url("settings.png");
 }
 
 .link-Calendar {
-  background-image: url("calendar.png");  
+  background-image: url("calendar.png");
 }
 
 .link-Gallery {
-  background-image: url("gallery.png");  
+  background-image: url("gallery.png");
 }
 
 .collapsible {
@@ -632,14 +662,15 @@ a.practiceLink:hover {
   text-align: left;
   outline: none;
   font-size: 18px;
-  background-image: url("collapse-arrow.png");  
+  background-image: url("collapse-arrow.png");
 }
 
 .collapsible.active {
-  background-image: url("expand-arrow.png");  
+  background-image: url("expand-arrow.png");
 }
 
-.active, .collapsible:hover {
+.active,
+.collapsible:hover {
   background-color: #555;
 }
 
@@ -653,7 +684,7 @@ a.practiceLink:hover {
 .active:after {
 }
 
-.content {  
+.content {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
@@ -662,16 +693,16 @@ a.practiceLink:hover {
 }
 
 .menuCollapsed.content {
-  max-height: 0px;;
+  max-height: 0px;
 }
 
-.menuExpanded.content{
+.menuExpanded.content {
   max-height: 500px;
 }
 
 .flowDown {
   flex: 1;
-  flex-direction: column;;
+  flex-direction: column;
 }
 
 .popup-overlay {
@@ -715,7 +746,7 @@ a.practiceLink:hover {
 }
 
 .popup .popup-close:hover {
-  color: #06D85F;
+  color: #06d85f;
 }
 
 .popup .popup-content {
@@ -723,11 +754,11 @@ a.practiceLink:hover {
   overflow: auto;
 }
 
-@media screen and (max-width: 700px){
-  .box{
+@media screen and (max-width: 700px) {
+  .box {
     width: 70%;
   }
-  .popup{
+  .popup {
     width: 70%;
   }
 }
