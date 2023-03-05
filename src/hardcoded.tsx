@@ -2577,562 +2577,562 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
     ,"puzzleCredit":"G.D. Fox", "imageCredit":"", },
     "287": {
         "targets": [
-            "boost",
-            "lurid"
+            "pause",
+            "think"
         ],
         "initialGuesses": [
-            "grant"
+            "reset"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"G.R. Fox", "imageCredit":"", },
     "288": {
         "targets": [
-            "laser",
-            "think"
+            "itchy",
+            "fleas"
         ],
         "initialGuesses": [
-            "salon"
+            "puppy"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"Liz P", "imageCredit":"", },
     "289": {
         "targets": [
-            "stout",
-            "dwarf"
+            "cache",
+            "troll"
         ],
         "initialGuesses": [
-            "flock"
+            "cyber"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"John P", "imageCredit":"", },
     "290": {
         "targets": [
-            "enter",
-            "which"
+            "inbox",
+            "draft"
         ],
         "initialGuesses": [
-            "scent"
+            "email"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"Heidi L", "imageCredit":"", },
     "291": {
         "targets": [
-            "plane",
-            "stout"
+            "rusty",
+            "oxide"
         ],
         "initialGuesses": [
-            "reign"
+            "metal"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"Bob L", "imageCredit":"", },
     "292": {
         "targets": [
-            "petty",
-            "rough"
+            "prism",
+            "cloud"
         ],
         "initialGuesses": [
-            "arrow"
+            "scene"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"John P", "imageCredit":"", },
     "293": {
         "targets": [
-            "prior",
-            "wheat"
+            "bushy",
+            "plant"
         ],
         "initialGuesses": [
-            "brave"
+            "shrub"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"Libby C", "imageCredit":"", },
     "294": {
         "targets": [
-            "issue",
-            "aloft"
+            "apron",
+            "sweet"
         ],
         "initialGuesses": [
-            "stray"
+            "taste"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"KMill", "imageCredit":"", },
     "295": {
         "targets": [
-            "chuck",
-            "write"
+            "quack",
+            "bones"
         ],
         "initialGuesses": [
-            "bread"
+            "medic"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"Emma C", "imageCredit":"", },
     "296": {
         "targets": [
-            "dense",
-            "axial"
+            "speak",
+            "truth"
         ],
         "initialGuesses": [
-            "steel"
+            "relax"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"Marius B", "imageCredit":"", },
     "297": {
         "targets": [
-            "bosom",
-            "ridge"
+            "peony",
+            "quail"
         ],
         "initialGuesses": [
-            "uncle"
+            "vowel"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"Joseph B", "imageCredit":"", },
     "298": {
         "targets": [
-            "choir",
-            "masse"
+            "lindy",
+            "strut"
         ],
         "initialGuesses": [
-            "bunny"
+            "swing"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"G.R. Fox", "imageCredit":"", },
     "299": {
         "targets": [
-            "avail",
-            "round"
+            "taxes",
+            "crook"
         ],
         "initialGuesses": [
-            "overt"
+            "audit"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"J. Russell", "imageCredit":"", },
     "300": {
         "targets": [
-            "rover",
-            "madly"
+            "judge",
+            "trial"
         ],
         "initialGuesses": [
-            "stake"
+            "guilt"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"deBare", "imageCredit":"", },
     "301": {
         "targets": [
-            "snowy",
-            "purge"
+            "flash",
+            "optic"
         ],
         "initialGuesses": [
-            "exalt"
+            "green"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"Francis+Joey", "imageCredit":"", },
     "302": {
         "targets": [
-            "holly",
-            "stair"
+            "moldy",
+            "fungi"
         ],
         "initialGuesses": [
-            "linen"
+            "spore"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"Masta DDT", "imageCredit":"", },
     "303": {
         "targets": [
-            "grind",
-            "shook"
+            "bored",
+            "stiff"
         ],
         "initialGuesses": [
-            "think"
+            "ennui"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"Simon P", "imageCredit":"", },
     "304": {
         "targets": [
-            "tally",
-            "porch"
+            "quoth",
+            "raven"
         ],
         "initialGuesses": [
-            "peril"
+            "edgar"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"TStamnes", "imageCredit":"", },
     "305": {
         "targets": [
-            "swine",
-            "datum"
+            "rocky",
+            "blues"
         ],
         "initialGuesses": [
-            "mount"
+            "slash"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"RHS+TOK", "imageCredit":"", },
     "306": {
         "targets": [
-            "blast",
-            "moody"
+            "brown",
+            "meats"
         ],
         "initialGuesses": [
-            "nasty"
+            "grill"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"Libby C", "imageCredit":"", },
     "307": {
         "targets": [
-            "fully",
-            "tight"
+            "lover",
+            "giddy"
         ],
         "initialGuesses": [
-            "night"
+            "happy"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"Sarah G", "imageCredit":"", },
     "308": {
         "targets": [
-            "godly",
-            "strap"
-        ],
-        "initialGuesses": [
-            "avant"
-        ]
-    ,"puzzleCredit":"", "imageCredit":"", },
-    "309": {
-        "targets": [
-            "vital",
-            "gorge"
-        ],
-        "initialGuesses": [
-            "glaze"
-        ]
-    ,"puzzleCredit":"", "imageCredit":"", },
-    "310": {
-        "targets": [
-            "ferry",
-            "locus"
-        ],
-        "initialGuesses": [
-            "buyer"
-        ]
-    ,"puzzleCredit":"", "imageCredit":"", },
-    "311": {
-        "targets": [
-            "exile",
-            "frost"
-        ],
-        "initialGuesses": [
-            "motor"
-        ]
-    ,"puzzleCredit":"", "imageCredit":"", },
-    "312": {
-        "targets": [
-            "fluid",
-            "opera"
-        ],
-        "initialGuesses": [
-            "legal"
-        ]
-    ,"puzzleCredit":"", "imageCredit":"", },
-    "313": {
-        "targets": [
-            "adapt",
-            "winch"
-        ],
-        "initialGuesses": [
-            "witty"
-        ]
-    ,"puzzleCredit":"", "imageCredit":"", },
-    "314": {
-        "targets": [
-            "shank",
-            "pilot"
-        ],
-        "initialGuesses": [
-            "ovary"
-        ]
-    ,"puzzleCredit":"", "imageCredit":"", },
-    "315": {
-        "targets": [
-            "drama",
-            "siege"
-        ],
-        "initialGuesses": [
-            "chest"
-        ]
-    ,"puzzleCredit":"", "imageCredit":"", },
-    "316": {
-        "targets": [
-            "verse",
+            "purse",
             "kitty"
         ],
         "initialGuesses": [
-            "molar"
+            "money"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"John P", "imageCredit":"", },
+    "309": {
+        "targets": [
+            "tithe",
+            "blood"
+        ],
+        "initialGuesses": [
+            "money"
+        ]
+    ,"puzzleCredit":"John P", "imageCredit":"", },
+    "310": {
+        "targets": [
+            "jelly",
+            "honor"
+        ],
+        "initialGuesses": [
+            "toast"
+        ]
+    ,"puzzleCredit":"John P", "imageCredit":"", },
+    "311": {
+        "targets": [
+            "spook",
+            "agent"
+        ],
+        "initialGuesses": [
+            "plant"
+        ]
+    ,"puzzleCredit":"Libby C", "imageCredit":"", },
+    "312": {
+        "targets": [
+            "thing",
+            "place"
+        ],
+        "initialGuesses": [
+            "store"
+        ]
+    ,"puzzleCredit":"Libby C", "imageCredit":"", },
+    "313": {
+        "targets": [
+            "flood",
+            "swamp"
+        ],
+        "initialGuesses": [
+            "drown"
+        ]
+    ,"puzzleCredit":"Emma C", "imageCredit":"", },
+    "314": {
+        "targets": [
+            "shoot",
+            "fudge"
+        ],
+        "initialGuesses": [
+            "slang"
+        ]
+    ,"puzzleCredit":"Typhoon Freeze", "imageCredit":"", },
+    "315": {
+        "targets": [
+            "vines",
+            "rumor"
+        ],
+        "initialGuesses": [
+            "grape"
+        ]
+    ,"puzzleCredit":"Finland Taipan", "imageCredit":"", },
+    "316": {
+        "targets": [
+            "cynic",
+            "doubt"
+        ],
+        "initialGuesses": [
+            "sneer"
+        ]
+    ,"puzzleCredit":"Bob L", "imageCredit":"", },
     "317": {
         "targets": [
-            "magma",
-            "tenth"
+            "prick",
+            "blood"
         ],
         "initialGuesses": [
-            "revel"
+            "thorn"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"Justin R", "imageCredit":"", },
     "318": {
         "targets": [
-            "repay",
-            "joint"
+            "sound",
+            "alike"
         ],
         "initialGuesses": [
-            "house"
+            "rhyme"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"G.D. Fox", "imageCredit":"", },
     "319": {
         "targets": [
-            "field",
-            "avant"
+            "magic",
+            "boxes"
         ],
         "initialGuesses": [
-            "brush"
+            "gifts"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"deBare", "imageCredit":"", },
     "320": {
         "targets": [
-            "elude",
-            "snack"
+            "teach",
+            "young"
         ],
         "initialGuesses": [
-            "globe"
+            "trick"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"G.R. Fox", "imageCredit":"", },
     "321": {
         "targets": [
-            "staff",
-            "owner"
+            "sonic",
+            "heart"
         ],
         "initialGuesses": [
-            "trunk"
+            "drwho"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"Big Dan", "imageCredit":"", },
     "322": {
         "targets": [
-            "child",
-            "berry"
+            "human",
+            "robot"
         ],
         "initialGuesses": [
-            "moral"
+            "excel"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"Joshua C", "imageCredit":"", },
     "323": {
         "targets": [
-            "slain",
-            "dough"
+            "tight",
+            "clasp"
         ],
         "initialGuesses": [
-            "bribe"
+            "grips"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"deBare", "imageCredit":"", },
     "324": {
         "targets": [
-            "ounce",
-            "maxim"
+            "adieu",
+            "nymph"
         ],
         "initialGuesses": [
-            "fence"
+            "split"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"Juice", "imageCredit":"", },
     "325": {
         "targets": [
-            "scalp",
-            "undue"
+            "peony",
+            "lilac"
         ],
         "initialGuesses": [
-            "watch"
+            "pansy"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"deBare", "imageCredit":"", },
     "326": {
         "targets": [
-            "brook",
-            "laity"
+            "beach",
+            "sport"
         ],
         "initialGuesses": [
-            "snuff"
+            "balls"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"Liz P", "imageCredit":"", },
     "327": {
         "targets": [
-            "frame",
-            "booth"
+            "hands",
+            "pivot"
         ],
         "initialGuesses": [
-            "serve"
+            "jazzy"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"G.R. Fox", "imageCredit":"", },
     "328": {
         "targets": [
-            "world",
-            "naive"
+            "level",
+            "synth"
         ],
         "initialGuesses": [
-            "radar"
+            "audio"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"Vective", "imageCredit":"", },
     "329": {
         "targets": [
-            "steel",
-            "round"
+            "pride",
+            "sloth"
         ],
         "initialGuesses": [
-            "spine"
+            "seven"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"Masta DDT", "imageCredit":"", },
     "330": {
         "targets": [
-            "shave",
-            "drunk"
+            "queue",
+            "strip"
         ],
         "initialGuesses": [
-            "drill"
+            "lines"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"Andrew G", "imageCredit":"", },
     "331": {
         "targets": [
-            "heron",
-            "vivid"
+            "magic",
+            "flute"
         ],
         "initialGuesses": [
-            "thief"
+            "opera"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"Chris C", "imageCredit":"", },
     "332": {
         "targets": [
-            "robot",
-            "evade"
+            "dusty",
+            "baker"
         ],
         "initialGuesses": [
-            "vomit"
+            "champ"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"G.D. Fox", "imageCredit":"", },
     "333": {
         "targets": [
-            "apply",
-            "movie"
+            "sinus",
+            "fever"
         ],
         "initialGuesses": [
-            "sheer"
+            "grass"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"Bob L", "imageCredit":"", },
     "334": {
-        "targets": [
-            "crash",
-            "being"
-        ],
-        "initialGuesses": [
-            "canon"
-        ]
-    ,"puzzleCredit":"", "imageCredit":"", },
-    "335": {
-        "targets": [
-            "teeth",
-            "mayor"
-        ],
-        "initialGuesses": [
-            "again"
-        ]
-    ,"puzzleCredit":"", "imageCredit":"", },
-    "336": {
-        "targets": [
-            "shaft",
-            "bunny"
-        ],
-        "initialGuesses": [
-            "check"
-        ]
-    ,"puzzleCredit":"", "imageCredit":"", },
-    "337": {
-        "targets": [
-            "fifth",
-            "clean"
-        ],
-        "initialGuesses": [
-            "triad"
-        ]
-    ,"puzzleCredit":"", "imageCredit":"", },
-    "338": {
-        "targets": [
-            "ought",
-            "axial"
-        ],
-        "initialGuesses": [
-            "aging"
-        ]
-    ,"puzzleCredit":"", "imageCredit":"", },
-    "339": {
-        "targets": [
-            "fauna",
-            "cross"
-        ],
-        "initialGuesses": [
-            "rifle"
-        ]
-    ,"puzzleCredit":"", "imageCredit":"", },
-    "340": {
-        "targets": [
-            "cheap",
-            "drink"
-        ],
-        "initialGuesses": [
-            "chair"
-        ]
-    ,"puzzleCredit":"", "imageCredit":"", },
-    "341": {
-        "targets": [
-            "villa",
-            "murky"
-        ],
-        "initialGuesses": [
-            "viral"
-        ]
-    ,"puzzleCredit":"", "imageCredit":"", },
-    "342": {
-        "targets": [
-            "strap",
-            "couch"
-        ],
-        "initialGuesses": [
-            "blood"
-        ]
-    ,"puzzleCredit":"", "imageCredit":"", },
-    "343": {
-        "targets": [
-            "globe",
-            "witch"
-        ],
-        "initialGuesses": [
-            "study"
-        ]
-    ,"puzzleCredit":"", "imageCredit":"", },
-    "344": {
-        "targets": [
-            "ninth",
-            "vocal"
-        ],
-        "initialGuesses": [
-            "pause"
-        ]
-    ,"puzzleCredit":"", "imageCredit":"", },
-    "345": {
-        "targets": [
-            "whirl",
-            "pound"
-        ],
-        "initialGuesses": [
-            "sneak"
-        ]
-    ,"puzzleCredit":"", "imageCredit":"", },
-    "346": {
-        "targets": [
-            "motto",
-            "essay"
-        ],
-        "initialGuesses": [
-            "never"
-        ]
-    ,"puzzleCredit":"", "imageCredit":"", },
-    "347": {
-        "targets": [
-            "devon",
-            "tally"
-        ],
-        "initialGuesses": [
-            "windy"
-        ]
-    ,"puzzleCredit":"", "imageCredit":"", },
-    "348": {
         "targets": [
             "maybe",
             "split"
         ],
         "initialGuesses": [
-            "local"
+            "dates"
         ]
     ,"puzzleCredit":"", "imageCredit":"", },
+    "335": {
+        "targets": [
+            "tuner",
+            "shack"
+        ],
+        "initialGuesses": [
+            "radio"
+        ]
+    ,"puzzleCredit":"John P", "imageCredit":"", },
+    "336": {
+        "targets": [
+            "quote",
+            "lyric"
+        ],
+        "initialGuesses": [
+            "write"
+        ]
+    ,"puzzleCredit":"John P", "imageCredit":"", },
+    "337": {
+        "targets": [
+            "joins",
+            "party"
+        ],
+        "initialGuesses": [
+            "idiot"
+        ]
+    ,"puzzleCredit":"Marius B", "imageCredit":"", },
+    "338": {
+        "targets": [
+            "cough",
+            "ailed"
+        ],
+        "initialGuesses": [
+            "lungs"
+        ]
+    ,"puzzleCredit":"Moss B", "imageCredit":"", },
+    "339": {
+        "targets": [
+            "tulip",
+            "oxeye"
+        ],
+        "initialGuesses": [
+            "bloom"
+        ]
+    ,"puzzleCredit":"Moss B", "imageCredit":"", },
+    "340": {
+        "targets": [
+            "chaff",
+            "group"
+        ],
+        "initialGuesses": [
+            "wheat"
+        ]
+    ,"puzzleCredit":"Dave and Sydney", "imageCredit":"", },
+    "341": {
+        "targets": [
+            "rainy",
+            "flood"
+        ],
+        "initialGuesses": [
+            "boots"
+        ]
+    ,"puzzleCredit":"Thunderdale", "imageCredit":"", },
+    "342": {
+        "targets": [
+            "looks",
+            "empty"
+        ],
+        "initialGuesses": [
+            "vapid"
+        ]
+    ,"puzzleCredit":"Libby C", "imageCredit":"", },
+    "343": {
+        "targets": [
+            "fight",
+            "boxer"
+        ],
+        "initialGuesses": [
+            "duels"
+        ]
+    ,"puzzleCredit":"Panda Dan's Dad", "imageCredit":"", },
+    "344": {
+        "targets": [
+            "mined",
+            "craft"
+        ],
+        "initialGuesses": [
+            "creep"
+        ]
+    ,"puzzleCredit":"Sanfilzands", "imageCredit":"", },
+    "345": {
+        "targets": [
+            "pulpy",
+            "drink"
+        ],
+        "initialGuesses": [
+            "juice"
+        ]
+    ,"puzzleCredit":"Corbus", "imageCredit":"", },
+    "346": {
+        "targets": [
+            "raise",
+            "bluff"
+        ],
+        "initialGuesses": [
+            "poker"
+        ]
+    ,"puzzleCredit":"Erik Berlin", "imageCredit":"", },
+    "347": {
+        "targets": [
+            "mochi",
+            "sakes"
+        ],
+        "initialGuesses": [
+            "japan"
+        ]
+    ,"puzzleCredit":"Krapow", "imageCredit":"", },
+    "348": {
+        "targets": [
+            "hound",
+            "speak"
+        ],
+        "initialGuesses": [
+            "howls"
+        ]
+    ,"puzzleCredit":"Libby C", "imageCredit":"", },
     "349": {
         "targets": [
             "flour",
