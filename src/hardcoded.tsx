@@ -3135,157 +3135,157 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
     ,"puzzleCredit":"Libby C", "imageCredit":"", },
     "349": {
         "targets": [
-            "flour",
-            "piety"
+            "words",
+            "plaza"
         ],
         "initialGuesses": [
-            "weary"
+            "scott"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"Kennyfa", "imageCredit":"", },
     "350": {
         "targets": [
-            "flake",
-            "brunt"
+            "runny",
+            "vetos"
         ],
         "initialGuesses": [
-            "final"
+            "knows"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"Stro-solves", "imageCredit":"", },
     "351": {
         "targets": [
-            "solve",
-            "pinch"
+            "dwarf",
+            "gnome"
         ],
         "initialGuesses": [
-            "alley"
+            "small"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"Alan Comer", "imageCredit":"", },
     "352": {
         "targets": [
-            "tempo",
-            "whirl"
+            "axiom",
+            "guess"
         ],
         "initialGuesses": [
-            "sling"
+            "proof"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"Steve Blau", "imageCredit":"", },
     "353": {
         "targets": [
-            "husky",
-            "cider"
+            "jewel",
+            "topaz"
         ],
         "initialGuesses": [
-            "witty"
+            "stone"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"Bob L", "imageCredit":"", },
     "354": {
         "targets": [
-            "dozen",
-            "friar"
+            "lacks",
+            "teeth"
         ],
         "initialGuesses": [
-            "fritz"
+            "gummy"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"Bob L", "imageCredit":"", },
     "355": {
         "targets": [
-            "aloud",
-            "tempt"
+            "climb",
+            "tower"
         ],
         "initialGuesses": [
-            "bluff"
+            "night"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"A Conway", "imageCredit":"", },
     "356": {
         "targets": [
-            "story",
-            "magma"
+            "meaty",
+            "chili"
         ],
         "initialGuesses": [
-            "manly"
+            "spicy"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"Mrs. Juarez the best", "imageCredit":"", },
     "357": {
         "targets": [
-            "spend",
-            "valor"
+            "music",
+            "party"
         ],
         "initialGuesses": [
-            "karma"
+            "raves"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"Mr. Orlando's class", "imageCredit":"", },
     "358": {
         "targets": [
-            "marry",
-            "stuff"
+            "pinky",
+            "thumb"
         ],
         "initialGuesses": [
-            "shake"
+            "digit"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"Libby C", "imageCredit":"", },
     "359": {
         "targets": [
-            "spell",
-            "wight"
+            "field",
+            "scrum"
         ],
         "initialGuesses": [
-            "bathe"
+            "rugby"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"Matt P", "imageCredit":"", },
     "360": {
         "targets": [
-            "graze",
-            "skill"
+            "windy",
+            "solar"
         ],
         "initialGuesses": [
-            "axial"
+            "power"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"Soulless", "imageCredit":"", },
     "361": {
         "targets": [
-            "crest",
-            "lowly"
+            "eerie",
+            "spook"
         ],
         "initialGuesses": [
-            "mixer"
+            "haunt"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"Tushar", "imageCredit":"", },
     "362": {
         "targets": [
-            "magma",
-            "pride"
+            "phone",
+            "click"
         ],
         "initialGuesses": [
-            "storm"
+            "modem"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"Soulless", "imageCredit":"", },
     "363": {
         "targets": [
-            "drake",
-            "topic"
+            "icing",
+            "plays"
         ],
         "initialGuesses": [
-            "royal"
+            "delay"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"Soulless", "imageCredit":"", },
     "364": {
         "targets": [
-            "sting",
-            "blade"
+            "focus",
+            "drive"
         ],
         "initialGuesses": [
-            "amiss"
+            "train"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"Josh Sez Hi", "imageCredit":"", },
     "365": {
         "targets": [
-            "lemon",
-            "shaft"
+            "river",
+            "south"
         ],
         "initialGuesses": [
-            "amend"
+            "bravo"
         ]
-    ,"puzzleCredit":"", "imageCredit":"", },
+    ,"puzzleCredit":"John Lamb", "imageCredit":"", },
     "366": {
         "targets": [
             "swamp",
