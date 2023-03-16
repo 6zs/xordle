@@ -465,7 +465,7 @@ function Game(props: GameProps) {
   }
 
   const resetDay = () => {
-    if (isDev) {
+    if (isDev || dayNum == 350) {
       window.localStorage.removeItem(gameDayStoragePrefix+dayNum);
       window.localStorage.removeItem(hardModeStoragePrefix+dayNum);
       window.localStorage.removeItem(guessesDayStoragePrefix+dayNum);
