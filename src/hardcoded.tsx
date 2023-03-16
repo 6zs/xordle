@@ -3144,13 +3144,13 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
     ,"puzzleCredit":"Kennyfa", "imageCredit":"", },
     "350": {
         "targets": [
-            "runny",
-            "vetos"
+            "buggy",
+            "world"
         ],
         "initialGuesses": [
-            "knows"
+            "oops!"
         ]
-    ,"puzzleCredit":"Stro-solves", "imageCredit":"", },
+    ,"puzzleCredit":"", "imageCredit":"", },
     "351": {
         "targets": [
             "dwarf",
