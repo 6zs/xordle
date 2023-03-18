@@ -223,7 +223,7 @@ export function makePuzzle(seed: number) : Puzzle {
   let hardCoded = hardCodedPuzzles[seed];
   if (hardCoded && !practice) {
     if (wordsHaveNoOverlap(hardCoded.targets[0], hardCoded.targets[1]) && wordsAreInDictionary(hardCoded.targets[0], hardCoded.targets[1]) ) {
-      hardCoded.imageCredit = hardCoded.imageCredit == "" ? "midjourney ai with prompts by keldor" : hardCoded.imageCredit;
+      hardCoded.imageCredit = hardCoded.imageCredit == "" ? "Image by Midjourney AI with prompts by keldor" : hardCoded.imageCredit;
       return hardCoded;
     }
     else {
@@ -784,7 +784,7 @@ function Game(props: GameProps) {
   const news: string = "There's now an experimental 'hard mode' available in game settings that makes it so the starting clue is only revealed one letter at a time as you guess. Emoji-results and game history will be marked with !!! to indicate the puzzle was played in hard mode. Changing the setting will take effect on the *next* puzzle you start.";
   const showNews = readNewsItem < newsIndex && RawStats().wins >= 1 && gameState == GameState.Playing;
   const hardModeIndicator = hardModeState ? " !!!" : "";
-  const imageCredit = puzzle.imageCredit !== "" ? ("Image by " + puzzle.imageCredit + ".") : "";
+  const imageCredit = puzzle.imageCredit !== "" ? puzzle.imageCredit : "";
   
   return (
     <div className="Game" style={{ display: props.hidden ? "none" : "block" }}>
