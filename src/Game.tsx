@@ -869,7 +869,7 @@ function Game(props: GameProps) {
         </a>)
       }
 
-      {haveImage && gameState !== GameState.Playing && puzzle.puzzleCredit !== "" && (<p>Puzzle submitted by {puzzle.puzzleCredit}.</p>)}
+      {gameState !== GameState.Playing && puzzle.puzzleCredit !== "" && (<p>Puzzle submitted by {puzzle.puzzleCredit}.</p>)}
 
       {researchDivs}
       {readOnly() && (
