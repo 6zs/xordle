@@ -148,6 +148,10 @@ function wordsHaveNoOverlap(word1: string, word2: string) {
   return true;
 }
 
+function wordsAreInDictionary(word1: string, word2: string) {
+  return fivesDictionary.lastIndexOf(word1) !== -1 && fivesDictionary.lastIndexOf(word2) !== -1;
+}
+
 function countMatching(cluedLetters: CluedLetter[]) : Map<Clue, number> {
   let counts = new Map<Clue,number>();
   for (const letter of cluedLetters) {
@@ -218,7 +222,7 @@ let uniqueGame = practice ? 100000 : 1000;
 export function makePuzzle(seed: number) : Puzzle { 
   let hardCoded = hardCodedPuzzles[seed];
   if (hardCoded && !practice) {
-    if (wordsHaveNoOverlap(hardCoded.targets[0], hardCoded.targets[1]) ) {
+    if (wordsHaveNoOverlap(hardCoded.targets[0], hardCoded.targets[1]) && wordsAreInDictionary(hardCoded.targets[0], hardCoded.targets[1]) ) {
       hardCoded.imageCredit = hardCoded.imageCredit == "" ? "midjourney ai with prompts by keldor" : hardCoded.imageCredit;
       return hardCoded;
     }
@@ -228,7 +232,7 @@ export function makePuzzle(seed: number) : Puzzle {
   }
   hardCoded = hardCodedPractice[seed];
   if (hardCoded && practice) {
-    if (wordsHaveNoOverlap(hardCoded.targets[0], hardCoded.targets[1]) ) {
+    if (wordsHaveNoOverlap(hardCoded.targets[0], hardCoded.targets[1]) && wordsAreInDictionary(hardCoded.targets[0], hardCoded.targets[1]) ) {
       return hardCoded;
     }
     else {
