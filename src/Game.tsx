@@ -770,7 +770,7 @@ function Game(props: GameProps) {
     tableRows.splice(puzzle.initialGuesses.length, 0, (<tr className="Row Row-locked-in">{cells}</tr>))
   }
 
-  const dateText = `, ${new Date(day1Date.getTime()+(dayNum)*86400*1000).toLocaleDateString(undefined, { month: 'short', day: 'numeric' })}`;
+  const dateText = `, ${new Date(day1Date.getTime()+(dayNum-1)*86400*1000).toLocaleDateString(undefined, { month: 'short', day: 'numeric' })}`;
   const cheatText = cheat ? ` ${puzzle.targets}` : "";
   const canPrev = dayNum > 1;
   const canNext = dayNum < todayDayNum || isDev;
