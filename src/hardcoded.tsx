@@ -3186,7 +3186,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "gummy"
         ]
-    ,"puzzleCredit":"Bob L", "imageCredit":"", },
+    ,"puzzleCredit":"Bob L", "imageCredit":"", "limerick":"There once was a gummy named Lacks\nWho wanted to chew on some snacks\n But his teeth, oh, so bare \n Caused him great despair \nSo he gummed down his treats with no cracks!", },
     "355": {
         "targets": [
             "climb",
@@ -3195,7 +3195,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "night"
         ]
-    ,"puzzleCredit":"A Conway", "imageCredit":"", },
+    ,"puzzleCredit":"A Conway", "imageCredit":"", "limerick":"There once was a man who'd climb towers \nAt the stroke of the darkest night hours \n He'd slip and he'd sway \n But still find his way \nAs the town below him just cowered!"},
     "356": {
         "targets": [
             "meaty",
@@ -3204,7 +3204,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "spicy"
         ]
-    ,"puzzleCredit":"Mrs. Juarez the best", "imageCredit":"", },
+    ,"puzzleCredit":"Mrs. Juarez the best", "imageCredit":"", "limerick":"A cook with a meaty, spicy chili \nHad a secret so strange and quite silly \n The heat was absurd \n As folks ate, they slurred \nFor it set tongues aflame, willy-nilly!", },
     "357": {
         "targets": [
             "music",
@@ -3213,7 +3213,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "raves"
         ]
-    ,"puzzleCredit":"Mr. Orlando's class", "imageCredit":"", },
+    ,"puzzleCredit":"Mr. Orlando's class", "imageCredit":"", "limerick":"A fellow who raves all about \nLoved music, no shadow of doubt \n At each party he'd dance \n In a wild, trance-like prance \nAs the beat echoed, he'd twist and he'd shout!", },
     "358": {
         "targets": [
             "pinky",
@@ -3222,7 +3222,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "digit"
         ]
-    ,"puzzleCredit":"Libby C", "imageCredit":"A robot attempted to draw,\n A hand with a digit so raw.\n Its pinky, a stump,\n Resembled a thumb,\n And the outcome left all in awe!", },
+    ,"puzzleCredit":"Libby C", "imageCredit":"", "limerick":"A pinky, a digit so small \nDreamed of being a thumb, strong and tall \n But the hand would just laugh \n As it tried to grasp \nYet it still stood, proud through it all!", },
     "359": {
         "targets": [
             "field",
@@ -3231,7 +3231,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "rugby"
         ]
-    ,"puzzleCredit":"Matt P", "imageCredit":"", },
+    ,"puzzleCredit":"Matt P", "imageCredit":"", "limerick":"There once was a rugby field scene \nWhere the scrum was a sight quite obscene \n The players would shove \n In a tight-fitting glove \nAs they fought for the ball in between!", },
     "360": {
         "targets": [
             "windy",
@@ -3240,7 +3240,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "power"
         ]
-    ,"puzzleCredit":"Soulless", "imageCredit":"", },
+    ,"puzzleCredit":"Soulless", "imageCredit":"", "limerick":"In a town that was windy and bright \nSolar power was taking its flight \n The sun and the breeze \n Made energy with ease \nAs renewables danced in the light!", },
     "361": {
         "targets": [
             "eerie",
@@ -3249,7 +3249,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "haunt"
         ]
-    ,"puzzleCredit":"Tushar", "imageCredit":"", },
+    ,"puzzleCredit":"Tushar", "imageCredit":"", "limerick":"An eerie old house on the street \nWas known as a spook's favorite retreat \n With a creak and a groan \n It would chill to the bone \nAs the haunt made its presence complete!", },
     "362": {
         "targets": [
             "phone",
@@ -3258,7 +3258,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "modem"
         ]
-    ,"puzzleCredit":"Soulless", "imageCredit":"", },
+    ,"puzzleCredit":"Soulless", "imageCredit":"", "limerick":"A phone with a click and a beep \nReminded of modems that'd creep \n The sound, so nostalgic \n Though tech, quite archaic \nA memory we'll fondly still keep!", },
     "363": {
         "targets": [
             "icing",
@@ -3267,7 +3267,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "delay"
         ]
-    ,"puzzleCredit":"Soulless", "imageCredit":"", },
+    ,"puzzleCredit":"Soulless", "imageCredit":"", "limerick":"With delay, they were icing their plays \nThe Capitals fought through the craze \n In the end, they'd prevail \n Raising high the cup's tale \nStanley's champions, earning their praise!", },
     "364": {
         "targets": [
             "focus",
@@ -3276,7 +3276,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "train"
         ]
-    ,"puzzleCredit":"Josh Sez Hi", "imageCredit":"", },
+    ,"puzzleCredit":"Josh Sez Hi", "imageCredit":"", "limerick":"A train that would focus and drive \nWas determined to make its best strive \n It huffed and it puffed \n Through tunnels, it snuffed \nOn time, at each station, arrive!", },
     "365": {
         "targets": [
             "river",
