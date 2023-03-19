@@ -3141,7 +3141,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "scott"
         ]
-    ,"puzzleCredit":"Kennyfa", "imageCredit":"", },
+    ,"puzzleCredit":"Kennyfa", "imageCredit":"", "referralLink":"https://www.youtube.com/channel/UC8HHDytpZ-cs9bavTbgYfmA", "referralText":"In honor of Scott Stro-solves who sometimes plays our game on YouTube. Thanks Scott!"},
     "350": {
         "targets": [
             "buggy",

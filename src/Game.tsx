@@ -363,7 +363,9 @@ export interface Puzzle {
   initialGuesses: string[],
   puzzleCredit: string,
   imageCredit: string,
-  limerick?: string
+  limerick?: string,
+  referralLink?: string,
+  referralText?: string
 }
 
 function Game(props: GameProps) {
@@ -551,7 +553,7 @@ function Game(props: GameProps) {
       return;
     }
     var request = new XMLHttpRequest();
-    request.open("GET", "/images/" + puzzleNumber.toString() + "-" + puzzleStart + "-sm.jpg", true);
+    request.open("GET", "/images/" + puzzleNumber.toString() + "-" + encodeURIComponent(puzzleStart) + "-sm.jpg", true);
     request.send();
     request.onreadystatechange = function() {
       if (request.readyState == 4 && request.status == 200) {
@@ -787,6 +789,8 @@ function Game(props: GameProps) {
   const hardModeIndicator = hardModeState ? " !!!" : "";
   const imageCredit = puzzle.imageCredit !== "" ? puzzle.imageCredit : "";
   const limerick = puzzle.limerick !== undefined ? puzzle.limerick : "";
+  const referralText = puzzle.referralText !== undefined ? puzzle.referralText : "";
+  const referralLink = puzzle.referralLink !== undefined ? puzzle.referralLink : "";  
   
   return (
     <div className="Game" style={{ display: props.hidden ? "none" : "block" }}>
@@ -869,10 +873,13 @@ function Game(props: GameProps) {
 
       {haveImage && gameState !== GameState.Playing &&
         (<a className="rewardImageLink" href={`/images/${currentSeed}-${puzzle.initialGuesses[0]}.png`} target="_blank">
-          <img className="rewardImage" title={imageCredit} src={`/images/${currentSeed}-${puzzle.initialGuesses[0]}-sm.jpg`}/>
+          <img className="rewardImage" title={imageCredit} src={`/images/${currentSeed}-${encodeURIComponent(puzzle.initialGuesses[0])}-sm.jpg`}/>
         </a>)
       }
       {gameState !== GameState.Playing && limerick !== "" && (<p className="limerick"><div className="limerick-text">{limerick}</div></p>)}
+
+      {gameState !== GameState.Playing && referralText !== "" && (<p className="referral">{referralText}</p>)}
+      {gameState !== GameState.Playing && referralLink !== "" && (<a className="referral-link" href={referralLink}>Check it out!</a>)}
 
       {researchDivs}
       {readOnly() && (
