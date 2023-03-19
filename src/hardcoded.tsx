@@ -3150,7 +3150,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "oops!"
         ]
-    ,"puzzleCredit":"", "imageCredit":"There once was a program called OOPS!\n In the coding world, it would swoop.\n Its bugginess grand,\n Spread throughout the land,\n And made developers jump through hoops!", },
+    ,"puzzleCredit":"", "imageCredit":"", "limerick": "There once was a program called OOPS!\nIn the coding world, it would swoop.\n Its bugginess grand,\n Spread throughout the land,\nAnd made developers jump through hoops!", },
     "351": {
         "targets": [
             "dwarf",
@@ -3159,7 +3159,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "small"
         ]
-    ,"puzzleCredit":"Alan Comer", "imageCredit":"There once was a dwarf, oh so small,\n Who resided in gardens, stood tall.\n With a gnome by his side,\n They'd take every stride,\n In their tiny world, they'd enthral.", },
+    ,"puzzleCredit":"Alan Comer", "imageCredit":"", "limerick":"There once was a dwarf, oh so small,\nWho resided in gardens, stood tall.\n With a gnome by his side,\n They'd take every stride,\nIn their tiny world, they'd enthral.", },
     "352": {
         "targets": [
             "axiom",
@@ -3168,7 +3168,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "proof"
         ]
-    ,"puzzleCredit":"Steve Blau", "imageCredit":"There once was a proof quite complex,\n With an axiom that left minds perplexed.\n A guess did appear,\n And with logic so clear,\n The puzzle was solved, quite unhexed. ", },
+    ,"puzzleCredit":"Steve Blau", "imageCredit":"", "limerick":"There once was a proof quite complex,\nWith an axiom that left minds perplexed.\n A guess did appear,\n And with logic so clear,\nThe puzzle was solved, quite unhexed. ", },
     "353": {
         "targets": [
             "jewel",
@@ -3177,7 +3177,7 @@ export const hardCodedPuzzles : Record<number, Puzzle> = {
         "initialGuesses": [
             "stone"
         ]
-    ,"puzzleCredit":"Bob L", "imageCredit":"In a cave filled with stones, dark and deep,\n Lay a jewel that would make grown men weep.\n A topaz so bright,\n Gleaming pure in the light,\n A treasure forever to keep.", },
+    ,"puzzleCredit":"Bob L", "imageCredit":"", "limerick":"In a cave filled with stones, dark and deep,\nLay a jewel that would make grown men weep.\n A topaz so bright,\n Gleaming pure in the light,\nA treasure forever to keep.", },
     "354": {
         "targets": [
             "lacks",

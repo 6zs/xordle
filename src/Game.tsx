@@ -362,7 +362,8 @@ export interface Puzzle {
   targets: [string, string],
   initialGuesses: string[],
   puzzleCredit: string,
-  imageCredit: string
+  imageCredit: string,
+  limerick?: string
 }
 
 function Game(props: GameProps) {
@@ -785,6 +786,7 @@ function Game(props: GameProps) {
   const showNews = readNewsItem < newsIndex && RawStats().wins >= 1 && gameState == GameState.Playing;
   const hardModeIndicator = hardModeState ? " !!!" : "";
   const imageCredit = puzzle.imageCredit !== "" ? puzzle.imageCredit : "";
+  const limerick = puzzle.limerick !== undefined ? puzzle.limerick : "";
   
   return (
     <div className="Game" style={{ display: props.hidden ? "none" : "block" }}>
@@ -863,13 +865,14 @@ function Game(props: GameProps) {
       {gameState !== GameState.Playing && (<p>
         {puzzle.initialGuesses.map(s=>s.toUpperCase()).join(", ")} » {puzzle.targets[0].toUpperCase()} + {puzzle.targets[1].toUpperCase()}</p>)}
 
+      {gameState !== GameState.Playing && puzzle.puzzleCredit !== "" && (<p>Puzzle submitted by {puzzle.puzzleCredit}.</p>)}
+
       {haveImage && gameState !== GameState.Playing &&
         (<a className="rewardImageLink" href={`/images/${currentSeed}-${puzzle.initialGuesses[0]}.png`} target="_blank">
           <img className="rewardImage" title={imageCredit} src={`/images/${currentSeed}-${puzzle.initialGuesses[0]}-sm.jpg`}/>
         </a>)
       }
-
-      {gameState !== GameState.Playing && puzzle.puzzleCredit !== "" && (<p>Puzzle submitted by {puzzle.puzzleCredit}.</p>)}
+      {gameState !== GameState.Playing && limerick !== "" && (<p className="limerick"><div className="limerick-text">{limerick}</div></p>)}
 
       {researchDivs}
       {readOnly() && (
