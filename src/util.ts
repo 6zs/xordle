@@ -6,8 +6,8 @@ import { instants } from "./instants";
 export const gameName = "xordle";
 export const maxGuesses = 9;
 
-export const day1Date = new Date('2022-04-01T00:00:00');
 export const todayDate = new Date();
+export const day1Date = new Date(2022, 3, 1, todayDate.getHours(), todayDate.getMinutes(), todayDate.getSeconds(), todayDate.getMilliseconds());
 
 export function dateToNumber(date: Date) : number {
   return Math.floor((date.getTime() - day1Date.getTime())/(1000*60*60*24));
