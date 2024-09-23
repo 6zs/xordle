@@ -10,7 +10,7 @@ export const todayDate = new Date();
 export const day1Date = new Date(2022, 3, 1, todayDate.getHours(), todayDate.getMinutes(), todayDate.getSeconds(), todayDate.getMilliseconds());
 
 export function dateToNumber(date: Date) : number {
-  return Math.floor((date.getTime() - day1Date.getTime())/(1000*60*60*24));
+  return Math.round((date.getTime() - day1Date.getTime())/(1000*60*60*24));
 }
 
 const todayNumber = dateToNumber(todayDate);
